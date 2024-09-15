@@ -1,3 +1,6 @@
+KORAD 공모전 프로젝트
+2024/9/5 ~ 2024/10/18
+
 깃허브 태그명👋
 git Commit Convention
 
