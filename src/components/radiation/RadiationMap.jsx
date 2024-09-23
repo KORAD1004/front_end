@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import data from '../../gj.json';
+import data from '../../assets/data/map.json';
 import styles from '../../styles/radiation/radiation.module.css';
 
 export default function RadiationMap() {
@@ -48,35 +48,39 @@ export default function RadiationMap() {
 
         // 폴리곤 그리기 함수
         const drawPolygons = () => {
-        area.forEach((area) => {
-            // 좌표 변환
-            const coordinates = area.geometry.coordinates[0].map(
-            (coord) => {
-                console.log(new kakao.maps.LatLng(coord[1], coord[0]));
-                return new kakao.maps.LatLng(coord[1], coord[0])
-            }
-            );
-
-            // 임의의 방사선 수치 설정 (실제 데이터에 따라 조정 필요)
-            area.radiation = area.radiation || 0.15;
-
-            const polygon = new kakao.maps.Polygon({
-            map: map,
-            path: coordinates,
-            strokeWeight: 2,
-            strokeColor: "#004c80",
-            strokeOpacity: 0.8,
-            fillColor: getColorByRadiation(area.radiation),
-            fillOpacity: 0.1,
-            });
-
-            kakao.maps.event.addListener(polygon, "mouseover", function () {
-            polygon.setOptions({ fillColor: "#09f" });
-            });
-            kakao.maps.event.addListener(polygon, "mouseout", function () {
-            polygon.setOptions({ fillColor: getColorByRadiation(area.radiation) });
-            });
-        });
+            area.forEach((area) => {
+                // 모든 폴리곤에 대해 반복
+                area.geometry.coordinates.forEach((polygon) => {
+                    // 각 폴리곤의 모든 링에 대해 반복
+                    polygon.forEach((ring) => {
+                        // 좌표 변환
+                        const coordinates = ring.map((coord) => {
+                            return new kakao.maps.LatLng(coord[1], coord[0]);
+                        });
+            
+                        // 임의의 방사선 수치 설정 (실제 데이터에 따라 조정 필요)
+                        area.radiation = area.radiation || 0.15;
+            
+                        const polygonObj = new kakao.maps.Polygon({
+                            map: map,
+                            path: coordinates,
+                            strokeWeight: 2,
+                            strokeColor: "#004c80",
+                            strokeOpacity: 0.8,
+                            fillColor: getColorByRadiation(area.radiation),
+                            fillOpacity: 0.1,
+                        });
+            
+                        // 마우스 이벤트 설정
+                        kakao.maps.event.addListener(polygonObj, "mouseover", function () {
+                            polygonObj.setOptions({ fillColor: "#09f" });
+                        });
+                        kakao.maps.event.addListener(polygonObj, "mouseout", function () {
+                            polygonObj.setOptions({ fillColor: getColorByRadiation(area.radiation) });
+                        });
+                    });
+                });
+            });            
         };
 
         drawPolygons();
