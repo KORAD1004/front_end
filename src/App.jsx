@@ -1,10 +1,12 @@
 import './App.css'
+import Main from './pages/main/main';
 
-export default function App() {
-
+const App = () => {
   return (
-    <>
-      
-    </>
-  )
-}
+    <div>
+      <Main/> 
+    </div>
+  );
+};
+
+export default App;
