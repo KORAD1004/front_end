@@ -1,0 +1,84 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/images/radiation/radBackground.svg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.headerWrapper {
+    width: 95%;
+}
+
+.header h1{
+    font-family: 'Pretendard-bold';
+    color: white;
+    font-size: 20px;
+}
+
+.header {
+    margin-top: 113px;
+}
+
+.menu {
+    margin-top: 31px;
+    display: flex;
+    width: 100%;
+    height: 39px;
+    justify-content: space-between;
+    margin-bottom: 11px;
+}
+
+.menuName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    border-radius: 10px;
+    background-color: white;
+    height: 100%;
+}
+
+.menuName span {
+    font-family: 'Pretendard-medium';
+    font-size: 12px;
+}
+
+.toggle {
+    width: 12%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 13px;
+}
+
+.description span {
+    color: white;
+    font-size: 8.69px;
+    font-family: 'Pretendard';
+}
+
+.description span:last-child {
+    font-weight: 600;
+    font-family: 'Pretendard-semiBold';
+}
+
+.map {
+    width: 95%;
+    height: 450px;
+}
+
+.map div {
+    border-radius: 15px;
+}
