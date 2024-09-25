@@ -2,27 +2,27 @@ import { useState } from "react";
 import { useEffect } from "react";
 import data from '../../assets/data/map.json';
 import styles from '../../styles/radiation/radiation.module.css';
+import gongdan from '../../assets/images/radiation/gongdan.svg';
 
 export default function RadiationMap() {
     const [area, setArea] = useState([]);
+    const radiation = [0.15, 0.13, 0.23, 0.24, 0.35, 0, 34, 0.57, 0.06];
   
     useEffect(() => {
         // Kakao Maps API 로드 확인
         if (!window.kakao || !window.kakao.maps) {
-            alert("Kakao maps API is not loaded");
-            return;
+          alert("Kakao maps API is not loaded");
+          return;
         }
-
-        // GeoJSON 데이터 가져오기
-        // axios
-        //   .get(
-        //     "https://raw.githubusercontent.com/southkorea/seoul-maps/master/kostat/2013/json/seoul_municipalities_geo_simple.json"
-        //   )
-        //   .then((res) => {
-        //     setArea(res.data.features);
-        //   });
-        setArea(data.features);
-    }, []);
+    
+        // JSON 데이터로 area 설정
+        const initialArea = data.features.map((item, index) => ({
+          ...item,
+          radiation: radiation[index] || 0, // 방사선 값 추가
+        }));
+    
+        setArea(initialArea); // 초기화한 area를 설정
+      }, []);
 
     useEffect(() => {
         // Kakao Maps가 로드되었는지 확인
@@ -38,6 +38,13 @@ export default function RadiationMap() {
         };
 
         const map = new kakao.maps.Map(container, options);
+
+        const markerPosition = new kakao.maps.LatLng(35.8388735, 129.196647);
+        const marker = new kakao.maps.Marker({
+            position: markerPosition,
+        });
+
+        marker.setMap(map);
 
         // 방사선 수치에 따른 색상 설정 함수
         const getColorByRadiation = (level) => {
@@ -68,7 +75,7 @@ export default function RadiationMap() {
                             strokeColor: "#004c80",
                             strokeOpacity: 0.8,
                             fillColor: getColorByRadiation(area.radiation),
-                            fillOpacity: 0.1,
+                            fillOpacity: 0.3,
                         });
             
                         // 마우스 이벤트 설정
@@ -88,7 +95,14 @@ export default function RadiationMap() {
 
     return (
         <div className={styles.map}>
-            <div id="map" style={{ width: "100%", height: "100%" }}/>;
+            <div id="map" style={{ width: "100%", height: "100%" }}>
+                <div className={styles.notice}>
+                    <div className={styles.pictogram}>
+                        <img src={gongdan}/>
+                        <span>경주 방폐물처리장</span>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
