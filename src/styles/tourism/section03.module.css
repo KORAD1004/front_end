@@ -1,0 +1,84 @@
+.allContainer {
+    width: 100vw;
+    height: 780px;
+    overflow: hidden;
+    position: relative; 
+}
+
+.mainTextContainer {
+    margin-left: 8%;
+    margin-top: -10%;
+}
+
+.mainText {
+    font-family: 'Pretendard-extraBold';
+    font-size: 25.76px;
+    text-align: left;
+}
+
+.mainSmallText {
+    font-family: 'Pretendard-bold';
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-top: 20%;
+}
+
+.clipContainer {
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    justify-content: center; 
+    margin-top: 8%;
+    margin-bottom: 20%;
+}
+
+.clip {
+    width: 344px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #c4c4c4;
+    margin: 0.5%;
+    overflow: hidden; 
+    display: flex; 
+    align-items: center;         
+    justify-content: space-around;
+}
+.clipTextContainer {
+    display: flex; 
+    align-items: center;         
+    justify-content: center; 
+}
+
+.clipText {
+    font-family: 'Pretendard-bold';
+    font-size: 10.9px;
+    white-space: nowrap; /* 텍스트가 한 줄을 넘지 않도록 설정 */
+    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis; /* 넘칠 경우 말줄임표(...) 표시 */
+}
+
+.clipTextClick {
+    font-family: 'Pretendard-bold';
+    font-size: 10.9px;
+}
+
+.clipBox {
+    font-family: 'Pretendard';
+    width: 54.48px;
+    height: 21.19px;
+    background-color: #77B353;
+    color: #ffffff;
+    font-size: 10.09px;
+    display: flex;                  
+    align-items: center;         
+    justify-content: center;
+}
+
+.clipBoxContainer {
+    display: flex;
+    align-items: center;         
+    justify-content: left; 
+}
