@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import mainback from '../../assets/images/main/mainback.svg'; 
 import mainname from '../../assets/images/main/mainname.svg';
 import toptext from '../../assets/images/main/top_text.svg';
+import animatedBackground from '../../assets/images/main/animated-background.gif';
 import MenuBar from '../../components/main/menubar';
 import text from '../../assets/images/main/text.svg';
 import example1 from '../../assets/images/main/example1.svg';
@@ -9,7 +10,9 @@ import example2 from '../../assets/images/main/example2.svg';
 import example3 from '../../assets/images/main/example3.svg';
 import safety from '../../assets/images/main/safety.svg';
 import themestory from '../../assets/images/main/Theme Story.svg';
+import theme from '../../assets/images/main/theme.svg';
 import Map from '../../components/main/map';
+import SearchBar from '../../components/main/searchbar';
 import information from '../../assets/images/main/information.svg';
 import styles from '../../styles/main/main.module.css'; 
 
@@ -32,6 +35,7 @@ function App() {
     <div className={styles["app-container"]}> 
       <div className={styles["top-container"]}> 
         <img src={mainback} className={styles["mainback"]} alt="main page picture" />
+        <img src={animatedBackground} className={styles["animated-background"]} alt="animated background" />
         <div className={styles["image-overlay"]}>
           <img src={mainname} className={styles["mainname"]} alt="main name" />
           <img src={toptext} className={styles["toptext"]} alt="top text" />
@@ -77,6 +81,7 @@ function App() {
         <img src={safety} className={styles["safety"]} alt="safety" />
 
     <div className={styles['middle-container']}>
+    <img src={theme} className={styles["theme"]} alt="theme" />
         <img src={themestory} className={styles["themestory"]} alt="theme story" />
         <div className={styles['hashtag']}>
         <div className={styles['hashtag-row']}>
@@ -98,17 +103,44 @@ function App() {
             안전관리 역량의 기틀이 단단한 경주를 넓은 시야로 바라볼 수 있는 우리로 성장할 수 있게 둘러보아요.
         </p>
         <Map />
+        <SearchBar />
     </div>
 
     <div className={styles["information-container"]}> 
-    <img src={information} className={styles["information"]} alt="Information" />
+  <img src={information} className={styles["information"]} alt="Information" />
+  
+  <div className={styles["notice-container"]}>
+    <div className={styles["notice-item"]}>
+      <div className={styles["notice-title-box"]}>공지사항</div>
+        <p className={styles["notice-title"]}>
+          비상진료에 따른 병·의원 이용안내
+        </p>
+        <p className={styles["notice-content"]}>
+        응급의료포털 (https://www.e-gen.or.kr/)
+        </p>
     </div>
+    
+    <div className={styles["notice-divider"]}></div> 
+    
+    <div className={styles["notice-item"]}>
+      <div className={styles["notice-title-box"]}>공지사항</div>
+      <p className={styles["notice-title"]}>
+          비상진료에 따른 병·의원 이용안내
+        </p>
+        <p className={styles["notice-content"]}>
+        응급의료포털 (https://www.e-gen.or.kr/)
+        </p>
+    </div>
+  </div>
+</div>
+
+
 
       <div className={styles["bottom-box"]}>
         <p className={styles["bottom-comment1"]}>
           방폐장 부지 선정 논의 후, 29년 만에 세계적인 수준으로 준공된
         </p>
-        <p className={styles["bottom-comment1"]}>
+        <p className={styles["bottom-comment2"]}>
           경주 방폐물 처리장을 보다 쉽고, 투명하게 전달하고자 노력하겠습니다.
         </p>
         <p className={styles["bottom-comment3"]}>

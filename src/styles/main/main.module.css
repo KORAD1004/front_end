@@ -6,17 +6,19 @@ body, html, #root {
 
 .app-container {
   width: 100%;
-  height: 300px; 
+  height: auto; 
   overflow: visible; 
   display: flex; 
   flex-direction: column; 
   align-items: center; 
+  padding-top: 1300px; 
 }
 
 .top-container {
   position: relative; 
   width: 100%;
-  /* background-image: url('../../assets/images/main/mainback.svg');  */
+  height: 400px; 
+  background-image: url('../../assets/images/main/mainback.svg'); 
   background-size: cover; 
   background-position: center; 
   display: flex;
@@ -25,6 +27,20 @@ body, html, #root {
   align-items: center; 
 }
   
+
+.animated-background {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  opacity: 0.3; 
+}
+
+
+
 .mainname {
   position: absolute;
   top: 40%; 
@@ -63,11 +79,12 @@ body, html, #root {
 
 
   .separator-line {
+    width: 100%;
     border: none; 
     border-top: 1px solid #ccc; 
     margin: 20px auto;
     padding: 5px 0;
-    margin-top: 5px;
+    margin-top: 5px
   }
 
 
@@ -82,7 +99,7 @@ body, html, #root {
     align-items: center; 
     position: relative;
     width: 100%; 
-    max-width: 800px; 
+    max-width: 900px; 
     margin: 10px auto;
     padding: 5px 0; 
     background-color: #fff; 
@@ -120,7 +137,7 @@ body, html, #root {
     display: flex;
     align-items: center;
   }
-  
+
   .dot {
     width: 10px; 
     height: 10px;
@@ -161,17 +178,22 @@ body, html, #root {
     opacity: 1; 
   }
 
+
+  .middle-container {
+    width: 100%;
+    text-align: center;
+    margin-top: -150px;
+  }
+
+  .middle-comment1{
+    font-family: Pretendard;
+    font-size: 6px;
+  }
   .safety{
     width: 100%;
     margin-top: 60px;
   }
 
-
-  .middle-container {
-    text-align: center;
-    margin-top: 100px;
-  }
-  
   .hashtag {
     display: flex;
     flex-direction: column; 
@@ -196,21 +218,29 @@ body, html, #root {
     white-space: nowrap;
   }
 
-
-  .themestory{
-    width: 80%;
+  .themestory {
+    width: 60%;
+    margin-bottom: 30px;
+    left: 10px;
   }
-
+  
+  .theme {
+    position: relative; 
+    z-index: -1; /* themestory 뒤로 배치 */
+    top: 150px;
+  }
+  
 .map-container {
   display: flex;
   flex-direction: column;
   align-items: center; 
   justify-content: center;
-  margin: 60px 0; 
+  margin: 100px 0; 
 }
 
 .map-comment {
-  font-size: 12px;
+  font-family: Pretendard;
+  font-size: 8px;
   margin-bottom: 10px; 
   text-align: center;
 }
@@ -222,12 +252,114 @@ body, html, #root {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  width: 250px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.search-button {
+  background-color: #79BD4E;
+  color: white;
+  width: 75px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+}
+
+.notice-container {
+  position: relative;
+  width: 100%; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: flex-start; 
+  margin-top: 1px;
+}
+
+.notice-item {
+  width: 45%; 
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.notice-title-box {
+  width: 40px; 
+  height: 20px; 
+  background-color: #79BD4E; 
+  color: white; 
+  font-weight: bold;
+  margin-top: 15px; 
+  margin-left: 10%;
+  font-size: 8px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.notice-title {
+  margin-left: 10%;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.notice-content {
+  margin-left: 10%;
+  font-size: 7px;
+}
+
+.notice_item{
+  width: 50%;
+}
+.notice-divider {
+  position: absolute;
+  top: 10%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 1px;
+  height: 71px;
+  background-color: #e0e0e0;
+}
+
+.bottom-comment1{
+font-size: 8px;
+font-weight: bold;
+}
   
-  
+.bottom-comment2{
+  font-size: 8px;
+}
+
+.bottom-comment3{
+  top: 50%;
+  left: 50%; 
+  transform: translateX(-50%,-50%); 
+  font-size: 8px;
+}
   .bottom-box {
+    width: 100%;
     bottom: 0%;
     padding: 20px;
-    margin: 0; 
+    margin-top: 30px; 
     background-color: #D9D9D9; 
   }
 
