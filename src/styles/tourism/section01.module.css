@@ -9,12 +9,27 @@
   width: 100vw;
   height: 60vh; 
   overflow: hidden;
+  position: relative;
+}
+
+.imageContainerGif {
+  width: 80%;
+  position: absolute; /* 위치를 절대값으로 변경해 좀 더 정확하게 제어 */
+  top: 0; /* 위쪽에 맞춤 */
+  left: 50%; /* 수평 가운데 정렬 */
+  transform: translateX(-50%); /* 가운데로 정렬 */
+  z-index: 1; /* 배경 이미지 위에 표시되도록 설정 */
+}
+
+.imageGif {
+  width: 100%;
+  height: auto;
 }
 
 .image {
   width: 100%; 
   height: auto; 
-  position: relative; 
+  position: relative;
   top: 0; 
   left: 0;
   z-index: 0;
@@ -25,7 +40,7 @@
   top: 15%; 
   left: 50%; 
   transform: translateX(-50%);
-  z-index: 1; 
+  z-index: 2; 
 }
 
 .tilteImage {

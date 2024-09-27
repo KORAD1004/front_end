@@ -7,7 +7,8 @@
 
 .mainTextContainer {
     margin-left: 8%;
-    margin-top: -10%;
+   
+    z-index: 1;
 }
 
 .mainText {
@@ -32,6 +33,7 @@
     justify-content: center; 
     margin-top: 8%;
     margin-bottom: 20%;
+    z-index: 1;
 }
 
 .clip {
@@ -45,6 +47,7 @@
     display: flex; 
     align-items: center;         
     justify-content: space-around;
+    z-index: 0;
 }
 .clipTextContainer {
     display: flex; 
@@ -81,4 +84,19 @@
     display: flex;
     align-items: center;         
     justify-content: left; 
+}
+
+.imgContainer {
+    position: absolute;
+    right: 0; 
+    z-index: 0;
+    margin-top: -12%;
+    overflow: hidden;
+}
+
+.bottomImg {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    margin-left: 30%;
 }

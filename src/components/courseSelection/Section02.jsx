@@ -1,6 +1,5 @@
 import React from "react";
 import styles from '../../styles/courseSelection/section02.module.css';
-import map from '../../assets/images/courseSelection/지도예시.png';
 import CourseMap from "./CourseMap";
 
 const Section02 = () => {
