@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import mainback from '../../assets/images/main/mainback.svg'; 
 import mainname from '../../assets/images/main/mainname.svg';
 import toptext from '../../assets/images/main/top_text.svg';
-import animatedBackground from '../../assets/images/main/animated-background.gif';
 import MenuBar from '../../components/main/menubar';
 import text from '../../assets/images/main/text.svg';
 import example1 from '../../assets/images/main/example1.svg';
@@ -34,8 +33,6 @@ function App() {
   return (
     <div className={styles["app-container"]}> 
       <div className={styles["top-container"]}> 
-        <img src={mainback} className={styles["mainback"]} alt="main page picture" />
-        <img src={animatedBackground} className={styles["animated-background"]} alt="animated background" />
         <div className={styles["image-overlay"]}>
           <img src={mainname} className={styles["mainname"]} alt="main name" />
           <img src={toptext} className={styles["toptext"]} alt="top text" />
