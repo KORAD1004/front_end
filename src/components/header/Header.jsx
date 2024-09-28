@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   const handleHomeClick = () => {
-    navigate('/'); // 홈으로 이동
+    navigate('/CourseHome'); // 홈으로 이동
   };
 
   const toggleMenu = () => {

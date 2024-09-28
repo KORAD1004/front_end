@@ -37,11 +37,18 @@
     font-family: 'Pretendard-semiBold';
     margin: 1%;
     white-space: nowrap;
+    transition: background 0.3s ease, color 0.3 ease;
+  }
+  
+.miniButton:hover {
+    background: linear-gradient(90deg, #5e8447, #7eb65c);
+    color: white;
 }
 
-.miniButton:active {
+.miniButton:focus {
     background: linear-gradient(90deg, #5e8447, #7eb65c);
-  }
+    color: white;
+}
 
 .miniButtonAllContainer {
     margin: 4%;

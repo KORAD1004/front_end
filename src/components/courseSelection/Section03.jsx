@@ -31,24 +31,27 @@ const Section03 = () => {
                 </div>
             </div>
             <div className={styles.courseContainer}>
-                <div className={styles.courseBox}>
-                    <div className={styles.courseTextContainer}>
-                        <p className={styles.courseText}>📍경주 국립박물관</p>
-                    </div>
-                    <div className={styles.courseTextContainer}>
-                        <p className={styles.courseText}>⟶</p>
-                    </div>
-                    <div className={styles.courseTextContainer}>
-                        <p className={styles.courseText}>📍경주 국립박물관</p>
-                    </div>
-                    <div className={styles.courseTextContainer}>
-                        <p className={styles.courseText}>⟶</p>
-                    </div>
-                    <div className={styles.courseTextContainer}>
-                        <p className={styles.courseText}>📍경주 국립박물관</p>
-                    </div>
+                <div className={styles.card}>
+                    <div className={styles.museumName}>경주 국립박물관</div>
+                    <hr className={styles.underline} />
+                    <div className={styles.museumAddress}>경북 경주시 일정로 186</div>
+                </div>
+                <div className={styles.card}>
+                    <div className={styles.museumName}>경주 국립박물관</div>
+                    <hr className={styles.underline} />
+                    <div className={styles.museumAddress}>경북 경주시 일정로 186</div>
+                </div>
+                <div className={styles.card}>
+                    <div className={styles.museumName}>경주 국립박물관</div>
+                    <hr className={styles.underline} />
+                    <div className={styles.museumAddress}>경북 경주시 일정로 186</div>
                 </div>
             </div>
+            <div className={styles.buttonContainer}>
+                    <button className={styles.customButton}>홈페이지 바로가기</button>
+                    <button className={styles.customButton}>홈페이지 바로가기</button>
+                    <button className={styles.customButton}>홈페이지 바로가기</button>
+                </div>
         </div>
     );
 };
