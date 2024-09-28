@@ -1,0 +1,8 @@
+.map {
+    width: 100%;
+    height: 233px;
+}
+
+.map div {
+    border-radius: 10px;
+}
