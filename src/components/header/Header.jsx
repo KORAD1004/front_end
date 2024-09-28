@@ -10,17 +10,17 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleBackClick = () => {
-    navigate(-1); // 뒤로가기
+    navigate(-1);
   };
 
   const handleHomeClick = () => {
-    navigate('/CourseHome'); // 홈으로 이동
+    navigate('/CourseHome');
   };
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(prevState => !prevState);
   };
-
+ 
   return (
     <header className={styles.header}>
       <div className={styles.IconsContainer}>
@@ -47,15 +47,14 @@ const Header = () => {
           />
         </div>
       </div>
-      {menuOpen && (
-        <div className={styles.menu}>
+        <div className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
           <ul>
-            <li>Menu 1</li>
-            <li>Menu 2</li>
-            <li>Menu 3</li>
+            <li>방폐물이란?</li>
+            <li>원자력안전도</li>
+            <li>경주관광지</li>
+            <li>나의여행일정</li>
           </ul>
         </div>
-      )}
     </header>
   );
 };
