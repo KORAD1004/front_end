@@ -1,10 +1,12 @@
-import './App.css'
+import Main from './pages/main/main';
+import Introduction from './pages/introduction/introduction'
 
-export default function App() {
-
+const App = () => {
   return (
-    <>
-      
-    </>
-  )
-}
+    <div>
+      <Introduction/> 
+    </div>
+  );
+};
+
+export default App;
