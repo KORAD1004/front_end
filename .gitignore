@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-# hide api key
-index.html
-
 # Environment files
 .env
 
