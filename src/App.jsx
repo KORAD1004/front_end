@@ -4,7 +4,7 @@ import Introduction from './pages/introduction/introduction'
 const App = () => {
   return (
     <div>
-      <Introduction/> 
+      <Main/> 
     </div>
   );
 };
