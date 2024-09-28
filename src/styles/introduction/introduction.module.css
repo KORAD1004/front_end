@@ -1,9 +1,18 @@
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 가로 스크롤 숨김 */
+  }
   .app-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh; 
+    overflow: visible;
+    padding-top: 540%;
   }
 
   .top-container{
@@ -41,3 +50,108 @@
   .negativec{
     margin-top: 5%;
   }
+
+  .image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+   
+.image-gallery {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 10px;
+    overflow-x: auto; 
+    scroll-behavior: smooth;     
+    flex-grow: 1; 
+    max-width: none; 
+    width: 100%;
+}
+  
+  .gallery-image {
+    width: 210px;
+    height: 130px;
+    margin: 0 5px; 
+    cursor: pointer;
+    opacity: 0.6; 
+    transition: opacity 0.3s ease;
+    scroll-margin: 50%; 
+}
+
+  
+  .gallery-image.active {
+    opacity: 1; 
+  }
+
+  .eight{
+    z-index: 1;
+    margin-top: -5%;
+  }
+
+  .change{
+    margin-top: 10%;
+  }
+
+  .aim-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .aim{
+    margin-top: 5%;
+  }
+
+  .tower-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 15%;
+  }
+
+.promise{
+    margin-top: 10%;
+}
+.but{
+    margin-top: 3%;
+}
+
+.f-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 8%;
+  }
+
+  .fcomment{
+    margin-top: 10%;
+  }
+
+  .bottom-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+
+  .end{
+    z-index: -1;
+    margin-top: -15%;
+  }
+
+  .app-container, .image-container, .aim-container, .tower-container, .f-container, .bottom-container {
+    max-width: 100%;
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+  }
+  
