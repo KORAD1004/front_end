@@ -16,10 +16,10 @@ export default function Radiation() {
                     <div className={styles.description}>
                         <div>
                             <span>최근 3년간의 평균 방사선량 기준으로 </span>
-                            <span>+0.0973 미만은 정상, +0.0973 이상은 주의, 0.973이상은 경고,</span>
+                            <span>+0.0973 미만은 정상, +0.0973 이상은 주의, +0.973 이상은 경고,</span>
                         </div>
                         <div>
-                            <span>평균 973 이상은 비상</span>
+                            <span>+973 이상은 비상</span>
                             <span>의 네 단계가 한국원자력안전기술원에서 제공하는 기준입니다.</span>
                         </div> 
                     </div>

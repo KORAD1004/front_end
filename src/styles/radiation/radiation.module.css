@@ -7,6 +7,7 @@
     background-image: url('../../assets/images/radiation/radBackground.svg');
     background-repeat: no-repeat;
     background-size: 100vw;
+    overflow: hidden;
 }
 
 .headerWrapper {
@@ -133,8 +134,10 @@
 }
 
 .map {
+    position: relative;
     width: 95%;
-    height: 570px;
+    height: 67%;
+    margin-bottom: -200px;
 }
 
 .map div {
@@ -143,24 +146,86 @@
 
 .notice {
     position: relative;
-    z-index: 100;
+    z-index: 10;
     display: flex;
-    justify-content: end;
-    margin: 15px 5%;
+    align-items: end;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 15px 5%;
 }
 
 .pictogram {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     border-radius: 17px;
-    width: 40%;
+    width: 130px;
     height: 30px;
     box-shadow: 0 0 3.42px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
 }
 
-.pictogram span {
+.pictogram span, .clickPictogram span {
     font-size: 11px;
     font-family: 'Pretendard-bold';
+}
+
+.clickPictogram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    width: 130px;
+    height: 30px;
+    background-color: #ECECEC;
+    box-shadow: inset 0 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.customOverlay {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.5px solid #FF7676;
+    pointer-events: none;
+}
+
+.customOverlay::before {
+    content: "";
+    display: inline-block;
+    clear: both;
+    border: 8px solid transparent;
+    border-bottom-color: white;
+    position:absolute;
+    right: 50%;
+    top: -15px;
+    transform: translateX(50%);
+    pointer-events: none;
+}
+
+.infoLine {
+    margin: 5px auto;
+    height: 0.63px;
+    border: 0.63px solid #FF7676;
+    width: 90%;
+}
+
+.customOverlay span:first-child {
+    font-size: 11.25px;
+    font-family: 'Pretendard-bold';
+}
+
+.customOverlay span:last-child {
+    font-size: 10px;
+    font-family: 'Pretendard-medium';
+}
+
+.gongdan {
+    pointer-events: none;
+    position: relative;
+    z-index: 10;
+    top: -65%;
+    left: 20%;
 }
