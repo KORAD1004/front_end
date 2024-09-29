@@ -5,10 +5,12 @@ import Radiation from './pages/radiation/Radiation.jsx';
 import TourismHome from './pages/tourism/Home.jsx';
 import Introduction from './pages/introduction/introduction.jsx';
 import CourseHome from './pages/courseSelection/CourseHome.jsx';
+import Header from './components/header/Header.jsx';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/radiation' element={<Radiation/>}/>
