@@ -1,13 +1,9 @@
-import Main from './pages/main/main';
-import Introduction from './pages/introduction/introduction'
+import './App.css';
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <Main/> 
-    </div>
-  );
-};
-
-export default App;
+    <>
+    </>
+  )
+}
 
