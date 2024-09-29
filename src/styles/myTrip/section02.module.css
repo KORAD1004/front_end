@@ -1,0 +1,22 @@
+.allContainer {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    position: relative; 
+}
+
+.textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5%;
+}
+
+.mapText {
+    font-family: 'Pretendard-bold';
+    font-size: 12.73px;
+}
+
+.mapContainer {
+    
+}

@@ -1,0 +1,89 @@
+.allContainer {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    position: relative; 
+}
+
+.imgContainer {
+    width: 100%;
+    height: 154px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100vw; 
+    height: auto; 
+    z-index: 0;
+}
+
+.tripBigContainer {
+    height: auto;
+    padding: 5%;
+}
+
+.tripTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+
+.tripMiniTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 4%;
+    margin-right: 3%;
+}
+
+.tripMiniText {
+    font-family: 'Pretendard';
+    font-size: 8px;
+    color: #404040;
+}
+
+.tripMiniText2 {
+    font-family: 'Pretendard';
+    font-size: 8px;
+    color: #404040;
+    margin-right: 27%;
+}
+
+.tripText {
+    font-family: 'Pretendard-bold';
+    font-size: 12.73px;
+    margin-right: 2%;
+}
+
+.longInputBox {
+    width: 45%;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    margin-right: 5%;
+}
+
+.longInputBox2 {
+    width: 45%;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    margin-right: 2%;
+}
+
+.longInputBox3 {
+    width: 45%;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    margin-left: 13.5%;
+    margin-top: -3%;
+}
+
+.shortInputBox {
+    width: 20%;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+}
