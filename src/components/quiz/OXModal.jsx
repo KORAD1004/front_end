@@ -21,7 +21,6 @@ const OXModal = ({ isOpen, onRequestClose, oxImage, ox, question, onCourse }) =>
         <div className={styles.titleSecond}>
             AI 맞춤 추천 코스 확인하자!
         </div>
-        <button className={styles.closeButton} onClick={onRequestClose}>×</button>
       </div>
 
       <div className={styles.modalBody}>
