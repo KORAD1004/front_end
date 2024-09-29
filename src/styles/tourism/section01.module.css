@@ -1,0 +1,78 @@
+.allContainer {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  position: relative; 
+}
+
+.imageContainer {
+  width: 100vw;
+  height: 60vh; 
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  width: 100%; 
+  height: auto; 
+  position: relative;
+  top: 0; 
+  left: 0;
+  z-index: 0;
+}
+
+.tilteImageContainer {
+  position: absolute;
+  top: 15%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 2; 
+}
+
+.tilteImage {
+  width: 123.66px;
+  height: 116.57px;
+}
+
+.mainTextContainer {
+  margin-left: 8%;
+}
+
+.mainText {
+  font-family: 'Pretendard-extraBold';
+  font-size: 25.76px;
+  text-align: left;
+}
+
+.mainSmallText{
+  font-family: 'Pretendard-bold';
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.courseButton {
+  width: 91.17px;
+  height: 29.23px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  font-size: 10.44px;
+  font-family: 'Pretendard-semiBold';
+}
+
+.courseButtonContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.courseImage {
+  margin-top: 5%;
+}
