@@ -1,20 +1,13 @@
 import React from "react";
 import styles from '../../styles/tourism/section01.module.css';
-import background from '../../assets/images/tourism/Tourism_background.svg';
+import background from '../../assets/images/tourism/Tourism_background.gif';
 import course1 from '../../assets/images/tourism/코스예시.png';
 import title from '../../assets/images/tourism/Tourism_Title.png';
-import background2 from '../../assets/images/tourism/background2.gif';
+
 const Section01 = () => {
     return (
         <div className={styles.allContainer}>
             <div className={styles.imageContainer}>
-                <div className={styles.imageContainerGif}>
-                    <img 
-                        src={background2}
-                        alt="Tourism Background2"
-                        className={styles.imageGif} 
-                    />
-                </div>
                 <img 
                     src={background}
                     alt="Tourism Background" 
