@@ -1,4 +1,4 @@
-import './App.css';
+import './app.css';
 
 export default function App() {
   return (
@@ -6,4 +6,3 @@ export default function App() {
     </>
   )
 }
-

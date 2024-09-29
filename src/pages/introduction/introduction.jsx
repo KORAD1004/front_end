@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'; // useState와 useRef를 함께 임포트
+import { useState, useRef } from 'react'; // useState와 useRef를 함께 임포트
 import radiation from '../../assets/images/introduction/radiation.svg';
 import topcomment from '../../assets/images/introduction/top-comment.svg';
 import negative from '../../assets/images/introduction/negative.svg';
