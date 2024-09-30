@@ -124,6 +124,7 @@ export default function RadiationMap() {
             level: 13, // 지도의 확대 레벨
             scrollwheel: false, // 마우스 휠 확대/축소 비활성화
             disableDoubleClickZoom: true, // 더블 클릭 확대/축소 비활성화
+            draggable: false
         };
 
         const newMap = new kakao.maps.Map(container, options);
