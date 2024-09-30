@@ -1,150 +1,231 @@
-  .app-container {
+.app-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-items: flex-start;
     width: 100vw;
-    height: auto;
-    min-height: 100vh; 
+    height: 100%;
     overflow: visible;
   }
 
   .top-container{
     width: 100%;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../../assets/images/introduction/top-back.svg'); 
-    background-size: cover; 
-    background-position: center; 
+    position: relative;
   }
 
-  .radiation{
+  .topback{
     width: 100%;
-    margin-top: 90%;
   }
 
-  .top-comment{
+  .top-comment1{
+    position: absolute;
+    top:40%;
+    font-family: 'Pretendard-Bold';
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  .top-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
-    font-family: Pretendard;
-    font-size: 10px;
-    margin-top: 3%;
-  }
-
-  .ne-container{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80%;
-  }
-
-  .negativec{
-    margin-top: 5%;
-  }
-
-  .image-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-   
-.image-gallery {
-    display: flex;
-    justify-content: flex-start; 
-    margin-top: 10px;
-    overflow-x: auto; 
-    scroll-behavior: smooth;     
-    flex-grow: 1; 
-    max-width: none; 
-    width: 100%;
-}
-  
-  .gallery-image {
-    width: 210px;
-    height: 130px;
-    margin: 0 5px; 
-    cursor: pointer;
-    opacity: 0.6; 
-    transition: opacity 0.3s ease;
-    scroll-margin: 50%; 
-}
-
-  
-  .gallery-image.active {
-    opacity: 1; 
-  }
-
-  .eight{
+    height: 40%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    background-color: #ffffff;
+    color: #ffffff;
     z-index: 1;
-    margin-top: -5%;
+    bottom: 0%;
+  }
+  
+.topboxback{
+  position: absolute;
+  bottom: 10%;
   }
 
-  .change{
-    margin-top: 10%;
+  .top-comment2{
+    margin-top: 75%;
+    position: absolute;
+    font-family: 'Pretendard';
+    font-size: 13px;
   }
 
-  .aim-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
+  .highlight1 {
+    font-family: 'Pretendard-bold';
   }
+  
+.rad-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 15%;
+}
 
-  .aim{
-    margin-top: 5%;
-  }
+.rad{
+  width: 100%;
+}
 
-  .tower-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin-top: 15%;
-  }
+.rad-comment{
+  width: 100%;
+  margin-top: 3%;
+  font-family: 'Pretendard';
+  font-size: 11px;
+}
+
+.highlight2 {
+  font-family: 'Pretendard-bold';
+}
+
+
+.ne-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.ne-comment{
+  margin-top: 3%;
+  font-family: 'Pretendard';
+  font-size: 11px;
+}
+
+.image-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+ 
+.image-gallery {
+  display: flex;
+  justify-content: flex-start; 
+  margin-top: 10%;
+  overflow-x: auto; 
+  scroll-behavior: smooth;     
+  max-width: none; 
+  width: 100%;
+  height: auto;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  margin: 0 3%; 
+  cursor: pointer;
+  opacity: 0.6; 
+  transition: opacity 0.3s ease;
+}
+
+
+.gallery-image.active {
+  opacity: 1; 
+}
+
+.eightcomment{
+  margin-top: 3%;
+  font-family: 'Pretendard';
+  font-size: 11px;
+
+}
+
+.care-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  padding-bottom: 10%;
+}
+
+.care{
+  left: 10%;
+  margin-top: 10%;
+  width: 90%;
+  height: 10%;
+}
+
+.carecomment{
+  font-family: 'Pretendard';
+  font-size: 10px;
+}
+
+.highlight3 {
+  font-family: 'Pretendard-bold';
+}
+
+.tower-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.towercomment{
+  margin-top: 3%;
+  font-family: 'Pretendard';
+  font-size: 10px;
+}
 
 .promise{
-    margin-top: 10%;
-}
-.but{
-    margin-top: 3%;
+  margin-top: 5%;
 }
 
-.f-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin-top: 8%;
-  }
+.promisecomment{
+  font-family: 'Pretendard';
+  font-size: 10px;
+}
 
-  .fcomment{
-    margin-top: 10%;
-  }
+.i-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+}
 
-  .bottom-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin-top: 10%;
-    margin-bottom: 20%;
-  }
+.icomment{
+  margin-top: 3%;
+  font-family: 'Pretendard';
+  font-size: 11px;
+}
 
-  .end{
-    z-index: -1;
-    margin-top: -15%;
-  }
+.graph{
+  margin-top: 10%;
+}
 
-  .app-container, .image-container, .aim-container, .tower-container, .f-container, .bottom-container {
-    max-width: 100%;
-    box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
-  }
-  
+.gcomment{
+  margin-top: 10%;
+  font-family: 'Pretendard';
+  font-size: 12px;
+}
+
+.gback{
+  width: 100%;
+}
+
+.bcomment{
+  margin-top: 10%;
+  font-family: 'Pretendard';
+  font-size: 10px;
+}
+
+.bcomment2{
+  margin-top: 10%;
+  font-family: 'Pretendard';
+  font-size: 10px;
+  margin-bottom: 10%;
+}
