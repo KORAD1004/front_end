@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   const handleHomeClick = () => {
-    navigate('/CourseHome');
+    navigate('/');
   };
 
   const toggleMenu = () => {
@@ -54,10 +54,10 @@ const Header = () => {
       </div>
         <div className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
           <ul>
-            <li>방폐물이란?</li>
-            <li>원자력안전도</li>
-            <li>경주관광지</li>
-            <li>나의여행일정</li>
+            <li onClick={()=>navigate('/#')}>방폐물이란?</li>
+            <li onClick={()=>navigate('/radiation')}>원자력안전도</li>
+            <li onClick={()=>navigate('/tourism')}>경주관광지</li>
+            <li onClick={()=>navigate('/#')}>나의여행일정</li>
           </ul>
         </div>
     </header>
