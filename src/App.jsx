@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './app.css';
+import './App.css';
 import Main from './pages/main/main.jsx';
 import Radiation from './pages/radiation/Radiation.jsx';
 import TourismHome from './pages/tourism/Home.jsx';
