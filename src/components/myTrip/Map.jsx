@@ -98,7 +98,7 @@ const Map = () => {
   }, [keyword]);
 
   return (
-    <div className={styles.map_wrap} style={{ position: 'relative', width: '100%', height: '500px' }}>
+    <div className={styles.map_wrap} style={{ position: 'relative', width: '100%', height: '100%' }}>
       <div ref={mapRef} style={{ width: '100%', height: '100%' }}></div>
       <div id="menu_wrap" className={styles.bg_white} style={{
         position: 'absolute', top: 0, left: 0, bottom: 0, width: '250px', margin: '10px 0 30px 10px', padding: '5px', overflowY: 'auto', background: 'rgba(255, 255, 255, 0.7)', zIndex: 1, fontSize: '12px', borderRadius: '10px'

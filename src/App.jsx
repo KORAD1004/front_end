@@ -11,7 +11,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MyTripCreate/>}/>
+        <Route path='/' element={<Main/>}/>
         <Route path='/radiation' element={<Radiation/>}/>
         <Route path='/tourism' element={<TourismHome/>}/>
         <Route path='/introduction' element={<Introduction/>}/>

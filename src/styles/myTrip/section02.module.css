@@ -12,11 +12,94 @@
     padding: 5%;
 }
 
+.textContainer2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .mapText {
-    font-family: 'Pretendard-bold';
+    font-family: 'Pretendard-extraBold';
     font-size: 12.73px;
 }
 
 .mapContainer {
-    
+    padding: 3%;
+    height: 193px;
 }
+
+.searchContainer {
+ padding: 5%;
+}
+
+.addScheduleButton {
+    width: 20%;
+    padding: 2%;
+    font-family: 'Pretendard-semiBold';
+    font-size: 7.68px;
+    border-radius: 10px;
+    border: 1px solid #c4c4c4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5% 0 5%;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+    width: 100%;
+  }
+  
+  .textBox {
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .arrowButton {
+    width: 39.79px;
+    height: 37.69px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .saveButton {
+    background-color: #77B353;
+    width: 65px;
+    height: 38.14px;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 3%;
+    font-family: 'Pretendard-bold';
+    font-size: 12.52px;
+  }
+  
+  .saveButton:hover {
+    background-color: #45a049;
+  }
+  
+  .memoContainer {
+    margin-top: 10px;
+  }
+  
+  .memoTextBox {
+    width: 250px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+
