@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: left;
     padding: 5%;
+    margin-top: -5%;
+    margin-bottom: -5%;
 }
 
 .textContainer2 {
