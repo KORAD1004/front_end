@@ -19,5 +19,6 @@ export default function App() {
         <Route path='/courseSelection' element={<CourseHome/>}/>
       </Routes>
     </BrowserRouter>
+
   )
 }
