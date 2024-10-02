@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'; // useNavigate 추가
 import mainback from '../../assets/images/main/mainback.svg'; 
 import mainname from '../../assets/images/main/mainname.svg';
 import toptext from '../../assets/images/main/top_text.svg';
@@ -16,122 +17,131 @@ import information from '../../assets/images/main/information.svg';
 import styles from '../../styles/main/main.module.css'; 
 
 const images = [
-    { id: 1, src: example1, alt: 'Image 1' },
-    { id: 2, src: example2, alt: 'Image 2' },
-    { id: 3, src: example3, alt: 'Image 3' },
+  { id: 1, src: example1, alt: 'Image 1' },
+  { id: 2, src: example2, alt: 'Image 2' },
+  { id: 3, src: example3, alt: 'Image 3' },
 ];
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const imageRefs = useRef([]); 
+  const imageRefs = useRef([]);
+  const galleryRef = useRef(null);
+  const navigate = useNavigate(); 
 
   const handleImageClick = (index) => {
     setCurrentIndex(index);
-    imageRefs.current[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    const clickedImage = imageRefs.current[index];
+    const galleryElement = galleryRef.current;
+
+    if (clickedImage && galleryElement) {
+      const offsetLeft = clickedImage.offsetLeft - galleryElement.offsetWidth / 2 + clickedImage.offsetWidth / 2;
+      galleryElement.scrollTo({
+        left: offsetLeft,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
-    <div className={styles["app-container"]}> 
-      <div className={styles["top-container"]}> 
+    <div className={styles["app-container"]}>
+      <div className={styles["top-container"]}>
         <div className={styles["image-overlay"]}>
           <img src={mainname} className={styles["mainname"]} alt="main name" />
           <img src={toptext} className={styles["toptext"]} alt="top text" />
-          <button className={styles['top-button']}>
+          <button className={styles['top-button']} onClick={() => navigate('/introduction')}>
             자세히 알아보기
           </button>
         </div>
       </div>
-<div>
-<MenuBar />
-<hr className={styles["separator-line"]} />
-</div>
 
+      <div className={styles["m-container"]}>
+        <MenuBar />
+        <hr className={styles["separator-line"]} />
+      </div>
+
+    <div className={styles["image-container"]}>
       <div className={styles["text-and-dots-container"]}>
         <img src={text} className={styles["text-image"]} alt="text" />
         <div className={styles["dot-indicator-container"]}>
           {images.map((_, index) => (
-            <div 
-              key={index} 
-              className={`${styles["dot"]} ${currentIndex === index ? styles["active"] : ''}`} 
+            <div
+              key={index}
+              className={`${styles["dot"]} ${currentIndex === index ? styles["active"] : ''}`}
               onClick={() => handleImageClick(index)}
             />
           ))}
         </div>
       </div>
 
-      <div className={styles["image-gallery"]}>
+      <div className={styles["image-gallery"]} ref={galleryRef}>
         {images.map((image, index) => (
-          <img 
-            key={image.id} 
-            ref={(el) => (imageRefs.current[index] = el)} 
-            src={image.src} 
-            alt={image.alt} 
+          <img
+            key={image.id}
+            ref={(el) => (imageRefs.current[index] = el)}
+            src={image.src}
+            alt={image.alt}
             className={`${styles["gallery-image"]} ${currentIndex === index ? styles["active"] : ''}`}
-            onClick={() => handleImageClick(index)} 
+            onClick={() => handleImageClick(index)}
           />
         ))}
       </div>
-
       <p className={styles["middle-comment1"]}>
-          *본 소개지는 '한국원자력환경공단' 인근 핫플레이스로, 사회적 갈등을 대화와 타협, 민주적 방식으로 극복해낸 역사적 모범사례로 대표합니다.
-        </p>
-        <img src={safety} className={styles["safety"]} alt="safety" />
-
-    <div className={styles['middle-container']}>
-    <img src={theme} className={styles["theme"]} alt="theme" />
-        <img src={themestory} className={styles["themestory"]} alt="theme story" />
-        <div className={styles['hashtag']}>
-        <div className={styles['hashtag-row']}>
-        <div className={styles['hashtag-box']}>#경주월드</div>
-        <div className={styles['hashtag-box']}>#불국사</div>
-        <div className={styles['hashtag-box']}>#첨성대</div>
-        </div>
-        <div className={styles['hashtag-row']}>
-        <div className={styles['hashtag-box']}>#석굴암</div>
-        <div className={styles['hashtag-box']}>#황리단길</div>
-         <div className={styles['hashtag-box']}>#천마총</div>
-         <div className={styles['hashtag-box']}>#동궁원</div>
-        </div>
-        </div>
+        *본 소개지는 '한국원자력환경공단' 인근 핫플레이스로, 사회적 갈등을 대화와 타협, 민주적 방식으로 극복해낸 역사적 모범사례로 대표합니다.
+      </p>
     </div>
 
-    <div className={styles["map-container"]}>
+
+      <div className={styles['middle-container']}>
+      <img src={safety} className={styles["safety"]} alt="safety" />
+        <img src={theme} className={styles["theme"]} alt="theme" />
+        <img src={themestory} className={styles["themestory"]} alt="theme story" />
+        <div className={styles['hashtag']}>
+          <div className={styles['hashtag-row']}>
+            <div className={styles['hashtag-box']}>#경주월드</div>
+            <div className={styles['hashtag-box']}>#불국사</div>
+            <div className={styles['hashtag-box']}>#첨성대</div>
+          </div>
+          <div className={styles['hashtag-row']}>
+            <div className={styles['hashtag-box']}>#석굴암</div>
+            <div className={styles['hashtag-box']}>#황리단길</div>
+            <div className={styles['hashtag-box']}>#천마총</div>
+            <div className={styles['hashtag-box']}>#동궁원</div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles["map-container"]}>
         <p className={styles["map-comment"]}>
-            안전관리 역량의 기틀이 단단한 경주를 넓은 시야로 바라볼 수 있는 우리로 성장할 수 있게 둘러보아요.
+          안전관리 역량의 기틀이 단단한 경주를 넓은 시야로 바라볼 수 있는 우리로 성장할 수 있게 둘러보아요.
         </p>
         <Map />
         <SearchBar />
-    </div>
+      </div>
 
-    <div className={styles["information-container"]}> 
-  <img src={information} className={styles["information"]} alt="Information" />
-  
-  <div className={styles["notice-container"]}>
-    <div className={styles["notice-item"]}>
-      <div className={styles["notice-title-box"]}>공지사항</div>
-        <p className={styles["notice-title"]}>
-          비상진료에 따른 병·의원 이용안내
-        </p>
-        <p className={styles["notice-content"]}>
-        응급의료포털 (https://www.e-gen.or.kr/)
-        </p>
-    </div>
-    
-    <div className={styles["notice-divider"]}></div> 
-    
-    <div className={styles["notice-item"]}>
-      <div className={styles["notice-title-box"]}>공지사항</div>
-      <p className={styles["notice-title"]}>
-          비상진료에 따른 병·의원 이용안내
-        </p>
-        <p className={styles["notice-content"]}>
-        응급의료포털 (https://www.e-gen.or.kr/)
-        </p>
-    </div>
-  </div>
-</div>
-
-
+      <div className={styles["information-container"]}>
+        <img src={information} className={styles["information"]} alt="Information" />
+        <div className={styles["notice-container"]}>
+          <div className={styles["notice-item"]}>
+            <div className={styles["notice-title-box"]}>공지사항</div>
+            <p className={styles["notice-title"]}>
+              비상진료에 따른 병·의원 이용안내
+            </p>
+            <p className={styles["notice-content"]}>
+              응급의료포털 (https://www.e-gen.or.kr/)
+            </p>
+          </div>
+          <div className={styles["notice-divider"]}></div>
+          <div className={styles["notice-item"]}>
+            <div className={styles["notice-title-box"]}>공지사항</div>
+            <p className={styles["notice-title"]}>
+              비상진료에 따른 병·의원 이용안내
+            </p>
+            <p className={styles["notice-content"]}>
+              응급의료포털 (https://www.e-gen.or.kr/)
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div className={styles["bottom-box"]}>
         <p className={styles["bottom-comment1"]}>

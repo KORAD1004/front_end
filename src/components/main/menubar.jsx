@@ -1,16 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/main/main.module.css';
 
 function MenuBar() {
+  const navigate = useNavigate(); 
+
   return (
     <div className={styles['menu-bar']}>
-      <div className={styles['menu-item']}>방폐물이란?</div>
+      <button className={styles['menu-item']} onClick={() => navigate('/introduction')}> 방폐물이란?</button>
       <div className={styles['menu-divider']}>|</div>
-      <div className={styles['menu-item']}>원자력안전도</div>
+      <button className={styles['menu-item']} onClick={() => navigate('/Radiation')}>원자력안전도</button>
       <div className={styles['menu-divider']}>|</div>
-      <div className={styles['menu-item']}>경주관광지</div>
+      <button className={styles['menu-item']} onClick={() => navigate('/tourism')}>경주관광지</button>
       <div className={styles['menu-divider']}>|</div>
-      <div className={styles['menu-item']}>나의여행일정</div>
+      <button className={styles['menu-item']} onClick={() => navigate('/courseSelection')}>나의여행일정</button>
     </div>
   );
 }
