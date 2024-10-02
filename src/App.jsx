@@ -6,6 +6,7 @@ import TourismHome from './pages/tourism/Home.jsx';
 import Introduction from './pages/introduction/introduction.jsx';
 import CourseHome from './pages/courseSelection/CourseHome.jsx';
 import Header from './components/header/Header.jsx';
+import RadWaste from './pages/radWaste/RadWaste.jsx';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path='/tourism' element={<TourismHome/>}/>
         <Route path='/introduction' element={<Introduction/>}/>
         <Route path='/courseSelection' element={<CourseHome/>}/>
+        <Route path='/radWaste' element={<RadWaste/>}/>
       </Routes>
     </BrowserRouter>
   )
