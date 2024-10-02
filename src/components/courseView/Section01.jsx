@@ -15,7 +15,7 @@ const Section01 = () => {
                     className={styles.image}
                 />
             </div>
-            <p className={styles.mainText}>코스선택하기</p>
+            <p className={styles.mainText}>코스확인하기</p>
             <div className={styles.courseNameBarContainer}>
                 <p className={styles.courseNameBar}>|</p>
             </div>
