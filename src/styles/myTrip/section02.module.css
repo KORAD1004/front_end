@@ -26,12 +26,12 @@
 }
 
 .mapContainer {
-    padding: 3%;
+    padding: 5%;
     height: 193px;
 }
 
 .searchContainer {
- padding: 5%;
+    padding: 5%;
 }
 
 .addScheduleButton {
@@ -48,21 +48,43 @@
     flex-direction: column;
     align-items: center;
     padding: 0 5% 0 5%;
+    height: 168px;
+    overflow-y: auto;
   }
   
+  .searchBox {
+    width: 68%;
+    padding: 2%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #D6D6D6, #F0F0F0);
+  }
+
   .row {
+    position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     width: 100%;
   }
-  
-  .textBox {
-    width: 100px;
-    height: 30px;
-    margin-right: 10px;
+
+  .textBox2 {
+    width: 50%;
+    height: 7%;
     border: 1px solid #ccc;
     padding: 5px;
+  }
+
+  .text{
+    font-family: 'Pretendard-bold';
+    font-size: 10px;
+    margin-right: 5%;
+  }
+
+  .textContainer3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1%;
   }
   
   .arrowButton {
@@ -74,6 +96,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 2%;
   }
   
   .saveButton {
@@ -89,19 +112,23 @@
     font-size: 12.52px;
   }
   
-  .saveButton:hover {
+  .saveButton:focus {
     background-color: #45a049;
   }
   
   .memoContainer {
-    margin-top: 10px;
+    position: absolute;
+    top: 122%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
   }
   
   .memoTextBox {
-    width: 250px;
-    height: 30px;
+    width: 97%;
+    height: 35px;
     border: 1px solid #ccc;
     padding: 5px;
+    background-color: #E9E9E9;
   }
-  
 

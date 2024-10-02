@@ -18,18 +18,18 @@ const Section01 = () => {
                 </div>
                 <div className={styles.tripTextContainer}>
                     <p className={styles.tripText}>여행명</p>
-                    <div className={styles.longInputBox}></div>
+                    <input type="text" className={styles.longInputBox}></input>
                     <p className={styles.tripText}>인원수</p>
-                    <div className={styles.shortInputBox}></div>
+                    <input type="text" className={styles.shortInputBox}></input>
                 </div>
                 <div className={styles.tripTextContainer}>
                     <p className={styles.tripText}>기간</p>
-                    <div className={styles.longInputBox2}></div>
+                    <input type="text" placeholder="시작 날짜" className={styles.longInputBox2}></input>
                     <p className={styles.tripText}>일차</p>
-                    <div className={styles.shortInputBox}></div>
+                    <input type="text" className={styles.shortInputBox}></input>
                 </div>
                 <div className={styles.tripTextContainer}>
-                    <div className={styles.longInputBox3}></div>
+                    <input type="text" placeholder="종료 날짜" className={styles.longInputBox3}></input>
                     <p className={styles.tripMiniText2}>| 1박2일 기준</p>
                 </div>
             </div>

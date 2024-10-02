@@ -1,0 +1,81 @@
+.allContainer {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    position: relative; 
+}
+
+.textAllContainer {
+    padding: 5%;
+}
+
+.textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.noText {
+    font-family: 'Pretendard-bold';
+    font-size: 11px;
+    margin-right: 5%;
+}
+
+.courseText {
+    font-family: 'Pretendard-semiBold';
+    font-size: 10px;
+    margin-right: 5%;
+}
+
+.memoText {
+    font-family: 'Pretendard-semiBold';
+    font-size: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.saveButton {
+    background-color: #77B353;
+    width: 65px;
+    height: 38.14px;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 3%;
+    font-family: 'Pretendard-bold';
+    font-size: 12.52px;
+}
+  
+.saveButton:focus {
+    background-color: #45a049;
+}
+
+.backButton {
+    background-color: #E1E1E1;
+    width: 65px;
+    height: 38.14px;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Pretendard-bold';
+    font-size: 12.52px;
+}
+  
+.backButton:focus {
+    background-color: #7d827d;
+}
+
+.underline {
+    width: 100%;
+    height: 1px;
+    background-color: #C7C7C7;
+    margin-bottom: 5%;
+}
+  

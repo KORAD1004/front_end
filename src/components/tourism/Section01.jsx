@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/tourism/section01.module.css';
 import background from '../../assets/images/tourism/Tourism_background.gif';
 import course1 from '../../assets/images/tourism/예시.png';
@@ -6,6 +7,8 @@ import title from '../../assets/images/tourism/Tourism_Title.png';
 import Quiz from '../../components/quiz/Quiz1.jsx';
 
 const Section01 = () => {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.allContainer}>
             <div className={styles.imageContainer}>
@@ -33,7 +36,7 @@ const Section01 = () => {
                     className={styles.courseImage}
                 />
             <div className={styles.courseButtonContainer}>
-                <button className={styles.courseButton}>코스선택하기</button>
+                <button className={styles.courseButton} onClick={()=>navigate('/courseSelection')}>코스선택하기</button>
             </div>
         </div>
       );
