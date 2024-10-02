@@ -10,16 +10,16 @@ import FindCode from './pages/findcode/findcode.jsx'
 
 export default function App() {
   return (
-    // <BrowserRouter>
-    //   <Header/>
-    //   <Routes>
-    //     <Route path='/' element={<Main/>}/>
-    //     <Route path='/radiation' element={<Radiation/>}/>
-    //     <Route path='/tourism' element={<TourismHome/>}/>
-    //     <Route path='/introduction' element={<Introduction/>}/>
-    //     <Route path='/courseSelection' element={<CourseHome/>}/>
-    //   </Routes>
-    // </BrowserRouter>
-    <FindCode />
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/radiation' element={<Radiation/>}/>
+        <Route path='/tourism' element={<TourismHome/>}/>
+        <Route path='/introduction' element={<Introduction/>}/>
+        <Route path='/courseSelection' element={<CourseHome/>}/>
+      </Routes>
+    </BrowserRouter>
+
   )
 }
