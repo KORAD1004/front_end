@@ -1,5 +1,4 @@
 .app-container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,9 +8,79 @@
 
 
   .top-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
-    height: 30%;
-    background-image: url('../../assets/images/signupq//background.svg');
-    background-repeat: no-repeat;
-    background-size: 100vw;
+    height: auto;
+
   }
+
+  .back{
+    width: 100%;
+    height: 30%;
+    top: 60%;
+    z-index: 1;
+  }
+
+  .top-comment{
+    position: absolute;
+    font-family: 'Pretendard-bold';
+    font-size: 20px;
+    color: #ffffff;
+    z-index: 2;
+    bottom: 10%; 
+  }
+
+  .middle-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+
+  }
+
+  .comment-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    top: 16%; 
+    left: 9%;
+  }
+
+  .middle-comment1{
+    font-family: 'Pretendard';
+    font-size: 14px;
+  }
+
+  .middle-comment2{
+    font-family: 'Pretendard-bold';
+    font-size: 25px;
+    margin-top: 5%;
+  }
+
+  .midback{
+    width: 100%;
+    z-index: 1;
+  }
+
+  .midbutton{
+    position: absolute;
+    top:80%;
+    width: 80px;
+    height: 26px;
+    border-radius: 15px;
+    border: 1px #000000;
+    background-color: #ffffff;
+    font-size: 10px;
+    font-family: 'Pretendard';
+    z-index: 2;
+  }
+  
