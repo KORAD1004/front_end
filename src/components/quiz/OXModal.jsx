@@ -19,7 +19,7 @@ const OXModal = ({ isOpen, onRequestClose, oxImage, ox, question, onCourse }) =>
             KORAD 퀴즈 풀고
         </div>
         <div className={styles.titleSecond}>
-            AI 맞춤 추천 코스 확인하자!
+            경주 관광 페이지 적극 활용하자!
         </div>
       </div>
 
