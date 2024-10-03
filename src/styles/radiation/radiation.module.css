@@ -153,6 +153,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     padding: 15px 5%;
+    pointer-events: none;
 }
 
 .pictogram {
@@ -164,6 +165,7 @@
     height: 30px;
     box-shadow: 0 0 3.42px 0 rgba(0, 0, 0, 0.5);
     background-color: white;
+    pointer-events: auto;
 }
 
 .pictogram span, .clickPictogram span {
@@ -180,9 +182,10 @@
     height: 30px;
     background-color: #ECECEC;
     box-shadow: inset 0 4px 2px rgba(0, 0, 0, 0.3);
+    pointer-events: auto;
 }
 
-.customOverlay {
+.customOverlay, .gyeongjuOverlay {
     position: relative;
     z-index: 1000;
     display: flex;
@@ -205,6 +208,19 @@
     pointer-events: none;
 }
 
+.gyeongjuOverlay::before {
+    content: "";
+    display: inline-block;
+    clear: both;
+    border: 8px solid transparent;
+    border-top-color: white;
+    position:absolute;
+    right: 50%;
+    bottom: -15px;
+    transform: translateX(50%);
+    pointer-events: none;
+}
+
 .infoLine {
     margin: 5px auto;
     height: 0.63px;
@@ -212,12 +228,12 @@
     width: 90%;
 }
 
-.customOverlay span:first-child {
+.customOverlay span:first-child, .gyeongjuOverlay span:first-child {
     font-size: 11.25px;
     font-family: 'Pretendard-bold';
 }
 
-.customOverlay span:last-child {
+.customOverlay span:last-child, .gyeongjuOverlay span:last-child {
     font-size: 10px;
     font-family: 'Pretendard-medium';
 }
@@ -226,6 +242,6 @@
     pointer-events: none;
     position: relative;
     z-index: 10;
-    top: -65%;
-    left: 20%;
+    top: -55%;
+    left: 50px;
 }

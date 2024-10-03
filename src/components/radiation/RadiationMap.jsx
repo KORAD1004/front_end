@@ -21,17 +21,35 @@ export default function RadiationMap() {
     function focusGyeongju() {
         if (map) {
             // customOverlay가 존재하면 숨기기
-            if (customOverlayRef.current) {
+            if (!customOverlayRef.current) {
+                customOverlayRef.current = new window.kakao.maps.CustomOverlay({
+                    zIndex: 1000,
+                });
+            } else {
                 customOverlayRef.current.setMap(null);
             }
-
+    
             if (map.getLevel() > 11 && isClick === false) {
                 map.setLevel(11);
                 map.setCenter(new window.kakao.maps.LatLng(35.85, 129.2545));
                 polygonObjects.current.forEach(polygon => {
-                    if(gyeongjuPolygon.current!==polygon) polygon.setOptions({fillColor:"#004c80"});
+                    if (gyeongjuPolygon.current !== polygon) polygon.setOptions({ fillColor: "#004c80" });
                 });
-                gyeongjuPolygon.current.setOptions({strokeColor:"#FF7676", strokeWeight:5});
+    
+                gyeongjuPolygon.current.setOptions({ strokeColor: "#FF7676", strokeWeight: 5 });
+    
+                const gyeongjuData = area.find(item => item.properties.KOR_NM === "경주시");
+                if (gyeongjuData) {
+                    const content = `<div class=${styles.gyeongjuOverlay} style="position:relative; z-index:100; bottom:100px; padding:5px; width:120px; height:40px; background-color: rgba(255, 255, 255, 0.8);">
+                                        <span>경주시</span>
+                                        <div class=${styles.infoLine}></div>
+                                        <span>${gyeongjuData.radiation} μSv/h</span>
+                                    </div>`;
+                    customOverlayRef.current.setContent(content);
+                    customOverlayRef.current.setPosition(new window.kakao.maps.LatLng(35.8388735, 129.196647));
+                    customOverlayRef.current.setMap(map);
+                }
+    
             } else if (map.getLevel() < 13 && isClick === true) {
                 map.setLevel(13);
                 map.setCenter(new window.kakao.maps.LatLng(35.7360, 127.8829));
@@ -41,11 +59,12 @@ export default function RadiationMap() {
                         polygonObj.setOptions(initialPolygon.options);
                     }
                 });
-                
-                gyeongjuPolygon.current.setOptions({strokeColor:"#004c80", strokeWeight:1});
+    
+                gyeongjuPolygon.current.setOptions({ strokeColor: "#004c80", strokeWeight: 1 });
             }
         }
     }
+    
 
     // 폴리곤 중심 좌표 계산 함수
     const getPolygonCenter = (coordinates) => {
@@ -65,8 +84,9 @@ export default function RadiationMap() {
         else if (level - avgRad < -0.018) return "#75EA2D";
         else if (level - avgRad < -0.013) return "#66FF66";
         else if (level - avgRad < -0.008) return "#009900";
-        else if (level - avgRad < 0.073) return "#006600"; // 낮은 수치
+        else if (level - avgRad < 0.0973) return "#006600"; // 낮은 수치
         else if (level - avgRad < 0.973) return "#FFFF00"; // 중간 수치
+        else if (level - avgRad < 973) return "#E68E27";
         else return "#FF0000"; // 높은 수치
     };
 
@@ -104,6 +124,7 @@ export default function RadiationMap() {
             level: 13, // 지도의 확대 레벨
             scrollwheel: false, // 마우스 휠 확대/축소 비활성화
             disableDoubleClickZoom: true, // 더블 클릭 확대/축소 비활성화
+            draggable: false
         };
 
         const newMap = new kakao.maps.Map(container, options);
@@ -168,12 +189,15 @@ export default function RadiationMap() {
                     polygonGroups.current[regionName].push(polygonObj);
     
                     kakao.maps.event.addListener(polygonObj, "mouseover", function () {
-                        polygonObj.setOptions({ fillColor: "#09f" });
+                        const regionName = area.properties.KOR_NM;
+                        polygonGroups.current[regionName].forEach((poly) => {
+                            poly.setOptions({ fillColor: "#09f" });
+                        });
                     });
     
                     kakao.maps.event.addListener(polygonObj, "mouseout", function () {
                         polygonObj.setOptions({
-                            fillColor: isClick && !isGyeongju ? "#A0A0A0" : getColorByRadiation(area.radiation, avgRad[index].avgRad),
+                            fillColor: getColorByRadiation(area.radiation, avgRad[index].avgRad),
                         });
                     });
     
@@ -189,7 +213,7 @@ export default function RadiationMap() {
                         // 클릭한 폴리곤이 속한 그룹 선택
                         const regionName = area.properties.KOR_NM;
                         polygonGroups.current[regionName].forEach((poly) => {
-                            poly.setOptions({ strokeColor: "#FF7676", strokeWeight: 3 });
+                            poly.setOptions({ strokeColor: "#FF7676", strokeWeight: 3, fillColor: getColorByRadiation(area.radiation, avgRad[index].avgRad) });
                         });
     
                         // 오버레이 업데이트
@@ -214,7 +238,7 @@ export default function RadiationMap() {
 
     return (
         <div className={styles.map}>
-            <div id="map" style={{ width: "100%", height: "100%" }}>
+            <div id="map" style={isClick?{width: "100%", height: "100%", pointerEvents:"none"}:{ width: "100%", height: "100%" }}>
                 <div className={styles.notice}>
                     <div onClick={() => { 
                         setIsClick((state) => !state); focusGyeongju();}} className={isClick ? styles.clickPictogram : styles.pictogram}>
