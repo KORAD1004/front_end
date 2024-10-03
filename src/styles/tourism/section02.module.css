@@ -93,8 +93,6 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
-    padding: 10px;
-    width: 60%;
 }
 
 .touristAttractionText {
@@ -102,7 +100,7 @@
     font-size: 18.57px;
     text-align: left;
     margin-top: 8%;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
 }
 
 .touristAttractionSmallText {
