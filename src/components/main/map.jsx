@@ -5,11 +5,11 @@ const Map = () => {
     const { kakao } = window;
     const container = document.getElementById('map'); 
     const options = {
-      center: new kakao.maps.LatLng(35.846307, 129.215661), // 지도 중심좌표 (경주 보문관광단지 기준 좌표)
+      center: new kakao.maps.LatLng(35.8388735, 129.196647),
       level: 4, 
     };
     const map = new kakao.maps.Map(container, options); 
-    const markerPosition = new kakao.maps.LatLng(35.846307, 129.215661); 
+    const markerPosition = new kakao.maps.LatLng(35.8388735, 129.196647); 
     const marker = new kakao.maps.Marker({
       position: markerPosition,
     });

@@ -7,6 +7,8 @@ import Introduction from './pages/introduction/introduction.jsx';
 import CourseHome from './pages/courseSelection/CourseHome.jsx';
 import Header from './components/header/Header.jsx';
 import RadWaste from './pages/radWaste/RadWaste.jsx';
+import MyTrip from './pages/myTrip/MyTripCreate.jsx';
+import CourseView from './pages/courseView/CourseView.jsx';
 
 export default function App() {
   return (
@@ -19,7 +21,10 @@ export default function App() {
         <Route path='/introduction' element={<Introduction/>}/>
         <Route path='/courseSelection' element={<CourseHome/>}/>
         <Route path='/radWaste' element={<RadWaste/>}/>
+        <Route path='/myTrip' element={<MyTrip/>}/>
+        <Route path='/courseView' element={<CourseView/>}/>
       </Routes>
     </BrowserRouter>
+
   )
 }
