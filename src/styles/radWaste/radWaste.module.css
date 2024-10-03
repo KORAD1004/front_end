@@ -1,3 +1,12 @@
+@keyframes mount {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
 .pageWrapper {
     background-image: url('../../assets/images/radWaste/rwBackground2.svg'), url('../../assets/images/radWaste/rwBackground.svg'), url('../../assets/images/radWaste/bodyImg5.svg');
     background-repeat: no-repeat;
@@ -313,4 +322,26 @@
     color: white;
     font-size: 12px;
     font-family: 'Pretendard-extraBold';
+}
+
+.backBtn {
+    position: fixed;
+    bottom: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    border: 0.5px solid #909090;
+    width: 165px;
+    height: 32px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    animation: mount 1s ease-in-out;
+}
+
+.backBtn span {
+    font-family: 'Pretendard-bold';
+    font-size: 10px;
 }
