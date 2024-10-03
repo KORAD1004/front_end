@@ -23,15 +23,14 @@
 
 .tilteImageContainer {
   position: absolute;
-  top: 15%; 
+  top: 12%;
   left: 50%; 
   transform: translateX(-50%);
-  z-index: 2; 
 }
 
 .tilteImage {
-  width: 123.66px;
-  height: 116.57px;
+  width: 139px;
+  height: 152.05px;
 }
 
 .mainTextContainer {
