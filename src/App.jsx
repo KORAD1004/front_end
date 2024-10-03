@@ -6,7 +6,6 @@ import TourismHome from './pages/tourism/Home.jsx';
 import Introduction from './pages/introduction/introduction.jsx';
 import CourseHome from './pages/courseSelection/CourseHome.jsx';
 import Header from './components/header/Header.jsx';
-import FindCode from './pages/findcode/findcode.jsx'
 
 export default function App() {
   return (
