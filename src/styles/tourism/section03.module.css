@@ -1,6 +1,6 @@
 .allContainer {
     width: 100vw;
-    height: 780px;
+    height: auto;
     overflow: hidden;
     position: relative; 
 }
@@ -87,16 +87,17 @@
 }
 
 .imgContainer {
+    width: 60%;
+    height: auto;
     position: absolute;
     right: 0; 
     z-index: 0;
-    margin-top: -12%;
     overflow: hidden;
+    margin-top: 5%;
 }
 
 .bottomImg {
-    width: 70%;
+    width: 100%;
     height: auto;
     overflow: hidden;
-    margin-left: 30%;
 }

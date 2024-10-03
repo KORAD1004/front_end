@@ -5,7 +5,7 @@ import star from '../../assets/images/tourism/starImg.png'
 
 const Section03 = () => {
     return (
-        <div className={styles.allCountainer}>
+        <div className={styles.allContainer}>
             <div className={styles.imgContainer}>
                 <img 
                     src={bottom}

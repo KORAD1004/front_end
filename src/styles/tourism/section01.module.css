@@ -7,7 +7,7 @@
 
 .imageContainer {
   width: 100vw;
-  height: 60vh; 
+  height: 52vh; 
   overflow: hidden;
   position: relative;
 }
@@ -35,6 +35,7 @@
 
 .mainTextContainer {
   margin-left: 8%;
+  margin-top: 5%;
 }
 
 .mainText {

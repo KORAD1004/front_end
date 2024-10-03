@@ -24,13 +24,12 @@ const Section01 = () => {
                 </div>
                 <div className={styles.tripTextContainer}>
                     <p className={styles.tripText}>기간</p>
-                    <input type="text" placeholder="시작 날짜" className={styles.longInputBox2}></input>
+                    <div className={styles.daysContainer}>
+                        <input type="text" placeholder="시작 날짜" className={styles.longInputBox2}></input>
+                        <input type="text" placeholder="종료 날짜" className={styles.longInputBox3}></input>
+                    </div>
                     <p className={styles.tripText}>일차</p>
                     <input type="text" className={styles.shortInputBox}></input>
-                </div>
-                <div className={styles.tripTextContainer}>
-                    <input type="text" placeholder="종료 날짜" className={styles.longInputBox3}></input>
-                    <p className={styles.tripMiniText2}>| 1박2일 기준</p>
                 </div>
             </div>
         </div>

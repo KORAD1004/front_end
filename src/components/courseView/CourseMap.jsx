@@ -77,7 +77,7 @@ customOverlay.setMap(map);
         }, []);   
     return (
         <div className={styles.map}>
-            <div id="map" style={{width:"100%", height:"100%"}}></div>
+            <div id="map"></div>
         </div>
     );
 };
