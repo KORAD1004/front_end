@@ -1,15 +1,19 @@
-import HeaderSection from '../../components/radWaste/HeaderSection';
 import styles from '../../styles/radWaste/radWaste.module.css';
-import ContainerSection from '../../components/radWaste/ContainerSection';
-import InfoSection from '../../components/radWaste/InfoSection';
+import { Suspense, lazy } from 'react';
+import Loading from '../../components/loading/Loading';
+const HeaderSection = lazy(() => import('../../components/radWaste/HeaderSection'));
+const ContainerSection = lazy(() => import('../../components/radWaste/ContainerSection'));
+const InfoSection = lazy(() => import('../../components/radWaste/InfoSection'));
 
 export default function RadWaste() {
 
     return (
-        <div className={styles.pageWrapper}>
-            <HeaderSection/>
-            <ContainerSection/>
-            <InfoSection/>
-        </div>
+        <Suspense fallback={<Loading/>}>
+            <div className={styles.pageWrapper}>
+                <HeaderSection/>
+                <ContainerSection/>
+                <InfoSection/>
+            </div>
+        </Suspense>
     )
 }
