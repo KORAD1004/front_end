@@ -22,8 +22,7 @@ const Section01 = () => {
             <div className={styles.courseNameContainer}>
                 <p className={styles.courseName}> 가족여행코스</p>
                 <p className={styles.codeBox}>#99764210</p>
-            </div>
-                  <div className={styles.buttonContainer}>
+                <div className={styles.buttonContainer}>
                     <img 
                         src={clear}
                         alt="course clear" 
@@ -34,7 +33,8 @@ const Section01 = () => {
                         alt="course change" 
                         className={styles.button}
                     />
-            </div>
+                </div>
+            </div>     
         </div>
     );
 };
