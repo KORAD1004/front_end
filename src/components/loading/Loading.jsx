@@ -18,7 +18,7 @@ export default function Loading() {
                     alt="Battery Outline"
                     style={{position:"relative", zIndex:"1"}}  
                 />
-                <div style={{ height: `${fillPercentage}%`, position:"absolute", bottom:"0", width:"90%", background:"linear-gradient(0, #33422A, #648252)", zIndex:"0", transition:"height 0.5s ease", borderRadius:"5px" }} />
+                <div style={{ height: `${fillPercentage}%`, position:"absolute", bottom:"0", width:"90%", background:"linear-gradient(0, #33422A, #648252)", zIndex:"0", transition:"height 1.2s ease", borderRadius:"5px" }} />
             </div>
         </div>
     )
