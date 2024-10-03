@@ -1,18 +1,7 @@
-import wasteContainer from '../../assets/images/radWaste/wasteContainer.svg';
+import loadingContainer from '../../assets/images/loading/loadingContainer.svg';
 import { useState, useEffect } from "react";
 
 export default function Loading() {
-    // return (
-    //     <div style={{display:"flex",width:"100vw", justifyContent:"center", height:"100vh", alignItems:"center"}}>
-    //         <ProgressBar
-    //         visible={true}
-    //         height="80"
-    //         width="500"
-    //         ariaLabel="progress-bar-loading"
-    //         wrapperStyle={{}}
-    //         wrapperClass=""
-    //     /></div>
-    // )
     const [fillPercentage, setFillPercentage] = useState(0);
 
     useEffect(()=>{
@@ -25,11 +14,11 @@ export default function Loading() {
         <div style={{display:"flex", height:"100vh", justifyContent:"center", alignItems:"center"}}>
             <div style={{position:"relative", justifyContent:"center", display:"flex"}}>
                 <img 
-                    src={wasteContainer}
+                    src={loadingContainer}
                     alt="Battery Outline"
                     style={{position:"relative", zIndex:"1"}}  
                 />
-                <div style={{ height: `${fillPercentage}%`, position:"absolute", bottom:"0", width:"90%", backgroundColor:"#6B8E23", zIndex:"0", transition:"height 0.5s ease", borderRadius:"5px" }} />
+                <div style={{ height: `${fillPercentage}%`, position:"absolute", bottom:"0", width:"90%", background:"linear-gradient(0, #33422A, #648252)", zIndex:"0", transition:"height 0.5s ease", borderRadius:"5px" }} />
             </div>
         </div>
     )
