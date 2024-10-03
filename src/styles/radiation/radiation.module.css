@@ -30,7 +30,7 @@
     flex-direction: column;
     width: 100%;
     height: 70px;
-    padding: 14px 0;
+    padding: 2% 0;
     background-color: black;
     z-index: 100;
 }
@@ -95,7 +95,7 @@
 .statusBar {
     display: flex;
     gap: 20px;
-    margin: 10px 8%;
+    margin: 2% 8%;
     height: 9px;
 }
 
@@ -136,7 +136,7 @@
 .map {
     position: relative;
     width: 95%;
-    height: 67%;
+    height: 70%;
     margin-bottom: -200px;
 }
 
