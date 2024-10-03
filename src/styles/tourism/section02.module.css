@@ -104,10 +104,14 @@
 }
 
 .touristAttractionSmallText {
+    display: flex;
+    align-items: center;
+    width: 100%;
     font-family: 'Pretendard-bold';
     font-size: 10px;
     text-align: left;
     margin: 2%;
+    gap: 2%;
 }
 
 .subText {

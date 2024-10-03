@@ -1,6 +1,8 @@
 import React from "react";
 import styles from '../../styles/tourism/section02.module.css';
 import touristAttraction from '../../assets/images/tourism/관광지예시.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faClock, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Section02 = () => {
     return (
@@ -34,36 +36,60 @@ const Section02 = () => {
                     <img src={touristAttraction} alt="Attraction" className={styles.touristAttractionImage} />
                     <div className={styles.touristAttractionTextContainer}>
                         <p className={styles.touristAttractionText}>국립경주박물관</p>
-                        <p className={styles.touristAttractionSmallText}>경상북도 경주 일정로 186</p>
-                        <p className={styles.touristAttractionSmallText}>평일 10:00 - 18:00</p>
-                        <p className={styles.touristAttractionSmallText}>054-740-7500</p>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faMapMarkerAlt} />경상북도 경주 일정로 186
+                        </div>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faClock} />평일 10:00 - 18:00
+                        </div>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faPhone} />054-740-7500
+                        </div>
                     </div>
                 </div>
                 <div className={styles.touristAttraction}>
                     <img src={touristAttraction} alt="Attraction" className={styles.touristAttractionImage} />
                     <div className={styles.touristAttractionTextContainer}>
                         <p className={styles.touristAttractionText}>국립경주박물관</p>
-                        <p className={styles.touristAttractionSmallText}>경상북도 경주 일정로 186</p>
-                        <p className={styles.touristAttractionSmallText}>평일 10:00 - 18:00</p>
-                        <p className={styles.touristAttractionSmallText}>054-740-7500</p>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faMapMarkerAlt} />경상북도 경주 일정로 186
+                        </div>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faClock} />평일 10:00 - 18:00
+                        </div>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faPhone} />054-740-7500
+                        </div>
                     </div>
                 </div>
                 <div className={styles.touristAttraction}>
                     <img src={touristAttraction} alt="Attraction" className={styles.touristAttractionImage} />
                     <div className={styles.touristAttractionTextContainer}>
                         <p className={styles.touristAttractionText}>국립경주박물관</p>
-                        <p className={styles.touristAttractionSmallText}>경상북도 경주 일정로 186</p>
-                        <p className={styles.touristAttractionSmallText}>평일 10:00 - 18:00</p>
-                        <p className={styles.touristAttractionSmallText}>054-740-7500</p>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faMapMarkerAlt} />경상북도 경주 일정로 186
+                        </div>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faClock} />평일 10:00 - 18:00
+                        </div>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faPhone} />054-740-7500
+                        </div>
                     </div>
                 </div>
                 <div className={styles.touristAttraction}>
                     <img src={touristAttraction} alt="Attraction" className={styles.touristAttractionImage} />
                     <div className={styles.touristAttractionTextContainer}>
                         <p className={styles.touristAttractionText}>국립경주박물관</p>
-                        <p className={styles.touristAttractionSmallText}>경상북도 경주 일정로 186</p>
-                        <p className={styles.touristAttractionSmallText}>평일 10:00 - 18:00</p>
-                        <p className={styles.touristAttractionSmallText}>054-740-7500</p>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faMapMarkerAlt} />경상북도 경주 일정로 186
+                        </div>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faClock} />평일 10:00 - 18:00
+                        </div>
+                        <div className={styles.touristAttractionSmallText}>
+                            <FontAwesomeIcon icon={faPhone} />054-740-7500
+                        </div>
                     </div>
                 </div>
             </div>
