@@ -104,7 +104,7 @@ export default function RadiationMap() {
                 setAvgRad(res.data);
                 setLoading(false);
             })
-    })
+    }, [])
 
     useEffect(() => {
 
