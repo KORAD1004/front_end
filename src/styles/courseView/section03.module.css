@@ -15,7 +15,7 @@ body {
 
 .courseImage {
     width: 100%;
-    height: 163px;
+    height: 30%;
     border-radius: 5%;
 }
 
@@ -31,77 +31,80 @@ body {
 }
 
 .courseContainer {
-    display: flex;      
-    align-items: center;         
-    justify-content: center; 
+  display: flex;      
+  align-items: center;         
+  justify-content: center; 
+  gap: 2%;
+  margin-top: 1%;
 }
 
 .card {
-    border: 0.5px solid #ccc;
-    padding: 8px;
-    border-radius: 10px;
-    text-align: center;
-    width: 32%;
-    margin: 1%;
-  }
+  border: 0.5px solid #ccc;
+  padding: 8px;
+  border-radius: 10px;
+  text-align: center;
+  width: 32%;
+}
   
-  .museumName {
+.museumName {
     font-size: 10px;
     font-family: 'Pretendard-Bold';
     margin-top: 4%;
-  }
+}
   
-  .underline {
+.underline {
     width: 100px;
     border: 0;
     border-top: 1px solid #ccc;
     margin: 8% auto;
-  }
+}
   
-  .museumAddress {
+.museumAddress {
     font-size: 8px;
     font-family: 'Pretendard-semiBold';
     margin-bottom: 2%;
-  }
+}
 
-  .buttonContainer {
-    display: flex;      
-    align-items: center;         
-    justify-content: center; 
-  }
+.buttonContainer {
+  display: flex;      
+  align-items: center;         
+  justify-content: center; 
+  margin-bottom: 10%;
+  gap: 2%;
+  margin-top: 1%;
+}
 
-  .customButton {
-    width: 32%;
-    font-size: 10px;
-    font-family: 'Pretendard-Bold';
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px 20px 10px 20px;
-    margin: 1%;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.customButton {
+  width: 32%;
+  font-size: 10px;
+  font-family: 'Pretendard-Bold';
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
   
-  .customButton:hover {
+.customButton:hover {
     background-color: #f0f0f0;
-  }
+}
   
-  .customButton:active {
+.customButton:active {
     background-color: #e0e0e0;
-  }
+}
 
-  .underline2 {
+.underline2 {
     width: 100%;
     height: 1px;
     background-color: #C7C7C7;
     margin-bottom: 4%;
     transform: scaleY(0.5);
     margin-top: 2%;
-  }
+}
 
-  .saveButton {
+.saveButton {
     width: 30%;
     padding: 3%;
     font-family: 'Pretendard';
@@ -110,4 +113,4 @@ body {
     border-radius: 20px;
     background-color: #5E8447;
     margin-bottom: 6%;
-  }
+}

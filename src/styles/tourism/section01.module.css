@@ -7,7 +7,7 @@
 
 .imageContainer {
   width: 100vw;
-  height: 60vh; 
+  height: 52vh; 
   overflow: hidden;
   position: relative;
 }
@@ -23,19 +23,19 @@
 
 .tilteImageContainer {
   position: absolute;
-  top: 15%; 
+  top: 12%;
   left: 50%; 
   transform: translateX(-50%);
-  z-index: 2; 
 }
 
 .tilteImage {
-  width: 123.66px;
-  height: 116.57px;
+  width: 139px;
+  height: 152.05px;
 }
 
 .mainTextContainer {
   margin-left: 8%;
+  margin-top: 5%;
 }
 
 .mainText {
