@@ -3,7 +3,7 @@ import styles from '../../styles/radWaste/radWaste.module.css';
 import wasteContainer from '../../assets/images/radWaste/wasteContainer.svg';
 import PropTypes from 'prop-types';
 
-export default function WasteContainer({per}) {
+export default function WasteContainer({per, msg}) {
     const [fillPercentage, setFillPercentage] = useState(0);
 
     useEffect(()=>{
@@ -27,7 +27,7 @@ export default function WasteContainer({per}) {
                 </div>
             </div>
             <div className={styles.containerInfo}>
-                    <span>현재 포화 정도</span>
+                    <span>{msg}</span>
                     <div className={styles.line}/>
                     <span className={styles.percentageText}>{fillPercentage}% / 100%</span>
             </div>
@@ -37,4 +37,5 @@ export default function WasteContainer({per}) {
 
 WasteContainer.propTypes = {
     per: PropTypes.number, // per에 대한 유효성 검사 추가
+    msg: PropTypes.string
 };
