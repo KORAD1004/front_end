@@ -7,7 +7,6 @@
     background-image: url('../../assets/images/radiation/radBackground.svg');
     background-repeat: no-repeat;
     background-size: 100vw;
-    overflow: hidden;
 }
 
 .headerWrapper {
