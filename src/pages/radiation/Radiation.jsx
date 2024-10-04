@@ -6,7 +6,7 @@ const RadiationMap = lazy(() => import('../../components/radiation/RadiationMap'
 
 export default function Radiation() {
     return (
-        <Suspense fallback={<Loading/>}>
+        <Suspense fallback={<Loading time={1.2}/>}>
             <div className={styles.pageWrapper}>
                 <RadiationHeader/>
                 <RadiationMap/>

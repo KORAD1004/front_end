@@ -2,15 +2,17 @@ import { useState, useEffect, useRef } from "react";
 import data from '../../assets/data/map.json';
 import styles from '../../styles/radiation/radiation.module.css';
 import gongdan from '../../assets/images/radiation/gongdan.svg';
-import radiation from '../../assets/data/radiation.json';
-import avgRadData from '../../assets/data/avgRad.json';
 import gongdanImg from '../../assets/images/radiation/gongdanImg.svg';
+import axios from "axios";
+import Loading from "../loading/Loading";
 
 export default function RadiationMap() {
     const [area, setArea] = useState([]);
     const [avgRad, setAvgRad] = useState([]);
+    const [radiation, setRadiation] = useState();
     const [isClick, setIsClick] = useState(false); // 경주 지역 오버레이 클릭 여부
     const [map, setMap] = useState(null);
+    const [loading, setLoading] = useState(true);
     const selectedPolygonRef = useRef(null); // useRef로 이전의 선택된 폴리곤 참조
     const initialPolygons = useRef([]);
     const polygonObjects = useRef([]); // 모든 폴리곤 객체를 저장하는 배열
@@ -65,7 +67,6 @@ export default function RadiationMap() {
         }
     }
     
-
     // 폴리곤 중심 좌표 계산 함수
     const getPolygonCenter = (coordinates) => {
         let sumLat = 0;
@@ -90,13 +91,22 @@ export default function RadiationMap() {
         else return "#FF0000"; // 높은 수치
     };
 
-    useEffect(() => {
-        // axios.get(`https://7k57mfcjca.execute-api.ap-northeast-2.amazonaws.com/default/recent_radiation_average`)
-        //     .then(res=>{
-        //         setAvgRad(res.data);
-        //     })
+    useEffect(()=>{
+        axios.get(`${import.meta.env.VITE_SERVER_URL}/api/scrap/radiation/recent/avg`)
+        .then(res=>{
+            setRadiation(res.data);
+        })
+    }, [])
 
-        setAvgRad(avgRadData);
+    useEffect(()=>{
+        axios.get(`${import.meta.env.VITE_SERVER_URL}/api/scrap/radiation/average`)
+            .then(res=>{
+                setAvgRad(res.data);
+                setLoading(false);
+            })
+    })
+
+    useEffect(() => {
 
         // Kakao Maps API 로드 확인
         if (!window.kakao || !window.kakao.maps) {
@@ -105,15 +115,17 @@ export default function RadiationMap() {
         }
 
         // JSON 데이터로 area 설정
-        const initialArea = data.features.map((item, index) => ({
-            ...item,
-            radiation: radiation[index]["μSv/h"] || 0, // 방사선 값 추가
-        }));
-        setArea(initialArea); // 초기화한 area를 설정
-    }, []);
+        if (radiation && radiation.length > 0) { // 여기서 조건을 추가
+            const initialArea = data.features.map((item, index) => ({
+                ...item,
+                radiation: radiation[index]?.["μSv/h"] || 0, // 방사선 값 추가
+            }));
+            setArea(initialArea); // 초기화한 area를 설정
+        }
+    }, [radiation]);
 
     useEffect(() => {
-        if (!window.kakao || !window.kakao.maps || area.length === 0) return;
+        if (!window.kakao || !window.kakao.maps || area.length === 0 || loading ) return;
     
         const { kakao } = window;
     
@@ -149,10 +161,15 @@ export default function RadiationMap() {
         });
     
         setMap(newMap); // 상태 업데이트
-    }, [area]);
+    }, [area, loading]);
 
     useEffect(() => {
-        if (!map||area.length===0|avgRad.length===0) return;
+        if (!map || area.length === 0 || avgRad.length === 0 || loading) return;
+    
+        if (polygonObjects.current.length > 0) {
+            // 폴리곤이 이미 그려져 있으면 실행하지 않음
+            return;
+        }
     
         const { kakao } = window;
     
@@ -187,7 +204,7 @@ export default function RadiationMap() {
                         fillOpacity: 0.3,
                     });
     
-                    if(isGyeongju) gyeongjuPolygon.current = polygonObj;
+                    if (isGyeongju) gyeongjuPolygon.current = polygonObj;
     
                     polygonObjects.current.push(polygonObj);
                     initialPolygons.current.push({
@@ -198,10 +215,9 @@ export default function RadiationMap() {
                             strokeOpacity: 0.8,
                             fillColor: getColorByRadiation(area.radiation, avgRad[index].avgRad),
                             fillOpacity: 0.3,
-                        }
+                        },
                     });
     
-                    // 지역 이름을 키로 폴리곤 그룹 저장
                     const regionName = area.properties.KOR_NM;
                     if (!polygonGroups.current[regionName]) {
                         polygonGroups.current[regionName] = [];
@@ -209,7 +225,6 @@ export default function RadiationMap() {
                     polygonGroups.current[regionName].push(polygonObj);
     
                     kakao.maps.event.addListener(polygonObj, "mouseover", function () {
-                        const regionName = area.properties.KOR_NM;
                         polygonGroups.current[regionName].forEach((poly) => {
                             poly.setOptions({ fillColor: "#09f" });
                         });
@@ -222,20 +237,17 @@ export default function RadiationMap() {
                     });
     
                     kakao.maps.event.addListener(polygonObj, "click", function () {
-                        if (selectedPolygonRef.current && selectedPolygonRef.current !== polygonObj) {
-                            // 이전에 선택된 폴리곤 그룹 복원
+                        if (selectedPolygonRef.current && selectedPolygonRef.current.polygon !== polygonObj) {
                             const prevRegionName = selectedPolygonRef.current.regionName;
                             polygonGroups.current[prevRegionName].forEach((poly) => {
                                 poly.setOptions({ strokeColor: "#004c80", strokeWeight: 1 });
                             });
                         }
-
-                        // 클릭한 폴리곤이 속한 그룹 선택
-                        const regionName = area.properties.KOR_NM;
+    
                         polygonGroups.current[regionName].forEach((poly) => {
                             poly.setOptions({ strokeColor: "#FF7676", strokeWeight: 3, fillColor: getColorByRadiation(area.radiation, avgRad[index].avgRad) });
                         });
-
+    
                         const isJeonraJeju = regionName === "제주특별자치도" || regionName === "전라남도" || regionName === "광주광역시" || regionName === "경상북도"; 
     
                         // 오버레이 업데이트
@@ -251,6 +263,7 @@ export default function RadiationMap() {
                                             <div class=${styles.infoLine}></div>
                                             <span>${area.radiation} μSv/h</span>
                                          </div>`;
+
                         customOverlay.setContent(content);
                         customOverlay.setPosition(getPolygonCenter(path[0]));
                         customOverlay.setMap(map);
@@ -263,7 +276,15 @@ export default function RadiationMap() {
         };
     
         drawPolygons();
-    }, [map, area, avgRad]);
+    }, [map, area, avgRad, loading]);
+
+    if (loading) {
+        return (
+            <div className={styles.loading}>
+                <Loading time={6}/>
+            </div>
+        );
+    }
 
     return (
         <div className={styles.map}>

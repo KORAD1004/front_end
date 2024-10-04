@@ -77,7 +77,8 @@
 }
 
 .description div {
-    height: 10.5px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .description span {
@@ -244,3 +245,18 @@
     top: -55%;
     left: 50px;
 }
+
+.loading {
+    position: relative;
+    width: 95%;
+    height: 70%;
+    margin-bottom: -200px;
+    background-color: rgb(242, 239, 239);
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.loading div div {
+    bottom: 15%;
+}
+

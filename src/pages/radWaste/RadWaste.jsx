@@ -16,7 +16,7 @@ export default function RadWaste() {
     }
 
     return (
-        <Suspense fallback={<Loading/>}>
+        <Suspense fallback={<Loading time={1.2}/>}>
             <div ref={scrollRef} className={styles.pageWrapper}>
                 <HeaderSection/>
                 <ContainerSection/>
