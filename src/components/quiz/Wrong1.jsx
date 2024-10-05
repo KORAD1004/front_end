@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import OXModal from './OXModal.jsx';
-import CorrectImg from '../../assets/images/quiz/Correct.png';
+import WrongImg from '../../assets/images/quiz/Wrong.png';
 
-const Correct = ({ isOpen, onRequestClose }) => {
-
+const Wrong1 = ({isOpen, onRequestClose}) => {
+  
   const handleCourse = () => {
     onRequestClose();
   };
@@ -14,8 +14,8 @@ const Correct = ({ isOpen, onRequestClose }) => {
         isOpen={isOpen}
         onRequestClose={onRequestClose}
         shouldCloseOnOverlayClick={false}
-        oxImage={CorrectImg}
-        ox="정답을 맞추셨습니다,"
+        oxImage={WrongImg}
+        ox="이제부터 정답을 알아가요!"
         question="KORAD는 안전한 방폐물 관리를 위한 준정부기관입니다."
         onCourse={handleCourse}
       />
@@ -23,4 +23,4 @@ const Correct = ({ isOpen, onRequestClose }) => {
   );
 };
 
-export default Correct;
+export default Wrong1;

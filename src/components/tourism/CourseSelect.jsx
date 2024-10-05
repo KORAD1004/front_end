@@ -1,16 +1,16 @@
 import { useState, useRef } from 'react';
-import example1 from '../../assets/images/tourism/코스예시.png';
-import example2 from '../../assets/images/tourism/코스예시.png';
-import example3 from '../../assets/images/tourism/코스예시.png';
+import id1 from '../../assets/images/tourism/id1.png';
+import id2 from '../../assets/images/tourism/id2.png';
+import id3 from '../../assets/images/tourism/id3.png';
 import styles from '../../styles/tourism/courseSelect.module.css';
 
 const images = [
-  { id: 1, src: example1, alt: 'Image 1' },
-  { id: 2, src: example2, alt: 'Image 2' },
-  { id: 3, src: example3, alt: 'Image 3' },
+  { id: 1, src: id1, alt: 'Image 1' },
+  { id: 2, src: id2, alt: 'Image 2' },
+  { id: 3, src: id3, alt: 'Image 3' },
 ];
 
-const CourseSelect = () => {
+const CourseSelect = ({ onImageSelect }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imageRefs = useRef([]);
   const galleryRef = useRef(null);
@@ -26,6 +26,13 @@ const CourseSelect = () => {
         left: offsetLeft,
         behavior: 'smooth',
       });
+    }
+
+    // 선택된 이미지의 ID를 상위 컴포넌트로 전달
+    if (onImageSelect) {
+      onImageSelect(images[index].id); // props로 전달받은 함수 실행
+    } else {
+      console.warn("onImageSelect is not provided");
     }
   };
 

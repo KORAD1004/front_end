@@ -48,11 +48,12 @@ body {
     font-size: 23.33px;
     color: #ffffff;
     white-space: nowrap;
+    margin: 1%;
 }
 
 .courseNameBarContainer {
     position: absolute;
-    top: 59%; 
+    top: 60%; 
     left: 5%; 
     z-index: 1;
     text-align: left;

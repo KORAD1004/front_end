@@ -53,31 +53,31 @@
     margin: 4%;
     width: 92%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2%;
 }
 
 .miniButtonContainer {
-   width: 15%;
+   width: 85px;
 }
 
 .touristAttractionContainer {  
     display: flex;   
     flex-direction: column;      
     align-items: center;         
-    height: 71%;
+    height: 68%;
     overflow-y: auto;
     width: 100%;
 }
 
 .touristAttraction {
     display: flex;
-    flex: 0 0 auto;
-    width: 92%;
+    width: 342px;
     height: 143px;
     border-radius: 10px;
     background-color: #f2f2f2;
     border: 2px solid #c4c4c4;
-    margin: 1%;
+    margin-bottom: 1%;
     overflow: hidden;
     position: relative;
 }
@@ -93,14 +93,15 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
+    width: 58%;
 }
 
 .touristAttractionText {
     font-family: 'Pretendard-extraBold';
-    font-size: 18.57px;
+    font-size: 17px;
     text-align: left;
     margin-top: 8%;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
 }
 
 .touristAttractionSmallText {

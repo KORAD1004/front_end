@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import QuizModal from './QuizModal.jsx';
-import Correct from './Correct1.jsx';
-import Wrong from './Wrong1.jsx';
+import Correct from './Correct3.jsx';
+import Wrong from './Wrong3.jsx';
 
-const Quiz1 = () => {
+const Quiz3 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCorrectModalOpen, setIsCorrectModalOpen] = useState(false);
   const [isWrongModalOpen, setIsWrongModalOpen] = useState(false);
@@ -40,8 +40,8 @@ const Quiz1 = () => {
       <QuizModal
         isOpen={isModalOpen}
         onRequestClose={handleCloseModal}
-        info="한국원자력환경공단은"
-        question="방사성 폐기물의 안전한 관리를 중점적으로 운영되는 준정부기관이다."
+        info="고준위방폐물이란 열과 방사능의 준위가 높은 폐기물을 말합니다."
+        question="우리나라의 경우 고준위방사성폐기물은 사용 후 핵연료가 대부분입니다."
         onCorrect={handleCorrect}
         onWrong={handleWrong}
       />
@@ -58,4 +58,4 @@ const Quiz1 = () => {
   );
 };
 
-export default Quiz1;
+export default Quiz3;

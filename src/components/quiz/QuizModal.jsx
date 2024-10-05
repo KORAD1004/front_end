@@ -6,7 +6,7 @@ import Wrong  from '../../assets/images/quiz/Wrong.png';
 
 Modal.setAppElement('#root');
 
-const QuizModal = ({ isOpen, onRequestClose, question, onCorrect, onWrong }) => {
+const QuizModal = ({ isOpen, onRequestClose, info, question, onCorrect, onWrong }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -26,6 +26,7 @@ const QuizModal = ({ isOpen, onRequestClose, question, onCorrect, onWrong }) => 
 
       <div className={styles.modalBody}>
         <h2>Q,</h2>
+        <p>{info}</p>
         <p>{question}</p>
       </div>
 
