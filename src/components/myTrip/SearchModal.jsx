@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export default function SearchModal({onSave, onClose}) {
+export default function SearchModal({onSave, onClose, lon, lat}) {
     const [result, setResult] = useState([]);
 
     const searchPlace = (e) => {
@@ -17,6 +17,25 @@ export default function SearchModal({onSave, onClose}) {
                 setResult(res.data);
             })
     }
+
+    function getDistance(lat1, lon1, lat2, lon2) {
+        const R = 6371; // 지구 반지름 (킬로미터)
+        const toRad = angle => angle * (Math.PI / 180); // 각도를 라디안으로 변환
+    
+        const dLat = toRad(lat2 - lat1);
+        const dLon = toRad(lon2 - lon1);
+        const lat1Rad = toRad(lat1);
+        const lat2Rad = toRad(lat2);
+    
+        const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                  Math.cos(lat1Rad) * Math.cos(lat2Rad) *
+                  Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        const distance = R * c; // 거리 계산
+    
+        return distance.toFixed(1);
+    }    
     
     return (
         <div className={styles.modalWrapper}>
@@ -39,7 +58,7 @@ export default function SearchModal({onSave, onClose}) {
                             </div>
                             <div className={styles.bottom}>
                                 <span>{item.address}</span>
-                                <span>200km</span>
+                                <span>{getDistance(item.latitude, item.longitude, lat, lon)}km</span>
                             </div>
                         </div>
                     ))
@@ -51,5 +70,7 @@ export default function SearchModal({onSave, onClose}) {
 
 SearchModal.propTypes = {
     onClose: PropTypes.func, // per에 대한 유효성 검사 추가
-    onSave: PropTypes.func
+    onSave: PropTypes.func,
+    lon: PropTypes.number,
+    lat: PropTypes.number
 };
