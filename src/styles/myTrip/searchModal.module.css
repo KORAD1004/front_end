@@ -85,3 +85,9 @@
     font-family: 'Pretendard';
     font-size: 12.29px;
 }
+
+.bottom span:first-child {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

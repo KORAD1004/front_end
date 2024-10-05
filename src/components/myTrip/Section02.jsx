@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from '../../styles/myTrip/section02.module.css';
 import Map from './Map.jsx';
 import SearchModal from "./SearchModal.jsx";
 
 const Section02 = () => {
+    //현위치 추가
+    const [location, setLocation] = useState({ latitude: null, longitude: null });
+
+    useEffect(() => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    setLocation({
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude
+                    });
+                }
+            );
+        }
+    }, []);
+
     const [rows, setRows] = useState([
         { id: 1, place:"", isMemoVisible: false },
         { id: 2, place:"", isMemoVisible: false },
@@ -81,7 +97,7 @@ const Section02 = () => {
                     ))}
                 </div>
             </div>
-        {showToggle&&<SearchModal onClose={()=>setShowToggle(false)} onSave={(place)=>onSave(place)} rows={rows}/>}
+        {showToggle&&<SearchModal lon={location.longitude} lat={location.latitude} onClose={()=>setShowToggle(false)} onSave={(place)=>onSave(place)} rows={rows}/>}
         </>
     );
 };
