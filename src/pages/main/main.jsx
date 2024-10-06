@@ -124,26 +124,35 @@ function App() {
       <div className={styles["information-container"]}>
         <ImageLazy src={information} className={styles["information"]} alt="Information" />
         <div className={styles["notice-container"]}>
-          <div className={styles["notice-item"]}>
-            <div className={styles["notice-title-box"]}>공지사항</div>
-            <p className={styles["notice-title"]}>
-              비상진료에 따른 병·의원 이용안내
-            </p>
-            <p className={styles["notice-content"]}>
-              응급의료포털 (https://www.e-gen.or.kr/)
-            </p>
-          </div>
-          <div className={styles["notice-divider"]}></div>
-          <div className={styles["notice-item"]}>
-            <div className={styles["notice-title-box"]}>공지사항</div>
-            <p className={styles["notice-title"]}>
-              비상진료에 따른 병·의원 이용안내
-            </p>
-            <p className={styles["notice-content"]}>
-              응급의료포털 (https://www.e-gen.or.kr/)
-            </p>
-          </div>
-        </div>
+  {loading ? (
+    <p>Loading notices...</p>
+  ) : error ? (
+    <p>Error loading notices.</p>
+  ) : (
+    notices.map((notice, index) => (
+      <div key={index} className={styles["notice-item"]}>
+        <div className={styles["notice-title-box"]}>공지사항</div>
+
+        <p
+          className={styles["notice-title"]}
+          onClick={() => window.open(notice.url, "_blank")}
+          style={{ cursor: 'pointer', color: 'black' }}
+        >
+          {notice.title}
+        </p>
+
+        <p
+          className={styles["notice-content"]}
+          onClick={() => window.open(notice.url, "_blank")}
+          style={{ cursor: 'pointer', color: 'black' }}
+        >
+          {notice.content}
+        </p>
+      </div>
+    ))
+  )}
+</div>
+
       </div>
 
       <div className={styles["bottom-box"]}>
