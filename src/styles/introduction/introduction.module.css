@@ -25,7 +25,7 @@
   position: absolute;
   top:40%;
   font-family: 'Pretendard-Bold';
-  font-size: 4vw; /* 화면 너비의 4% */
+  font-size: 4vw;
   color: #ffffff;
 }
 
@@ -53,7 +53,7 @@
   margin-top: 75%;
   position: absolute;
   font-family: 'Pretendard';
-  font-size: 2.5vw; /* 화면 너비의 2.5% */
+  font-size: 2.5vw;
 }
 
 .highlight1 {
@@ -76,7 +76,7 @@
   width: 100%;
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 2.2vw; /* 화면 너비의 2.2% */
+  font-size: 2.2vw; 
 }
 
 .highlight2 {
@@ -94,7 +94,7 @@
 .ne-comment{
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 2.2vw; /* 화면 너비의 2.2% */
+  font-size: 2.2vw; 
 }
 
 .image-container{
@@ -131,9 +131,9 @@
 }
 
 .eightcomment{
-  margin-top: 3%;
+  margin-top: 10%;
   font-family: 'Pretendard';
-  font-size: 2.2vw; /* 화면 너비의 2.2% */
+  font-size: 2.2vw; 
 }
 
 .care-container{
@@ -155,7 +155,7 @@
 
 .carecomment{
   font-family: 'Pretendard';
-  font-size: 2vw; /* 화면 너비의 2% */
+  font-size: 2vw; 
 }
 
 .highlight3 {
@@ -173,7 +173,7 @@
 .towercomment{
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 2vw; /* 화면 너비의 2% */
+  font-size: 2vw; 
 }
 
 .promise{
@@ -182,7 +182,7 @@
 
 .promisecomment{
   font-family: 'Pretendard';
-  font-size: 2vw; /* 화면 너비의 2% */
+  font-size: 2vw; 
 }
 
 .i-container{
@@ -197,7 +197,7 @@
 .icomment{
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 2.2vw; /* 화면 너비의 2.2% */
+  font-size: 2.2vw; 
 }
 
 .graph{
@@ -207,7 +207,7 @@
 .gcomment{
   margin-top: 10%;
   font-family: 'Pretendard';
-  font-size: 2.2vw; /* 화면 너비의 2.2% */
+  font-size: 2.2vw;
 }
 
 .gback{
@@ -217,12 +217,31 @@
 .bcomment{
   margin-top: 10%;
   font-family: 'Pretendard';
-  font-size: 2vw; /* 화면 너비의 2% */
+  font-size: 2vw; 
 }
 
 .bcomment2{
   margin-top: 10%;
   font-family: 'Pretendard';
-  font-size: 2vw; /* 화면 너비의 2% */
+  font-size: 2vw; 
   margin-bottom: 10%;
+}
+
+.image-box {
+  position: absolute;
+  background-color: black; 
+  width: 320px; 
+  height: 40px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+ margin-top: 36%;
+
+
+}
+
+.box-comment {
+  font-family: 'Pretendard-bold';
+  color: white; 
+  font-size: 11px; 
 }
