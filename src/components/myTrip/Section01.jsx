@@ -13,9 +13,6 @@ const Section01 = () => {
                 />
             </div>
             <div className={styles.tripBigContainer}>
-                <div className={styles.tripMiniTextContainer}>
-                    <p className={styles.tripMiniText}>코스 저장 코드 #89002261</p>
-                </div>
                 <div className={styles.tripTextContainer}>
                     <p className={styles.tripText}>여행명</p>
                     <input type="text" className={styles.longInputBox}></input>

@@ -48,11 +48,11 @@ export default function SearchModal({onSave, onClose, lon, lat}) {
             </div>
             <div className={styles.placeWrapper}>
                 {
-                    result.map(item=>(
-                        <div className={styles.place} key={item.id} onClick={()=>onSave(item.title.toString())}>
+                    result.map(item => (
+                        <div className={styles.place} key={item.id} onClick={() => onSave(item.title, item.latitude, item.longitude, item.address)}>
                             <div className={styles.title}>
                                 <div>
-                                    <img src={here}/>
+                                    <img src={here} />
                                     <span>{item.title.trimStart()}</span>
                                 </div>
                             </div>
@@ -62,6 +62,7 @@ export default function SearchModal({onSave, onClose, lon, lat}) {
                             </div>
                         </div>
                     ))
+                    
                 }
             </div>
         </div>
