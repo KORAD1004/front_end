@@ -7,6 +7,7 @@ import Quiz1 from '../../components/quiz/Quiz1.jsx';
 import Quiz2 from '../../components/quiz/Quiz2.jsx';
 import Quiz3 from '../../components/quiz/Quiz3.jsx';
 import CourseSelect from './CourseSelect.jsx';
+import ImageLazy from '../imgLazy/ImageLazy.jsx';
 
 
 const Section01 = () => {
@@ -48,14 +49,14 @@ const Section01 = () => {
         <div className={styles.allContainer}>
             {renderQuiz()}
             <div className={styles.imageContainer}>
-                <img 
+                <ImageLazy 
                     src={background}
                     alt="Tourism Background" 
                     className={styles.image}
                 />
             </div>
             <div className={styles.tilteImageContainer}>
-                <img 
+                <ImageLazy 
                     src={title}
                     alt="Tourism Title" 
                     className={styles.tilteImage}
