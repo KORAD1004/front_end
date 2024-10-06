@@ -46,21 +46,30 @@
     overflow: hidden; 
     display: flex; 
     align-items: center;         
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 0;
 }
+
 .clipTextContainer {
     display: flex; 
     align-items: center;         
-    justify-content: center; 
+    justify-content: center;
+    width: 50%;
 }
 
 .clipText {
     font-family: 'Pretendard-bold';
     font-size: 10.9px;
-    white-space: nowrap; /* 텍스트가 한 줄을 넘지 않도록 설정 */
-    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis; /* 넘칠 경우 말줄임표(...) 표시 */
+}
+
+.clipTextClickContainer {
+    display: flex; 
+    align-items: center;         
+    justify-content: center;
+    margin-right: 5%;
 }
 
 .clipTextClick {
@@ -83,7 +92,8 @@
 .clipBoxContainer {
     display: flex;
     align-items: center;         
-    justify-content: left; 
+    justify-content: left;
+    margin-left: 5%;
 }
 
 .imgContainer {

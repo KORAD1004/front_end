@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import styles from '../../styles/tourism/section03.module.css';
 import bottom from '../../assets/images/tourism/bottomImg.png';
-import star from '../../assets/images/tourism/starImg.png'
 
 const Section03 = () => {
+    const [articles, setArticles] = useState([]);
+
+    useEffect(() => {
+        const fetchArticles = async () => {
+            try {
+                const response = await axios.get(`http://dev.smartcheers.site/api/scrap/korad-naver-blog/article/recent/${5}`);
+                setArticles(response.data);
+            } catch (error) {
+                console.error('Error fetching articles:', error);
+            }
+        };
+
+        fetchArticles();
+    }, []);
+
     return (
         <div className={styles.allContainer}>
             <div className={styles.imgContainer}>
@@ -18,61 +33,21 @@ const Section03 = () => {
                 <p className={styles.mainText}>경주 아티클 클립</p>
             </div>
             <div className={styles.clipContainer}>
-                <div className={styles.clip}>
-                    <div className={styles.clipBoxContainer}>
-                        <div className={styles.clipBox}>BLOG</div>
+                {articles.map((article, index) => (
+                    <div className={styles.clip} key={index}>
+                        <div className={styles.clipBoxContainer}>
+                            <div className={styles.clipBox}>BLOG</div>
+                        </div>
+                        <div className={styles.clipTextContainer}>
+                            <p className={styles.clipText}>{article.content.title}</p>
+                        </div>
+                        <div className={styles.clipTextClickContainer}>
+                            <p className={styles.clipTextClick} onClick={() => window.open(article.content.url, "_blank")}>
+                                바로가기
+                            </p>
+                        </div>
                     </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipText}>한국원자력공단 | 8월, 경주 어때?</p>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipTextClick}>바로가기</p>
-                    </div>
-                </div>
-                <div className={styles.clip}>
-                    <div className={styles.clipBoxContainer}>
-                        <div className={styles.clipBox}>BLOG</div>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipText}>한국원자력공단 | 8월, 경주 어때?</p>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipTextClick}>바로가기</p>
-                    </div>
-                </div>
-                <div className={styles.clip}>
-                    <div className={styles.clipBoxContainer}>
-                        <div className={styles.clipBox}>BLOG</div>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipText}>한국원자력공단 | 8월, 경주 어때?</p>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipTextClick}>바로가기</p>
-                    </div>
-                </div>
-                <div className={styles.clip}>
-                    <div className={styles.clipBoxContainer}>
-                        <div className={styles.clipBox}>BLOG</div>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipText}>한국원자력공단 | 8월, 경주 어때?</p>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipTextClick}>바로가기</p>
-                    </div>
-                </div>
-                <div className={styles.clip}>
-                    <div className={styles.clipBoxContainer}>
-                        <div className={styles.clipBox}>BLOG</div>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipText}>한국원자력공단 | 8월, 경주 어때?</p>
-                    </div>
-                    <div className={styles.clipTextContainer}>
-                        <p className={styles.clipTextClick}>바로가기</p>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );

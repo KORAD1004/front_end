@@ -1,57 +1,74 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 import styles from '../../styles/courseSelection/section03.module.css';
-import course1 from '../../assets/images/courseSelection/코스1.png';
-import course2 from '../../assets/images/courseSelection/코스2.png';
-import course3 from '../../assets/images/courseSelection/코스3.png';
 
 const Section03 = () => {
+    const [courseData, setCourseData] = useState([]);
+    const location = useLocation();
+
+    const searchParams = new URLSearchParams(location.search);
+    const id = searchParams.get('id');
+
+    const getCourseData = async (id) => {
+        try {
+            const response = await axios.get(`http://dev.smartcheers.site/api/course-place/${id}`);
+            setCourseData(response.data);
+        } catch (error) {
+            console.error('Error fetching course data:', error);
+        }
+    };
+
+    useEffect(() => {
+        if (id) {
+            getCourseData(id);
+        }
+    }, [id]);
+
     return (
         <div className={styles.allContainer}>
             <div className={styles.courseImgeAllContainer}>
-                <div className={styles.courseImageContainer}>
-                    <img 
-                        src={course1}
-                        alt="course Imgaes1" 
-                        className={styles.courseImage}
-                    />
-                </div>
-                <div className={styles.courseImageContainer}>
-                    <img 
-                        src={course2}
-                        alt="course Imgaes2" 
-                        className={styles.courseImage}
-                    />
-                </div>
-                <div className={styles.courseImageContainer}>
-                    <img 
-                        src={course3}
-                        alt="course Imgaes3" 
-                        className={styles.courseImage}
-                    />
-                </div>
+                {courseData.length > 0 ? (
+                    courseData.map((course, index) => (
+                        <div className={styles.courseImageContainer} key={index}>
+                            <div className={styles.circle}>
+                                <span className={styles.circleText}>{index + 1}</span>
+                            </div>
+                            <img
+                                src={'https://' + course.image}
+                                alt={`course Images ${index + 1}`}
+                                className={styles.courseImage}
+                            />
+                        </div>
+                    ))
+                ) : (
+                    <div>Loading...</div>
+                )}
             </div>
             <div className={styles.courseContainer}>
-                <div className={styles.card}>
-                    <div className={styles.museumName}>경주 국립박물관</div>
-                    <hr className={styles.underline} />
-                    <div className={styles.museumAddress}>경북 경주시 일정로 186</div>
-                </div>
-                <div className={styles.card}>
-                    <div className={styles.museumName}>경주 국립박물관</div>
-                    <hr className={styles.underline} />
-                    <div className={styles.museumAddress}>경북 경주시 일정로 186</div>
-                </div>
-                <div className={styles.card}>
-                    <div className={styles.museumName}>경주 국립박물관</div>
-                    <hr className={styles.underline} />
-                    <div className={styles.museumAddress}>경북 경주시 일정로 186</div>
-                </div>
+                {courseData.length > 0 ? (
+                    courseData.map((course, index) => (
+                        <div className={styles.card} key={index}>
+                            <div className={styles.courseName}>{course.title}</div>
+                            <hr className={styles.underline} />
+                            <div className={styles.courseAddress}>{course.address}</div>
+                        </div>
+                    ))
+                ) : (
+                    <div>Loading...</div>
+                )}
             </div>
             <div className={styles.buttonContainer}>
-                    <button className={styles.customButton}>홈페이지 바로가기</button>
-                    <button className={styles.customButton}>홈페이지 바로가기</button>
-                    <button className={styles.customButton}>홈페이지 바로가기</button>
-                </div>
+                {courseData.length > 0 ? (
+                    courseData.map((course, index) => (
+                        <button key={index} className={styles.customButton}>
+                            {course.category}
+                        </button>
+                    ))
+                ) : (
+                    <div>Loading...</div>
+                )}
+            </div>
         </div>
     );
 };
