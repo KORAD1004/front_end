@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation  } from 'react-router-dom';
 import styles from '../../styles/header/header.module.css';
 import back_icon from '../../assets/images/header/back-icon.svg';
 import home_icon from '../../assets/images/header/home-icon.png';
@@ -7,6 +7,7 @@ import menu_icon from '../../assets/images/header/menu-icon.png';
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleBackClick = () => {
@@ -20,6 +21,10 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(prevState => !prevState);
   };
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
  
   return (
     <header className={styles.header}>
@@ -52,7 +57,7 @@ const Header = () => {
             <li onClick={()=>navigate('/#')}>방폐물이란?</li>
             <li onClick={()=>navigate('/radiation')}>원자력안전도</li>
             <li onClick={()=>navigate('/tourism')}>경주관광지</li>
-            <li onClick={()=>navigate('/#')}>나의여행일정</li>
+            <li onClick={()=>navigate('/myTrip')}>나의여행일정</li>
           </ul>
         </div>
     </header>

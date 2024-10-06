@@ -1,0 +1,93 @@
+
+.allContainer {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    position: relative; 
+}
+
+.imageContainer {
+    width: 100vw;
+    height: auto; 
+    overflow: hidden;
+    position: relative;
+  }
+  
+.image {
+    width: 100vw; 
+    height: auto; 
+    z-index: 0;
+}
+
+.mainText {
+    font-family: 'Pretendard-semiBold';
+    font-size: 20px;
+    color: #ffffff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.courseNameContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    top: 70%; 
+    left: 10%; 
+    z-index: 1;
+    padding: 5%;
+}
+
+.courseName {
+    font-family: 'Pretendard-semiBold';
+    font-size: 23.33px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.courseNameBarContainer {
+    position: absolute;
+    top: 70%;
+    left: 5%; 
+    z-index: 1;
+    text-align: left;
+    width: auto;
+    margin-top: 5%;
+}
+
+.courseNameBar {
+    font-family: 'Pretendard';
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.buttonContainer {
+    display: flex; 
+    align-items: center;
+    justify-content: right;
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    margin-left: 65%;
+    margin-bottom: 18%;
+}
+
+.button {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.codeBox {
+    font-family: 'Pretendard-semiBold';
+    font-size: 10.44px;
+    width: 20%;
+    padding: 3% 5%;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 20px;
+    margin-left: 30%;
+}

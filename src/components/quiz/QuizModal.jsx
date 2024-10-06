@@ -6,7 +6,7 @@ import Wrong  from '../../assets/images/quiz/Wrong.png';
 
 Modal.setAppElement('#root');
 
-const QuizModal = ({ isOpen, onRequestClose, question, onCorrect, onWrong }) => {
+const QuizModal = ({ isOpen, onRequestClose, info, question, onCorrect, onWrong }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -20,12 +20,13 @@ const QuizModal = ({ isOpen, onRequestClose, question, onCorrect, onWrong }) => 
             KORAD 퀴즈 풀고
         </div>
         <div className={styles.titleSecond}>
-            AI 맞춤 추천 코스 확인하자!
+            경주 관광 페이지 적극 활용하자!
         </div>
       </div>
 
       <div className={styles.modalBody}>
         <h2>Q,</h2>
+        <p>{info}</p>
         <p>{question}</p>
       </div>
 

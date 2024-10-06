@@ -1,5 +1,5 @@
 .overlay {
-    background-color: rgba(0, 0, 0, 0.7); /* 배경 어둡게 */
+    background-color: rgba(0, 0, 0, 0.2); /* 배경 어둡게 */
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +13,7 @@
   .modal {
     background-color: white;
     padding: 20px;
-    width: 80%;
+    width: 300px;
     height: auto;
     border-radius: 10px;
     text-align: center;
