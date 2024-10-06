@@ -1,65 +1,65 @@
 .app-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-items: flex-start;
-    width: 100vw;
-    height: 100%;
-    overflow: visible;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100%;
+  overflow: visible;
+}
 
-  .top-container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
+.top-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
-  .topback{
-    width: 100%;
-  }
+.topback{
+  width: 100%;
+}
 
-  .top-comment1{
-    position: absolute;
-    top:40%;
-    font-family: 'Pretendard-Bold';
-    font-size: 20px;
-    color: #ffffff;
-  }
+.top-comment1{
+  position: absolute;
+  top:40%;
+  font-family: 'Pretendard-Bold';
+  font-size: 4vw; /* 화면 너비의 4% */
+  color: #ffffff;
+}
 
-  .top-box {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    height: 40%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
-    background-color: #ffffff;
-    color: #ffffff;
-    z-index: 1;
-    bottom: 0%;
-  }
-  
+.top-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 40%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; 
+  background-color: #ffffff;
+  color: #ffffff;
+  z-index: 1;
+  bottom: 0%;
+}
+
 .topboxback{
   position: absolute;
   bottom: 10%;
-  }
+}
 
-  .top-comment2{
-    margin-top: 75%;
-    position: absolute;
-    font-family: 'Pretendard';
-    font-size: 13px;
-  }
+.top-comment2{
+  margin-top: 75%;
+  position: absolute;
+  font-family: 'Pretendard';
+  font-size: 2.5vw; /* 화면 너비의 2.5% */
+}
 
-  .highlight1 {
-    font-family: 'Pretendard-bold';
-  }
-  
+.highlight1 {
+  font-family: 'Pretendard-bold';
+}
+
 .rad-container{
   display: flex;
   flex-direction: column;
@@ -76,13 +76,12 @@
   width: 100%;
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 11px;
+  font-size: 2.2vw; /* 화면 너비의 2.2% */
 }
 
 .highlight2 {
   font-family: 'Pretendard-bold';
 }
-
 
 .ne-container{
   display: flex;
@@ -95,7 +94,7 @@
 .ne-comment{
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 11px;
+  font-size: 2.2vw; /* 화면 너비의 2.2% */
 }
 
 .image-container{
@@ -106,7 +105,7 @@
   height: auto;
   overflow: visible;
 }
- 
+
 .image-gallery {
   display: flex;
   justify-content: flex-start; 
@@ -127,7 +126,6 @@
   transition: opacity 0.3s ease;
 }
 
-
 .gallery-image.active {
   opacity: 1; 
 }
@@ -135,8 +133,7 @@
 .eightcomment{
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 11px;
-
+  font-size: 2.2vw; /* 화면 너비의 2.2% */
 }
 
 .care-container{
@@ -158,7 +155,7 @@
 
 .carecomment{
   font-family: 'Pretendard';
-  font-size: 10px;
+  font-size: 2vw; /* 화면 너비의 2% */
 }
 
 .highlight3 {
@@ -176,7 +173,7 @@
 .towercomment{
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 10px;
+  font-size: 2vw; /* 화면 너비의 2% */
 }
 
 .promise{
@@ -185,7 +182,7 @@
 
 .promisecomment{
   font-family: 'Pretendard';
-  font-size: 10px;
+  font-size: 2vw; /* 화면 너비의 2% */
 }
 
 .i-container{
@@ -200,7 +197,7 @@
 .icomment{
   margin-top: 3%;
   font-family: 'Pretendard';
-  font-size: 11px;
+  font-size: 2.2vw; /* 화면 너비의 2.2% */
 }
 
 .graph{
@@ -210,7 +207,7 @@
 .gcomment{
   margin-top: 10%;
   font-family: 'Pretendard';
-  font-size: 12px;
+  font-size: 2.2vw; /* 화면 너비의 2.2% */
 }
 
 .gback{
@@ -220,12 +217,12 @@
 .bcomment{
   margin-top: 10%;
   font-family: 'Pretendard';
-  font-size: 10px;
+  font-size: 2vw; /* 화면 너비의 2% */
 }
 
 .bcomment2{
   margin-top: 10%;
   font-family: 'Pretendard';
-  font-size: 10px;
+  font-size: 2vw; /* 화면 너비의 2% */
   margin-bottom: 10%;
 }

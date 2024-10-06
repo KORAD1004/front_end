@@ -1,3 +1,8 @@
+html, body {
+  overflow: visible;
+  height: auto;
+}
+
 .app-container {
   overflow: visible; 
   display: flex; 
@@ -40,8 +45,7 @@
 .top-button {
   position: absolute;
   bottom: 10%; 
-  right: -5%; 
-  transform: translate(-50%,-50%);
+  right: 7%; 
   color: rgb(0, 0, 0); 
   border: none;
   padding: 0; 
