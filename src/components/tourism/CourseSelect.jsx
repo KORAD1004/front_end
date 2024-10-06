@@ -3,6 +3,7 @@ import example1 from '../../assets/images/tourism/코스예시.png';
 import example2 from '../../assets/images/tourism/코스예시.png';
 import example3 from '../../assets/images/tourism/코스예시.png';
 import styles from '../../styles/tourism/courseSelect.module.css';
+import ImageLazy from '../imgLazy/ImageLazy';
 
 const images = [
   { id: 1, src: example1, alt: 'Image 1' },
@@ -45,9 +46,9 @@ const CourseSelect = () => {
 
       <div className={styles.imageGallery} ref={galleryRef}>
         {images.map((image, index) => (
-          <img
+          <ImageLazy
             key={image.id}
-            ref={(el) => (imageRefs.current[index] = el)}
+            refer={(el) => (imageRefs.current[index] = el)}
             src={image.src}
             alt={image.alt}
             className={`${styles.galleryImage} ${currentIndex === index ? styles.active : ''}`}

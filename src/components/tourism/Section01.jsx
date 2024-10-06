@@ -5,6 +5,7 @@ import background from '../../assets/images/tourism/Tourism_background.gif';
 import title from '../../assets/images/tourism/Tourism_Title.png';
 import Quiz from '../../components/quiz/Quiz1.jsx';
 import CourseSelect from './CourseSelect.jsx';
+import ImageLazy from '../imgLazy/ImageLazy.jsx';
 
 const Section01 = () => {
     const navigate = useNavigate();
@@ -13,14 +14,14 @@ const Section01 = () => {
         <div className={styles.allContainer}>
             <Quiz />
             <div className={styles.imageContainer}>
-                <img 
+                <ImageLazy 
                     src={background}
                     alt="Tourism Background" 
                     className={styles.image}
                 />
             </div>
             <div className={styles.tilteImageContainer}>
-                <img 
+                <ImageLazy 
                     src={title}
                     alt="Tourism Title" 
                     className={styles.tilteImage}
