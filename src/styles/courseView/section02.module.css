@@ -53,3 +53,17 @@ body {
     height: 233px;
     border-radius: 10%;
 }
+
+.scheduleItem {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.icon {
+    margin-right: 7px;
+}
+
+.scheduleText {
+    margin: 0;
+}
