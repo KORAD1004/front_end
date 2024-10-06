@@ -1,3 +1,8 @@
+html, body {
+  overflow: visible;
+  height: auto;
+}
+
 .app-container {
   overflow: visible; 
   display: flex; 
@@ -40,8 +45,7 @@
 .top-button {
   position: absolute;
   bottom: 10%; 
-  right: -5%; 
-  transform: translate(-50%,-50%);
+  right: 7%; 
   color: rgb(0, 0, 0); 
   border: none;
   padding: 0; 
@@ -161,7 +165,7 @@
   
   .gallery-image {
     width: 100%;
-    height: 210px;
+    height: 50%;
     margin: 0 5px; 
     cursor: pointer;
     opacity: 0.6; 
@@ -187,7 +191,7 @@
   .middle-comment1{
     margin-top: 3%;
     font-family: Pretendard;
-    font-size: 6px;
+    font-size: 1.6vw;
   }
 
   .safety{
@@ -247,7 +251,7 @@
 
 .map-comment {
   font-family: 'Pretendard';
-  font-size: 8px;
+  font-size: 1.7vw;
   margin-bottom: 10px; 
   text-align: center;
 }
@@ -326,7 +330,7 @@
   font-weight: bold;
   margin-left: 10%;
   padding: 2px 5px;
-  font-size: 8px;
+  font-size: 2vw;
   display: flex; 
   justify-content: center; 
   align-items: center;
@@ -336,19 +340,33 @@
   font-family: 'Pretendard-bold';
   margin-left: 10%;
   margin-top: 2%;
-  font-size: 8px;
+  font-size: 1.5vw;
   font-weight: bold;
+  text-align: left;
+  color: #000000;
 }
 
 .notice-content {
   font-family: 'Pretendard';
   margin-left: 10%;
   margin-top: 10%;
-  font-size: 7px;
+  font-size: 1.4vw;
+  text-align: left;
+  color: #000000;
+}
+
+.notice-url {
+  color: black; 
+  text-decoration: none; 
+}
+
+.notice-url:hover {
+  text-decoration: underline; 
 }
 
 .notice_item{
   width: 50%;
+  
 }
 
 .notice-divider {
@@ -364,13 +382,13 @@
 .bottom-comment1{
 font-family: 'Pretendard';
 margin-top: 4%;
-font-size: 8px;
+font-size: 1.7vw;
 font-weight: bold;
 }
   
 .bottom-comment2{
   font-family: 'Pretendard-bold';
-  font-size: 8px;
+  font-size: 1.7vw;
 }
 
 .bottom-comment3{
@@ -380,6 +398,7 @@ font-weight: bold;
   transform: translateX(-50%,-50%); 
   font-size: 6px;
   margin-top: 3%;
+  font-size: 1.5vw;
 }
 
   .bottom-box {
