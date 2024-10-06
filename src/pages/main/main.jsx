@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'; // useNavigate 추가
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import mainback from '../../assets/images/main/mainback.svg'; 
 import mainname from '../../assets/images/main/mainname.svg';
 import toptext from '../../assets/images/main/top_text.svg';
