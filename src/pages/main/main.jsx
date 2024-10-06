@@ -16,6 +16,7 @@ import Map from '../../components/main/map';
 import SearchBar from '../../components/main/searchbar';
 import information from '../../assets/images/main/information.svg';
 import styles from '../../styles/main/main.module.css'; 
+import ImageLazy from '../../components/imgLazy/ImageLazy';
 
 const images = [
   { id: 1, src: example1, alt: 'Image 1' },
@@ -49,8 +50,8 @@ function App() {
     <div className={styles["app-container"]}>
       <div className={styles["top-container"]}>
         <div className={styles["image-overlay"]}>
-          <img src={mainname} className={styles["mainname"]} alt="main name" />
-          <img src={toptext} className={styles["toptext"]} alt="top text" />
+          <ImageLazy src={mainname} className={styles["mainname"]} alt="main name" />
+          <ImageLazy src={toptext} className={styles["toptext"]} alt="top text" />
           <button className={styles['top-button']} onClick={() => navigate('/introduction')}>
             자세히 알아보기
           </button>
@@ -64,7 +65,7 @@ function App() {
 
       <div className={styles["image-container"]}>
         <div className={styles["text-and-dots-container"]}>
-          <img src={text} className={styles["text-image"]} alt="text" />
+          <ImageLazy src={text} className={styles["text-image"]} alt="text" />
           <div className={styles["dot-indicator-container"]}>
             {images.map((_, index) => (
               <div
@@ -78,7 +79,7 @@ function App() {
 
         <div className={styles["image-gallery"]} ref={galleryRef}>
           {images.map((image, index) => (
-            <img
+            <ImageLazy
               key={image.id}
               ref={(el) => (imageRefs.current[index] = el)}
               src={image.src}
@@ -94,9 +95,9 @@ function App() {
       </div>
 
       <div className={styles['middle-container']}>
-        <img src={safety} className={styles["safety"]} alt="safety" />
-        <img src={theme} className={styles["theme"]} alt="theme" />
-        <img src={themestory} className={styles["themestory"]} alt="theme story" />
+        <ImageLazy src={safety} className={styles["safety"]} alt="safety" />
+        <ImageLazy src={theme} className={styles["theme"]} alt="theme" />
+        <ImageLazy src={themestory} className={styles["themestory"]} alt="theme story" />
         <div className={styles['hashtag']}>
           <div className={styles['hashtag-row']}>
             <div className={styles['hashtag-box']}>#경주월드</div>
@@ -120,37 +121,30 @@ function App() {
         <SearchBar />
       </div>
 
-      <div className={styles["notice-container"]}>
-  {loading ? (
-    <p>Loading notices...</p>
-  ) : error ? (
-    <p>Error loading notices.</p>
-  ) : (
-    notices.map((notice, index) => (
-      <div key={index} className={styles["notice-item"]}>
-        <div className={styles["notice-title-box"]}>공지사항</div>
-
-        {/* 제목을 클릭하면 URL로 이동 */}
-        <p
-          className={styles["notice-title"]}
-          onClick={() => window.open(notice.url, "_blank")}
-        >
-          {notice.title}
-        </p>
-
-        {/* 내용을 클릭하면 URL로 이동 */}
-        <p
-          className={styles["notice-content"]}
-          onClick={() => window.open(notice.url, "_blank")}
-        >
-          {notice.content}
-        </p>
+      <div className={styles["information-container"]}>
+        <ImageLazy src={information} className={styles["information"]} alt="Information" />
+        <div className={styles["notice-container"]}>
+          <div className={styles["notice-item"]}>
+            <div className={styles["notice-title-box"]}>공지사항</div>
+            <p className={styles["notice-title"]}>
+              비상진료에 따른 병·의원 이용안내
+            </p>
+            <p className={styles["notice-content"]}>
+              응급의료포털 (https://www.e-gen.or.kr/)
+            </p>
+          </div>
+          <div className={styles["notice-divider"]}></div>
+          <div className={styles["notice-item"]}>
+            <div className={styles["notice-title-box"]}>공지사항</div>
+            <p className={styles["notice-title"]}>
+              비상진료에 따른 병·의원 이용안내
+            </p>
+            <p className={styles["notice-content"]}>
+              응급의료포털 (https://www.e-gen.or.kr/)
+            </p>
+          </div>
+        </div>
       </div>
-    ))
-  )}
-</div>
-
-
 
       <div className={styles["bottom-box"]}>
         <p className={styles["bottom-comment1"]}>
