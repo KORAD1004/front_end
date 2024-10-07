@@ -1,14 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/myTrip/section03.module.css';
 
 const Section03 = ({ rows = [] }) => {
     const navigate = useNavigate();
-    // 예시: 의존성 배열을 빈 배열([])로 설정하여 마운트될 때 한 번만 실행
-    useEffect(() => {
-        console.log("Section03 렌더링");
-    }, []);  // 빈 배열을 사용하여 컴포넌트가 처음 마운트될 때만 실행
-
 
     return (
         <div className={styles.allContainer}>
