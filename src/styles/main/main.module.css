@@ -422,7 +422,7 @@ font-weight: bold;
 
   .separator-line2 {
     position: absolute;
-    height: 16vw; /* 부모 컨테이너의 전체 높이 */
+    height: 16vw; 
     width: 0;
     border-left: 1px solid #ccc;
     margin-top: 2%;
