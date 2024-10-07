@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import styles from '../../styles/courseSelection/section03.module.css';
@@ -12,7 +12,7 @@ const Section03 = () => {
 
     const getCourseData = async (id) => {
         try {
-            const response = await axios.get(`http://dev.smartcheers.site/api/course-place/${id}`);
+            const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/course-place/${id}`);
             setCourseData(response.data);
         } catch (error) {
             console.error('Error fetching course data:', error);
