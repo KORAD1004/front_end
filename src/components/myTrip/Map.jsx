@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from '../../styles/myTrip/Map.module.css';
+import styles from '../../styles/myTrip/map.module.css';
 
 const Map = ({ rows }) => {
   useEffect(() => {
