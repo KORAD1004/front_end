@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from '../../styles/myTrip/section02.module.css';
 import Map from './Map.jsx';
 import SearchModal from "./SearchModal.jsx";
@@ -7,7 +7,8 @@ import Section03 from "./Section03";
 
 const Section02 = () => {
     const [location, setLocation] = useState({ latitude: null, longitude: null });
-    
+    const lastRowRef = useRef(null);
+
     useEffect(() => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -38,7 +39,14 @@ const Section02 = () => {
 
     const addRow = () => {
         const newId = rows.length + 1;
-        setRows([...rows, { id: newId, isMemoVisible: false, address: "", memo: "" }]);
+        const newRow = { id: newId, isMemoVisible: false, address: "", memo: "" };
+        setRows([...rows, newRow]);
+        
+        setTimeout(() => {
+            if (lastRowRef.current) {
+                lastRowRef.current.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 0);
     };
 
     const toggleMemoVisibility = (id) => {
@@ -88,8 +96,8 @@ const Section02 = () => {
                     </div>
                 </div>
                 <div className={styles.container}>
-                    {rows.map((row) => (
-                        <div key={row.id} className={styles.row}>
+                    {rows.map((row, index) => (
+                        <div key={row.id} className={styles.row} ref={index === rows.length - 1 ? lastRowRef : null}>
                             <div className={styles.searchBox}>
                                 <div className={styles.textContainer3}>
                                     <p className={styles.text}>No.{row.id}</p>
