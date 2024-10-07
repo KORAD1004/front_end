@@ -14,7 +14,7 @@ const Section01 = () => {
 
     const getCourseData = async (id) => {
         try {
-            const response = await axios.get(`http://dev.smartcheers.site/api/course/${id}`);
+            const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/course/${id}`);
             const courseNameParts = response.data.courseName.split(',');
             setFirstPart(courseNameParts[0] + ',');
             setLastPart(courseNameParts[courseNameParts.length - 1]);

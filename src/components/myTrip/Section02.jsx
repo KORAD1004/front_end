@@ -7,7 +7,7 @@ import Section03 from "./Section03";
 
 const Section02 = () => {
     const [location, setLocation] = useState({ latitude: null, longitude: null });
-    const lastRowRef = useRef(null);
+    const containerRef = useRef(null);
 
     useEffect(() => {
         if (navigator.geolocation) {
@@ -39,12 +39,15 @@ const Section02 = () => {
 
     const addRow = () => {
         const newId = rows.length + 1;
-        const newRow = { id: newId, isMemoVisible: false, address: "", memo: "" };
-        setRows([...rows, newRow]);
-        
+        setRows([...rows, { id: newId, isMemoVisible: false, address: "", memo: "" }]);
+
+        // 일정 추가 후 rows 컨테이너 내부에서만 스크롤이 마지막 row로 이동
         setTimeout(() => {
-            if (lastRowRef.current) {
-                lastRowRef.current.scrollIntoView({ behavior: 'smooth' });
+            if (containerRef.current) {
+                containerRef.current.scrollTo({
+                    top: containerRef.current.scrollHeight,
+                    behavior: 'smooth',
+                });
             }
         }, 0);
     };
@@ -95,9 +98,10 @@ const Section02 = () => {
                         <button className={styles.addScheduleButton} onClick={addRow}>일정 추가하기</button>
                     </div>
                 </div>
-                <div className={styles.container}>
-                    {rows.map((row, index) => (
-                        <div key={row.id} className={styles.row} ref={index === rows.length - 1 ? lastRowRef : null}>
+                {/* rows를 감싸는 컨테이너 */}
+                <div className={styles.container} ref={containerRef}>
+                    {rows.map((row) => (
+                        <div key={row.id} className={styles.row}>
                             <div className={styles.searchBox}>
                                 <div className={styles.textContainer3}>
                                     <p className={styles.text}>No.{row.id}</p>

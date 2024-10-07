@@ -12,7 +12,7 @@ const Section03 = () => {
 
     const getCourseData = async (id) => {
         try {
-            const response = await axios.get(`http://dev.smartcheers.site/api/course-place/${id}`);
+            const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/course-place/${id}`);
             setCourseData(response.data);
         } catch (error) {
             console.error('Error fetching course data:', error);
