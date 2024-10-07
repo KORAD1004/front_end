@@ -21,7 +21,7 @@ export default function InfoSection({onClick}) {
                     setIsVisible(false);
                 }
             },
-            { threshold: 0.4 }
+            { threshold: 0.3 }
         );
 
         const currentTarget = targetRef.current;
