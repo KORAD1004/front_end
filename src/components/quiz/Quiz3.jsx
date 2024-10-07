@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import QuizModal from './QuizModal.jsx';
 import Correct from './Correct3.jsx';
 import Wrong from './Wrong3.jsx';
+import cookie from 'js-cookie';
 
 const Quiz3 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,7 +11,7 @@ const Quiz3 = () => {
   
   useEffect(() => {
     // 컴포넌트가 마운트될 때 모달 열기
-    setIsModalOpen(true);
+    if(cookie.get("test")==="false"||cookie.get("test")===undefined) setIsModalOpen(true);
   }, []);
 
   const handleCloseModal = () => {
@@ -20,6 +21,7 @@ const Quiz3 = () => {
   const handleCorrect = () => {
     setIsModalOpen(false);
     setIsCorrectModalOpen(true);
+    cookie.set("test", true);
   };
 
   const handleWrong = () => {

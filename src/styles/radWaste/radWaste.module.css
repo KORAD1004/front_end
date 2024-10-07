@@ -7,6 +7,12 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .radWasteInfo span {
+        font-size: 20px !important;
+    }
+}
+
 .pageWrapper {
     background-image: url('../../assets/images/radWaste/rwBackground2.svg'), url('../../assets/images/radWaste/rwBackground.svg'), url('../../assets/images/radWaste/bodyImg5.svg');
     background-repeat: no-repeat;
