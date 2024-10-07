@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import back from '../../assets/images/findcode/background.svg';
 import midback from '../../assets/images/findcode/midback.svg';
 import search from '../../assets/images/findcode/search.svg';
-import newImage from '../../assets/images/findcode/newImage.svg';  
 import styles from '../../styles/findcode/findcode.module.css';
+import useFetchTravelDetails from '../../hooks/findCode/useFetchTravelDetails';
 
 function App() { 
-    const [isSearchClicked, setIsSearchClicked] = useState(false);
     const [inputValue, setInputValue] = useState(''); 
+    const [isSearchClicked, setIsSearchClicked] = useState(false); 
+    const { travelDetails, fetchTravelDetails, loading, error } = useFetchTravelDetails(inputValue);
 
     const handleSearchClick = () => {
         if (inputValue.startsWith('#') && inputValue.length === 9) { 
-            setIsSearchClicked(true);  
+            fetchTravelDetails(); 
+            setIsSearchClicked(true); 
         }
     };
 
@@ -59,7 +61,19 @@ function App() {
           {!isSearchClicked ? (
             <div className={styles["linear"]}></div>
           ) : (
-            <img src={newImage} alt="New image" className={styles['new-image']} />
+            <>
+              {loading && <p>Loading...</p>}
+
+              {error && <p>Error: 데이터를 불러오는 중 문제가 발생했습니다.</p>}
+          
+              {travelDetails && (
+                <div className={styles["travel-info"]}>
+                  <p className={styles["travel-name"]}>{travelDetails.travelName}</p>
+                  <p>{`${travelDetails.startDate} ~ ${travelDetails.endDate} 중 ${travelDetails.days}일차`}</p>
+                  <img src={travelDetails.image} alt="Travel location" className={styles['new-image']} />
+                </div>
+              )}
+            </>
           )}
         </div>
       </>
