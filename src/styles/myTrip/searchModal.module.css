@@ -49,11 +49,13 @@
 }
 
 .placeWrapper {
-    width: 100%;
+    margin-top: 3%;
+    width: 93%;
     overflow-y: auto;
 }
 
 .place {
+    border-radius: 10px;
     padding: 5% 7%;
     border-bottom: 0.5px solid #BCBCBC;
 }
@@ -91,3 +93,12 @@
     white-space: nowrap;
     overflow: hidden;
 }
+
+.click {
+    background-color: #40672A;
+}
+
+.click span {
+    color: white;
+}
+
