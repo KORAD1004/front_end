@@ -81,7 +81,7 @@ function App() {
           {images.map((image, index) => (
             <ImageLazy
               key={image.id}
-              ref={(el) => (imageRefs.current[index] = el)}
+              refer={(el) => (imageRefs.current[index] = el)}
               src={image.src}
               alt={image.alt}
               className={`${styles["gallery-image"]} ${currentIndex === index ? styles["active"] : ''}`}
