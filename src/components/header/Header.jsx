@@ -54,7 +54,7 @@ const Header = () => {
       </div>
         <div className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
           <ul>
-            <li onClick={()=>navigate('/#')}>방폐물이란?</li>
+            <li onClick={()=>navigate('/radWaste')}>방폐물이란?</li>
             <li onClick={()=>navigate('/radiation')}>원자력안전도</li>
             <li onClick={()=>navigate('/tourism')}>경주관광지</li>
             <li onClick={()=>navigate('/myTrip')}>나의여행일정</li>
