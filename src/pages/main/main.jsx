@@ -154,7 +154,7 @@ function App() {
         </div>
       ))
     )}
-    <div className={styles["separator-line2"]}></div>
+    <div className={styles["separator-line"]}></div>
 
   </div>
 
