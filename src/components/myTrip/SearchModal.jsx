@@ -45,7 +45,7 @@ export default function SearchModal({ onSave, onClose, lon, lat }) {
                 <img src={close} />
             </div>
             <div className={styles.searchWrapper}>
-                <input onChange={searchPlace} placeholder='목적지, 대중교통, 주소 검색를 검색하세요' />
+                <input onChange={searchPlace} placeholder='목적지를 입력하세요.' />
                 <div><img src={search} /></div>
             </div>
             <div className={styles.placeWrapper}>

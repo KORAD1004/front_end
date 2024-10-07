@@ -37,10 +37,12 @@
     background-color: #F5F5F5;
     border: none;
     padding: 5% 3%;
+    font-size: 16px;
+    font-family: 'Pretendard-medium';
 }
 
 .searchWrapper div {
-    width: 13%;
+    width: 42px;
     background: linear-gradient(-44deg, #59843E, #79BD4E);
     display: flex;
     align-items: center;
