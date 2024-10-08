@@ -5,6 +5,26 @@ body {
     min-height: auto;
 }
 
+@media screen and (min-width: 1024px){
+    .allContainer {
+        width: 100vw;
+        height: 70vh !important;
+        overflow: hidden;
+        position: relative; 
+    }
+    
+    .imageContainer {
+        width: 100vw; 
+        overflow: hidden;
+    }
+      
+    .image {
+        width: 100vw; 
+        height: auto; 
+        z-index: 0;
+    }
+}
+
 .allContainer {
     width: 100vw;
     height: auto;
@@ -13,8 +33,7 @@ body {
 }
 
 .imageContainer {
-    width: 100vw;
-    height: 305px; 
+    width: 100vw; 
     overflow: hidden;
 }
   
