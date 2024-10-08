@@ -1,6 +1,6 @@
 import React from "react";
 import styles from '../../styles/myTrip/section01.module.css';
-import Background from '../../assets/images/myTrip/background.png';
+import Background from '../../assets/images/myTrip/background.svg';
 
 const Section01 = ({ tripName, setTripName, numPeople, setNumPeople, startDate, setStartDate, endDate, setEndDate, dayCount, setDayCount }) => {
     return (
@@ -12,6 +12,9 @@ const Section01 = ({ tripName, setTripName, numPeople, setNumPeople, startDate, 
                         alt="myTrip Background" 
                         className={styles.image}
                     />
+                    <div className={styles.titleContainer}>
+                        <p className={styles.title}>나의여행일정</p>
+                    </div>
                 </div>
                 <div className={styles.tripBigContainer}>
                     <div className={styles.tripTextContainer}>

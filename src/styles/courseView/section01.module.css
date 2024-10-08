@@ -1,4 +1,81 @@
-
+@media screen and (min-width: 1024px){
+    .allContainer {
+        width: 100vw;
+        height: auto;
+        overflow: hidden;
+        position: relative; 
+    }
+    
+    .imageContainer {
+        width: 100vw;
+        height: 70vh !important; 
+        overflow: hidden;
+        position: relative;
+      }
+      
+    .image {
+        width: 100vw; 
+        height: auto; 
+        z-index: 0;
+    }
+    
+    .mainText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 30px !important;
+        color: #ffffff;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+    .courseNameContainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 80%;
+        top: 60% !important; 
+        left: 10%; 
+        z-index: 1;
+        padding: 5%;
+    }
+    
+    .courseName {
+        font-family: 'Pretendard-semiBold';
+        font-size: 33.33px !important;
+        color: #ffffff;
+        white-space: nowrap;
+    }
+    
+    .buttonContainer {
+        display: flex; 
+        align-items: center;
+        justify-content: right;
+        position: absolute;
+        z-index: 1;
+        width: auto;
+        margin-left: 65%;
+        margin-bottom: 10% !important;
+    }
+    
+    .button {
+        width: 35px !important;
+        height: 35px !important;
+        margin-left: 10px;
+    }
+    
+    .codeBox {
+        font-family: 'Pretendard-semiBold';
+        font-size: 13.44px !important;
+        width: 8% !important;
+        padding: 1% 1% !important;
+        background-color: #ffffff;
+        color: black;
+        border-radius: 20px;
+        margin-left: 63% !important;
+    }
+}
 .allContainer {
     width: 100vw;
     height: auto;

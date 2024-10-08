@@ -5,6 +5,69 @@ body {
     min-height: auto;
 }
 
+@media screen and (min-width: 1024px){
+    .allContainer {
+        width: 95vw;
+        height: auto;
+        overflow: hidden;
+        position: relative; 
+        margin: 0 auto;
+    }
+    
+    .tag {
+        width: 74.13px !important;
+        height: 37.53px !important;
+        background-color: #79BD4E;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        font-size: 16px !important;
+        font-family: 'Pretendard';
+        color: #ffffff;
+        margin: 1%;
+    }
+    
+    .tagContainer {
+        display: flex;
+        margin-top: 1% !important;
+        margin-left: 1% !important;
+        margin-bottom: 1%;
+    }
+    
+    .timeBox {
+        width: 100%;
+        height: 35px;
+        border-radius: 10px;
+        background-color: #dddddd;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    
+    .timeText {
+        font-size: 10px;
+        font-family: 'Pretendard';
+        color: #000000;
+        margin-right: 5%;
+    }
+    
+    .time {
+        width: 68.95px;
+        height: 19.96px;
+        background-color: #ffffff;
+    }
+    
+    .timeContainer {
+        display: flex;               
+        flex-direction: column;      
+        align-items: center;         
+        justify-content: center; 
+    }
+}
+
 .allContainer {
     width: 95vw;
     height: auto;
@@ -32,18 +95,6 @@ body {
     margin-top: 2%;
     margin-left: 2%;
     margin-bottom: 1%;
-}
-
-.mapImageContainer {
-    display: inline-block;
-    justify-content: center; 
-    align-items: center;
-}
-
-.mapImage {
-    width: 100vw;
-    height: 233px;
-    border-radius: 10%;
 }
 
 .timeBox {
