@@ -7,13 +7,13 @@ function MenuBar() {
 
   return (
     <div className={styles['menu-bar']}>
-      <button className={styles['menu-item']} onClick={() => navigate('/introduction')}> 방폐물이란?</button>
+      <button className={styles['menu-item1']} onClick={() => navigate('/radWaste')}> 방폐물이란?</button>
       <div className={styles['menu-divider']}>|</div>
       <button className={styles['menu-item']} onClick={() => navigate('/Radiation')}>원자력안전도</button>
       <div className={styles['menu-divider']}>|</div>
       <button className={styles['menu-item']} onClick={() => navigate('/tourism')}>경주관광지</button>
       <div className={styles['menu-divider']}>|</div>
-      <button className={styles['menu-item']} onClick={() => navigate('/courseSelection')}>나의여행일정</button>
+      <button className={styles['menu-item']} onClick={() => navigate('/findcode')}>나의여행일정</button>
     </div>
   );
 }

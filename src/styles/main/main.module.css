@@ -25,6 +25,19 @@ html, body {
   align-items: center; 
 }
   
+@media screen and (min-width: 1024px){
+  .top-container {
+    height: 600px;
+  }
+
+  .menu-bar {
+    display: none !important;
+  }
+
+  .separator-line {
+    display: none !important;
+  }
+}
 
 .mainname {
   position: absolute;
@@ -344,6 +357,9 @@ html, body {
   font-weight: bold;
   text-align: left;
   color: #000000;
+  min-height: 2vh;
+  min-width: 40vw;
+  max-width: 40vw;
 }
 
 .notice-content {
@@ -353,6 +369,14 @@ html, body {
   font-size: 1.4vw;
   text-align: left;
   color: #000000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3vh;
+  min-width: 40vw;;
+  max-width: 40vw;
 }
 
 .notice-url {

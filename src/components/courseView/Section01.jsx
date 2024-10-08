@@ -1,11 +1,14 @@
-import React from "react";
 import styles from '../../styles/courseView/section01.module.css';
 import background from '../../assets/images/courseView/background.png';
 import clear from '../../assets/images/courseView/Clear.png';
 import change from '../../assets/images/courseView/Change.png';
+import { useSearchParams } from 'react-router-dom';
 
 
 const Section01 = () => {
+    const [param] = useSearchParams();
+    const code = param.get("code");
+
     return (
         <div className={styles.allContainer}>
             <div className={styles.imageContainer}>
@@ -21,7 +24,7 @@ const Section01 = () => {
             </div>
             <div className={styles.courseNameContainer}>
                 <p className={styles.courseName}> 가족여행코스</p>
-                <p className={styles.codeBox}>#99764210</p>
+                <p className={styles.codeBox}>#{code}</p>
                 <div className={styles.buttonContainer}>
                     <img 
                         src={clear}

@@ -9,6 +9,7 @@ import Header from './components/header/Header.jsx';
 import RadWaste from './pages/radWaste/RadWaste.jsx';
 import MyTrip from './pages/myTrip/MyTripCreate.jsx';
 import CourseView from './pages/courseView/CourseView.jsx';
+import FindCode from './pages/findcode/findcode.jsx';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path='/radWaste' element={<RadWaste/>}/>
         <Route path='/myTrip' element={<MyTrip/>}/>
         <Route path='/courseView' element={<CourseView/>}/>
+        <Route path='/findCode' element={<FindCode/>}/>
       </Routes>
     </BrowserRouter>
 
