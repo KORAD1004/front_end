@@ -5,9 +5,10 @@ import SearchModal from "./SearchModal.jsx";
 import TrashCan from "../../assets/images/myTrip/trashCan.png";
 import Section03 from "./Section03";
 
-const Section02 = () => {
-    const [location, setLocation] = useState({ latitude: null, longitude: null });
+const Section02 = ({ rows, setRows, location, setLocation }) => {
     const containerRef = useRef(null);
+    const [currentId, setCurrentId] = useState(null);
+    const [showToggle, setShowToggle] = useState(false);
 
     useEffect(() => {
         if (navigator.geolocation) {
@@ -20,20 +21,12 @@ const Section02 = () => {
                 }
             );
         }
-    }, []);
+    }, [setLocation]);
 
-    const [rows, setRows] = useState([
-        { id: 1, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
-        { id: 2, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
-        { id: 3, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" }
-    ]);
-    const [currentId, setCurrentId] = useState(null);
-    const [showToggle, setShowToggle] = useState(false);
-
-    const onSave = (place, latitude, longitude, address) => {
+    const onSave = (place, latitude, longitude, address, hotspotId) => {
         setShowToggle(false);
         setRows(rows.map(row =>
-            row.id === currentId ? { ...row, place, latitude, longitude, address } : row
+            row.id === currentId ? { ...row, place, latitude, longitude, address, hotspotId } : row
         ));
     };
 
@@ -78,7 +71,7 @@ const Section02 = () => {
     };
 
     const onMemoChange = (id, memo) => {
-        setRows(rows.map(row => 
+        setRows(rows.map(row =>
             row.id === id ? { ...row, memo } : row
         ));
     };
@@ -140,7 +133,7 @@ const Section02 = () => {
                                     />
                                 </div>
                             )}
-                            
+
                         </div>
                     ))}
                 </div>
@@ -153,12 +146,7 @@ const Section02 = () => {
                     lon={location.longitude}
                     lat={location.latitude}
                     onClose={() => setShowToggle(false)}
-                    onSave={(place, latitude, longitude, address) => onSave(place, latitude, longitude, address)}
-                    rows={rows}
-                />
-            )}
-            {currentId && (
-                <Section03
+                    onSave={(place, latitude, longitude, address, hotspotId) => onSave(place, latitude, longitude, address, hotspotId)}
                     rows={rows}
                 />
             )}
