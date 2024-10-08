@@ -353,7 +353,9 @@ html, body {
   font-weight: bold;
   text-align: left;
   color: #000000;
-  min-height: 3vw;
+  min-height: 2vh;
+  min-width: 40vw;
+  max-width: 40vw;
 }
 
 .notice-content {
@@ -367,6 +369,9 @@ html, body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-height: 3vh;
+  min-width: 40vw;;
+  max-width: 40vw;
 }
 
 .notice-url {
