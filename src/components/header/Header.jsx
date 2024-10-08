@@ -33,7 +33,7 @@ const Header = () => {
     <>
       {isDesktop?
       <div className={styles.desktopHeader}>
-        <div className={styles.title}>
+        <div onClick={()=>navigate('/')} className={styles.title}>
           <img src={headerIcon}/>
           <div className={styles.titleLabel}>
             <span>경화수월 | 시적인 정취로 말로 표현할 수 없을 정도의 훌륭함을 나타냄</span>

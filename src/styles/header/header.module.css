@@ -60,38 +60,6 @@
   top: 20px;
   z-index: 100;
 }
-
-@media screen and (min-width: 1024px) {
-  .header {
-
-  }
-  
-  .menu {
-    width: 100%;
-    padding: 0;
-    top: auto;
-    position: absolute;
-    opacity: 1;
-    max-height: 500px;
-    background-color: rgba(0, 0, 0, 0);
-    background: none;
-  }
-
-  .IconsContainer {
-    display: none;
-  }
-
-  .menu ul {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  .menu li {
-    padding: 3%;
-    border-bottom: none;
-  }
-}
   
 .leftIcons {
   display: flex;
@@ -128,6 +96,7 @@
   display: flex;
   align-items: center;
   gap: 3%;
+  cursor: pointer;
 }
 
 .title div {
