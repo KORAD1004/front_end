@@ -46,6 +46,8 @@ function App() {
     }
   };
 
+  
+
   return (
     <div className={styles["app-container"]}>
       <div className={styles["top-container"]}>
@@ -89,6 +91,7 @@ function App() {
             />
           ))}
         </div>
+
         <p className={styles["middle-comment1"]}>
           *본 소개지는 '한국원자력환경공단' 인근 핫플레이스로, 사회적 갈등을 대화와 타협, 민주적 방식으로 극복해낸 역사적 모범사례로 대표합니다.
         </p>
@@ -123,35 +126,37 @@ function App() {
 
       <div className={styles["information-container"]}>
         <ImageLazy src={information} className={styles["information"]} alt="Information" />
-        <div className={styles["notice-container"]}>
-  {loading ? (
-    <p>Loading notices...</p>
-  ) : error ? (
-    <p>Error loading notices.</p>
-  ) : (
-    notices.map((notice, index) => (
-      <div key={index} className={styles["notice-item"]}>
-        <div className={styles["notice-title-box"]}>공지사항</div>
+          <div className={styles["notice-container"]}>
+    {loading ? (
+      <p>Loading notices...</p>
+    ) : error ? (
+      <p>Error loading notices.</p>
+    ) : (
+      notices.map((notice, index) => (
+        <div key={index} className={styles["notice-item"]}>
+          <div className={styles["notice-title-box"]}>공지사항</div>
 
-        <p
-          className={styles["notice-title"]}
-          onClick={() => window.open(notice.url, "_blank")}
-          style={{ cursor: 'pointer', color: 'black' }}
-        >
-          {notice.title}
-        </p>
+          <p
+            className={styles["notice-title"]}
+            onClick={() => window.open(notice.url, "_blank")}
+            style={{ cursor: 'pointer', color: 'black' }}
+          >
+            {notice.title}
+          </p>
 
-        <p
-          className={styles["notice-content"]}
-          onClick={() => window.open(notice.url, "_blank")}
-          style={{ cursor: 'pointer', color: 'black' }}
-        >
-          {notice.content}
-        </p>
-      </div>
-    ))
-  )}
-</div>
+          <p
+            className={styles["notice-content"]}
+            onClick={() => window.open(notice.url, "_blank")}
+            style={{ cursor: 'pointer', color: 'black' }}
+          >
+            {notice.content}
+          </p>
+        </div>
+      ))
+    )}
+    <div className={styles["separator-line2"]}></div>
+
+  </div>
 
       </div>
 

@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import back from '../../assets/images/findcode/background.svg';
 import midback from '../../assets/images/findcode/midback.svg';
 import search from '../../assets/images/findcode/search.svg';
-import newImage from '../../assets/images/findcode/newImage.svg';  
 import styles from '../../styles/findcode/findcode.module.css';
+import useFetchTravelDetails from '../../hooks/findCode/useFetchTravelDetails';
 
 function App() { 
-    const [isSearchClicked, setIsSearchClicked] = useState(false);
     const [inputValue, setInputValue] = useState(''); 
+    const [isSearchClicked, setIsSearchClicked] = useState(false); 
+    const { travelDetails, fetchTravelDetails, loading, error } = useFetchTravelDetails();
+    const navigate = useNavigate();
 
     const handleSearchClick = () => {
         if (inputValue.startsWith('#') && inputValue.length === 9) { 
-            setIsSearchClicked(true);  
+            const code = inputValue.substring(1); // # 이후 8자만 사용
+            fetchTravelDetails(code); 
+            setIsSearchClicked(true); 
         }
     };
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);  
+    };
+
+    const handleImageClick = () => {
+        const code = inputValue.substring(1); // # 이후 8자만 사용
+        console.log('Navigating to /courseView with code:', code); // 로그 출력
+        navigate(`/courseView?code=${code}`); 
     };
 
     return (
@@ -37,7 +48,6 @@ function App() {
             <img src={midback} className={styles["midback"]} alt="mid back" />
             
             <div className={styles["input-container"]}>
-              <button className={styles['midbutton']}>코스 추가하기</button>
               <input 
                 type="text" 
                 value={inputValue}  
@@ -54,12 +64,36 @@ function App() {
                 <img src={search} alt="Go to tourism" className={styles['search']} />
               </button>
             </div>
+            <button className={styles['midbutton']} onClick={() => navigate('/myTrip')}>나만의 코스 만들어 보기</button>
           </div>
 
           {!isSearchClicked ? (
             <div className={styles["linear"]}></div>
           ) : (
-            <img src={newImage} alt="New image" className={styles['new-image']} />
+            <>
+              {loading && <p>Loading...</p>}
+
+              {error && <p>Error: 데이터를 불러오는 중 문제가 발생했습니다.</p>}
+          
+              {travelDetails && (
+                <div className={styles["travel-container"]}>
+                  <div className={styles["travel-com"]} onClick={handleImageClick}> 
+                    <p className={styles["travel-name"]}>{travelDetails.travelName}</p> 
+                    <p className={styles["travel-comment"]}>
+                      | {`${travelDetails.startDate} ~ ${travelDetails.endDate} 중 ${travelDetails.days}`}
+                    </p>
+                  </div>
+                  <div className={styles["image-list"]}>
+                    <img 
+                      src={travelDetails.image} 
+                      alt="Travel" 
+                      className={styles['new-image']}
+                      onClick={handleImageClick} 
+                    />
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </>

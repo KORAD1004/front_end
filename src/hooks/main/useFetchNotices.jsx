@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { axiosInstance } from '../../axios/axios_instance';
 
 const useFetchNotices = () => {
   const [notices, setNotices] = useState([]);
@@ -9,7 +10,7 @@ const useFetchNotices = () => {
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const response = await axios.get('https://dev.smartcheers.site/api/scrap/korad-official-website/notice/recent/2');
+        const response = await axiosInstance.get("api/scrap/korad-official-website/notice/recent/2");
         const fetchedNotices = response.data.map(item => ({
           title: item.content.title,
           content: item.content.content.split('.')[0] + '.', // 첫 번째 마침표를 기준으로 분리한 문장
