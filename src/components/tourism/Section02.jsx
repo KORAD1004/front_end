@@ -9,7 +9,7 @@ const Section02 = () => {
 
     async function getData(category) {
         try {
-            const response = await axios.get(`https://dev.smartcheers.site/api/hotspot/${category}`);
+            const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/hotspot/${category}`);
             setAttractions(response.data);
         } catch (error) {
             console.error(error);

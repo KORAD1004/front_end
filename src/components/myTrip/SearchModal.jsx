@@ -55,7 +55,7 @@ export default function SearchModal({ onSave, onClose, lon, lat }) {
                             className={`${styles.place} ${isClick === item.id ? styles.click : ''}`}
                             key={item.id}
                             onClick={() => {
-                                if(isClick===item.id) onSave(item.title.toString());
+                                if(isClick===item.id) onSave(item.title, item.latitude, item.longitude, item.address, item.id);
                                 setIsClick(item.id);
                             }}
                         >
@@ -71,6 +71,7 @@ export default function SearchModal({ onSave, onClose, lon, lat }) {
                             </div>
                         </div>
                     ))
+                    
                 }
             </div>
         </div>

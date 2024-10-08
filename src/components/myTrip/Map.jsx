@@ -1,155 +1,87 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from "react";
 import styles from '../../styles/myTrip/map.module.css';
 
-const Map = () => {
-  const mapRef = useRef(null); // map을 렌더링할 DOM 요소 참조
-  const [keyword, setKeyword] = useState('경주 청정누리공원'); // 검색 키워드 상태
-  const [places, setPlaces] = useState([]); // 검색 결과
-  const [pagination, setPagination] = useState(null); // 페이지네이션 상태
-  const markersRef = useRef([]); // 마커 배열
-
-  // 컴포넌트가 마운트될 때 카카오맵 API를 불러오는 useEffect
+const Map = ({ rows }) => {
   useEffect(() => {
+    if (!window.kakao || !window.kakao.maps) {
+      return;
+    }
+
     const { kakao } = window;
-    
-    const mapContainer = mapRef.current; 
+
+    const mapContainer = document.getElementById('map'); // 지도를 표시할 div 
     const mapOption = {
-      center: new kakao.maps.LatLng(37.566826, 126.9786567),
-      level: 2,
+      center: new kakao.maps.LatLng(33.450701, 126.570667), // 초기 지도의 중심좌표
+      level: 5
     };
+
     const map = new kakao.maps.Map(mapContainer, mapOption);
+    const bounds = new kakao.maps.LatLngBounds();
+    let hasValidCoordinates = false;
+    const markers = []; // 마커를 저장할 배열
 
-    const ps = new kakao.maps.services.Places();
-    const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
+    rows.forEach((row, index) => {
+      if (row.latitude && row.longitude) {
+        const coords = new kakao.maps.LatLng(row.latitude, row.longitude);
 
-    const searchPlaces = () => {
-      if (!keyword.trim()) {
-        alert('키워드를 입력해주세요!');
-        return;
+        // 동그란 초록색 배경에 숫자 추가를 위한 HTML 엘리먼트 생성
+        const labelContent = document.createElement('div');
+        labelContent.style.width = '30px';
+        labelContent.style.height = '30px';
+        labelContent.style.backgroundColor = '#5E8447';
+        labelContent.style.color = 'white';
+        labelContent.style.borderRadius = '50%'; // 동그란 모양
+        labelContent.style.textAlign = 'center';
+        labelContent.style.lineHeight = '30px'; // 중앙 정렬
+        labelContent.innerText = index + 1; // 숫자 추가
+        labelContent.style.position = 'absolute';
+        labelContent.style.transform = 'translate(-50%, -50%)';
+        labelContent.style.pointerEvents = 'none';
+
+        // 숫자 레이블을 마커의 위치에 추가
+        const labelPosition = new kakao.maps.LatLng(row.latitude, row.longitude);
+        const labelOverlay = new kakao.maps.CustomOverlay({
+          position: labelPosition,
+          content: labelContent,
+          yAnchor: 1 // 레이블 위치 조정
+        });
+
+        labelOverlay.setMap(map); // 맵에 레이블 추가
+
+        bounds.extend(coords);
+        hasValidCoordinates = true;
+
+        markers.push(coords); // 마커의 좌표 저장
       }
-      ps.keywordSearch(keyword, (data, status, pagination) => {
-        if (status === kakao.maps.services.Status.OK) {
-          setPlaces(data);
-          setPagination(pagination);
-          displayPlaces(data);
-          displayPagination(pagination);
-        } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
-          alert('검색 결과가 존재하지 않습니다.');
-        } else if (status === kakao.maps.services.Status.ERROR) {
-          alert('검색 결과 중 오류가 발생했습니다.');
-        }
-      });
-    };
+    });
 
-    const displayPlaces = (places) => {
-      removeMarker(); // 기존 마커 제거
-
-      const bounds = new kakao.maps.LatLngBounds();
-      const newMarkers = [];
-
-      places.forEach((place, i) => {
-        const placePosition = new kakao.maps.LatLng(place.y, place.x);
-        const marker = addMarker(placePosition, i);
-        newMarkers.push(marker);
-
-        bounds.extend(placePosition);
-        kakao.maps.event.addListener(marker, 'mouseover', () => {
-          displayInfowindow(marker, place.place_name);
-        });
-        kakao.maps.event.addListener(marker, 'mouseout', () => {
-          infowindow.close();
-        });
+    // 마커를 선으로 연결
+    if (markers.length > 1) {
+      const linePath = markers.map(coord => {
+        return new kakao.maps.LatLng(coord.getLat(), coord.getLng());
       });
 
-      markersRef.current = newMarkers; // 새로운 마커 배열 저장
-      map.setBounds(bounds);
-    };
-
-    const addMarker = (position, idx) => {
-      const imageSrc =
-        'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png';
-      const imageSize = new kakao.maps.Size(36, 37);
-      const imgOptions = {
-        spriteSize: new kakao.maps.Size(36, 691),
-        spriteOrigin: new kakao.maps.Point(0, idx * 46 + 10),
-        offset: new kakao.maps.Point(13, 37),
-      };
-      const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions);
-      const marker = new kakao.maps.Marker({
-        position,
-        image: markerImage,
+      const polyline = new kakao.maps.Polyline({
+        path: linePath,
+        strokeWeight: 5, // 선 두께
+        strokeColor: '#5E8447', // 초록색
+        strokeOpacity: 1, // 선의 투명도
+        strokeStyle: 'solid' // 선의 스타일
       });
-      marker.setMap(map);
-      return marker;
-    };
 
-    const removeMarker = () => {
-        markersRef.current.forEach((marker) => marker.setMap(null)); // 마커 삭제
-        markersRef.current = []; // 마커 배열 초기화
-    };
+      polyline.setMap(map); // 맵에 선 추가
+    }
 
-    const displayInfowindow = (marker, title) => {
-      const content = `<div style="padding:5px;z-index:1;">${title}</div>`;
-      infowindow.setContent(content);
-      infowindow.open(map, marker);
-    };
-
-    searchPlaces();
-  }, [keyword]);
+    if (hasValidCoordinates) {
+      setTimeout(() => {
+        map.setBounds(bounds);
+      }, 1000);
+    }
+  }, [rows]);
 
   return (
-    <div className={styles.map_wrap}>
-      <div ref={mapRef} style={{ width: '100%', height: '100%' }}></div>
-      <div id="menu_wrap" className={styles.bg_white} style={{
-        position: 'absolute', top: 0, left: 0, bottom: 0, width: '250px', margin: '10px 0 30px 10px', padding: '5px', overflowY: 'auto', background: 'rgba(255, 255, 255, 0.7)', zIndex: 1, fontSize: '12px', borderRadius: '10px'
-      }}>
-        <div className={styles.option}>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setKeyword(e.target.keyword.value);
-            }}
-          >
-            키워드 :{' '}
-            <input
-              type="text"
-              id="keyword"
-              defaultValue={keyword}
-              size="15"
-            />{' '}
-            <button type="submit">검색하기</button>
-          </form>
-        </div>
-        <hr className={styles.hr} />
-        <ul id="placesList" className={styles.placeList}>
-          {places.map((place, index) => (
-            <li key={index} className={styles.item}>
-              <span className={`${styles.markerbg} ${styles[`marker_${index + 1}`]}`}></span>
-              <div className={styles.info}>
-                <h5>{place.place_name}</h5>
-                <span>{place.road_address_name || place.address_name}</span>
-                <span className={styles.jibun}>{place.address_name}</span>
-                <span className={styles.tel}>{place.phone}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-        <div id="pagination" className={styles.pagination}>
-          {pagination &&
-            Array(pagination.last)
-              .fill()
-              .map((_, i) => (
-                <a
-                  key={i}
-                  href="#!"
-                  className={pagination.current === i + 1 ? styles.on : ''}
-                  onClick={() => pagination.gotoPage(i + 1)}
-                >
-                  {i + 1}
-                </a>
-              ))}
-        </div>
-      </div>
+    <div className={styles.map}>
+      <div id="map" style={{ width: "100%", height: "100%" }}></div>
     </div>
   );
 };
