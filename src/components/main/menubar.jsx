@@ -13,7 +13,7 @@ function MenuBar() {
       <div className={styles['menu-divider']}>|</div>
       <button className={styles['menu-item']} onClick={() => navigate('/tourism')}>경주관광지</button>
       <div className={styles['menu-divider']}>|</div>
-      <button className={styles['menu-item']} onClick={() => navigate('/courseSelection')}>나의여행일정</button>
+      <button className={styles['menu-item']} onClick={() => navigate('/findcode')}>나의여행일정</button>
     </div>
   );
 }
