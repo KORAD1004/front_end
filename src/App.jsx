@@ -24,7 +24,7 @@ export default function App() {
         <Route path='/radWaste' element={<RadWaste/>}/>
         <Route path='/myTrip' element={<MyTrip/>}/>
         <Route path='/courseView' element={<CourseView/>}/>
-        <Route path='/findcode' element={<FindCode/>}/>
+        <Route path='/findCode' element={<FindCode/>}/>
       </Routes>
     </BrowserRouter>
 
