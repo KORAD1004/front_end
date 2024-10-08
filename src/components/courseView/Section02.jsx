@@ -23,7 +23,7 @@ const Section02 = ({data}) => {
                 </div>
             </div>
             <div className={styles.underline}></div>
-            <CourseMap />
+            <CourseMap data={data} />
         </div>
     );
 };
