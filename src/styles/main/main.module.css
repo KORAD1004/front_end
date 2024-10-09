@@ -250,7 +250,7 @@ html, body {
   }
 
   .themestory {
-    position: relative; /* 겹치는 요소 위로 배치 */
+    position: relative;
     width: 50%;
     right:15%;
   }
@@ -293,13 +293,14 @@ html, body {
   }
 
   .search-input {
+    display: flex;
     font-family: 'Pretendard';
-    width: 50vw; /* 250px을 대체할 vw 값 */
-    padding: 4vw; /* 15px을 대체할 vw 값 */
-    border: 0.1vw solid #D8D8D8; /* 1px을 vw로 변환 */
+    width: 50vw; 
+    padding: 3.5vw; 
+    border: 0.1vw solid #D8D8D8; 
     background-color: #D8D8D8;
-    border-radius: 1vw; /* 10px을 vw로 변환 */
-    font-size: 2.3vw; /* 10px을 vw로 변환 */
+    border-radius: 1vw; 
+    font-size: 2.3vw; 
     white-space: nowrap;
     color: #000000 !important;
   }
@@ -320,6 +321,12 @@ html, body {
 
 .search-button:hover {
   background-color: #45a049;
+}
+
+.paper-icon {
+  width: 2.5vw; 
+  height: auto;
+  margin-left: 2%; 
 }
 
 .information-container{
