@@ -82,7 +82,7 @@ function App() {
           ))}
         </div>
         <p className={styles["eightcomment"]}>
-          한국방사성폐기물관리공단’에서 ‘한국원자력환경공단'으로<br/> 사명변경이 최종 의결되는 과정을 거쳐 명칭이 변경되었습니다.
+          한국방사성폐기물관리공단’에서 <span className={styles["highlight2"]}>'한국원자력환경공단'으로</span><br/> 사명변경이 최종 의결되는 과정을 거쳐 명칭이 변경되었습니다.
         </p>
         <div className={styles["image-box"]}>
             <p className={styles["box-comment"]}>

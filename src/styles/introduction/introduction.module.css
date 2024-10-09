@@ -80,7 +80,7 @@
 }
 
 .highlight2 {
-  font-family: 'Pretendard-bold';
+  font-family: 'Pretendard-extraBold';
 }
 
 .ne-container{
@@ -148,14 +148,15 @@
 
 .care{
   left: 10%;
-  margin-top: 10%;
-  width: 90%;
+  margin-top: 17%;
+  width: 100%;
   height: 10%;
 }
 
 .carecomment{
   font-family: 'Pretendard';
   font-size: 2vw; 
+  margin-top: 2%;
 }
 
 .highlight3 {
@@ -168,6 +169,7 @@
   align-items: center;
   width: 100%;
   height: auto;
+  margin-top: 10%;
 }
 
 .towercomment{
