@@ -28,7 +28,7 @@
 
 .mapContainer {
     padding: 5%;
-    height: 193px;
+    height: auto !important;
 }
 
 .searchContainer {

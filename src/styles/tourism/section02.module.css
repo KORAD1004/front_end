@@ -77,10 +77,12 @@
     
     .touristAttractions {
         display: flex;
-        flex-wrap: wrap; /* 너비를 초과하면 줄바꿈 */
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 1%; /* 요소 간의 간격 설정 */
-        padding: 0% 7%; /* 내부 여백 추가 */
+        gap: 1%;
+        padding: 0% 7%;
+        justify-content: flex-start;
+        width: 86% !important;
     }
     
     

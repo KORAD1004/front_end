@@ -1,5 +1,5 @@
 import styles from '../../styles/courseView/section02.module.css';
-import CourseMap from "./CourseMap";
+import CourseMap from './CourseMap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faClock, faUser } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';

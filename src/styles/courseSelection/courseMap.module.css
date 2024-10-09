@@ -1,13 +1,14 @@
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .map {
-        width: 100%;
-        height: 500px;
-    }
-    
-    .map div {
-        border-radius: 10px;
+        height: 80vh !important;
+        width: 80% !important;
+        margin: 0 auto;
+        .map div {
+            border-radius: 10px;
+        }
     }
 }
+
 
 .map {
     width: 100%;
