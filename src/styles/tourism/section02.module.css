@@ -1,3 +1,23 @@
+@media screen and (min-width: 768px){
+    .touristAttractions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3%;
+        width: 80%;
+    }
+
+    .touristAttraction {
+        width: 100% !important;
+        border-radius: 10px;
+        background-color: #f2f2f2;
+        border: 2px solid #c4c4c4;
+        margin-bottom: 1%;
+        overflow: hidden;
+        position: relative;
+        
+    }
+}
+
 @media screen and (min-width: 1024px){
     .allContainer {
         width: 100vw;

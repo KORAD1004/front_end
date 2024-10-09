@@ -11,7 +11,7 @@ const Map = ({ rows }) => {
 
     const mapContainer = document.getElementById('map'); // 지도를 표시할 div 
     const mapOption = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667), // 초기 지도의 중심좌표
+      center: new kakao.maps.LatLng(35.8561719, 129.2247477), // 초기 지도의 중심좌표
       level: 5
     };
 

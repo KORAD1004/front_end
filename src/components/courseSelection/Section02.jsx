@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 import styles from '../../styles/courseSelection/section02.module.css';
 import CourseMap from "./CourseMap";
@@ -28,15 +28,14 @@ const Section02 = () => {
 
     return (
         <div className={styles.allContainer}>
-            <div className={styles.tagContainer}>
-                {course.length > 0 && (
-                    <>
-                        {course[0] && <p className={styles.tag}>{course[0].category}</p>}
-                        {course[1] && <p className={styles.tag}>{course[1].category}</p>}
-                        {course[2] && <p className={styles.tag}>{course[2].category}</p>}
-                    </>
-                )}
-            </div>
+            {course.length > 0 && (
+                <div className={styles.tagContainer}>
+                    {Array.from(new Set(course.map(item => item.category))).map((category, index) => (
+                        <p key={index} className={styles.tag}>{category}</p>
+                    ))}
+                </div>
+            )}
+
             <CourseMap />
             {/* <div className={styles.timeContainer}>
                 <div className={styles.timeBox}>
