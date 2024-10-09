@@ -67,27 +67,27 @@
     .touristAttractionContainer {  
         display: flex;   
         flex-direction: column;
-        justify-content: flex-start; /* 위에서부터 정렬 */
+        justify-content: flex-start;
         align-items: center; 
         height: 840px !important;
-        overflow-y: auto; /* 스크롤 가능 */
+        overflow-y: auto;
         width: 100% !important;
-        padding: 0; /* 패딩 제거 */
+        padding: 0;
     }
 
     .touristAttractions {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개의 열 */
-        gap: 3%; /* 요소들 사이의 간격 */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3%;
         width: 80%;
     }
     
     .touristAttraction {
-        width: 100% !important; /* 그리드의 각 셀에 꽉 차게 */
+        width: 100% !important;
         border-radius: 10px;
         background-color: #f2f2f2;
         border: 2px solid #c4c4c4;
-        margin-bottom: 1%; /* 요소 간 하단 여백 */
+        margin-bottom: 1%;
         overflow: hidden;
         position: relative;
         
