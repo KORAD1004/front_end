@@ -12,8 +12,7 @@ function App() {
     const { travelDetails, fetchTravelDetails, loading, error } = useFetchTravelDetails();
     const navigate = useNavigate();
 
-    // 8자리 숫자만 입력 받는지 확인
-    const isValidInput = (value) => /^[0-9]{8}$/.test(value);
+    const isValidInput = (value) => /^[0-9]{8}$/.test(value); 
 
     const handleSearchClick = () => {
         if (isValidInput(inputValue)) { 
@@ -85,6 +84,10 @@ function App() {
                     </p>
                   </div>
                   <div className={styles["image-list"]}>
+                    <div 
+                      className={styles["darker"]} 
+                      onClick={handleImageClick} 
+                    ></div>
                     <img 
                       src={travelDetails.image} 
                       alt="Travel" 
