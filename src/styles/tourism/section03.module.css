@@ -75,6 +75,13 @@
     .clipTextClick {
         font-family: 'Pretendard-bold';
         font-size: 17.9px !important;
+        transition: all 0.3s ease; /* 변화를 부드럽게 적용 */
+        cursor: pointer; /* 마우스 커서를 손가락 모양으로 변경 */
+    }
+    
+    .clipTextClick:hover {
+        color: #5E8447; /* 커서 올렸을 때 색상 변경 */
+        transform: scale(1.05); /* 살짝 크기를 키워 클릭할 수 있는 효과 */
     }
     
     .clipBox {
@@ -188,9 +195,16 @@
 }
 
 .clipTextClick {
-    font-family: 'Pretendard-bold';
-    font-size: 10.9px;
-}
+        font-family: 'Pretendard-bold';
+        font-size: 10.9px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .clipTextClick:hover {
+        color: #5E8447;
+        transform: scale(1.05);
+    }
 
 .clipBox {
     font-family: 'Pretendard';
