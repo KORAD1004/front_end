@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import styles from '../../styles/myTrip/map.module.css';
+import styles from '../../styles/courseView/courseMap.module.css';
 
-const Map = ({ data }) => {
+const CourseMap = ({ data }) => {
   useEffect(() => {
     if (!window.kakao || !window.kakao.maps) {
       return;
@@ -91,4 +91,4 @@ const Map = ({ data }) => {
   );
 };
 
-export default Map;
+export default CourseMap;
