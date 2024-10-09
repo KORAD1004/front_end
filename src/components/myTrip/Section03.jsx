@@ -20,8 +20,6 @@ const Section03 = ({ tripName, numPeople, startDate, endDate, dayCount, rows = [
             }))
         };
 
-        console.log("저장할 데이터:", travelData);
-
         try {
             await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/schedule`, travelData)
                 .then(res => {

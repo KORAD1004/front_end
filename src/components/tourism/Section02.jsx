@@ -6,13 +6,13 @@ import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Section02 = () => {
     const [attractions, setAttractions] = useState([]);
-    const [activeButton, setActiveButton] = useState(null); // 활성화된 버튼의 인덱스 관리
+    const [activeButton, setActiveButton] = useState(null);
 
     async function getData(category, index) {
         try {
             const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/hotspot/${category}`);
             setAttractions(response.data);
-            setActiveButton(index); // 버튼 클릭 시 해당 인덱스를 활성화 상태로 저장
+            setActiveButton(index);
         } catch (error) {
             console.error(error);
         }
