@@ -119,7 +119,17 @@ html, body {
     background: none;
     flex-grow: 0;
   }
-  
+  .menu-item1{
+    font-family: 'Pretendard-bold';
+    padding: 5px 10px; 
+    font-size: 10px; 
+    cursor: pointer;
+    color: #2C5016; 
+    white-space: nowrap; 
+    background: none;
+    flex-grow: 0;
+    white-space: nowrap;
+  }
   .menu-divider {
     padding: 0 10px; 
     color: #ccc; 

@@ -12,10 +12,12 @@ function App() {
     const { travelDetails, fetchTravelDetails, loading, error } = useFetchTravelDetails();
     const navigate = useNavigate();
 
+    // 8자리 숫자만 입력 받는지 확인
+    const isValidInput = (value) => /^[0-9]{8}$/.test(value);
+
     const handleSearchClick = () => {
-        if (inputValue.startsWith('#') && inputValue.length === 9) { 
-            const code = inputValue.substring(1); // # 이후 8자만 사용
-            fetchTravelDetails(code); 
+        if (isValidInput(inputValue)) { 
+            fetchTravelDetails(inputValue); 
             setIsSearchClicked(true); 
         }
     };
@@ -25,9 +27,8 @@ function App() {
     };
 
     const handleImageClick = () => {
-        const code = inputValue.substring(1); // # 이후 8자만 사용
-        console.log('Navigating to /courseView with code:', code); // 로그 출력
-        navigate(`/courseView?code=${code}`); 
+        console.log('Navigating to /courseView with code:', inputValue); // 로그 출력
+        navigate(`/courseView?code=${inputValue}`); 
     };
 
     return (
@@ -52,14 +53,14 @@ function App() {
                 type="text" 
                 value={inputValue}  
                 onChange={handleInputChange} 
-                placeholder="#으로 시작하는 코드 8자를 입력해 주세요"
-                maxLength={9}  
+                placeholder="8자리 숫자를 입력해 주세요"
+                maxLength={8}  
                 className={styles['search-input']}
               />
               <button 
                 className={styles['search-button']}
                 onClick={handleSearchClick}
-                disabled={!(inputValue.startsWith('#') && inputValue.length === 9)}
+                disabled={!isValidInput(inputValue)}  
               >
                 <img src={search} alt="Go to tourism" className={styles['search']} />
               </button>
