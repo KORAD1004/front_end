@@ -20,17 +20,6 @@
     border: 0.58px solid rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (min-width: 1024px) {
-    .radWasteInfo span {
-        font-size: 20px !important;
-    }
-    
-    .gongdanInfo {
-        width: 25%;
-    }
-
-}
-
 .pageWrapper {
     background-image: url('../../assets/images/radWaste/rwBackground2.svg'), url('../../assets/images/radWaste/rwBackground.svg'), url('../../assets/images/radWaste/bodyImg5.svg');
     background-repeat: no-repeat;
@@ -359,4 +348,79 @@
 .backBtn span {
     font-family: 'Pretendard-bold';
     font-size: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .radWasteInfo span {
+        font-size: 20px !important;
+    }
+    
+    .gongdanInfo {
+        width: 25%;
+        height: 30px;
+        border-radius: 20px;
+    }
+
+    .gongdanInfo span:first-child {
+        font-size: 15px;
+    }
+
+    .gongdanInfo span:last-child {
+        font-size: 10px;
+    }
+
+    .intro span:first-child {
+        font-size: 15px;
+    }
+
+    .intro span:last-child {
+        font-size: 8px;
+    }
+
+    .predictRadWaste {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .containerInfo span:first-child {
+        font-size: 15px;
+    }
+
+    .containerInfo span:last-child {
+        font-size: 10px;
+    }
+
+    .unitInfo span:nth-child(2) {
+        font-size: 20px;
+    }
+
+    .unitInfo span:last-child {
+        font-size: 10px;
+    }
+
+    .predictHeader span {
+        font-size: 14px;
+    }
+
+    .header {
+        margin-top: 10%;
+    }
+
+    .header span {
+        font-size: 40px;
+    }
+
+    .todayInfo {
+        width: 30%;
+        height: 50px;
+        border-radius: 20px;
+    }
+
+    .todayInfo span {
+        font-size: 16px;
+    }
+
+    .todayInfo img {
+        width: 7%;
+    }
 }
