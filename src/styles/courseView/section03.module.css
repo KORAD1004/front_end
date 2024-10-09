@@ -14,6 +14,26 @@
     .map {
         height: 70vh !important;
     }
+
+    .buttonContainer {
+        display: flex;      
+        align-items: center;         
+        justify-content: center; 
+        margin-bottom: 10%;
+        gap: 2%;
+        margin-top: 1%;
+      }
+      
+      .saveButton {
+        width: 20% !important;
+        padding: 2% !important;
+        font-family: 'Pretendard';
+        font-size: 15px !important;
+        color: #ffffff;
+        border-radius: 20px;
+        background-color: #5E8447;
+        margin-bottom: 6%;
+    }
 }
 
 body {

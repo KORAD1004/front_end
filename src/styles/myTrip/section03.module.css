@@ -1,3 +1,92 @@
+@media screen and (min-width: 1024px){
+    .allContainer {
+        width: 100vw;
+        height: auto;
+        overflow: hidden;
+        position: relative; 
+    }
+    
+    .textAllContainer {
+        padding: 5%;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        width: 70% !important;
+    }
+    
+    .textContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5%;
+    }
+    
+    .noText {
+        font-family: 'Pretendard-bold';
+        font-size: 17px !important;
+        margin-right: 5%;
+    }
+    
+    .courseText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 17px !important;
+        margin-right: 5%;
+    }
+    
+    .memoText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 17px !important;
+    }
+    
+    .noDataText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 17px !important;
+        margin-right: 40%;
+    }
+    
+    .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    
+    .saveButton {
+        background-color: #77B353;
+        width: 85px !important;
+        height: 58.14px !important;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        margin-left: 3%;
+        font-family: 'Pretendard-bold';
+        font-size: 17.52px !important;
+    }
+      
+    .saveButton:focus {
+        background-color: #45a049;
+    }
+    
+    .backButton {
+        background-color: #E1E1E1;
+        width: 85px !important;
+        height: 58.14px !important;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-family: 'Pretendard-bold';
+        font-size: 17.52px !important;
+        color: #000;
+    }
+      
+    .backButton:focus {
+        background-color: #7d827d;
+    }
+      
+}
+
 .allContainer {
     width: 100vw;
     height: auto;

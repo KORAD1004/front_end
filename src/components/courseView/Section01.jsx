@@ -5,7 +5,7 @@ import change from '../../assets/images/courseView/Change.png';
 import { useSearchParams } from 'react-router-dom';
 
 
-const Section01 = () => {
+const Section01 = ({data}) => {
     const [param] = useSearchParams();
     const code = param.get("code");
 
@@ -19,11 +19,8 @@ const Section01 = () => {
                 />
             </div>
             <p className={styles.mainText}>코스확인하기</p>
-            <div className={styles.courseNameBarContainer}>
-                <p className={styles.courseNameBar}>|</p>
-            </div>
             <div className={styles.courseNameContainer}>
-                <p className={styles.courseName}> 가족여행코스</p>
+                <p className={styles.courseName}>| {data && data.length > 0 && data[0].travelName}</p>
                 <p className={styles.codeBox}>#{code}</p>
                 <div className={styles.buttonContainer}>
                     <img 

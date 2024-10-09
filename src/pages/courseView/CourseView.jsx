@@ -20,7 +20,7 @@ const CourseView = () => {
   
   return (
     <div>
-      <Section01 />
+      <Section01 data={data}/>
       <Section02 data={data}/>
       <Section03 data={data}/>
     </div>

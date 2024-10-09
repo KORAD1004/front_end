@@ -61,8 +61,8 @@ const Section03 = () => {
             <div className={styles.buttonContainer}>
                 {courseData.length > 0 ? (
                     courseData.map((course, index) => (
-                        <button key={index} className={styles.customButton}>
-                            {course.category}
+                        <button key={index} className={styles.customButton} onClick={() => window.location.href = course.spotURL}>
+                            더 알아보기
                         </button>
                     ))
                 ) : (

@@ -5,17 +5,133 @@ body {
   min-height: auto;
 }
 
+@media screen and (min-width: 1024px){
+  .allContainer {
+    width: 95vw;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .courseImage {
+    width: 460px !important;
+    height: 300px !important;
+    border-radius: 5%;
+  }
+  
+  .courseImageContainer {
+    position: relative; 
+    width: 32%;
+    height: 100%;
+    margin-top: 5%;
+  }
+  
+  .courseImgeAllContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+  }
+  
+  .courseContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 1%;
+  }
+  
+  .card {
+    border: 0.5px solid #ccc;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+    width: 32%;
+  }
+  
+  .courseName {
+    font-size: 20px !important;
+    font-family: 'Pretendard-Bold';
+    margin-top: 4%;
+  }
+  
+  .underline {
+    width: 200px !important;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 8% auto;
+  }
+  
+  .courseAddress {
+    font-size: 17px !important;
+    font-family: 'Pretendard-semiBold';
+    margin-bottom: 2%;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    gap: 2%;
+    margin-top: 1%;
+  }
+  
+  .customButton {
+    width: 32%;
+    height: 40px !important;
+    font-size: 15px !important;
+    font-family: 'Pretendard-Bold';
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .customButton:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .customButton:active {
+    background-color: #e0e0e0;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .circleText {
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+  }
+}
+
 .allContainer {
   width: 95vw;
-  height: 35vh;
+  height: auto;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
 }
 
 .courseImage {
-  width: 100%;
-  height: 100%;
+  width: 116px;
+  height: 153px;
   border-radius: 5%;
 }
 
@@ -23,6 +139,7 @@ body {
   position: relative; 
   width: 32%;
   height: 100%;
+  margin-top: 5%;
 }
 
 .courseImgeAllContainer {
