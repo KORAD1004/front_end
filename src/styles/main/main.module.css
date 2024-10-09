@@ -368,8 +368,8 @@ html, body {
   text-align: left;
   color: #000000;
   min-height: 2vh;
-  min-width: 40vw;
-  max-width: 40vw;
+  min-width: 10vw;
+  max-width: 30vw;
 }
 
 .notice-content {
@@ -385,8 +385,8 @@ html, body {
   overflow: hidden;
   text-overflow: ellipsis;
   min-height: 3vh;
-  min-width: 40vw;;
-  max-width: 40vw;
+  min-width: 10vw;
+  max-width: 30vw;
 }
 
 .notice-url {
