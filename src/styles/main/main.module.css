@@ -25,6 +25,19 @@ html, body {
   align-items: center; 
 }
   
+@media screen and (min-width: 1024px){
+  .top-container {
+    height: 600px;
+  }
+
+  .menu-bar {
+    display: none !important;
+  }
+
+  .separator-line {
+    display: none !important;
+  }
+}
 
 .mainname {
   position: absolute;
@@ -62,12 +75,13 @@ html, body {
 }
 
 
-.separator-line {
-  width: 100%;
-  border: none; 
-  border-top: 1px solid #ccc; 
-  margin-top: 5px
-}
+  .separator-line {
+    width: 100%;
+    border: none; 
+    border-top: 1px solid #ccc; 
+    margin-top: 5px
+  }
+
 
   .text {
     margin-left: -70px; 
@@ -349,7 +363,6 @@ html, body {
   font-family: 'Pretendard-bold';
   margin-left: 10%;
   margin-top: 2%;
-  margin-bottom: 5%;
   font-size: 1.5vw;
   font-weight: bold;
   text-align: left;
@@ -362,6 +375,7 @@ html, body {
 .notice-content {
   font-family: 'Pretendard';
   margin-left: 10%;
+  margin-top: 10%;
   font-size: 1.4vw;
   text-align: left;
   color: #000000;
@@ -433,15 +447,4 @@ font-weight: bold;
 
   .information{
     width: 100%;
-  }
-
-  .separator-line2 {
-    position: absolute;
-    height: 16vw; 
-    width: 0;
-    border-left: 1px solid #ccc;
-    margin-top: 2%;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
   }

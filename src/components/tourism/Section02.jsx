@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from 'axios';
 import styles from '../../styles/tourism/section02.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,18 +6,20 @@ import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Section02 = () => {
     const [attractions, setAttractions] = useState([]);
+    const [activeButton, setActiveButton] = useState(null);
 
-    async function getData(category) {
+    async function getData(category, index) {
         try {
-            const response = await axios.get(`https://dev.smartcheers.site/api/hotspot/${category}`);
+            const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/hotspot/${category}`);
             setAttractions(response.data);
+            setActiveButton(index);
         } catch (error) {
             console.error(error);
         }
     }
 
     useEffect(() => {
-        getData("활동적");
+        getData("활동적", 0);
     }, []);
 
     return (
@@ -27,30 +29,22 @@ const Section02 = () => {
                 <p className={styles.mainText}>가볼만한 곳</p>
             </div>
             <div className={styles.miniButtonAllContainer}>
-                <div className={styles.miniButtonContainer}>
-                    <button className={styles.miniButton} onClick={() => getData("활동적")}>활동적</button>
-                </div>
-                <div className={styles.miniButtonContainer}>
-                    <button className={styles.miniButton} onClick={() => getData("정적인")}>정적인</button>
-                </div>
-                <div className={styles.miniButtonContainer}>
-                    <button className={styles.miniButton} onClick={() => getData("아이들")}>아이들</button>
-                </div>
-                <div className={styles.miniButtonContainer}>
-                    <button className={styles.miniButton} onClick={() => getData("나홀로")}>나홀로</button>
-                </div>
-                <div className={styles.miniButtonContainer}>
-                    <button className={styles.miniButton} onClick={() => getData("상징적")}>상징적</button>
-                </div>
-                <div className={styles.miniButtonContainer}>
-                    <button className={styles.miniButton} onClick={() => getData("역사적")}>역사적</button>
-                </div>
+                {["활동적", "정적인", "아이들", "나홀로", "상징적", "역사적"].map((category, index) => (
+                    <div className={styles.miniButtonContainer} key={index}>
+                        <button
+                            className={`${styles.miniButton} ${activeButton === index ? styles.active : ""}`}
+                            onClick={() => getData(category, index)}
+                        >
+                            {category}
+                        </button>
+                    </div>
+                ))}
             </div>
             <div className={styles.touristAttractionContainer}>
                 <div className={styles.touristAttractions}>
                     {attractions.map((attraction, index) => (
                         <div className={styles.touristAttraction} key={index}>
-                            <img src={'https://'+attraction.image} alt={attraction.subTitle} className={styles.touristAttractionImage} />
+                            <img src={'https://' + attraction.image} alt={attraction.subTitle} className={styles.touristAttractionImage} />
                             <div className={styles.touristAttractionTextContainer}>
                                 <p className={styles.touristAttractionText}>{attraction.title}</p>
                                 <div className={styles.touristAttractionSmallText}>
@@ -63,9 +57,8 @@ const Section02 = () => {
                         </div>
                     ))}
                 </div>
-
             </div>
-            <p className={styles.subText}>영업시간 및 정보들은 시간에 따라 변경될 수 있으므로 참고 부탁드립니다.</p>
+            <p className={styles.subText}>경주 관광사이트에서 가져온 api입니다.</p>
         </div>
     );
 };

@@ -4,11 +4,13 @@ import bodyImg from '../../assets/images/radWaste/bodyImg.svg';
 import bodyImg2 from '../../assets/images/radWaste/bodyImg2.svg';
 import bodyImg3 from '../../assets/images/radWaste/bodyImg3.svg';
 import bodyImg4 from '../../assets/images/radWaste/bodyImg4.svg';
+import { useMediaQuery } from 'react-responsive';
 import { useState, useRef, useEffect } from 'react';
 
 export default function InfoSection({onClick}) {
     const [isVisible, setIsVisible] = useState(false);
     const targetRef = useRef(null);  // ref는 useRef로 관리
+    const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
 
     useEffect(() => {
         if (!targetRef.current) return;  // targetRef가 설정되지 않으면 리턴
@@ -21,7 +23,7 @@ export default function InfoSection({onClick}) {
                     setIsVisible(false);
                 }
             },
-            { threshold: 0.4 }
+            { threshold: isDesktop ? 0.1 : 0.3 }
         );
 
         const currentTarget = targetRef.current;

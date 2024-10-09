@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from '../../styles/myTrip/section02.module.css';
 import Map from './Map.jsx';
 import SearchModal from "./SearchModal.jsx";
+import TrashCan from "../../assets/images/myTrip/trashCan.png";
+import Section03 from "./Section03";
 
-const Section02 = () => {
-    //현위치 추가
-    const [location, setLocation] = useState({ latitude: null, longitude: null });
+const Section02 = ({ rows, setRows, location, setLocation }) => {
+    const containerRef = useRef(null);
+    const [currentId, setCurrentId] = useState(null);
+    const [showToggle, setShowToggle] = useState(false);
 
     useEffect(() => {
         if (navigator.geolocation) {
@@ -18,42 +21,59 @@ const Section02 = () => {
                 }
             );
         }
-    }, []);
+    }, [setLocation]);
 
-    const [rows, setRows] = useState([
-        { id: 1, place:"", isMemoVisible: false },
-        { id: 2, place:"", isMemoVisible: false },
-        { id: 3, place:"", isMemoVisible: false }
-    ]);
-    const [currentId, setCurrentId] = useState(null);
-    const [showToggle, setShowToggle] = useState(false);
-    console.log(rows);
-
-    const onSave = (place) => {
+    const onSave = (place, latitude, longitude, address, hotspotId) => {
         setShowToggle(false);
-        setRows(rows.map(row => 
-            row.id === currentId ? { ...row, place} : row
+        setRows(rows.map(row =>
+            row.id === currentId ? { ...row, place, latitude, longitude, address, hotspotId } : row
         ));
-    }
-
-    // 일정 추가하기 버튼 클릭 시 새로운 row 추가
-    const addRow = () => {
-        const newId = rows.length + 1;
-        setRows([...rows, { id: newId, isMemoVisible: false }]);
     };
 
-    // 메모 보이기/숨기기 토글
+    const addRow = () => {
+        const newId = rows.length + 1;
+        setRows([...rows, { id: newId, isMemoVisible: false, address: "", memo: "" }]);
+
+        // 일정 추가 후 rows 컨테이너 내부에서만 스크롤이 마지막 row로 이동
+        setTimeout(() => {
+            if (containerRef.current) {
+                containerRef.current.scrollTo({
+                    top: containerRef.current.scrollHeight,
+                    behavior: 'smooth',
+                });
+            }
+        }, 0);
+    };
+
     const toggleMemoVisibility = (id) => {
-        setRows(rows.map(row => 
-            row.id === id ? { ...row, isMemoVisible: !row.isMemoVisible } : row
-        ));
+        setRows(rows.map(row => {
+            if (row.id === id) {
+                return { ...row, isMemoVisible: !row.isMemoVisible };
+            }
+            return row;
+        }));
+    };
+
+    const onDeleteRow = (id) => {
+        const newRows = rows.filter(row => row.id !== id);
+        const updatedRows = newRows.map((row, index) => ({
+            ...row,
+            id: index + 1
+        }));
+        setRows(updatedRows);
     };
 
     const getValue = (row) => {
         if (row.id === currentId) {
             return rows.find(r => r.id === currentId)?.place || "";
         }
-        return row.place; // 일치하지 않으면 원래 있던 값을 반환
+        return row.place;
+    };
+
+    const onMemoChange = (id, memo) => {
+        setRows(rows.map(row =>
+            row.id === id ? { ...row, memo } : row
+        ));
     };
 
     return (
@@ -63,7 +83,7 @@ const Section02 = () => {
                     <p className={styles.mapText}>지도</p>
                 </div>
                 <div className={styles.mapContainer}>
-                    <Map />
+                    <Map rows={rows} />
                 </div>
                 <div className={styles.searchContainer}>
                     <div className={styles.textContainer2}>
@@ -71,14 +91,21 @@ const Section02 = () => {
                         <button className={styles.addScheduleButton} onClick={addRow}>일정 추가하기</button>
                     </div>
                 </div>
-                <div className={styles.container}>
+                {/* rows를 감싸는 컨테이너 */}
+                <div className={styles.container} ref={containerRef}>
                     {rows.map((row) => (
                         <div key={row.id} className={styles.row}>
                             <div className={styles.searchBox}>
                                 <div className={styles.textContainer3}>
                                     <p className={styles.text}>No.{row.id}</p>
                                     <p className={styles.text}>명칭</p>
-                                    <input onClick={()=>{setShowToggle(true); setCurrentId(row.id)}} type="text" className={styles.textBox2} value={getValue(row)||""} readOnly/>
+                                    <input
+                                        onClick={() => { setShowToggle(true); setCurrentId(row.id); }}
+                                        type="text"
+                                        className={styles.textBox2}
+                                        value={getValue(row) || ""}
+                                        readOnly
+                                    />
                                 </div>
                             </div>
                             <button
@@ -87,17 +114,42 @@ const Section02 = () => {
                             >
                                 {row.isMemoVisible ? '▲' : '▼'}
                             </button>
-                            <button className={styles.saveButton}>저장</button>
+                            <div className={styles.trashCanContainer}>
+                                <img
+                                    src={TrashCan}
+                                    className={styles.trashCan}
+                                    onClick={() => onDeleteRow(row.id)}
+                                    alt="삭제"
+                                />
+                            </div>
                             {row.isMemoVisible && (
                                 <div className={styles.memoContainer}>
-                                    <input type="text" placeholder="메모를 작성해 주세요. (20자 이내)" className={styles.memoTextBox} />
+                                    <input
+                                        type="text"
+                                        placeholder="메모를 작성해 주세요. (20자 이내)"
+                                        className={styles.memoTextBox}
+                                        value={row.memo}
+                                        onChange={(e) => onMemoChange(row.id, e.target.value)}
+                                    />
                                 </div>
                             )}
+
                         </div>
                     ))}
                 </div>
+                <div className={styles.underlineContainer}>
+                    <div className={styles.underline}></div>
+                </div>
             </div>
-        {showToggle&&<SearchModal lon={location.longitude} lat={location.latitude} onClose={()=>setShowToggle(false)} onSave={(place)=>onSave(place)} rows={rows}/>}
+            {showToggle && (
+                <SearchModal
+                    lon={location.longitude}
+                    lat={location.latitude}
+                    onClose={() => setShowToggle(false)}
+                    onSave={(place, latitude, longitude, address, hotspotId) => onSave(place, latitude, longitude, address, hotspotId)}
+                    rows={rows}
+                />
+            )}
         </>
     );
 };

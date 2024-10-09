@@ -1,5 +1,6 @@
 import styles from '../../styles/radWaste/radWaste.module.css';
 import calendar from '../../assets/images/radWaste/calendar.svg';
+import InfoBox from './InfoBox';
 
 export default function HeaderSection() {
     const date = new Date();
@@ -21,11 +22,7 @@ export default function HeaderSection() {
                         <span>기준 현황</span>
                     </div>
                 </div>
-                <div className={styles.gongdanInfo}>
-                    <span>경주 중·저준위 방사성폐기물 처분장</span>
-                    <div className={styles.line}/>
-                    <span>경북 경주시 문무대왕면 동해안로 1249</span>
-                </div>
+                <InfoBox msg="경주 중·저준위 방사성폐기물 처분장" msg2="경북 경주시 문무대왕면 동해안로 1249"/>
             </div>
             <div className={styles.intro}>
                 <span>일별 경주 방폐물 처리장 포화 정도 및 예측 분석 시스템</span>

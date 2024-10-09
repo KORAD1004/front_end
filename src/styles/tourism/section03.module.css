@@ -1,3 +1,125 @@
+@media screen and (min-width: 1024px){
+    .allContainer {
+        width: 100vw;
+        height: auto;
+        overflow: hidden;
+        position: relative; 
+    }
+    
+    .mainTextContainer {
+        margin-left: 8%;
+        z-index: 1;
+    }
+    
+    .mainText {
+        font-family: 'Pretendard-extraBold';
+        font-size: 36px !important;
+        text-align: left;
+    }
+    
+    .mainSmallText {
+        font-family: 'Pretendard-bold';
+        font-size: 24px !important;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 8px;
+        margin-top: 20%;
+    }
+    
+    .clipContainer {
+        display: flex;               
+        flex-direction: column;      
+        align-items: center;         
+        justify-content: center; 
+        margin-top: 8%;
+        margin-bottom: 20%;
+        z-index: 1;
+    }
+    
+    .clip {
+        width: 86%;
+        height: 60px !important;
+        border-radius: 10px;
+        background-color: #ffffff;
+        border: 0.1px solid #c4c4c4;
+        margin: 1%;
+        overflow: hidden; 
+        display: flex; 
+        align-items: center;         
+        justify-content: space-between;
+        z-index: 0;
+    }
+    
+    .clipTextContainer {
+        display: flex; 
+        align-items: center;         
+        justify-content: center;
+        width: 50%;
+    }
+    
+    .clipText {
+        font-family: 'Pretendard-bold';
+        font-size: 17.9px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* 넘칠 경우 말줄임표(...) 표시 */
+    }
+    
+    .clipTextClickContainer {
+        display: flex; 
+        align-items: center;         
+        justify-content: center;
+        margin-right: 5%;
+    }
+    
+    .clipTextClick {
+        font-family: 'Pretendard-bold';
+        font-size: 17.9px !important;
+        transition: all 0.3s ease; /* 변화를 부드럽게 적용 */
+        cursor: pointer; /* 마우스 커서를 손가락 모양으로 변경 */
+    }
+    
+    .clipTextClick:hover {
+        color: #5E8447; /* 커서 올렸을 때 색상 변경 */
+        transform: scale(1.05); /* 살짝 크기를 키워 클릭할 수 있는 효과 */
+    }
+    
+    .clipBox {
+        font-family: 'Pretendard';
+        width: 64.48px !important;
+        height: 31.19px !important;
+        background-color: #77B353;
+        color: #ffffff;
+        font-size: 15.09px !important;
+        display: flex;                  
+        align-items: center;         
+        justify-content: center;
+    }
+    
+    .clipBoxContainer {
+        display: flex;
+        align-items: center;         
+        justify-content: left;
+        margin-left: 5%;
+    }
+    
+    .imgContainer {
+        width: 50% !important;
+        height: auto;
+        position: absolute;
+        right: 0; 
+        z-index: 0;
+        overflow: hidden;
+        margin-top: 5%;
+    }
+    
+    .bottomImg {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
 .allContainer {
     width: 100vw;
     height: auto;
@@ -37,12 +159,12 @@
 }
 
 .clip {
-    width: 80%;
-    height: 38px;
+    width: 86%;
+    height: 34px;
     border-radius: 10px;
     background-color: #ffffff;
-    border: 1px solid #c4c4c4;
-    margin: 0.5%;
+    border: 0.1px solid #c4c4c4;
+    margin: 1%;
     overflow: hidden; 
     display: flex; 
     align-items: center;         
@@ -73,9 +195,16 @@
 }
 
 .clipTextClick {
-    font-family: 'Pretendard-bold';
-    font-size: 10.9px;
-}
+        font-family: 'Pretendard-bold';
+        font-size: 10.9px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .clipTextClick:hover {
+        color: #5E8447;
+        transform: scale(1.05);
+    }
 
 .clipBox {
     font-family: 'Pretendard';

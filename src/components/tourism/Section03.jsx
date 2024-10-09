@@ -9,7 +9,7 @@ const Section03 = () => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const response = await axios.get(`http://dev.smartcheers.site/api/scrap/korad-naver-blog/article/recent/${5}`);
+                const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/scrap/korad-naver-blog/article/recent/${5}`);
                 setArticles(response.data);
             } catch (error) {
                 console.error('Error fetching articles:', error);

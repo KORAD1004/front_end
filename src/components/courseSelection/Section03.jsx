@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import styles from '../../styles/courseSelection/section03.module.css';
@@ -12,7 +12,7 @@ const Section03 = () => {
 
     const getCourseData = async (id) => {
         try {
-            const response = await axios.get(`http://dev.smartcheers.site/api/course-place/${id}`);
+            const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/course-place/${id}`);
             setCourseData(response.data);
         } catch (error) {
             console.error('Error fetching course data:', error);
@@ -61,8 +61,8 @@ const Section03 = () => {
             <div className={styles.buttonContainer}>
                 {courseData.length > 0 ? (
                     courseData.map((course, index) => (
-                        <button key={index} className={styles.customButton}>
-                            {course.category}
+                        <button key={index} className={styles.customButton} onClick={() => window.location.href = course.spotURL}>
+                            더 알아보기
                         </button>
                     ))
                 ) : (
