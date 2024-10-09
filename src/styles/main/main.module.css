@@ -346,16 +346,16 @@ html, body {
 }
 
 .notice-title-box {
-  width: 40px; 
-  height: 20px; 
-  background-color: #79BD4E; 
-  color: white; 
+  width: 8vw;  /* 화면 너비의 8% */
+  height: 3vh; /* 화면 높이의 5% */
+  background-color: #79BD4E;
+  color: white;
   font-weight: bold;
   margin-left: 10%;
-  padding: 2px 5px;
-  font-size: 2vw;
-  display: flex; 
-  justify-content: center; 
+  padding: 1px 5px;
+  font-size: 2vw;  /* 화면 너비의 2% */
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
