@@ -346,14 +346,14 @@ html, body {
 }
 
 .notice-title-box {
-  width: 8vw;  /* 화면 너비의 8% */
-  height: 3vh; /* 화면 높이의 5% */
+  width: 8vw; 
+  height: 4vw; 
   background-color: #79BD4E;
   color: white;
   font-weight: bold;
   margin-left: 10%;
   padding: 1px 5px;
-  font-size: 2vw;  /* 화면 너비의 2% */
+  font-size: 2vw; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,3 +448,14 @@ font-weight: bold;
   .information{
     width: 100%;
   }
+
+  .separator-line2 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 17vw;
+    background-color: #e0e0e0;
+  }
+  
