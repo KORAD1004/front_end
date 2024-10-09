@@ -42,14 +42,22 @@ const Section03 = ({ tripName, numPeople, startDate, endDate, dayCount, rows = [
             <div className={styles.textAllContainer}>
                 {rows.map((row, index) => (
                     <div key={row.id} className={styles.textContainer}>
-                        <p className={styles.noText}>No. {index + 1}</p>
+                        <div className={styles.noTextContainer}>
+                            <p className={styles.noText}>No. {index + 1}</p>
+                        </div>
                         {row.place ? (
                             <>
+                            <div className={styles.courseTextContainer}>
                                 <p className={styles.courseText}>{row.place} | {row.address}</p>
+                            </div>
+                            <div className={styles.memoTextContainer}>
                                 <p className={styles.memoText}>{row.memo}</p>
+                            </div>
                             </>
                         ) : (
-                            <p className={styles.noDataText}>정보가 없습니다.</p>
+                            <div className={styles.courseTextContainer}>
+                                <p className={styles.noDataText}>정보가 없습니다.</p>
+                            </div>
                         )}
                     </div>
                 ))}

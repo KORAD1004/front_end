@@ -17,31 +17,51 @@
     .textContainer {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin-bottom: 5%;
+    }
+    
+    .noTextContainer{
+        width: 20%;
+    }
+    
+    .courseTextContainer{
+        width: 50%;
+        display: flex;
+        align-self: start;
+    }
+    
+    .memoTextContainer{
+        width: 30%;
+        display: flex;
+        align-self: start;
     }
     
     .noText {
         font-family: 'Pretendard-bold';
         font-size: 17px !important;
-        margin-right: 5%;
+        margin-right: 7%;
     }
     
     .courseText {
         font-family: 'Pretendard-semiBold';
         font-size: 17px !important;
         margin-right: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .memoText {
         font-family: 'Pretendard-semiBold';
         font-size: 17px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .noDataText {
         font-family: 'Pretendard-semiBold';
         font-size: 17px !important;
-        margin-right: 40%;
     }
     
     .buttonContainer {
@@ -105,25 +125,46 @@
 .textContainer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+}
+
+.noTextContainer{
+    width: 20%;
+}
+
+.courseTextContainer{
+    width: 50%;
+    display: flex;
+    align-self: start;
+}
+
+.memoTextContainer{
+    width: 30%;
+    display: flex;
+    align-self: start;
 }
 
 .noText {
     font-family: 'Pretendard-bold';
     font-size: 11px;
-    margin-right: 5%;
+    margin-right: 7%;
 }
 
 .courseText {
     font-family: 'Pretendard-semiBold';
     font-size: 10px;
     margin-right: 5%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .memoText {
     font-family: 'Pretendard-semiBold';
     font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .noDataText {
