@@ -94,7 +94,6 @@ const Header = () => {
                 ? styles.dimmed 
                 : ''
             }
-            style={{}}  
           >
             <span>나의여행일정</span>
           </div>
