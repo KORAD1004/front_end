@@ -34,7 +34,7 @@ export default function InfoSection({onClick}) {
                 observer.unobserve(currentTarget);
             }
         };
-    }, []);  // 빈 배열을 의존성으로 하여 처음 한 번만 실행
+    }, [isDesktop]);  // 빈 배열을 의존성으로 하여 처음 한 번만 실행
     
     return (
         <>

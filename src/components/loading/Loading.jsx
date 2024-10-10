@@ -12,7 +12,7 @@ export default function Loading({time}) {
     }, [])
     
     return (
-        <div style={{display:"flex", height:"100vh", justifyContent:"center", alignItems:"center"}}>
+        <div style={{display:"flex", height: time===7?"70vh":"100vh", justifyContent:"center", alignItems:"center"}}>
             <div style={{position:"relative", justifyContent:"center", display:"flex"}}>
                 <img 
                     src={loadingContainer}

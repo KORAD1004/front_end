@@ -162,7 +162,7 @@
 
 .wasteFill {
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     width: 90%;
     background: linear-gradient(0, #33422A, #648252); /* 초록색 내용물 */
     z-index: 0;
@@ -343,6 +343,7 @@
     align-items: center;
     background-color: white;
     animation: mount 1s ease-in-out;
+    cursor: pointer;
 }
 
 .backBtn span {
@@ -407,7 +408,7 @@
     }
 
     .header span {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .todayInfo {

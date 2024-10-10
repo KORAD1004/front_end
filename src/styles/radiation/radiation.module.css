@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
     background-image: url('../../assets/images/radiation/radBackground.svg');
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -24,7 +23,7 @@
 }
 
 .menu {
-    margin-top: 19px;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -136,8 +135,7 @@
 .map {
     position: relative;
     width: 95%;
-    height: 70%;
-    margin-bottom: -200px;
+    height: 70vh;
 }
 
 .map div {
@@ -249,14 +247,32 @@
 .loading {
     position: relative;
     width: 95%;
-    height: 70%;
-    margin-bottom: -200px;
+    height: 70vh;
     background-color: rgb(242, 239, 239);
     overflow: hidden;
     border-radius: 15px;
 }
 
-.loading div div {
-    bottom: 15%;
+@media screen and (min-width: 1024px) {
+    .headerWrapper {
+        margin-top: 3%;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header {
+        margin-bottom: 3%;
+    }
+
+    .pageWrapper {
+        background-size: cover;
+    }
 }
 
+@media screen and (min-height: 870px) {
+    .header {
+        margin-top: 27%;
+    }
+}
