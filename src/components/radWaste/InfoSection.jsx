@@ -54,7 +54,7 @@ export default function InfoSection({onClick}) {
                 <span>그중 고준위 방폐물은</span>
                 <span>높은 열과 방사능을 내는 방사성폐기물로,</span>
                 <span>정확하게는 열 발생량이 2km/m3, 반감기 20년 이상인 알파선을 방출하는 핵종으로</span>
-                <span>방사능 농도가 그램당 4,000Bg(베크렐) 이상인 것입니다.</span>
+                <span>방사능 농도가 그램당 4,000Bq(베크렐) 이상인 것입니다.</span>
                 <span>경주 방폐물 처리장에서 주로 다루는 중저준위 방폐물은</span>
                 <span>고준위 정도에는 미치지 않는 정도의 방사성 폐기물을 의미합니다.</span>
                 <img src={bodyImg2}/>
