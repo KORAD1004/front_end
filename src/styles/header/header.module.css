@@ -116,14 +116,28 @@
   align-items: center;
   font-size: 18px;
   font-family: 'Pretendard-semiBold';
-  gap: 7%;
 }
 
 .menuList div {
   cursor: pointer;
-  padding: 5% 0;
+  padding: 3% 5%;
+  border-radius: 10px;
+  transition: color 0.25s ease-in, font-family 0.25s ease-in;
 }
 
 .menuList div span {
   white-space: nowrap;
+}
+
+.menuList div.dimmed {
+  color: lightgray; /* 호버되지 않은 형제들의 색상을 변경 */
+}
+
+.menuList div:hover {
+  font-family: 'Pretendard-bold';
+  color: white;
+}
+
+.gradation {
+  background: linear-gradient(90deg, #1A4400, #000000);
 }

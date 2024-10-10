@@ -281,7 +281,7 @@ export default function RadiationMap() {
     if (loading) {
         return (
             <div className={styles.loading}>
-                <Loading time={6}/>
+                <Loading time={7}/>
             </div>
         );
     }
