@@ -11,7 +11,7 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1113px)' });
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleBackClick = () => {
@@ -52,28 +52,49 @@ const Header = () => {
           <div onClick={()=>navigate('/radWaste')}
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={handleMouseLeave}
-            className={(hoveredIndex && hoveredIndex !== 1) || (location.pathname !== '/radWaste') ? styles.dimmed : ''}
+            className={
+              (hoveredIndex && hoveredIndex !== 1) || 
+              (location.pathname !== '/' && location.pathname !== '/radWaste') 
+                ? styles.dimmed 
+                : ''
+            }
           >
             <span>방폐물시스템</span>
           </div>
           <div onClick={()=>navigate('/radiation')}
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
-            className={(hoveredIndex && hoveredIndex !== 2) || (location.pathname !== '/radiation') ? styles.dimmed : ''}
+            className={
+              (hoveredIndex && hoveredIndex !== 2) || 
+              (location.pathname !== '/' && location.pathname !== '/radiation') 
+                ? styles.dimmed 
+                : ''
+            }
           >
             <span>원자력안전도</span>
           </div>
           <div onClick={()=>navigate('/tourism')}
             onMouseEnter={() => handleMouseEnter(3)}
             onMouseLeave={handleMouseLeave}
-            className={(hoveredIndex && hoveredIndex !== 3) || (location.pathname !== '/tourism') ? styles.dimmed : ''}  
+            className={
+              (hoveredIndex && hoveredIndex !== 3) || 
+              (location.pathname !== '/' && location.pathname !== '/tourism') 
+                ? styles.dimmed 
+                : ''
+            }
           >
             <span>경주관광지</span>
           </div>
           <div onClick={()=>navigate('/findCode')}
             onMouseEnter={() => handleMouseEnter(4)}
             onMouseLeave={handleMouseLeave}
-            className={(hoveredIndex && hoveredIndex !== 4) || (location.pathname !== '/findCode') ? styles.dimmed : ''}  
+            className={
+              (hoveredIndex && hoveredIndex !== 4) || 
+              (location.pathname !== '/' && location.pathname !== '/findCode') 
+                ? styles.dimmed 
+                : ''
+            }
+            style={{}}  
           >
             <span>나의여행일정</span>
           </div>
