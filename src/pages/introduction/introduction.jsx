@@ -12,6 +12,7 @@ import impossible from '../../assets/images/introduction/impossible.svg';
 import graph from '../../assets/images/introduction/graph.svg';
 import gback from '../../assets/images/introduction/gback.svg';
 import styles from '../../styles/introduction/introduction.module.css';
+import ImageLazy from '../../components/imgLazy/ImageLazy';
 
 const images = [
   { id: 1, src: politics1, alt: 'Image 1' },
@@ -44,16 +45,16 @@ function App() {
           소개페이지
         </p>
         <div className={styles["top-box"]}>
-          <img src={topboxback} className={styles["topboxback"]} alt="top box background" />
+          <ImageLazy src={topboxback} className={styles["topboxback"]} alt="top box background" />
         </div>
-        <img src={topback} className={styles["topback"]} alt="top back" />
+        <ImageLazy src={topback} className={styles["topback"]} alt="top back" />
         <p className={styles["top-comment2"]}>
           <span className={styles["highlight1"]}>한국원자력환경공단</span>이 무엇일까요?
         </p>
       </div>
 
       <div className={styles["rad-container"]}>
-        <img src={rad} className={styles["rad"]} alt="radiation" />
+        <ImageLazy src={rad} className={styles["rad"]} alt="radiation" />
         <p className={styles["rad-comment"]}>
           방사성폐기물로 인한 위해를 방지하고 공공의 안전과 환경보전에 이바지하기 위하여<br />
           설립된 <span className={styles["highlight2"]}>대한민국 산업통상자원부 산하 위탁집행형 준정부기관을 의미합니다.</span>
@@ -61,7 +62,7 @@ function App() {
       </div>
 
       <div className={styles["ne-container"]}>
-        <img src={ne} className={styles["ne"]} alt="negative" />
+        <ImageLazy src={ne} className={styles["ne"]} alt="negative" />
         <p className={styles["ne-comment"]}>
           ‘방사성’과 ‘폐기물’이라는 단어가 주는 <span className={styles["highlight2"]}>부정적 이미지를 해소하고</span><br />
           방사성폐기물처리장을 유치한 경주시민의 요구에 따라
@@ -71,7 +72,7 @@ function App() {
       <div className={styles["image-container"]}>
         <div className={styles["image-gallery"]} ref={galleryRef}>
           {images.map((image, index) => (
-            <img 
+            <ImageLazy 
               key={image.id}
               ref={(el) => (imageRefs.current[index] = el)}
               src={image.src}
@@ -92,7 +93,7 @@ function App() {
       </div>
 
       <div className={styles["care-container"]}>
-        <img src={care} className={styles["care"]} alt="care" />
+        <ImageLazy src={care} className={styles["care"]} alt="care" />
         <p className={styles["carecomment"]}>
           고준위 방사성 폐기물 처분시설 부지선정, 기술개발, 인력양성 등
           <br/><span className={styles["highlight3"]}>고준위 방사성 폐기물 관리사업을 책임지고 차질 없이 추진함을 목표로 합니다.</span>
@@ -100,11 +101,11 @@ function App() {
       </div>
 
       <div className={styles["tower-container"]}>
-        <img src={tower} className={styles["tower"]} alt="tower" />
+        <ImageLazy src={tower} className={styles["tower"]} alt="tower" />
         <p className={styles["towercomment"]}>
           경주의 방사성폐기물처분장 <span className={styles["highlight3"]}>건설사업은 1986년부터 시작되었습니다.</span>
         </p>
-        <img src={promise} className={styles["promise"]} alt="promise" />
+        <ImageLazy src={promise} className={styles["promise"]} alt="promise" />
         <p className={styles["promisecomment"]}>
           하지만, 방사성폐기물처분시설 부지확보 사업은<span className={styles["highlight3"]}> 19년간 9차례 실패를 거듭하면서</span><br/>
           사업자체도 계속적으로 바뀌게 되며 국가적인 난제였습니다.
@@ -112,16 +113,16 @@ function App() {
       </div>
 
       <div className={styles["i-container"]}>
-        <img src={impossible} className={styles["impossible"]} alt="impossible" />
+        <ImageLazy src={impossible} className={styles["impossible"]} alt="impossible" />
         <p className={styles["icomment"]}>
           정부는 2004년 주민투표제를 도입하고<br/><span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 유치지역에 관한 특별법</span>을 제정하였습니다.
           <br/><br/>경주를 포함한 총 4지역이 유치신청서를 제출하였고,
         </p>
-        <img src={graph} className={styles["graph"]} alt="graph" />
+        <ImageLazy src={graph} className={styles["graph"]} alt="graph" />
         <p className={styles["gcomment"]}>
           그리고 마침내 2005년 11월 2일 주민투표를 통해<br/><span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 부지가 경주로 확정되어</span>
         </p>
-        <img src={gback} className={styles["gback"]} alt="gback" />
+        <ImageLazy src={gback} className={styles["gback"]} alt="gback" />
         <p className={styles["bcomment"]}>
           이어지는 처분시설 건설 공사도 어려운 난관을 극복해가며,<br/><span className={styles["highlight3"]}>2014년 6월 30일에 1단계 동굴처분방식의 중저준위방폐물처분시설 공사를 완료하였고<br/>원자력안전위원회로부터 사용승인을 받았습니다.</span>
         </p>

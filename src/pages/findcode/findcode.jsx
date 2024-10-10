@@ -5,6 +5,7 @@ import midback from '../../assets/images/findcode/midback.svg';
 import search from '../../assets/images/findcode/search.svg';
 import styles from '../../styles/findcode/findcode.module.css';
 import useFetchTravelDetails from '../../hooks/findCode/useFetchTravelDetails';
+import ImageLazy from '../../components/imgLazy/ImageLazy';
 
 function App() { 
     const [inputValue, setInputValue] = useState(''); 
@@ -34,7 +35,7 @@ function App() {
       <>
         <div className={styles["app-container"]}>
           <div className={styles["top-container"]}>
-            <img src={back} className={styles["back"]} alt="back" />
+            <ImageLazy src={back} className={styles["back"]} alt="back" />
             <p className={styles["top-comment"]}>나의 여행일정</p>
           </div>
 
@@ -45,7 +46,7 @@ function App() {
               </p>
               <p className={styles["middle-comment2"]}>내가 만든 코스</p>
             </div>
-            <img src={midback} className={styles["midback"]} alt="mid back" />
+            <ImageLazy src={midback} className={styles["midback"]} alt="mid back" />
             
             <div className={styles["input-container"]}>
               <input 
@@ -61,7 +62,7 @@ function App() {
                 onClick={handleSearchClick}
                 disabled={!isValidInput(inputValue)}  
               >
-                <img src={search} alt="Go to tourism" className={styles['search']} />
+                <ImageLazy src={search} alt="Go to tourism" className={styles['search']} />
               </button>
             </div>
             <button className={styles['midbutton']} onClick={() => navigate('/myTrip')}>나만의 코스 만들어 보기</button>
@@ -88,7 +89,7 @@ function App() {
                       className={styles["darker"]} 
                       onClick={handleImageClick} 
                     ></div>
-                    <img 
+                    <ImageLazy 
                       src={travelDetails.image} 
                       alt="Travel" 
                       className={styles['new-image']}
