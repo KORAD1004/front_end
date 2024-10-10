@@ -111,6 +111,7 @@ html, body {
   
   
   .menu-item {
+    font-family: 'Pretendard-semiBold';
     padding: 5px 10px; 
     font-size: 10px; 
     cursor: pointer;
@@ -119,8 +120,9 @@ html, body {
     background: none;
     flex-grow: 0;
   }
+  
   .menu-item1{
-    font-family: 'Pretendard-bold';
+   font-family: 'Pretendard-semiBold';
     padding: 5px 10px; 
     font-size: 10px; 
     cursor: pointer;
@@ -151,6 +153,7 @@ html, body {
   }
   
   .text-image {
+    margin-left: 5%;
     margin-right: 20%; 
   }
   
