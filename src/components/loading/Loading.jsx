@@ -1,9 +1,11 @@
 import loadingContainer from '../../assets/images/loading/loadingContainer.svg';
 import { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Loading({time}) {
     const [fillPercentage, setFillPercentage] = useState(0);
+    const isDesktop = useMediaQuery({ query: '(min-width: 1113px)' });
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -12,6 +14,7 @@ export default function Loading({time}) {
     }, [])
     
     return (
+    (!isDesktop||time===7)&&
         <div style={{display:"flex", height: time===7?"70vh":"100vh", justifyContent:"center", alignItems:"center"}}>
             <div style={{position:"relative", justifyContent:"center", display:"flex"}}>
                 <img 
