@@ -202,6 +202,7 @@ html, body {
 
 
   .middle-container {
+    position: relative;
     overflow: visible; 
     display: flex; 
     flex-direction: column; 
@@ -218,50 +219,47 @@ html, body {
   }
 
   .safety{
+    position: relative;
     width: 100%;
-    margin-bottom: 20%;
+    margin-bottom: 25%;
   }
 
   .hashtag {
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    gap: 10px; 
-    margin-top: 10%;
+    gap: 1.5vw; 
+    margin-top: 3%;
   }
   
   .hashtag-row {
     display: flex;
     justify-content: center; 
-    gap: 5px; 
+    gap: 2vw; 
   }
   
   .hashtag-box {
-    padding: 10px 20px;
+    padding: 3vw 4vw ;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 4vw;
     color: #333;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
     white-space: nowrap;
   }
 
   .themestory {
-    position: relative; /* 겹치는 요소 위로 배치 */
-    width: 70%;
-    margin-bottom: 2%;
-    margin-top: 10%;
-    margin-right: 10%;
-    left: 5%;
+    position: relative;
+    width: 50%;
+    right:15%;
   }
   
   .theme {
     width: 100%;
     position: absolute;
     z-index: -1; 
-    top: 100%;
-    margin-top: 8%;
+    top: 29%;
   }
   
 .map-container {
@@ -290,35 +288,45 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    text-align: left;
+    margin-top: 5%;
   }
 
   .search-input {
-    width: 250px;
-    padding: 15px;
-    border: 1px solid #D8D8D8;
+    display: flex;
+    font-family: 'Pretendard';
+    width: 50vw; 
+    padding: 3.5vw; 
+    border: 0.1vw solid #D8D8D8; 
     background-color: #D8D8D8;
-    border-radius: 10px;
-    font-size: 10px;
+    border-radius: 1vw; 
+    font-size: 2.3vw; 
+    white-space: nowrap;
     color: #000000 !important;
   }
 
   .search-button {
     background-color: #79BD4E;
     color: white;
-    width: 75px;
-    height: 45px;
+    width: 20vw;
+    height: 10.3vw;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 3.5vw;
     white-space: nowrap;
     padding: 10px 2px;
   }
 
 .search-button:hover {
   background-color: #45a049;
+}
+
+.paper-icon {
+  width: 2.5vw; 
+  height: auto;
+  margin-left: 2%; 
 }
 
 .information-container{
@@ -353,7 +361,7 @@ html, body {
   font-weight: bold;
   margin-left: 10%;
   padding: 1px 5px;
-  font-size: 2vw; 
+  font-size: 1.5vw; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,7 +408,6 @@ html, body {
 
 .notice_item{
   width: 50%;
-  
 }
 
 .notice-divider {

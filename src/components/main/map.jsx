@@ -25,8 +25,8 @@ const Map = () => {
     <div
       id="map"
       style={{
-        width: '360px',
-        height: '200px',
+        width: '90vw',
+        height: '50vw',
         borderRadius: '10px',
         boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.2)',
       }}
