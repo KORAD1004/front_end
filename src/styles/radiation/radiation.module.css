@@ -270,9 +270,3 @@
         background-size: cover;
     }
 }
-
-@media screen and (min-height: 870px) {
-    .header {
-        margin-top: 27%;
-    }
-}
