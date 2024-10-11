@@ -1,8 +1,9 @@
 import styles from '../../styles/radWaste/radWaste.module.css';
 import calendar from '../../assets/images/radWaste/calendar.svg';
 import InfoBox from './InfoBox';
+import PropTypes from 'prop-types';
 
-export default function HeaderSection() {
+export default function HeaderSection({refer}) {
     const date = new Date();
     const year = date.getFullYear(); // 연도 가져오기
     const month = String(date.getMonth() + 1).padStart(2, '0'); // 월 가져오기 (0부터 시작하므로 +1, 두 자리로 포맷팅)
@@ -24,10 +25,14 @@ export default function HeaderSection() {
                 </div>
                 <InfoBox msg="경주 중·저준위 방사성폐기물 처분장" msg2="경북 경주시 문무대왕면 동해안로 1249"/>
             </div>
-            <div className={styles.intro}>
+            <div ref={refer} className={styles.intro}>
                 <span>일별 경주 방폐물 처리장 포화 정도 및 예측 분석 시스템</span>
                 <span>해당 자료는 KORAD open api 를 기반으로 제작되었으며, 약간의 오차가 존재할 수 있습니다.</span>
             </div>
         </div>
     )
+}
+
+HeaderSection.propTypes = {
+    refer: PropTypes.node
 }
