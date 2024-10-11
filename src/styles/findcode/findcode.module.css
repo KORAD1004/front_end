@@ -249,9 +249,9 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80vw; /* new-image와 동일한 너비 */
-  height: 11vh; /* new-image와 동일한 높이 */
-  background-color: rgba(0, 0, 0, 0.281); /* 50% 투명한 검정 배경 */
-  border-radius: 10px; /* new-image와 동일한 모서리 둥글기 */
-  z-index: 2; /* 이미지 위로 오게 설정 */
+  width: 80vw; 
+  height: 11vh; 
+  background-color: rgba(0, 0, 0, 0.281); 
+  border-radius: 10px; 
+  z-index: 2; 
 }

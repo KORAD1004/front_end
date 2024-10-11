@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import styles from '../../styles/components/map.module.css';
 
 const Map = () => {
   useEffect(() => {
@@ -15,7 +16,6 @@ const Map = () => {
     });
     marker.setMap(map); 
 
-
     const zoomControl = new kakao.maps.ZoomControl();
     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
@@ -24,12 +24,7 @@ const Map = () => {
   return (
     <div
       id="map"
-      style={{
-        width: '90vw',
-        height: '50vw',
-        borderRadius: '10px',
-        boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.2)',
-      }}
+      className={styles.map} // 모듈 CSS 클래스 적용
     ></div>
   );
 };

@@ -50,9 +50,19 @@ html, body {
 .toptext {
   position: absolute;
   top: 70%; 
-  left: 40%; 
+  left: 33%; 
   transform: translate(-50%,-50%);
   width: 275px; 
+}
+ 
+@media screen and (min-width: 1024px) {
+  .toptext  {
+    width: 20vw;
+  }
+
+  .mainname {
+    width: 13vw; 
+  }
 }
 
 .top-button {
@@ -74,6 +84,14 @@ html, body {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 1024px) {
+  .top-button  {
+    width: 8vw; 
+    height: 3vw;
+    font-size:1vw;
+  }
+}
+  
 
   .separator-line {
     width: 100%;
@@ -198,6 +216,13 @@ html, body {
     transition: opacity 0.3s ease; 
 }
 
+@media screen and (min-width: 1024px) {
+  .gallery-image {
+    width: 40vw; /* 큰 화면에서는 40% 크기로 설정 */
+    height: 30vw;
+    gap: 10vw;
+  }
+}
   
   .gallery-image.active {
     opacity: 1; 
@@ -226,6 +251,15 @@ html, body {
     width: 100%;
     margin-bottom: 25%;
   }
+  @media screen and (min-width: 1024px) {
+    .safety{
+      position: relative;
+      width: 100%;
+      
+      margin-bottom: 25%;
+    }
+  }
+  
 
   .hashtag {
     display: flex;
@@ -252,11 +286,26 @@ html, body {
     white-space: nowrap;
   }
 
+  @media screen and (min-width: 1024px) {
+    .hashtag-box {
+      padding: 1vw 1vw ;
+      font-size: 1.5vw;
+    }
+  }
+
   .themestory {
     position: relative;
     width: 50%;
     right:15%;
   }
+
+   
+@media screen and (min-width: 1024px) {
+  .themestory   {
+    width: 40vw;
+  }
+}
+
   
   .theme {
     width: 100%;
@@ -320,6 +369,21 @@ html, body {
     font-size: 3.5vw;
     white-space: nowrap;
     padding: 10px 2px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .search-input {
+      width: 47vw;
+      height: 2%;
+      padding: 2vw; 
+      font-size: 2vw;
+    }
+
+    .search-button {
+      width: 14vw;
+      height: 6.5vw;
+      font-size: 2.6vw;
+    }
   }
 
 .search-button:hover {
@@ -391,11 +455,11 @@ html, body {
   text-align: left;
   color: #000000;
   display: -webkit-box;
-  -webkit-line-clamp: 2; 
+  -webkit-line-clamp: 1; 
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 3vh;
+  min-height: 2.5vh;
   min-width: 10vw;
   max-width: 30vw;
 }
@@ -469,3 +533,23 @@ font-weight: bold;
     background-color: #e0e0e0;
   }
   
+  @media screen and (min-width: 1024px) {
+    .bottom-comment1{
+      font-family: 'Pretendard';
+      margin-top: 4%;
+      font-size: 1.3vw;
+      font-weight: bold;
+      }
+      .bottom-comment1{
+        font-family: 'Pretendard';
+        margin-top: 4%;
+        font-size: 1.3vw;
+        font-weight: bold;
+        }
+        .bottom-comment1{
+          font-family: 'Pretendard';
+          margin-top: 4%;
+          font-size: 1.3vw;
+          font-weight: bold;
+          }
+  }
