@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    padding: 5%;
+    padding: 5% 10% !important;
     margin-top: -5%;
     margin-bottom: -5%;
 }
@@ -34,8 +34,8 @@
 .searchContainer {
     padding: 0% !important;
     margin-top: 1% !important;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
 }
 
 .addScheduleButton {
@@ -53,13 +53,13 @@
     flex-direction: column;
     align-items: center;
     padding: 0 5% 0 5%;
-    height: 300px !important;
+    height: 220px !important;
     overflow-y: auto;
     margin-top: 1%;
   }
   
   .searchBox {
-    width: 58% !important;
+    width: 48% !important;
     padding: 1% !important;
     border-radius: 20px !important;
     background: linear-gradient(90deg, #D6D6D6, #F0F0F0);

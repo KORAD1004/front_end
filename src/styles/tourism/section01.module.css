@@ -1,14 +1,14 @@
 @media screen and (min-width: 1024px){
   .allContainer {
     width: 100vw;
-    height: 230vh !important ;
+    height: 200vh !important ;
     overflow: hidden;
     position: relative; 
   }
   
   .imageContainer {
     width: 100vw;
-    height: 100vh !important; 
+    height: 60vh !important; 
     overflow: hidden;
     position: relative;
   }
@@ -25,7 +25,7 @@
   .tilteImageContainer {
     position: absolute;
     top: 12%;
-    left: 50%; 
+    left: 48.5%; 
     transform: translateX(-50%);
   }
   
@@ -106,7 +106,7 @@
 .tilteImageContainer {
   position: absolute;
   top: 12%;
-  left: 50%; 
+  left: 48.5%; 
   transform: translateX(-50%);
 }
 

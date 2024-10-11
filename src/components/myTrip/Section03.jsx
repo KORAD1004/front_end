@@ -19,6 +19,7 @@ const Section03 = ({ tripName, numPeople, startDate, endDate, dayCount, rows = [
                 memo: row.memo || ""
             }))
         };
+        console.log(travelData);
 
         try {
             await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/schedule`, travelData)
