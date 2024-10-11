@@ -129,6 +129,7 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                                         placeholder="메모를 작성해 주세요. (20자 이내)"
                                         className={styles.memoTextBox}
                                         value={row.memo}
+                                        maxLength={20}
                                         onChange={(e) => onMemoChange(row.id, e.target.value)}
                                     />
                                 </div>

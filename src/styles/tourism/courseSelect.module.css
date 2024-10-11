@@ -43,7 +43,7 @@
     scroll-behavior: smooth;
     flex-grow: 1;
     max-width: none;
-    width: 100%;
+    width: 90%;
     overflow-x: hidden;
   }
   

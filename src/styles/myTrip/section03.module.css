@@ -7,7 +7,7 @@
     }
     
     .textAllContainer {
-        padding: 5%;
+        padding: 0% 20% !important;
         display: inline-block;
         align-items: center;
         justify-content: center;
@@ -213,4 +213,3 @@
 .backButton:focus {
     background-color: #7d827d;
 }
-  

@@ -2,8 +2,8 @@
     .touristAttractions {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 3%;
-        width: 80%;
+        width: 80vw;
+        justify-items: center;
     }
 
     .touristAttraction {
@@ -11,7 +11,7 @@
         border-radius: 10px;
         background-color: #f2f2f2;
         border: 2px solid #c4c4c4;
-        margin-bottom: 1%;
+        margin-bottom: 7% !important;
         overflow: hidden;
         position: relative;
         
@@ -98,20 +98,25 @@
     .touristAttractions {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3%;
-        width: 80%;
+        width: 80vw;
+        justify-items: center;
     }
     
     .touristAttraction {
-        width: 100% !important;
+        width: 380px !important;
         border-radius: 10px;
         background-color: #f2f2f2;
         border: 2px solid #c4c4c4;
-        margin-bottom: 1%;
+        margin-bottom: 7% !important;
         overflow: hidden;
         position: relative;
-        
     }
+
+    .touristAttractions::after {
+        content: '';
+        grid-column: span 2;
+        height: 0;
+    }    
     
     .touristAttractionImage {
         width: 33.33%; 
