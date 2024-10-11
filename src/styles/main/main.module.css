@@ -375,7 +375,7 @@ html, body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 2.5vh;
+  max-height: 1vh;
   min-width: 10vw;
   max-width: 30vw;
 }
@@ -527,5 +527,11 @@ html, body {
     margin-top: 4%;
     font-size: 1.3vw;
     font-weight: bold;
+  }
+
+  .notice-content {
+    min-height: 2.5vh;
+    min-width: 10vw;
+    max-width: 30vw;
   }
 }
