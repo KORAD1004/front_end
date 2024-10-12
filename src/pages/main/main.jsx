@@ -22,10 +22,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/components/swiper.css';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import '../../styles/components/swiper.css';
-
 const images = [
   { id: 1, src: example1, alt: 'Image 1' },
   { id: 2, src: example2, alt: 'Image 2' },
@@ -115,7 +111,18 @@ function App() {
       </div>
 
       <div className={styles['middle-container']}>
+        <div className={styles['safety-container']}>
         <ImageLazy src={safety} className={styles["safety"]} alt="safety" />
+        <p className={styles['safety-title']}>
+          SAFETY
+        </p>
+        <p className={styles['safety-comment']}>
+  민주적 부지선정과 안전성을 최우선으로 한 설계 및<br />
+  <span className={styles['safety-comment2']}>
+    시공으로 IAEA 방폐물 안전협약 검토회의 중 우수 사례 선정</span>
+</p>
+
+        </div>
         <ImageLazy src={theme} className={styles["theme"]} alt="theme" />
         <ImageLazy src={themestory} className={styles["themestory"]} alt="theme story" />
         <div className={styles['hashtag']}>
