@@ -125,7 +125,7 @@ html, body {
   display: flex; 
   flex-direction: column; 
   align-items: center;  
-  width: 100vw;
+  width: 100%;
 }
 
 .text-and-dots-container {
@@ -136,13 +136,13 @@ html, body {
 }
 
 .text-image {
-  margin-left: 5%;
-  margin-right: 20%; 
+  margin-left: 14%;
 }
 
 .dot-indicator-container {
   display: flex;
   align-items: center;
+  margin-right: 15%; 
 }
 
 .dot {
@@ -162,6 +162,7 @@ html, body {
 .image-gallery {
   margin-top: 5%;
   overflow-x: hidden;
+  margin-left:5%;
 }
 
 .gallery-image {
@@ -194,12 +195,6 @@ html, body {
   font-size: 1.6vw;
 }
 
-.safety {
-  position: relative;
-  width: 100%;
-  margin-bottom: 25%;
-}
-
 .hashtag {
   display: flex;
   flex-direction: column; 
@@ -215,15 +210,54 @@ html, body {
 }
 
 .hashtag-box {
-  padding: 3vw 4vw ;
-  background-color: #fff;
+  font-family: 'Pretendard';
+  padding: 2vw 3vw ;
+  background-color: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 20px;
-  font-size: 4vw;
-  color: #333;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+  border-radius: 28px;
+  font-size: 3vw;
+  color: #333; 
   white-space: nowrap;
 }
+
+.safety-container{
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 25%;
+  align-items: center; 
+}
+
+.safety {
+  width: 100%;
+}
+
+.safety-title {
+  position: absolute;
+  font-family: 'Pretendard-extraBold';
+  font-size: 8vw;
+  color: white;
+  top: 45%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+
+}
+
+.safety-comment{
+  position: absolute;
+  font-family: 'Pretendard';
+  font-size: 2.5vw;
+  color: white;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  white-space: nowrap
+}
+
+.safety-comment2{
+  font-family: 'Pretendard-Bold';
+}
+
 
 .themestory {
   position: relative;
@@ -235,7 +269,7 @@ html, body {
   width: 100%;
   position: absolute;
   z-index: -1; 
-  top: 29%;
+  top: 45%;
 }
 
 .map-container {
@@ -270,6 +304,7 @@ html, body {
 
 .search-input {
   display: flex;
+  align-items: center;
   font-family: 'Pretendard';
   width: 50vw; 
   padding: 3.5vw; 
@@ -300,9 +335,9 @@ html, body {
 }
 
 .paper-icon {
-  width: 2.5vw; 
-  height: auto;
-  margin-left: 2%; 
+  width: 2vw; 
+  height: 3vw;
+  margin-left: 3%; 
 }
 
 .information-container {
@@ -401,11 +436,13 @@ html, body {
   margin-top: 4%;
   font-size: 1.7vw;
   font-weight: bold;
+  color: #696969;
 }
 
 .bottom-comment2 {
   font-family: 'Pretendard-bold';
   font-size: 1.7vw;
+  color: #696969;
 }
 
 .bottom-comment3 {
@@ -416,6 +453,7 @@ html, body {
   font-size: 6px;
   margin-top: 3%;
   font-size: 1.5vw;
+  color: #696969;
 }
 
 .bottom-box {
@@ -442,11 +480,6 @@ html, body {
   background-color: #e0e0e0;
 }
 
-@media screen and (max-width: 600px) {
-  .image-container {
-    margin-left: 15%;
-  }
-}
 
 /* Media Queries */
 @media screen and (min-width: 1024px) {
@@ -492,39 +525,87 @@ html, body {
     gap: 10vw;
   }
 
-  .safety {
+  .middle-comment1{
+    font-size: 1vw;
+  }
+
+  .safety-container{
     position: relative;
     width: 100%;
+    height: auto;
     margin-bottom: 25%;
   }
 
+  .safety-title {
+    position: absolute;
+    font-family: 'Pretendard-extraBold';
+    font-size: 8vw;
+    color: white;
+    top: 45%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  
+  }
+  
+  .safety-comment{
+    position: absolute;
+    font-family: 'Pretendard';
+    font-size: 2.5vw;
+    color: white;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    white-space: nowrap
+  }
+  
+  .safety-comment2{
+    font-family: 'Pretendard-Bold';
+  }
+    
   .hashtag-box {
     padding: 1vw 1vw;
     font-size: 1.5vw;
   }
 
+
   .themestory {
     width: 40vw;
   }
 
-  .search-input {
-    width: 47vw;
-    height: 2%;
-    padding: 2vw; 
-    font-size: 2vw;
+  .map-comment{
+    font-size: 1vw;
   }
+  .search-input {
+    width: 27vw;
+    height: 3%;
+    padding: 1vw; 
+    font-size
+    : 1.1vw;
+  }
+  .paper-icon {
+    width: 1.5vw; 
+    height: 2.5vw;
+    margin-left: 3%; 
+  }
+
 
   .search-button {
-    width: 14vw;
-    height: 6.5vw;
-    font-size: 2.6vw;
+    width: 6vw;
+    height: 4vw;
+    font-size: 1.2vw;
   }
 
+
   .bottom-comment1 {
-    font-family: 'Pretendard';
-    margin-top: 4%;
+    font-size: 1.1vw;
+  }
+  
+  .bottom-comment2 {
     font-size: 1.3vw;
-    font-weight: bold;
+  }
+  
+  .bottom-comment3 {
+    font-size: 1.1vw;
   }
 
   .notice-content {

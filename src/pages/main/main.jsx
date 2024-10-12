@@ -42,7 +42,8 @@ function App() {
   };
 
 
-  const handleImageClick = (index) => {
+  const handleImageClick = (swiper, index) => {
+    swiper.slideTo(swiper.clickedIndex);
     setCurrentIndex(index);
   };
   
@@ -80,20 +81,15 @@ function App() {
         <div className={styles["image-gallery"]} ref={galleryRef}>
           <Swiper
             ref={swiperRef}
-            spaceBetween={10}
+            spaceBetween={15}
             slidesPerView={'auto'}
+            autoplay = {true}
             loop={true}
             onSlideChange={handleSlideChange}
-            loopAddBlankSlides={3}
-            slideToClickedSlide={true}
-            breakpoints={{
-              600: {
-                slideToClickedSlide: false
-              }
-            }}
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}
+                onClick={() => handleImageClick(swiperRef.current.swiper, index)}
               >
                 <ImageLazy
                   key={image.id}
@@ -115,7 +111,18 @@ function App() {
       </div>
 
       <div className={styles['middle-container']}>
+        <div className={styles['safety-container']}>
         <ImageLazy src={safety} className={styles["safety"]} alt="safety" />
+        <p className={styles['safety-title']}>
+          SAFETY
+        </p>
+        <p className={styles['safety-comment']}>
+  민주적 부지선정과 안전성을 최우선으로 한 설계 및<br />
+  <span className={styles['safety-comment2']}>
+    시공으로 IAEA 방폐물 안전협약 검토회의 중 우수 사례 선정</span>
+</p>
+
+        </div>
         <ImageLazy src={theme} className={styles["theme"]} alt="theme" />
         <ImageLazy src={themestory} className={styles["themestory"]} alt="theme story" />
         <div className={styles['hashtag']}>
