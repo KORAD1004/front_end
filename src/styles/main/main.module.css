@@ -162,11 +162,6 @@ html, body {
 
 .image-gallery {
   margin-top: 5%;
-  overflow-x: auto; 
-  scroll-behavior: smooth;     
-  flex-grow: 1; 
-  max-width: 100%; 
-  width: 100%;
   overflow-x: hidden;
 }
 

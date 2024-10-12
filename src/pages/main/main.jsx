@@ -22,6 +22,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/components/swiper.css';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import '../../styles/components/swiper.css';
+
 const images = [
   { id: 1, src: example1, alt: 'Image 1' },
   { id: 2, src: example2, alt: 'Image 2' },
@@ -42,7 +46,8 @@ function App() {
   };
 
 
-  const handleImageClick = (index) => {
+  const handleImageClick = (swiper, index) => {
+    swiper.slideTo(swiper.clickedIndex);
     setCurrentIndex(index);
   };
   
@@ -80,20 +85,15 @@ function App() {
         <div className={styles["image-gallery"]} ref={galleryRef}>
           <Swiper
             ref={swiperRef}
-            spaceBetween={10}
+            spaceBetween={15}
             slidesPerView={'auto'}
+            autoplay = {true}
             loop={true}
             onSlideChange={handleSlideChange}
-            loopAddBlankSlides={3}
-            slideToClickedSlide={true}
-            breakpoints={{
-              600: {
-                slideToClickedSlide: false
-              }
-            }}
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}
+                onClick={() => handleImageClick(swiperRef.current.swiper, index)}
               >
                 <ImageLazy
                   key={image.id}
