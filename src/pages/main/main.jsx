@@ -42,8 +42,7 @@ function App() {
   };
 
 
-  const handleImageClick = (swiper, index) => {
-    swiper.slideTo(swiper.clickedIndex);
+  const handleImageClick = (index) => {
     setCurrentIndex(index);
   };
   
@@ -85,9 +84,13 @@ function App() {
             slidesPerView={'auto'}
             loop={true}
             onSlideChange={handleSlideChange}
-            slideToClickedSlide={true}
             loopAddBlankSlides={3}
-            autoplay={true}
+            slideToClickedSlide={true}
+            breakpoints={{
+              600: {
+                slideToClickedSlide: false
+              }
+            }}
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}
