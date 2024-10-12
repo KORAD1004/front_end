@@ -1,3 +1,17 @@
+@media screen and (min-width: 1024px){
+  .imageGallery {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+    max-width: none;
+    width: 90% !important;
+    overflow-x: hidden;
+  }
+}
+
 .imageContainer {
     display: flex;
     flex-direction: column;
@@ -43,7 +57,7 @@
     scroll-behavior: smooth;
     flex-grow: 1;
     max-width: none;
-    width: 90%;
+    width: 100%;
     overflow-x: hidden;
   }
   
