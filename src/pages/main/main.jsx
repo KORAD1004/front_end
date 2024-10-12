@@ -84,7 +84,7 @@ function App() {
             spaceBetween={15}
             slidesPerView={'auto'}
             autoplay = {true}
-            // loop={true}
+            loop={true}
             onSlideChange={handleSlideChange}
           >
             {images.map((image, index) => (
