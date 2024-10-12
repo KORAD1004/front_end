@@ -176,6 +176,7 @@
     height: 26px;
     border-radius: 5px;
     border: 1px solid #c4c4c4;
+    margin-left: -3%;
 }
 
 .longInputBox3 {
@@ -183,7 +184,7 @@
     height: 26px;
     border-radius: 5px;
     border: 1px solid #c4c4c4;
-    margin-left: -5%;
+    margin-left: -10%;
 }
 
 .shortInputBox {
