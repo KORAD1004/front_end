@@ -60,7 +60,6 @@ const CourseSelect = ({ onImageSelect }) => {
           onSlideChange={handleSlideChange}
           slidesPerGroup={1}
           initialSlide={images.length - 2}
-          loop={true}
         >
           {images.map((image, index) => (
             <SwiperSlide

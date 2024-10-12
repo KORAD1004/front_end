@@ -81,15 +81,16 @@ function App() {
         <div className={styles["image-gallery"]} ref={galleryRef}>
           <Swiper
             ref={swiperRef}
-            spaceBetween={15}
+            spaceBetween={10}
             slidesPerView={'auto'}
-            autoplay = {true}
             loop={true}
             onSlideChange={handleSlideChange}
+            slideToClickedSlide={true}
+            loopAddBlankSlides={3}
+            autoplay={true}
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}
-                onClick={() => handleImageClick(swiperRef.current.swiper, index)}
               >
                 <ImageLazy
                   key={image.id}
