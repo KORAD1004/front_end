@@ -2,7 +2,7 @@
   position: absolute;
   top: 70%;
   right: 0%;
-  width: 40%;
+  width: 185px;
   background: linear-gradient(180deg,  #365d29 0%, #4f8b3d 100%);
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -97,11 +97,17 @@
   align-items: center;
   gap: 3%;
   cursor: pointer;
+  width: 45%;
 }
 
 .title div {
   position: relative;
   top: 10%;
+  width: 60%;
+}
+
+.title img {
+  width: 28%;
 }
 
 .title div span{
