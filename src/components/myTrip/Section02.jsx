@@ -1,14 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useMediaQuery } from 'react-responsive';
 import styles from '../../styles/myTrip/section02.module.css';
 import Map from './Map.jsx';
 import SearchModal from "./SearchModal.jsx";
 import TrashCan from "../../assets/images/myTrip/trashCan.png";
-import Section03 from "./Section03";
 
 const Section02 = ({ rows, setRows, location, setLocation }) => {
     const containerRef = useRef(null);
     const [currentId, setCurrentId] = useState(null);
     const [showToggle, setShowToggle] = useState(false);
+
+    const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
+
 
     useEffect(() => {
         if (navigator.geolocation) {
@@ -76,12 +79,13 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
         ));
     };
 
+
     return (
         <>
             <div className={styles.allContainer}>
-                <div className={styles.textContainer}>
+                {!isDesktop && <div className={styles.textContainer}>
                     <p className={styles.mapText}>지도</p>
-                </div>
+                </div>}
                 <div className={styles.mapContainer}>
                     <Map rows={rows} />
                 </div>
@@ -91,7 +95,13 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                         <button className={styles.addScheduleButton} onClick={addRow}>일정 추가하기</button>
                     </div>
                 </div>
-                {/* rows를 감싸는 컨테이너 */}
+                {isDesktop && (
+                    <>
+                        <div className={styles.underlineContainer}>
+                            <div className={styles.underline}></div>
+                        </div>
+                    </>
+                )}
                 <div className={styles.container} ref={containerRef}>
                     {rows.map((row) => (
                         <div key={row.id} className={styles.row}>
@@ -138,6 +148,15 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                         </div>
                     ))}
                 </div>
+                {isDesktop && (
+                    <>
+                        <div className={styles.saveContainer}>
+                            <div className={styles.textContainer2}>
+                                <div className={styles.mapText}>여행지 저장목록</div>
+                            </div>
+                        </div>
+                    </>
+                )}
                 <div className={styles.underlineContainer}>
                     <div className={styles.underline}></div>
                 </div>

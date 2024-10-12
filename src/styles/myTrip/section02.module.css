@@ -1,20 +1,20 @@
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   .mapText {
     font-family: 'Pretendard-extraBold';
     font-size: 12.73px !important;
-}
+  }
 
-.addScheduleButton {
+  .addScheduleButton {
     width: 13% !important;
-    padding: 1.5% 1%  !important;
+    padding: 1.5% 1% !important;
     font-family: 'Pretendard-semiBold';
     font-size: 11.68px !important;
     color: #000000;
     border-radius: 20px !important;
     border: 1px solid #c4c4c4;
-}
+  }
 
-.container {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
     overflow-y: auto;
     margin-top: 1%;
   }
-  
+
   .searchBox {
     width: 48% !important;
     padding: 1% !important;
@@ -47,12 +47,12 @@
     padding: 5px;
   }
 
-  .text{
+  .text {
     font-family: 'Pretendard-bold';
     font-size: 12px !important;
     margin-right: 5%;
   }
-  
+
   .memoContainer {
     position: absolute;
     top: 120% !important;
@@ -60,9 +60,9 @@
     width: 100%;
     z-index: 10;
   }
-  
+
   .memoTextBox {
-    width: 67% !important;
+    width: 70% !important;
     height: 35px !important;
     border: 1px solid #ccc;
     padding: 5px;
@@ -71,57 +71,65 @@
 
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .allContainer {
     width: 100vw;
     height: auto;
     overflow: hidden;
-    position: relative; 
-}
+    position: relative;
+  }
 
-.textContainer {
+  .textContainer {
     display: flex;
     align-items: center;
     justify-content: left;
     padding: 5% 10% !important;
     margin-top: -5%;
     margin-bottom: -5%;
-}
+  }
 
-.textContainer2 {
+  .textContainer2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+  }
 
-.mapText {
+  .mapText {
     font-family: 'Pretendard-extraBold';
-    font-size: 17.73px !important;
-}
+    font-size: 39.39px !important;
+  }
 
-.mapContainer {
-    padding: 5%;
+  .mapContainer {
+    padding: 0% 5% 5% 5% !important;
     height: auto !important;
-}
+  }
 
-.searchContainer {
+  .searchContainer {
     padding: 0% !important;
     margin-top: 1% !important;
-    margin-left: 10% !important;
-    margin-right: 10% !important;
-}
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+  }
 
-.addScheduleButton {
+  .saveContainer {
+    padding: 0% !important;
+    margin-top: 7% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+  }
+
+  .addScheduleButton {
     width: 13% !important;
-    padding: 1.5% 1%  !important;
+    padding: 1.2% 0% !important;
     font-family: 'Pretendard-semiBold';
-    font-size: 11.68px !important;
+    font-size: 14.68px !important;
     color: #000000;
-    border-radius: 20px !important;
+    border-radius: 30px !important;
     border: 1px solid #c4c4c4;
-}
+    background-color: #ffffff;
+  }
 
-.container {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,7 +138,7 @@
     overflow-y: auto;
     margin-top: 1%;
   }
-  
+
   .searchBox {
     width: 48% !important;
     padding: 1% !important;
@@ -154,18 +162,18 @@
     padding: 5px;
   }
 
-  .text{
+  .text {
     font-family: 'Pretendard-bold';
     font-size: 15px !important;
     margin-right: 5%;
   }
 
   .textContainer3 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
+
   .arrowButton {
     width: 39.79px;
     height: 37.69px;
@@ -179,24 +187,24 @@
     margin-left: 2%;
   }
 
-  .trashCanContainer{
+  .trashCanContainer {
     margin-left: 4%;
   }
 
-  .trashCan{
+  .trashCan {
     width: 40px;
   }
-  
+
   .memoContainer {
     position: absolute;
-    top: 132% !important;
+    top: 133% !important;
     left: 0;
     width: 100%;
     z-index: 10;
   }
-  
+
   .memoTextBox {
-    width: 71% !important;
+    width: 62% !important;
     height: 45px !important;
     border: 1px solid #ccc;
     padding: 5px;
@@ -204,152 +212,153 @@
   }
 
   .underline {
-    width: 100%;
-    height: 1px;
-    background-color: #C7C7C7;
-}
+    width: 80% !important;
+    height: 2px !important;
+    background-color: #303030 !important;
+  }
 
-.underlineContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5%;
-}
+  .underlineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 5% 5% 5% !important;
+  }
 
 
 }
 
 .allContainer {
-    width: 100vw;
-    height: auto;
-    overflow: hidden;
-    position: relative; 
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .textContainer {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 5%;
-    margin-top: -5%;
-    margin-bottom: -5%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 5%;
+  margin-top: -5%;
+  margin-bottom: -5%;
 }
 
 .textContainer2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .mapText {
-    font-family: 'Pretendard-extraBold';
-    font-size: 12.73px;
+  font-family: 'Pretendard-extraBold';
+  font-size: 12.73px;
 }
 
 .mapContainer {
-    padding: 5%;
-    height: 193px;
+  padding: 5%;
+  height: 193px;
 }
 
 .searchContainer {
-    padding: 5%;
-    margin-top: 5%;
+  padding: 5%;
+  margin-top: 5%;
 }
 
 .addScheduleButton {
-    width: 20%;
-    padding: 2%;
-    font-family: 'Pretendard-semiBold';
-    font-size: 7.68px;
-    color: #000000;
-    border-radius: 10px;
-    border: 1px solid #c4c4c4;
+  width: 20%;
+  padding: 2%;
+  font-family: 'Pretendard-semiBold';
+  font-size: 7.68px;
+  color: #000000;
+  border-radius: 20px;
+  border: 1px solid #c4c4c4;
+  background-color: #ffffff;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 5% 0 5%;
-    height: 168px;
-    overflow-y: auto;
-  }
-  
-  .searchBox {
-    width: 68%;
-    padding: 2%;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #D6D6D6, #F0F0F0);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5% 0 5%;
+  height: 168px;
+  overflow-y: auto;
+}
 
-  .row {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 3%;
-    width: 100%;
-  }
+.searchBox {
+  width: 68%;
+  padding: 2%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #D6D6D6, #F0F0F0);
+}
 
-  .textBox2 {
-    width: 50%;
-    height: 7%;
-    border: 1px solid #ccc;
-    padding: 5px;
-  }
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
+  width: 100%;
+}
 
-  .text{
-    font-family: 'Pretendard-bold';
-    font-size: 10px;
-    margin-right: 5%;
-  }
+.textBox2 {
+  width: 50%;
+  height: 7%;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
 
-  .textContainer3 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  .arrowButton {
-    width: 39.79px;
-    height: 37.69px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    color: #000000;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 2%;
-  }
+.text {
+  font-family: 'Pretendard-bold';
+  font-size: 10px;
+  margin-right: 5%;
+}
 
-  .trashCanContainer{
-    margin-left: 4%;
-  }
+.textContainer3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .trashCan{
-    width: 40px;
-  }
-  
-  .memoContainer {
-    position: absolute;
-    top: 122%;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
-  
-  .memoTextBox {
-    width: 97%;
-    height: 35px;
-    border: 1px solid #ccc;
-    padding: 5px;
-    background-color: #E9E9E9;
-  }
+.arrowButton {
+  width: 39.79px;
+  height: 37.69px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2%;
+}
 
-  .underline {
-    width: 100%;
-    height: 1px;
-    background-color: #C7C7C7;
+.trashCanContainer {
+  margin-left: 4%;
+}
+
+.trashCan {
+  width: 40px;
+}
+
+.memoContainer {
+  position: absolute;
+  top: 122%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.memoTextBox {
+  width: 97%;
+  height: 35px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: #E9E9E9;
+}
+
+.underline {
+  width: 100%;
+  height: 1px;
+  background-color: #C7C7C7;
 }
 
 .underlineContainer {
@@ -358,4 +367,3 @@
   align-items: center;
   padding: 5%;
 }
-

@@ -35,7 +35,7 @@ const Section01 = ({ tripName, setTripName, numPeople, setNumPeople, startDate, 
                     </div>
                     <div className={styles.tripTextContainer}>
                         <p className={styles.tripText}>기간</p>
-
+                        <div className={styles.daysContainer}>
                             <input
                                 type="date"
                                 className={styles.longInputBox2}
@@ -48,7 +48,7 @@ const Section01 = ({ tripName, setTripName, numPeople, setNumPeople, startDate, 
                                 value={endDate}
                                 onChange={(e) => setEndDate(e.target.value)}
                             />
-                       
+                        </div>
                         <p className={styles.tripText}>일차</p>
                         <input
                             type="text"
