@@ -7,26 +7,33 @@ const Section03 = ({ tripName, numPeople, startDate, endDate, dayCount, rows = [
     const navigate = useNavigate();
 
     const handleSave = async () => {
+
+        if (!tripName || !numPeople || !startDate || !endDate || !dayCount) {
+            alert("모든 정보를 입력해주세요");
+            return;
+        }
+
         const travelData = {
             travelName: tripName,
             headCount: parseInt(numPeople, 10),
             startDate: startDate,
             endDate: endDate,
             days: dayCount,
-            tourListDtoList: rows.map((row) => ({
-                number: row.id,
-                hotspot: row.hotspotId,
-                memo: row.memo || ""
-            }))
+            tourListDtoList: rows
+                .filter((row) => row.hotspotId)
+                .map((row) => ({
+                    number: row.id,
+                    hotspot: row.hotspotId,
+                    memo: row.memo || ""
+                }))
         };
-        console.log(travelData);
 
         try {
             await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/schedule`, travelData)
                 .then(res => {
                     navigate(`/courseView?code=${res.data}`);
                 });
-            
+
         } catch (error) {
             console.error("저장 중 오류 발생:", error);
         }
@@ -46,12 +53,12 @@ const Section03 = ({ tripName, numPeople, startDate, endDate, dayCount, rows = [
                         </div>
                         {row.place ? (
                             <>
-                            <div className={styles.courseTextContainer}>
-                                <p className={styles.courseText}>{row.place} | {row.address}</p>
-                            </div>
-                            <div className={styles.memoTextContainer}>
-                                <p className={styles.memoText}>{row.memo}</p>
-                            </div>
+                                <div className={styles.courseTextContainer}>
+                                    <p className={styles.courseText}>{row.place} | {row.address}</p>
+                                </div>
+                                <div className={styles.memoTextContainer}>
+                                    <p className={styles.memoText}>{row.memo}</p>
+                                </div>
                             </>
                         ) : (
                             <div className={styles.courseTextContainer}>

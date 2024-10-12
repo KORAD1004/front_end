@@ -1,3 +1,97 @@
+@media screen and (min-width: 600px){
+    
+    .textContainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+    
+    .noTextContainer{
+        width: 20%;
+    }
+    
+    .courseTextContainer{
+        width: 50%;
+        display: flex;
+        align-self: start;
+    }
+    
+    .memoTextContainer{
+        width: 30%;
+        display: flex;
+        align-self: start;
+    }
+    
+    .noText {
+        font-family: 'Pretendard-bold';
+        font-size: 15px !important;
+        margin-right: 7%;
+    }
+    
+    .courseText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 15px !important;
+        margin-right: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .memoText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 15px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .noDataText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 15px !important;
+    }
+    
+    .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    
+    .saveButton {
+        background-color: #77B353;
+        width: 75px !important;
+        height: 48.14px !important;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        margin-left: 3%;
+        font-family: 'Pretendard-bold';
+        font-size: 15.52px !important;
+    }
+      
+    .saveButton:hover {
+        background-color: #45a049;
+    }
+    
+    .backButton {
+        background-color: #E1E1E1;
+        width: 75px !important;
+        height: 48.14px !important;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-family: 'Pretendard-bold';
+        font-size: 15.52px !important;
+        color: #000;
+    }
+
+    .backButton:hover {
+        background-color: #7d827d !important;
+    }
+}
+
 @media screen and (min-width: 1024px){
     .allContainer {
         width: 100vw;
@@ -85,7 +179,7 @@
         font-size: 17.52px !important;
     }
       
-    .saveButton:focus {
+    .saveButton:hover {
         background-color: #45a049;
     }
     
@@ -101,8 +195,8 @@
         color: #000;
     }
       
-    .backButton:focus {
-        background-color: #7d827d;
+    .backButton:hover {
+        background-color: #7d827d !important;
     }
       
 }
