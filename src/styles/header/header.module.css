@@ -85,7 +85,7 @@
   position: absolute;
   display: flex;
   justify-content: space-between;
-  padding: 1% 3%;
+  padding: 1% 20px;
   width: 100vw;
   box-sizing: border-box;
   z-index: 100;
