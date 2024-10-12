@@ -143,6 +143,7 @@ html, body {
 .dot-indicator-container {
   display: flex;
   align-items: center;
+  margin-right: 10%;
 }
 
 .dot {
@@ -161,6 +162,11 @@ html, body {
 
 .image-gallery {
   margin-top: 5%;
+  overflow-x: auto; 
+  scroll-behavior: smooth;     
+  flex-grow: 1; 
+  max-width: 100%; 
+  width: 100%;
   overflow-x: hidden;
 }
 
