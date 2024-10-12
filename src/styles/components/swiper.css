@@ -1,0 +1,10 @@
+.swiper {
+  text-align: center;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  width: auto !important;
+}

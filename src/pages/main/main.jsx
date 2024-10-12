@@ -18,6 +18,10 @@ import information from '../../assets/images/main/information.svg';
 import styles from '../../styles/main/main.module.css'; 
 import ImageLazy from '../../components/imgLazy/ImageLazy';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import '../../styles/components/swiper.css';
+
 const images = [
   { id: 1, src: example1, alt: 'Image 1' },
   { id: 2, src: example2, alt: 'Image 2' },
@@ -28,24 +32,20 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imageRefs = useRef([]);
   const galleryRef = useRef(null);
+  const swiperRef = useRef(null);
   const navigate = useNavigate();
 
   const { notices, loading, error } = useFetchNotices();
 
-  const handleImageClick = (index) => {
-    setCurrentIndex(index);
-    const clickedImage = imageRefs.current[index];
-    const galleryElement = galleryRef.current;
-
-    if (clickedImage && galleryElement) {
-      const offsetLeft = clickedImage.offsetLeft - galleryElement.offsetWidth / 2 + clickedImage.offsetWidth / 2;
-      galleryElement.scrollTo({
-        left: offsetLeft,
-        behavior: 'smooth',
-      });
-    }
+  const handleSlideChange = (swiper) => {
+    setCurrentIndex(swiper.realIndex);
   };
 
+
+  const handleImageClick = (swiper, index) => {
+    swiper.slideTo(swiper.clickedIndex);
+    setCurrentIndex(index);
+  };
   
 
   return (
@@ -73,25 +73,38 @@ function App() {
               <div
                 key={index}
                 className={`${styles["dot"]} ${currentIndex === index ? styles["active"] : ''}`}
-                onClick={() => handleImageClick(index)}
               />
             ))}
           </div>
         </div>
 
         <div className={styles["image-gallery"]} ref={galleryRef}>
-          {images.map((image, index) => (
-            <ImageLazy
-              key={image.id}
-              refer={(el) => (imageRefs.current[index] = el)}
-              src={image.src}
-              alt={image.alt}
-              className={`${styles["gallery-image"]} ${currentIndex === index ? styles["active"] : ''}`}
-              onClick={() => handleImageClick(index)}
-            />
+          <Swiper
+            ref={swiperRef}
+            spaceBetween={15}
+            slidesPerView={'auto'}
+            autoplay = {true}
+            // loop={true}
+            onSlideChange={handleSlideChange}
+          >
+            {images.map((image, index) => (
+              <SwiperSlide key={image.id}
+                onClick={() => handleImageClick(swiperRef.current.swiper, index)}
+              >
+                <ImageLazy
+                  key={image.id}
+                  refer={(el) => (imageRefs.current[index] = el)}
+                  src={image.src}
+                  alt={image.alt}
+                  className={`${styles["gallery-image"]} ${currentIndex === index ? styles["active"] : ''}`}
+                />
+                
+              </SwiperSlide>
           ))}
-        </div>
+          
+          </Swiper>
 
+        </div>
         <p className={styles["middle-comment1"]}>
           *본 소개지는 '한국원자력환경공단' 인근 핫플레이스로, 사회적 갈등을 대화와 타협, 민주적 방식으로 극복해낸 역사적 모범사례로 대표합니다.
         </p>
