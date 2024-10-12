@@ -34,5 +34,5 @@ export default function HeaderSection({refer}) {
 }
 
 HeaderSection.propTypes = {
-    refer: PropTypes.node
+    refer: PropTypes.object
 }

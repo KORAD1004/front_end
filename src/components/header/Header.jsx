@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation  } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive'
-import headerIcon from '../../assets/images/header/headerIcon.png';
+import headerIcon from '../../assets/images/header/headerIcon.svg';
 import styles from '../../styles/header/header.module.css';
 import back_icon from '../../assets/images/header/back-icon.svg';
 import home_icon from '../../assets/images/header/home-icon.png';
@@ -11,7 +11,7 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const isDesktop = useMediaQuery({ query: '(min-width: 1113px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleBackClick = () => {

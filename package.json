@@ -24,7 +24,8 @@
     "react-modal": "^3.16.1",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.26.2",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "swiper-react": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
