@@ -6,6 +6,9 @@
     width: 90% !important;
     overflow-x: hidden;
   }
+  .galleryImage {
+    height: 20vw;
+  }
 }
 
 .imageContainer {
@@ -46,6 +49,7 @@
   }
   
   .imageGallery {
+    z-index: 0;
     margin-top: 5%;
     overflow-x: auto;
     max-width: none;
@@ -55,7 +59,6 @@
   
   .galleryImage {
     width: 100%;
-    height: 20vw;
     margin: 0 5px;
     cursor: pointer;
     opacity: 0.6;

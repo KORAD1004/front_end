@@ -442,6 +442,12 @@ html, body {
   background-color: #e0e0e0;
 }
 
+@media screen and (max-width: 600px) {
+  .image-container {
+    margin-left: 15%;
+  }
+}
+
 /* Media Queries */
 @media screen and (min-width: 1024px) {
   .top-container {

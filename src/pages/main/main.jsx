@@ -42,8 +42,7 @@ function App() {
   };
 
 
-  const handleImageClick = (swiper, index) => {
-    swiper.slideTo(swiper.clickedIndex);
+  const handleImageClick = (index) => {
     setCurrentIndex(index);
   };
   
@@ -81,15 +80,20 @@ function App() {
         <div className={styles["image-gallery"]} ref={galleryRef}>
           <Swiper
             ref={swiperRef}
-            spaceBetween={15}
+            spaceBetween={10}
             slidesPerView={'auto'}
-            autoplay = {true}
             loop={true}
             onSlideChange={handleSlideChange}
+            loopAddBlankSlides={3}
+            slideToClickedSlide={true}
+            breakpoints={{
+              600: {
+                slideToClickedSlide: false
+              }
+            }}
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}
-                onClick={() => handleImageClick(swiperRef.current.swiper, index)}
               >
                 <ImageLazy
                   key={image.id}
