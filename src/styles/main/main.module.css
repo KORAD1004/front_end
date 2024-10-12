@@ -160,14 +160,7 @@ html, body {
 }
 
 .image-gallery {
-  display: flex;
-  justify-content: flex-start; 
   margin-top: 5%;
-  overflow-x: auto; 
-  scroll-behavior: smooth;     
-  flex-grow: 1; 
-  max-width: none; 
-  width: 100%;
   overflow-x: hidden;
 }
 
@@ -489,7 +482,6 @@ html, body {
   }
 
   .gallery-image {
-    width: 40vw;
     height: 30vw;
     gap: 10vw;
   }
