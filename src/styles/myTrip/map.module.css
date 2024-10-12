@@ -1,6 +1,7 @@
+
 @media screen and (min-width: 1024px) {
   .map {
-      height: 65vh !important;
+      height: 500px !important;
       width: 80% !important;
       margin: 0 auto;
       .map div {
