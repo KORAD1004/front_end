@@ -46,7 +46,7 @@ export default function RadiationMap() {
     };
 
     //지역별 현재 방사선량, 지역별 3년 평균 방사선량 패칭
-    const { data: radiation } = useQuery({queryKey:['recentRadiation'], queryFn:fetchRecentRadiation, staleTime: 1000*60*5, refetchInterval: 1000*60*10}); 
+    const { data: radiation, isLoading: loading2 } = useQuery({queryKey:['recentRadiation'], queryFn:fetchRecentRadiation, staleTime: 1000*60*5, refetchInterval: 1000*60*10}); 
     const { data: avgRad, isLoading: loading} = useQuery({queryKey:['avgRadiation'], queryFn:fetchAvgRadiation, staleTime: 1000*60*5, refetchInterval: 1000*60*10});
 
     //초기 data 구조 가공
@@ -57,18 +57,18 @@ export default function RadiationMap() {
     //지도 그리기
     useEffect(() => {
         drawMap(area, loading, setMap);
-    }, [area, loading]);
+    }, [area, loading, loading2]);
 
     //폴리곤 그리기
     useEffect(() => {
         drawPolygon(map, area, avgRad, loading, polygonObjects, getColorByRadiation, gyeongjuPolygon, initialPolygons, polygonGroups, selectedPolygonRef, styles, customOverlayRef, getPolygonCenter);
-    }, [map, area, avgRad, loading]);
+    }, [map, area, avgRad, loading, loading2]);
 
     //로딩 UI 렌더링
-    if (loading) {
+    if (loading||loading2) {
         return (
             <div className={styles.loading}>
-                <Loading time={7}/>
+                <Loading time={2}/>
             </div>
         );
     }

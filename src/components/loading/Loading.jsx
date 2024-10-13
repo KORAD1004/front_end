@@ -14,8 +14,8 @@ export default function Loading({time}) {
     }, [])
     
     return (
-    (!isDesktop||time===7)&&
-        <div style={{display:"flex", height: time===7?"70vh":"100vh", justifyContent:"center", alignItems:"center"}}>
+    (!isDesktop||time===2)&&
+        <div style={{display:"flex", height: time===2?"70vh":"100vh", justifyContent:"center", alignItems:"center"}}>
             <div style={{position:"relative", justifyContent:"center", display:"flex"}}>
                 <img 
                     src={loadingContainer}

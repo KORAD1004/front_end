@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useQueryClient } from '@tanstack/react-query';
 import useFetchNotices from '../../hooks/main/useFetchNotices'; 
-import mainback from '../../assets/images/main/mainback.svg'; 
 import mainname from '../../assets/images/main/mainname.svg';
 import toptext from '../../assets/images/main/top_text.svg';
 import MenuBar from '../../components/main/menubar';
@@ -21,6 +21,8 @@ import ImageLazy from '../../components/imgLazy/ImageLazy';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/components/swiper.css';
+import { useEffect } from 'react';
+import { fetchAvgRadiation } from '../../hooks/axios/FetchData';
 
 const images = [
   { id: 1, src: example1, alt: 'Image 1' },
@@ -34,8 +36,13 @@ function App() {
   const galleryRef = useRef(null);
   const swiperRef = useRef(null);
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
   const { notices, loading, error } = useFetchNotices();
+
+  useEffect(() => {
+    queryClient.prefetchQuery({queryKey:['avgRadiation'], queryFn:fetchAvgRadiation});
+  }, [queryClient]);
 
   const handleSlideChange = (swiper) => {
     setCurrentIndex(swiper.realIndex);
@@ -106,7 +113,7 @@ function App() {
 
         </div>
         <p className={styles["middle-comment1"]}>
-          *본 소개지는 '한국원자력환경공단' 인근 핫플레이스로, 사회적 갈등을 대화와 타협, 민주적 방식으로 극복해낸 역사적 모범사례로 대표합니다.
+          *본 소개지는 &lsquo;한국원자력환경공단&rsquo; 인근 핫플레이스로, 사회적 갈등을 대화와 타협, 민주적 방식으로 극복해낸 역사적 모범사례로 대표합니다.
         </p>
       </div>
 
