@@ -21,7 +21,7 @@
   .galleryImage.active {
     opacity: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
   }
 }
 
@@ -74,7 +74,7 @@
   }
   
   .galleryImage {
-    width: 100%;
+    width: fit-content;
     margin: 0 5px;
     cursor: pointer;
     opacity: 0.6;
@@ -85,5 +85,5 @@
   .galleryImage.active {
     opacity: 1;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
