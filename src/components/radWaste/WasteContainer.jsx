@@ -3,6 +3,7 @@ import styles from '../../styles/radWaste/radWaste.module.css';
 import wasteContainer from '../../assets/images/radWaste/wasteContainer.svg';
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
+import ImageLazy from '../imgLazy/ImageLazy.jsx';
 
 export default function WasteContainer({per, msg}) {
     const [fillPercentage, setFillPercentage] = useState(0);
@@ -42,7 +43,7 @@ export default function WasteContainer({per, msg}) {
     return (
         <div className={styles.currentSaturation}>
             <div ref={targetRef} className={styles.wasteContainer}>
-                <img 
+                <ImageLazy 
                     src={wasteContainer}
                     alt="Battery Outline" 
                     className={styles.wasteOutline} 

@@ -2,6 +2,7 @@ import styles from '../../styles/radWaste/radWaste.module.css';
 import calendar from '../../assets/images/radWaste/calendar.svg';
 import InfoBox from './InfoBox';
 import PropTypes from 'prop-types';
+import ImageLazy from '../imgLazy/ImageLazy';
 
 export default function HeaderSection({refer}) {
     const date = new Date();
@@ -16,7 +17,7 @@ export default function HeaderSection({refer}) {
             </div>
             <div className={styles.infoHeader}>
                 <div className={styles.todayInfo}>
-                    <img src={calendar}/>
+                    <ImageLazy src={calendar}/>
                     <div>
                         <span>현재&nbsp;</span>
                         <span>{year}년 {month}월 {day}일&nbsp;</span>
