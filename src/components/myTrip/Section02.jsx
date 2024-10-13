@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import styles from '../../styles/myTrip/section02.module.css';
 import Map from './Map.jsx';
 import SearchModal from "./SearchModal.jsx";
-import TrashCan from "../../assets/images/myTrip/trashCan.png";
+import TrashCan from "../../assets/images/myTrip/trashCan.svg";
 
 const Section02 = ({ rows, setRows, location, setLocation }) => {
     const containerRef = useRef(null);

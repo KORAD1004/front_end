@@ -1,8 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 import styles from '../../styles/quiz/quizModal.module.css';
-import Correct from '../../assets/images/quiz/Correct.png';
-import Wrong  from '../../assets/images/quiz/Wrong.png';
+import Correct from '../../assets/images/quiz/Correct.svg';
+import Wrong  from '../../assets/images/quiz/Wrong.svg';
 
 Modal.setAppElement('#root');
 

@@ -1,7 +1,5 @@
 import styles from '../../styles/courseView/section01.module.css';
 import background from '../../assets/images/courseView/background.png';
-import clear from '../../assets/images/courseView/Clear.png';
-import change from '../../assets/images/courseView/Change.png';
 import { useSearchParams } from 'react-router-dom';
 
 

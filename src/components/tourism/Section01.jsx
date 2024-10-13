@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/tourism/section01.module.css';
 import background from '../../assets/images/tourism/Tourism_background.gif';
-import title from '../../assets/images/tourism/Tourism_Title.png';
+import title from '../../assets/images/tourism/Tourism_Title.svg';
 import Quiz1 from '../../components/quiz/Quiz1.jsx';
 import Quiz2 from '../../components/quiz/Quiz2.jsx';
 import Quiz3 from '../../components/quiz/Quiz3.jsx';

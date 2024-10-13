@@ -1,6 +1,6 @@
 import React from 'react';
 import OXModal from './OXModal.jsx';
-import WrongImg from '../../assets/images/quiz/Wrong.png';
+import WrongImg from '../../assets/images/quiz/Wrong.svg';
 
 const Wrong2 = ({isOpen, onRequestClose}) => {
   
