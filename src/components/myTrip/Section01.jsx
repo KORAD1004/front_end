@@ -48,6 +48,7 @@ const Section01 = ({ tripName, setTripName, numPeople, setNumPeople, startDate, 
                                 className={styles.longInputBox3}
                                 value={endDate}
                                 onChange={(e) => setEndDate(e.target.value)}
+                                min={startDate}
                             />
                         </div>
                         <p className={styles.tripText}>일차</p>
