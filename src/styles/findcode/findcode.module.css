@@ -38,7 +38,7 @@ html, body {
     font-size: 20px;
     color: #ffffff;
     z-index: 2;
-    bottom: 10%; 
+    bottom: 24%; 
   }
 
   
@@ -120,7 +120,7 @@ html, body {
     border: 1px solid #D8D8D8;
     background-color: #ffffff;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 16px;
     color: #000000 !important;
     margin-right:3% ;
     z-index: 1;
@@ -265,6 +265,7 @@ html, body {
 @media screen and (min-width: 1024px) {
   .top-comment{
     font-size: 2vw;
+    bottom: 50%;
     }
 
   .comment-container{
