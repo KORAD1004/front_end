@@ -4,8 +4,9 @@ import { useMediaQuery } from 'react-responsive'
 import headerIcon from '../../assets/images/header/headerIcon.svg';
 import styles from '../../styles/header/header.module.css';
 import back_icon from '../../assets/images/header/back-icon.svg';
-import home_icon from '../../assets/images/header/home-icon.png';
-import menu_icon from '../../assets/images/header/menu-icon.png';
+import home_icon from '../../assets/images/header/home-icon.svg';
+import menu_icon from '../../assets/images/header/menu-icon.svg';
+import ImageLazy from '../imgLazy/ImageLazy';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -103,7 +104,7 @@ const Header = () => {
       <header className={styles.header}>
         <div className={styles.IconsContainer}>
           <div className={styles.leftIcons}>
-            <img 
+            <ImageLazy 
               src={back_icon}
               alt="Back"
               className="icon"
@@ -111,13 +112,13 @@ const Header = () => {
             />
           </div>
           <div className={styles.rightIcons}>
-            <img 
+            <ImageLazy 
               src={home_icon}
               alt="Home"
               className="icon"
               onClick={handleHomeClick} 
             />
-            <img 
+            <ImageLazy 
               src={menu_icon}
               alt="Menu"
               className="icon"
