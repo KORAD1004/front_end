@@ -12,6 +12,7 @@ html, body {
     width: 100vw;
     height: auto;
     min-height: 100vh;
+    overflow: hidden;
   }
 
 
@@ -79,7 +80,6 @@ html, body {
 
 
     
-    
   .midback{
     width: 100%;
     z-index: 1;
@@ -87,10 +87,45 @@ html, body {
   }
 
 
+  .input-container {
+    position: relative;
+    top: 85%; 
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    height: auto;
+    justify-content: flex-start;
 
+  }
+    
+  .search-input {
+    flex-shrink: 0; 
+    width: 85vw; 
+    padding: 15px 15px;
+    border: 1px solid #D8D8D8;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #000000 !important;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+    
+  .search-button {
+    flex-shrink: 0; /* 버튼이 줄어들지 않도록 설정 */
+    width: 40px;
+    height: 40px;
+    background-color: #5E8447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-left: -7%;
+  }
+  
   .midbutton{
     position: relative;
-    width: 310px;
+    width: 85vw; 
     height: 40px;
     border-radius: 10px;
     border: 1px solid #c2c2c2;
@@ -101,41 +136,6 @@ html, body {
     background: linear-gradient(to right,  #83AD68,#2C5016);
     margin-top: 2%;
     margin-bottom: 2%;
-  }
-
-  .input-container {
-    position: relative;
-    top: 85%; 
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    height: auto;
-  
-  }
-  
-  
-  .search-input {
-    width: 300px;
-    padding: 15px 30px;
-    padding-left: 5%;
-    border: 1px solid #D8D8D8;
-    background-color: #ffffff;
-    border-radius: 10px;
-    font-size: 16px;
-    color: #000000 !important;
-    z-index: 1;
-    transform: scale(0.8);
-  }
-  
-  .search-button {
-    width: 40px;
-    height: 40px;
-    background-color: #5E8447;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    margin-right: 7%;
   }
   
   .new-content{
@@ -242,7 +242,7 @@ html, body {
 
 
 .new-image {
-  width: 80vw; 
+  width: 85vw; 
   height: 11vh; 
   border-radius: 10px;
   object-fit: cover;
@@ -255,8 +255,7 @@ html, body {
 
 .darker {
   position: absolute;
-
-  width: 80vw; 
+  width: 85vw; 
   height: 11vh; 
   background-color: rgba(0, 0, 0, 0.281); 
   border-radius: 10px; 
@@ -290,23 +289,27 @@ html, body {
         
         margin-top: 5%;
       }
-
+    
+  .input-container {
+      right: 0.5%;
+      }
   
   .search-input {
-    width: 30vw;
+    width: 27vw;
     padding: 1vw 2vw;
-    padding-left: 3%;
     font-size: 1vw;
+    transform: scale(1);
   }
   
   .search-button {
     width: 3vw;
     height: 3vw;
+    margin-left:4%
   }
 
   .midbutton{
     width: 35vw;
-    height: 2.5vw;
+    height: 3vw;
     font-size: 1vw;
   }
 
@@ -338,7 +341,7 @@ html, body {
 
   .darker {
     width: 35vw!important;
-    height: 15  vh !important;
+    height: 15vh !important;
     z-index: 2; 
     left: 50%;
     transform: translateX(-50%);
@@ -354,7 +357,7 @@ html, body {
     z-index: 2;
     left: 33.5%;
     top: 60%;
-    border-radius: 5px; /* 모서리를 둥글게 */
+    border-radius: 5px; 
     z-index: 4;
   }
 
