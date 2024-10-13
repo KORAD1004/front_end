@@ -36,7 +36,7 @@ function App() {
         <div className={styles["app-container"]}>
           <div className={styles["top-container"]}>
             <ImageLazy src={back} className={styles["back"]} alt="back" />
-            <p className={styles["top-comment"]}>나의 여행일정</p>
+            <p className={styles["top-comment"]}>나의여행일정</p>
           </div>
 
           <div className={styles["middle-container"]}>
