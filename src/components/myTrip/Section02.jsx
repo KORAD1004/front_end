@@ -136,10 +136,10 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                                 <div className={styles.memoContainer}>
                                     <input
                                         type="text"
-                                        placeholder="메모를 작성해 주세요. (20자 이내)"
+                                        placeholder="메모를 작성해 주세요. (16자 이내)"
                                         className={styles.memoTextBox}
                                         value={row.memo}
-                                        maxLength={20}
+                                        maxLength={16}
                                         onChange={(e) => onMemoChange(row.id, e.target.value)}
                                     />
                                 </div>
