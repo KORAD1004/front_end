@@ -37,12 +37,6 @@ const Section02 = () => {
             )}
 
             <CourseMap />
-            {/* <div className={styles.timeContainer}>
-                <div className={styles.timeBox}>
-                    <p className={styles.timeText}>이동시간 포함 예상 소요시간</p>
-                    <div className={styles.time}></div>
-                </div>
-            </div> */}
         </div>
     );
 };

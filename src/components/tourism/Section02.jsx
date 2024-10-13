@@ -3,6 +3,7 @@ import axios from 'axios';
 import styles from '../../styles/tourism/section02.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import ImageLazy from "../imgLazy/ImageLazy";
 
 const Section02 = () => {
     const [attractions, setAttractions] = useState([]);
@@ -44,7 +45,7 @@ const Section02 = () => {
                 <div className={styles.touristAttractions}>
                     {attractions.map((attraction, index) => (
                         <div className={styles.touristAttraction} key={index}>
-                            <img src={'https://' + attraction.image} alt={attraction.subTitle} className={styles.touristAttractionImage} />
+                            <ImageLazy src={'https://' + attraction.image} alt={attraction.subTitle} className={styles.touristAttractionImage} />
                             <div className={styles.touristAttractionTextContainer}>
                                 <p className={styles.touristAttractionText}>{attraction.title}</p>
                                 <div className={styles.touristAttractionSmallText}>

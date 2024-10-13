@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import styles from '../../styles/courseSelection/section03.module.css';
+import ImageLazy from "../imgLazy/ImageLazy";
 
 const Section03 = () => {
     const [courseData, setCourseData] = useState([]);
@@ -34,7 +35,7 @@ const Section03 = () => {
                             <div className={styles.circle}>
                                 <span className={styles.circleText}>{index + 1}</span>
                             </div>
-                            <img
+                            <ImageLazy
                                 src={'https://' + course.image}
                                 alt={`course Images ${index + 1}`}
                                 className={styles.courseImage}

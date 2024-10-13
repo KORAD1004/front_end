@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import styles from '../../styles/courseSelection/section01.module.css';
 import background from '../../assets/images/courseSelection/backgroundImg.svg';
+import ImageLazy from "../imgLazy/ImageLazy";
 
 const Section01 = () => {
     const [firstPart, setFirstPart] = useState('');
@@ -33,7 +34,7 @@ const Section01 = () => {
     return (
         <div className={styles.allContainer}>
             <div className={styles.imageContainer}>
-                <img
+                <ImageLazy
                     src={background}
                     alt="course Background"
                     className={styles.image}

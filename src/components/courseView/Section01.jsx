@@ -1,7 +1,7 @@
 import styles from '../../styles/courseView/section01.module.css';
 import background from '../../assets/images/courseView/background.png';
 import { useSearchParams } from 'react-router-dom';
-
+import ImageLazy from '../imgLazy/ImageLazy';
 
 const Section01 = ({data}) => {
     const [param] = useSearchParams();
@@ -10,7 +10,7 @@ const Section01 = ({data}) => {
     return (
         <div className={styles.allContainer}>
             <div className={styles.imageContainer}>
-                <img 
+                <ImageLazy 
                     src={background}
                     alt="course Background" 
                     className={styles.image}

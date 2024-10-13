@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import styles from '../../styles/quiz/quizModal.module.css';
 import Correct from '../../assets/images/quiz/Correct.svg';
 import Wrong  from '../../assets/images/quiz/Wrong.svg';
+import ImageLazy from '../imgLazy/ImageLazy';
 
 Modal.setAppElement('#root');
 
@@ -31,13 +32,13 @@ const QuizModal = ({ isOpen, onRequestClose, info, question, onCorrect, onWrong 
       </div>
 
       <div className={styles.modalActions}>
-        <img 
+        <ImageLazy 
             className={styles.correctButton} 
             src={Correct}
             alt="Correct" 
             onClick={onCorrect} 
         />
-        <img 
+        <ImageLazy 
             className={styles.wrongButton} 
             src={Wrong}
             alt="Wrong" 

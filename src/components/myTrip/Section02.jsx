@@ -4,6 +4,7 @@ import styles from '../../styles/myTrip/section02.module.css';
 import Map from './Map.jsx';
 import SearchModal from "./SearchModal.jsx";
 import TrashCan from "../../assets/images/myTrip/trashCan.svg";
+import ImageLazy from "../imgLazy/ImageLazy.jsx";
 
 const Section02 = ({ rows, setRows, location, setLocation }) => {
     const containerRef = useRef(null);
@@ -37,7 +38,6 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
         const newId = rows.length + 1;
         setRows([...rows, { id: newId, isMemoVisible: false, address: "", memo: "" }]);
 
-        // 일정 추가 후 rows 컨테이너 내부에서만 스크롤이 마지막 row로 이동
         setTimeout(() => {
             if (containerRef.current) {
                 containerRef.current.scrollTo({
@@ -125,7 +125,7 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                                 {row.isMemoVisible ? '▲' : '▼'}
                             </button>
                             <div className={styles.trashCanContainer}>
-                                <img
+                                <ImageLazy
                                     src={TrashCan}
                                     className={styles.trashCan}
                                     onClick={() => onDeleteRow(row.id)}
