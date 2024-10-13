@@ -102,9 +102,6 @@ function App() {
 
       <div className={styles["tower-container"]}>
         <ImageLazy src={tower} className={styles["tower"]} alt="tower" />
-        <p className={styles["towercomment"]}>
-          경주의 방사성폐기물처분장 <span className={styles["highlight3"]}>건설사업은 1986년부터 시작되었습니다.</span>
-        </p>
         <ImageLazy src={promise} className={styles["promise"]} alt="promise" />
         <p className={styles["promisecomment"]}>
           하지만, 방사성폐기물처분시설 부지확보 사업은<span className={styles["highlight3"]}> 19년간 9차례 실패를 거듭하면서</span><br/>
@@ -123,12 +120,7 @@ function App() {
           그리고 마침내 2005년 11월 2일 주민투표를 통해<br/><span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 부지가 경주로 확정되어</span>
         </p>
         <ImageLazy src={gback} className={styles["gback"]} alt="gback" />
-        <p className={styles["bcomment"]}>
-          이어지는 처분시설 건설 공사도 어려운 난관을 극복해가며,<br/><span className={styles["highlight3"]}>2014년 6월 30일에 1단계 동굴처분방식의 중저준위방폐물처분시설 공사를 완료하였고<br/>원자력안전위원회로부터 사용승인을 받았습니다.</span>
-        </p>
-        <p className={styles["bcomment2"]}>
-          이후 2015년 7월 중저준위방사성폐기물을 지하 사일로에 최초처분하였습니다.<br/><br/><span className={styles["highlight3"]}>2015년 8월 28일 준공식을 개최했으며,<br/>현재까지 대한민국의 원자력 사용에 중요한 역할을 도맡고 있습니다.</span>
-        </p>
+
       </div>
     </div>
   );

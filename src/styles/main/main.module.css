@@ -126,6 +126,7 @@ html, body {
   flex-direction: column; 
   align-items: center;  
   width: 100%;
+  margin-top: 7%;
 }
 
 .text-and-dots-container {
@@ -136,12 +137,13 @@ html, body {
 }
 
 .text-image {
-  margin-left: 14%;
+  margin-left: 7%;
 }
 
 .dot-indicator-container {
   display: flex;
   align-items: center;
+  margin-top: 15%;
   margin-right: 15%; 
 }
 
@@ -225,6 +227,7 @@ html, body {
   width: 100%;
   height: auto;
   margin-bottom: 25%;
+  margin-top: 10%;
   align-items: center; 
 }
 
@@ -246,7 +249,7 @@ html, body {
 .safety-comment{
   position: absolute;
   font-family: 'Pretendard';
-  font-size: 2.5vw;
+  font-size: 2.8vw;
   color: white;
   top: 70%;
   left: 50%;
@@ -263,13 +266,15 @@ html, body {
   position: relative;
   width: 50%;
   right: 15%;
+  margin-bottom: 3%;
+  margin-top: 20%;
 }
 
 .theme {
   width: 100%;
   position: absolute;
   z-index: -1; 
-  top: 45%;
+  top: 42%;
 }
 
 .map-container {
@@ -277,7 +282,7 @@ html, body {
   flex-direction: column;
   align-items: center; 
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 30%;
 }
 
 .map-comment {
@@ -289,7 +294,7 @@ html, body {
 
 .map {
   width: 360px; 
-  height: 200px; 
+  height: 250px; 
   border-radius: 10px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -314,9 +319,11 @@ html, body {
   font-size: 2.3vw; 
   white-space: nowrap;
   color: #000000 !important;
+  background: linear-gradient(to right, #D8D8D8, #ECECEC);
 }
 
 .search-button {
+  font-family: 'Pretendard-bold';
   background-color: #79BD4E;
   color: white;
   width: 20vw;
@@ -342,7 +349,7 @@ html, body {
 
 .information-container {
   width: 100%;
-  margin-top: 10%;
+  margin-top: 30%;
 }
 
 .notice-container {
@@ -370,32 +377,34 @@ html, body {
   background-color: #79BD4E;
   color: white;
   font-weight: bold;
-  margin-left: 10%;
+  margin-left: 15%;
   padding: 1px 5px;
-  font-size: 1.5vw; 
+  font-size: 2vw; 
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3%;
 }
 
 .notice-title {
   font-family: 'Pretendard-bold';
-  margin-left: 10%;
+  margin-left: 15%;
   margin-top: 2%;
-  font-size: 1.5vw;
+  font-size: 2.2vw;
   font-weight: bold;
   text-align: left;
   color: #000000;
   min-height: 2vh;
   min-width: 10vw;
   max-width: 30vw;
+  line-height: 1.2;
 }
 
 .notice-content {
   font-family: 'Pretendard';
-  margin-left: 10%;
+  margin-left: 15%;
   margin-top: 10%;
-  font-size: 1.4vw;
+  font-size: 1.9vw;
   text-align: left;
   color: #000000;
   display: -webkit-box;
@@ -433,15 +442,15 @@ html, body {
 
 .bottom-comment1 {
   font-family: 'Pretendard';
-  margin-top: 4%;
-  font-size: 1.7vw;
+  margin-top: 8%;
+  font-size: 2vw;
   font-weight: bold;
   color: #696969;
 }
 
 .bottom-comment2 {
   font-family: 'Pretendard-bold';
-  font-size: 1.7vw;
+  font-size: 2vw;
   color: #696969;
 }
 
@@ -454,11 +463,12 @@ html, body {
   margin-top: 3%;
   font-size: 1.5vw;
   color: #696969;
+  padding-bottom: 3%;
 }
 
 .bottom-box {
   width: 100%;
-  margin-top: 10%; 
+  margin-top: 20%; 
   background-color: #D9D9D9; 
   display: flex; 
   flex-direction: column; 
@@ -609,8 +619,8 @@ html, body {
   }
 
   .notice-content {
-    min-height: 2.5vh;
     min-width: 10vw;
     max-width: 30vw;
+    max-height: 3.5vh;
   }
 }
