@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import styles from '../../styles/quiz/oxModal.module.css';
-
+import ImageLazy from '../imgLazy/ImageLazy';
 
 Modal.setAppElement('#root');
 
@@ -24,7 +24,7 @@ const OXModal = ({ isOpen, onRequestClose, oxImage, ox, question, onCourse }) =>
       </div>
 
       <div className={styles.modalBody}>
-        <img 
+        <ImageLazy 
             className={styles.correctImg} 
             src={oxImage}
             alt="oxImage" 

@@ -6,6 +6,7 @@ import here2 from '../../assets/images/myTrip/here2.svg';
 import axios from 'axios';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import ImageLazy from '../imgLazy/ImageLazy';
 
 export default function SearchModal({ onSave, onClose, lon, lat }) {
     const [result, setResult] = useState([]);
@@ -42,11 +43,11 @@ export default function SearchModal({ onSave, onClose, lon, lat }) {
     return (
         <div className={styles.modalWrapper}>
             <div onClick={onClose} className={styles.closeWrapper}>
-                <img src={close} />
+                <ImageLazy src={close} />
             </div>
             <div className={styles.searchWrapper}>
                 <input onChange={searchPlace} placeholder='목적지를 입력하세요.' />
-                <div><img src={search} /></div>
+                <div><ImageLazy src={search} /></div>
             </div>
             <div className={styles.placeWrapper}>
                 {
@@ -61,7 +62,7 @@ export default function SearchModal({ onSave, onClose, lon, lat }) {
                         >
                             <div className={styles.title}>
                                 <div>
-                                    <img src={isClick === item.id?here2:here} />
+                                    <ImageLazy src={isClick === item.id?here2:here} />
                                     <span>{item.title.trimStart()}</span>
                                 </div>
                             </div>

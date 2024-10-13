@@ -1,13 +1,14 @@
 import React from "react";
 import styles from '../../styles/myTrip/section01.module.css';
 import Background from '../../assets/images/myTrip/background.svg';
+import ImageLazy from "../imgLazy/ImageLazy";
 
 const Section01 = ({ tripName, setTripName, numPeople, setNumPeople, startDate, setStartDate, endDate, setEndDate, dayCount, setDayCount }) => {
     return (
         <>
             <div className={styles.allContainer}>
                 <div className={styles.imgContainer}>
-                    <img 
+                    <ImageLazy 
                         src={Background}
                         alt="myTrip Background" 
                         className={styles.image}
