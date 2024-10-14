@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Section01 from '../../components/myTrip/Section01';
 import Section02 from '../../components/myTrip/Section02';
 import Section03 from '../../components/myTrip/Section03';
