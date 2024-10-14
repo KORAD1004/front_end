@@ -17,6 +17,9 @@ import SearchBar from '../../components/main/searchbar';
 import information from '../../assets/images/main/information.svg';
 import styles from '../../styles/main/main.module.css'; 
 import ImageLazy from '../../components/imgLazy/ImageLazy';
+import check from '../../assets/images/main/check.svg'
+import c1 from '../../assets/images/main/c1.svg'
+import c2 from '../../assets/images/main/c2.svg'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -120,16 +123,11 @@ function App() {
       <div className={styles['middle-container']}>
         <div className={styles['safety-container']}>
         <ImageLazy src={safety} className={styles["safety"]} alt="safety" />
-        <p className={styles['safety-title']}>
-          SAFETY
-        </p>
-        <p className={styles['safety-comment']}>
-  민주적 부지선정과 안전성을 최우선으로 한 설계 및<br />
-  <span className={styles['safety-comment2']}>
-    시공으로 IAEA 방폐물 안전협약 검토회의 중 우수 사례 선정</span>
-</p>
-
+        <ImageLazy src={check} className={styles["check"]} alt="check" />
+        <ImageLazy src={c2} className={styles["c2"]} alt="c2" />
+        <ImageLazy src={c1} className={styles["c1"]} alt="c1" />
         </div>
+        <div className={styles['theme-container']}>
         <ImageLazy src={theme} className={styles["theme"]} alt="theme" />
         <ImageLazy src={themestory} className={styles["themestory"]} alt="theme story" />
         <div className={styles['hashtag']}>
@@ -145,11 +143,20 @@ function App() {
             <div className={styles['hashtag-box']}>#동궁원</div>
           </div>
         </div>
+        </div>
       </div>
 
       <div className={styles["map-container"]}>
-        <p className={styles["map-comment"]}>
-          안전관리 역량의 기틀이 단단한 경주를 넓은 시야로 바라볼 수 있는 우리로 성장할 수 있게 둘러보아요.
+      <p className={styles["map-comment"]}>
+  <span className={styles["mc1"]}>경화주월</span><br/><br/>
+  <span className={styles["mc2"]}>안전관리 역량이 단단한 경주를</span><br/>
+  <span className={styles["mc3"]}>넓은 시야</span>
+  <span className={styles["mc4"]}>로 바라보기</span>
+</p>
+
+        <p className={styles["map-comment2"]}>
+          방문객의 안전과 추억을 남길 재미를<br/>
+          고려해 구성해 보았어요.
         </p>
         <Map />
         <SearchBar />
