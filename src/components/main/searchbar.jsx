@@ -13,7 +13,7 @@ function SearchBar() {
         <img src={paper} alt="Paper Icon" className={styles['paper-icon']} />
       </div>
       <button className={styles['search-button']} onClick={() => navigate('/tourism')}>
-        바로가기
+        검색
       </button>
     </div>
   );
