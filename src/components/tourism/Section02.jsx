@@ -59,7 +59,7 @@ const Section02 = () => {
                     ))}
                 </div>
             </div>
-            <p className={styles.subText}>경주 관광사이트에서 가져온 api입니다.</p>
+            <p className={styles.subText}>경상북도 경주시에서 제공한 경주문화관광 오픈API를 사용하여 제작된 저작물입니다.</p>
         </div>
     );
 };
