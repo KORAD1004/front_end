@@ -10,6 +10,7 @@ import example1 from '../../assets/images/main/example1.svg';
 import example2 from '../../assets/images/main/example2.svg';
 import example3 from '../../assets/images/main/example3.svg';
 import safety from '../../assets/images/main/safety.svg';
+import safety2 from '../../assets/images/main/safety2.svg';
 import themestory from '../../assets/images/main/Theme Story.svg';
 import theme from '../../assets/images/main/theme.svg';
 import Map from '../../components/main/map';
@@ -57,6 +58,20 @@ function App() {
     setCurrentIndex(index);
   };
   
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // 1024px 이상이면 true
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className={styles["app-container"]}>
@@ -72,7 +87,7 @@ function App() {
 
       <div className={styles["m-container"]}>
         <MenuBar />
-        <hr className={styles["separator-line"]} />
+
       </div>
 
       <div className={styles["image-container"]}>
@@ -121,8 +136,13 @@ function App() {
       </div>
 
       <div className={styles['middle-container']}>
-        <div className={styles['safety-container']}>
-        <ImageLazy src={safety} className={styles["safety"]} alt="safety" />
+      <div className={styles["safety-container"]}>
+        {/* 1024px 이상일 때는 safety2, 아니면 safety */}
+        <ImageLazy 
+          src={isLargeScreen ? safety2 : safety} 
+          className={styles["safety"]} 
+          alt="safety" 
+        />
         <ImageLazy src={check} className={styles["check"]} alt="check" />
         <ImageLazy src={c2} className={styles["c2"]} alt="c2" />
         <ImageLazy src={c1} className={styles["c1"]} alt="c1" />
@@ -147,20 +167,26 @@ function App() {
       </div>
 
       <div className={styles["map-container"]}>
-      <p className={styles["map-comment"]}>
-  <span className={styles["mc1"]}>경화주월</span><br/><br/>
-  <span className={styles["mc2"]}>안전관리 역량이 단단한 경주를</span><br/>
-  <span className={styles["mc3"]}>넓은 시야</span>
-  <span className={styles["mc4"]}>로 바라보기</span>
-</p>
+  <div className={styles["mc-container"]}>
+    <p className={styles["map-comment"]}>
+      <span className={styles["mc1"]}>경화주월</span><br/><br/>
+      <span className={styles["mc2"]}>안전관리 역량이 단단한 경주를</span><br/>
+      <span className={styles["mc3"]}>넓은 시야</span>
+      <span className={styles["mc4"]}>로 바라보기</span>
+    </p>
 
-        <p className={styles["map-comment2"]}>
-          방문객의 안전과 추억을 남길 재미를<br/>
-          고려해 구성해 보았어요.
-        </p>
-        <Map />
-        <SearchBar />
-      </div>
+    <p className={styles["map-comment2"]}>
+      방문객의 안전과 추억을 남길 재미를<br/>
+      고려해 구성해 보았어요.
+    </p>
+  </div>
+
+  <div className={styles["map-container2"]}>
+    <Map />
+    <SearchBar />
+  </div>
+</div>
+
 
       <div className={styles["information-container"]}>
         <ImageLazy src={information} className={styles["information"]} alt="Information" />
