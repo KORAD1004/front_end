@@ -661,7 +661,7 @@ margin-right: 20%;
 
 
   .mc-container{
-    background: linear-gradient(to bottom, rgb(255, 255, 255), #D8D8D8);
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #D8D8D8 90%);
     width: 40vw;
     height: 60vw;
   }
@@ -709,7 +709,7 @@ margin-right: 20%;
     padding: 0 20px;
     flex-direction: row;
   }
-  
+
   .map-comment{
     font-size: 0.5vw;
   }
