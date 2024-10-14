@@ -110,13 +110,13 @@ const Section03 = ({ tripName, numPeople, startDate, endDate, dayCount, rows }) 
                         className={styles.backButton}
                         onClick={() => navigate(-1)}
                     >
-                        취소
+                        {isDesktop?"취소하기":"취소"}
                     </button>
                     <button
                         className={styles.saveButton}
                         onClick={handleSave}
                     >
-                        저장
+                        {isDesktop?"저장하기":"저장"}
                     </button>
                 </div>
             </div>
