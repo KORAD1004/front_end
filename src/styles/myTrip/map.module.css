@@ -1,9 +1,7 @@
 
 @media screen and (min-width: 1024px) {
   .map {
-      height: 500px !important;
-      width: 80% !important;
-      margin: 0 auto;
+      height: 400px !important; 
       .map div {
           border-radius: 10px;
       }

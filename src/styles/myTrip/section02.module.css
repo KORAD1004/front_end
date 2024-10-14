@@ -77,6 +77,9 @@
     height: auto;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .textContainer {
@@ -92,16 +95,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 5%;
   }
 
   .mapText {
     font-family: 'Pretendard-extraBold';
-    font-size: 39.39px !important;
+    font-size: 30px !important;
   }
 
   .mapContainer {
-    padding: 0% 5% 5% 5% !important;
+    width: 40%;
     height: auto !important;
+    padding: 0 3% 0 0 !important;
   }
 
   .searchContainer {
@@ -119,7 +124,7 @@
   }
 
   .addScheduleButton {
-    width: 13% !important;
+    width: 25% !important;
     padding: 1.2% 0% !important;
     font-family: 'Pretendard-semiBold';
     font-size: 14.68px !important;
@@ -133,16 +138,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 5% 0 5%;
+    padding: 0 !important;
     height: 220px !important;
     overflow-y: auto;
     margin-top: 1%;
   }
 
   .searchBox {
-    width: 48% !important;
-    padding: 1% !important;
-    border-radius: 20px !important;
+    width: 53% !important;
+    padding: 0 !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 16.54px !important;
     background: linear-gradient(90deg, #D6D6D6, #F0F0F0);
   }
 
@@ -156,7 +164,7 @@
   }
 
   .textBox2 {
-    width: 50%;
+    width: 60% !important;
     height: 7%;
     border: 1px solid #ccc;
     padding: 5px;
@@ -164,14 +172,16 @@
 
   .text {
     font-family: 'Pretendard-bold';
+    width: 16%;
     font-size: 15px !important;
-    margin-right: 5%;
+    margin-right: 0 !important;
   }
 
   .textContainer3 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start !important;
+    width: 100%;
   }
 
   .arrowButton {
@@ -188,7 +198,7 @@
   }
 
   .trashCanContainer {
-    margin-left: 4%;
+    margin-left: 2% !important;
   }
 
   .trashCan {
@@ -224,6 +234,9 @@
     padding: 2% 5% 5% 5% !important;
   }
 
+  .travelContainer {
+    width: 50%;
+  }
 
 }
 

@@ -1,18 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from 'react-responsive';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import styles from '../../styles/myTrip/section02.module.css';
 import Map from './Map.jsx';
 import SearchModal from "./SearchModal.jsx";
-import TrashCan from "../../assets/images/myTrip/trashCan.svg";
-import ImageLazy from "../imgLazy/ImageLazy.jsx";
+import PropTypes from 'prop-types';
+import { Row } from "./Row.jsx";
 
 const Section02 = ({ rows, setRows, location, setLocation }) => {
     const containerRef = useRef(null);
     const [currentId, setCurrentId] = useState(null);
     const [showToggle, setShowToggle] = useState(false);
-
     const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
-
 
     useEffect(() => {
         if (navigator.geolocation) {
@@ -26,6 +26,19 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
             );
         }
     }, [setLocation]);
+
+    const moveRow = (fromIndex, toIndex) => {
+        const updatedRows = [...rows];
+        const [movedRow] = updatedRows.splice(fromIndex, 1);
+        updatedRows.splice(toIndex, 0, movedRow);
+
+        // 행의 순서에 맞게 번호를 업데이트합니다.
+        const reIndexedRows = updatedRows.map((row, index) => ({
+            ...row,
+            id: index + 1,
+        }));
+        setRows(reIndexedRows);
+    };
 
     const onSave = (place, latitude, longitude, address, hotspotId) => {
         setShowToggle(false);
@@ -79,87 +92,44 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
         ));
     };
 
-
     return (
-        <>
+        <DndProvider backend={HTML5Backend}>
             <div className={styles.allContainer}>
                 {!isDesktop && <div className={styles.textContainer}>
                     <p className={styles.mapText}>지도</p>
                 </div>}
+                {!isDesktop &&
                 <div className={styles.mapContainer}>
                     <Map rows={rows} />
-                </div>
-                <div className={styles.searchContainer}>
-                    <div className={styles.textContainer2}>
-                        <p className={styles.mapText}>관광지 검색하기</p>
-                        <button className={styles.addScheduleButton} onClick={addRow}>일정 추가하기</button>
+                </div>}
+                <div className={styles.travelContainer}>
+                    <div className={styles.searchContainer}>
+                        <div className={styles.textContainer2}>
+                            <p className={styles.mapText}>관광지 검색하기</p>
+                            <button className={styles.addScheduleButton} onClick={addRow}>일정 추가하기</button>
+                        </div>
+                    </div>
+                    <div className={styles.container} ref={containerRef}>
+                        {rows.map((row, index) => (
+                            <Row
+                                key={row.id}
+                                row={row}
+                                index={index}
+                                moveRow={moveRow}
+                                toggleMemoVisibility={toggleMemoVisibility}
+                                onDeleteRow={onDeleteRow}
+                                setShowToggle={setShowToggle}
+                                setCurrentId={setCurrentId}
+                                getValue={getValue}
+                                onMemoChange={onMemoChange}
+                            />
+                        ))}
                     </div>
                 </div>
-                {isDesktop && (
-                    <>
-                        <div className={styles.underlineContainer}>
-                            <div className={styles.underline}></div>
-                        </div>
-                    </>
-                )}
-                <div className={styles.container} ref={containerRef}>
-                    {rows.map((row) => (
-                        <div key={row.id} className={styles.row}>
-                            <div className={styles.searchBox}>
-                                <div className={styles.textContainer3}>
-                                    <p className={styles.text}>No.{row.id}</p>
-                                    <p className={styles.text}>명칭</p>
-                                    <input
-                                        onClick={() => { setShowToggle(true); setCurrentId(row.id); }}
-                                        type="text"
-                                        className={styles.textBox2}
-                                        value={getValue(row) || ""}
-                                        readOnly
-                                    />
-                                </div>
-                            </div>
-                            <button
-                                onClick={() => toggleMemoVisibility(row.id)}
-                                className={styles.arrowButton}
-                            >
-                                {row.isMemoVisible ? '▲' : '▼'}
-                            </button>
-                            <div className={styles.trashCanContainer}>
-                                <ImageLazy
-                                    src={TrashCan}
-                                    className={styles.trashCan}
-                                    onClick={() => onDeleteRow(row.id)}
-                                    alt="삭제"
-                                />
-                            </div>
-                            {row.isMemoVisible && (
-                                <div className={styles.memoContainer}>
-                                    <input
-                                        type="text"
-                                        placeholder="메모를 작성해 주세요. (12자 이내)"
-                                        className={styles.memoTextBox}
-                                        value={row.memo}
-                                        maxLength={12}
-                                        onChange={(e) => onMemoChange(row.id, e.target.value)}
-                                    />
-                                </div>
-                            )}
-
-                        </div>
-                    ))}
-                </div>
-                {isDesktop && (
-                    <>
-                        <div className={styles.saveContainer}>
-                            <div className={styles.textContainer2}>
-                                <div className={styles.mapText}>여행지 저장목록</div>
-                            </div>
-                        </div>
-                    </>
-                )}
-                <div className={styles.underlineContainer}>
-                    <div className={styles.underline}></div>
-                </div>
+                {isDesktop &&
+                <div className={styles.mapContainer}>
+                    <Map rows={rows} />
+                </div>}
             </div>
             {showToggle && (
                 <SearchModal
@@ -170,8 +140,15 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                     rows={rows}
                 />
             )}
-        </>
+        </DndProvider>
     );
 };
 
 export default Section02;
+
+Section02.propTypes = {
+    rows: PropTypes.array, 
+    setRows: PropTypes.func, 
+    location: PropTypes.object, 
+    setLocation: PropTypes.func
+}

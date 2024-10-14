@@ -101,17 +101,18 @@
     }
     
     .textAllContainer {
-        padding: 0% 20% !important;
         display: inline-block;
         align-items: center;
         justify-content: center;
-        width: 70% !important;
+        padding: 0 !important;
+        width: 100% !important;
     }
     
     .textContainer {
         display: flex;
         align-items: center;
-        margin-bottom: 5%;
+        margin: 0 8% 0 8% !important;
+        height: 70px;
     }
     
     .noTextContainer{
@@ -122,12 +123,16 @@
         width: 50%;
         display: flex;
         align-self: start;
+        height: 100%;
+        align-items: center;
     }
     
     .memoTextContainer{
         width: 30%;
         display: flex;
         align-self: start;
+        height: 100%;
+        align-items: center;
     }
     
     .noText {
@@ -139,10 +144,18 @@
     .courseText {
         font-family: 'Pretendard-semiBold';
         font-size: 17px !important;
-        margin-right: 5%;
+        margin-right: 0 !important;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .courseText:first-child {
+        width: 40%;
+    }
+
+    .courseText:nth-child(2) {
+        margin-right: 3% !important;
     }
     
     .memoText {
@@ -198,7 +211,57 @@
     .backButton:hover {
         background-color: #7d827d !important;
     }
-      
+
+    .underline {
+        width: 80% !important;
+        height: 2px !important;
+        background-color: #303030 !important;
+      }
+    
+      .underlineContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 5% 5% 5% !important;
+      }
+
+      .textContainer2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 3% 11.5%;
+      }
+    
+      .mapText {
+        font-family: 'Pretendard-extraBold';
+        font-size: 30px !important;
+      }
+
+      .noTextContainer {
+        width: 15% !important;
+        padding-right: 16px;
+        margin-right: 16px;
+        border-right: 1px solid #ddd;
+        height: 100%; /* 행이 늘어나도 선 길이 유지 */
+        display: flex;
+        align-items: center;
+      }
+
+      .memoContainer {
+        top: 60px;
+        left: 25%;
+        position: absolute;
+        padding: 10px;
+        background-color: #EBEBEB;
+        margin-top: 5px;
+        width: 40%;
+        border-radius: 10.5px;
+    }
+    
+    .memoText {
+        font-size: 14px;
+        color: #333;
+    }
 }
 
 .allContainer {
@@ -209,7 +272,6 @@
 }
 
 .textAllContainer {
-    padding: 5%;
     display: inline-block;
     align-items: center;
     justify-content: center;
@@ -307,3 +369,27 @@
 .backButton:focus {
     background-color: #7d827d;
 }
+
+.underline {
+    width: 100%;
+    height: 1px;
+    background-color: #C7C7C7;
+  }
+  
+  .underlineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+  }
+
+  .textContainer2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mapText {
+    font-family: 'Pretendard-extraBold';
+    font-size: 12.73px;
+  }
