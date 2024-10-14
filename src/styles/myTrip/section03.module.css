@@ -180,8 +180,8 @@
     }
     
     .saveButton {
-        background-color: #77B353;
-        width: 85px !important;
+        background: linear-gradient(64deg, #77B353, #496A34);
+        width: 120px !important;
         height: 58.14px !important;
         color: white;
         border: none;
@@ -189,7 +189,7 @@
         cursor: pointer;
         margin-left: 3%;
         font-family: 'Pretendard-bold';
-        font-size: 17.52px !important;
+        font-size: 20px !important;
     }
       
     .saveButton:hover {
@@ -197,15 +197,15 @@
     }
     
     .backButton {
-        background-color: #E1E1E1;
-        width: 85px !important;
+        background-color: #8C8C8C !important;
+        width: 120px !important;
         height: 58.14px !important;
         border: none;
         padding: 8px 16px;
         cursor: pointer;
         font-family: 'Pretendard-bold';
-        font-size: 17.52px !important;
-        color: #000;
+        font-size: 20px !important;
+        color: white !important;
     }
       
     .backButton:hover {
