@@ -98,10 +98,9 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                 {!isDesktop && <div className={styles.textContainer}>
                     <p className={styles.mapText}>지도</p>
                 </div>}
-                {!isDesktop &&
                 <div className={styles.mapContainer}>
                     <Map rows={rows} />
-                </div>}
+                </div>
                 <div className={styles.travelContainer}>
                     <div className={styles.searchContainer}>
                         <div className={styles.textContainer2}>
@@ -109,6 +108,7 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                             <button className={styles.addScheduleButton} onClick={addRow}>일정 추가하기</button>
                         </div>
                     </div>
+                    <div className={styles.line}/>
                     <div className={styles.container} ref={containerRef}>
                         {rows.map((row, index) => (
                             <Row
@@ -126,10 +126,6 @@ const Section02 = ({ rows, setRows, location, setLocation }) => {
                         ))}
                     </div>
                 </div>
-                {isDesktop &&
-                <div className={styles.mapContainer}>
-                    <Map rows={rows} />
-                </div>}
             </div>
             {showToggle && (
                 <SearchModal

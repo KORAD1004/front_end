@@ -13,6 +13,7 @@ const MyTripCreate = () => {
   const [rows, setRows] = useState([
     { id: 1, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
     { id: 2, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
+    { id: 3, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
     { id: 3, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" }
   ]);
 

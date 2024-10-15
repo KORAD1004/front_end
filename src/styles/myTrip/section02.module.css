@@ -74,12 +74,11 @@
 @media screen and (min-width: 1024px) {
   .allContainer {
     width: 100vw;
-    height: auto;
+    height: 60vh !important;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .textContainer {
@@ -106,7 +105,7 @@
   .mapContainer {
     width: 40%;
     height: auto !important;
-    padding: 0 3% 0 0 !important;
+    padding: 0 0 0 3% !important;
   }
 
   .searchContainer {
@@ -139,9 +138,17 @@
     flex-direction: column;
     align-items: center;
     padding: 0 !important;
-    height: 220px !important;
+    height: 300px !important;
     overflow-y: auto;
     margin-top: 1%;
+    gap: 15px 0;
+  }
+
+  .line {
+    border: 1px solid black;
+    height: 1px;
+    width: 70%;
+    margin: 5% auto;
   }
 
   .searchBox {
@@ -161,6 +168,8 @@
     justify-content: center;
     margin-bottom: 1.5% !important;
     width: 100%;
+    height: 50px !important;
+    flex: 0 0 auto;
   }
 
   .textBox2 {
