@@ -21,7 +21,7 @@
 }
 
 .pageWrapper {
-    background-image: url('../../assets/images/radWaste/rwBackground2.webp'), url('../../assets/images/radWaste/rwBackground.webp'), url('../../assets/images/radWaste/bodyImg5.svg');
+    background-image: url('../../assets/images/radWaste/rwBackground2.webp'), url('../../assets/images/radWaste/rwBackground.webp'), url('../../assets/images/radWaste/bodyImg5.webp');
     background-repeat: no-repeat;
     width: 100vw;
     background-position: center 80px, center 0, bottom;
@@ -685,7 +685,7 @@
     }
     
     .pageWrapper {
-        background-image: url('../../assets/images/radWaste/rwBackground3.svg'), url('../../assets/images/radWaste/rwBackground4.png'), url('../../assets/images/radWaste/bodyImg5.svg');
+        background-image: url('../../assets/images/radWaste/rwBackground3.webp'), url('../../assets/images/radWaste/rwBackground4.webp'), url('../../assets/images/radWaste/bodyImg5.webp');
         background-size: 60vw, 100vw, 100vw;
         background-position: center 100px, center 0, bottom;
     }
