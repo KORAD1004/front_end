@@ -21,12 +21,12 @@ import ImageLazy from '../../components/imgLazy/ImageLazy';
 import check from '../../assets/images/main/check.svg'
 import c1 from '../../assets/images/main/c1.svg'
 import c2 from '../../assets/images/main/c2.svg'
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/components/swiper.css';
 import { useEffect } from 'react';
 import { fetchAvgRadiation } from '../../hooks/axios/FetchData';
+import { useMediaQuery } from 'react-responsive';
 
 const images = [
   { id: 1, src: example1, alt: 'Image 1' },
@@ -35,6 +35,7 @@ const images = [
 ];
 
 function App() {
+  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
   const [currentIndex, setCurrentIndex] = useState(0);
   const imageRefs = useRef([]);
   const galleryRef = useRef(null);
@@ -74,7 +75,7 @@ function App() {
   }, []);
 
   return (
-    <div className={styles["app-container"]}>
+    <div className={styles["app-container"]} style={isDesktop?null:{backgroundImage:"url('../../assets/images/main/bac2.gif')"}}>
       <div className={styles["top-container"]}>
         <div className={styles["image-overlay"]}>
           <ImageLazy src={mainname} className={styles["mainname"]} alt="main name" />

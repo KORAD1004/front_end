@@ -2,15 +2,18 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../../styles/tourism/section01.module.css';
 import background from '../../assets/images/tourism/Tourism_background.webp';
+import background2 from '../../assets/images/tourism/Tourism_background2.gif'
 import title from '../../assets/images/tourism/Tourism_Title.svg';
 import Quiz1 from '../../components/quiz/Quiz1.jsx';
 import Quiz2 from '../../components/quiz/Quiz2.jsx';
 import Quiz3 from '../../components/quiz/Quiz3.jsx';
 import CourseSelect from './CourseSelect.jsx';
 import ImageLazy from '../imgLazy/ImageLazy.jsx';
+import { useMediaQuery } from 'react-responsive';
 
 
 const Section01 = () => {
+    const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
     const navigate = useNavigate();
     const [quizIndex, setQuizIndex] = useState(null); // quizIndex로 상태 관리
     const [selectedImageId, setSelectedImageId] = useState(null);
@@ -50,7 +53,7 @@ const Section01 = () => {
             {renderQuiz()}
             <div className={styles.imageContainer}>
                 <ImageLazy 
-                    src={background}
+                    src={isDesktop?background:background2}
                     alt="Tourism Background" 
                     className={styles.image}
                 />
