@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'; 
+import { useState, useRef } from 'react';
 import topback from '../../assets/images/introduction/top-back.svg';
 import topboxback from '../../assets/images/introduction/topboxback.svg';
 import rad from '../../assets/images/introduction/radiation.svg';
@@ -41,9 +41,7 @@ function App() {
   return (
     <div className={styles["app-container"]}>
       <div className={styles["top-container"]}>
-        <p className={styles["top-comment1"]}> 
-          소개페이지
-        </p>
+        <p className={styles["top-comment1"]}>소개페이지</p>
         <div className={styles["top-box"]}>
           <ImageLazy src={topboxback} className={styles["topboxback"]} alt="top box background" />
         </div>
@@ -86,17 +84,15 @@ function App() {
           한국방사성폐기물관리공단’에서 <span className={styles["highlight2"]}>'한국원자력환경공단'으로</span><br/> 사명변경이 최종 의결되는 과정을 거쳐 명칭이 변경되었습니다.
         </p>
         <div className={styles["image-box"]}>
-            <p className={styles["box-comment"]}>
-              2013년 6월 25일 제316회 국회(임시회) 8차 본회의를 통해
-            </p>
+          <p className={styles["box-comment"]}>2013년 6월 25일 제316회 국회(임시회) 8차 본회의를 통해</p>
         </div>
       </div>
 
       <div className={styles["care-container"]}>
         <ImageLazy src={care} className={styles["care"]} alt="care" />
         <p className={styles["carecomment"]}>
-          고준위 방사성 폐기물 처분시설 부지선정, 기술개발, 인력양성 등
-          <br/><span className={styles["highlight3"]}>고준위 방사성 폐기물 관리사업을 책임지고 차질 없이 추진함을 목표로 합니다.</span>
+          고준위 방사성 폐기물 처분시설 부지선정, 기술개발, 인력양성 등<br />
+          <span className={styles["highlight3"]}>고준위 방사성 폐기물 관리사업을 책임지고 차질 없이 추진함을 목표로 합니다.</span>
         </p>
       </div>
 
@@ -104,7 +100,7 @@ function App() {
         <ImageLazy src={tower} className={styles["tower"]} alt="tower" />
         <ImageLazy src={promise} className={styles["promise"]} alt="promise" />
         <p className={styles["promisecomment"]}>
-          하지만, 방사성폐기물처분시설 부지확보 사업은<span className={styles["highlight3"]}> 19년간 9차례 실패를 거듭하면서</span><br/>
+          방사성폐기물처분시설 부지확보 사업은<span className={styles["highlight3"]}> 19년간 9차례 실패를 거듭하면서</span><br />
           사업자체도 계속적으로 바뀌게 되며 국가적인 난제였습니다.
         </p>
       </div>
@@ -112,15 +108,15 @@ function App() {
       <div className={styles["i-container"]}>
         <ImageLazy src={impossible} className={styles["impossible"]} alt="impossible" />
         <p className={styles["icomment"]}>
-          정부는 2004년 주민투표제를 도입하고<br/><span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 유치지역에 관한 특별법</span>을 제정하였습니다.
-          <br/><br/>경주를 포함한 총 4지역이 유치신청서를 제출하였고,
+          정부는 2004년 주민투표제를 도입하고<br />
+          <span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 유치지역에 관한 특별법</span>을 제정하였습니다.
         </p>
         <ImageLazy src={graph} className={styles["graph"]} alt="graph" />
         <p className={styles["gcomment"]}>
-          그리고 마침내 2005년 11월 2일 주민투표를 통해<br/><span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 부지가 경주로 확정되어</span>
+          2005년 11월 2일 주민투표를 통해<br />
+          <span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 부지가 경주로 확정되었습니다.</span>
         </p>
         <ImageLazy src={gback} className={styles["gback"]} alt="gback" />
-
       </div>
     </div>
   );
