@@ -27,6 +27,7 @@ import '../../styles/components/swiper.css';
 import { useEffect } from 'react';
 import { fetchAvgRadiation } from '../../hooks/axios/FetchData';
 import { useMediaQuery } from 'react-responsive';
+import bac2 from '../../assets/images/main/bac2.gif';
 
 const images = [
   { id: 1, src: example1, alt: 'Image 1' },
@@ -76,7 +77,7 @@ function App() {
 
   return (
     <div className={styles["app-container"]}>
-      <div className={styles["top-container"]} style={isDesktop?null:{backgroundImage:"url('src/assets/images/main/bac2.gif')"}}>
+      <div className={styles["top-container"]} style={isDesktop?null:{backgroundImage:`url(${bac2})`}}>
         <div className={styles["image-overlay"]}>
           <ImageLazy src={mainname} className={styles["mainname"]} alt="main name" />
           <ImageLazy src={toptext} className={styles["toptext"]} alt="top text" />
