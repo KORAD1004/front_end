@@ -65,3 +65,8 @@
   font-family: 'Pretendard-medium';
   src: url('./assets/fonts/Pretendard-Medium.woff2');
 }
+
+@font-face {
+  font-family: 'PretendardV';
+  src: url('./assets/fonts/PretendardVariable.woff2');
+}
