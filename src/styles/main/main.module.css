@@ -38,10 +38,11 @@ html, body {
 
 .toptext {
   position: absolute;
+  width: 65vw;
   top: 70%; 
-  left: 33%; 
+  left: 40%; 
   transform: translate(-50%,-50%);
-  width: 275px; 
+ 
 }
 
 .top-button {

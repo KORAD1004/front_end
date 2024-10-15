@@ -114,7 +114,7 @@ function App() {
         <ImageLazy src={graph} className={styles["graph"]} alt="graph" />
         <p className={styles["gcomment"]}>
           2005년 11월 2일 주민투표를 통해<br />
-          <span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 부지가 경주로 확정되었습니다.</span>
+          <span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 부지가 경주로 확정되어</span>
         </p>
         <ImageLazy src={gback} className={styles["gback"]} alt="gback" />
       </div>
