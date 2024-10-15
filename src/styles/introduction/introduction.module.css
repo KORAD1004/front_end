@@ -186,6 +186,7 @@
 }
 
 .promise{
+width: 95%;
   margin-top: 25%;
 }
 
@@ -257,7 +258,9 @@
   font-size: 14px; 
 }
 
-
+.gback{
+  margin-top: 5%;
+}
 /* Media Queries */
 @media screen and (min-width: 1024px) {
 
