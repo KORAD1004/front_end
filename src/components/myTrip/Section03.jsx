@@ -65,13 +65,14 @@ const Section03 = ({ tripName, numPeople, startDate, endDate, dayCount, rows }) 
                         <div className={styles.underline}></div>
                     </div>
                 )}
+                <div className={styles.rowsWrapper}>
                 {rows.map((row, index) => (
-                    <div key={row.id} style={{position:"relative", marginLeft:"5%"}}>
+                    <div key={row.id} style={{position:"relative"}}>
                         {/* 여행지 정보 */}
                         <div
                             className={styles.textContainer} 
                             onClick={() => handleRowClick(row.id)}
-                            style={selectedRowId===row.id?{height:"90px"}:null}
+                            style={isDesktop&&selectedRowId===row.id?{height:"90px"}:null}
                         >
                             <div className={styles.noTextContainer}>
                                 {!isDesktop ? (
@@ -105,6 +106,7 @@ const Section03 = ({ tripName, numPeople, startDate, endDate, dayCount, rows }) 
                         )}
                     </div>
                 ))}
+                </div>
                 <div className={styles.buttonContainer}>
                     <button
                         className={styles.backButton}

@@ -74,12 +74,11 @@
 @media screen and (min-width: 1024px) {
   .allContainer {
     width: 100vw;
-    height: auto;
+    height: 60vh !important;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .textContainer {
@@ -106,7 +105,8 @@
   .mapContainer {
     width: 40%;
     height: auto !important;
-    padding: 0 3% 0 0 !important;
+    padding: 0 0 0 3% !important;
+    margin-left: 7%;
   }
 
   .searchContainer {
@@ -128,10 +128,10 @@
     padding: 1.2% 0% !important;
     font-family: 'Pretendard-semiBold';
     font-size: 14.68px !important;
-    color: #000000;
+    color: white !important;
     border-radius: 30px !important;
     border: 1px solid #c4c4c4;
-    background-color: #ffffff;
+    background-color: #77B353 !important;
   }
 
   .container {
@@ -139,9 +139,16 @@
     flex-direction: column;
     align-items: center;
     padding: 0 !important;
-    height: 220px !important;
+    height: 265px !important;
     overflow-y: auto;
     margin-top: 1%;
+    gap: 6px 0;
+  }
+
+  .line {
+    border: 1px solid black;
+    width: 70%;
+    margin: 5% auto 65px auto;
   }
 
   .searchBox {
@@ -161,6 +168,8 @@
     justify-content: center;
     margin-bottom: 1.5% !important;
     width: 100%;
+    height: 50px !important;
+    flex: 0 0 auto;
   }
 
   .textBox2 {

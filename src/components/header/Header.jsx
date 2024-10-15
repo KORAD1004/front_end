@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <>
       {isDesktop?
-      <div className={`${styles.desktopHeader} ${location.pathname === '/radWaste' ? styles.gradation : ''}`}>
+      <div className={`${styles.desktopHeader} ${location.pathname === '/radWaste' || location.pathname === '/findCode' ? styles.gradation : ''}`}>
         <div onClick={()=>navigate('/')} className={styles.title}>
           <img src={headerIcon}/>
           <div className={styles.titleLabel}>
