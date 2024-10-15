@@ -21,7 +21,7 @@
 }
 
 .pageWrapper {
-    background-image: url('../../assets/images/radWaste/rwBackground2.svg'), url('../../assets/images/radWaste/rwBackground.svg'), url('../../assets/images/radWaste/bodyImg5.svg');
+    background-image: url('../../assets/images/radWaste/rwBackground2.webp'), url('../../assets/images/radWaste/rwBackground.webp'), url('../../assets/images/radWaste/bodyImg5.svg');
     background-repeat: no-repeat;
     width: 100vw;
     background-position: center 80px, center 0, bottom;
