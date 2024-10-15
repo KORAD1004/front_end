@@ -84,7 +84,7 @@ export default function InfoSection({onClick}) {
                     <span>이러한 특징을 기반으로 폐기물을 처리하는 공간을 지정하였으며,</span>
                     <span>이를 &lsquo;방사성폐기물처분장&rsquo;에서 안전히 과정을 진행합니다.</span>
                 </div>
-                <ImageLazy src={bodyImg4}/>
+                <ImageLazy className={styles.bodyImg4} src={bodyImg4}/>
                 <div className={styles.spans2}>
                     <span>지속적으로 언급이 되고 있는 고준위 방폐물의 경우에는 </span>
                     <span>앞으로도 풀어나가야할 난제로 위치하고 있습니다.</span>

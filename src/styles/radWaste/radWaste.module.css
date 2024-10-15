@@ -297,6 +297,10 @@
     margin-bottom: 15%;
 }
 
+.radWasteInfo span:nth-child(19) {
+    font-family: 'Pretendard-bold';
+}
+
 .radWasteInfo span:nth-child(20) {
     margin-bottom: 12%;
     font-family: 'Pretendard-bold';
@@ -472,6 +476,11 @@
 
     .bodyImg3 {
         bottom: 240px;
+    }
+
+    .bodyImg4 {
+        width: 70%;
+        margin-bottom: 7%;
     }
 
     .bodyImg10 div {

@@ -264,11 +264,6 @@
         font-size: 14px;
         color: #333;
     }
-
-    .rowsWrapper {
-        height: auto !important;
-        overflow-y: none;
-    }
 }
 
 .allContainer {
@@ -399,9 +394,4 @@
   .mapText {
     font-family: 'Pretendard-extraBold';
     font-size: 12.73px;
-  }
-
-  .rowsWrapper {
-    height: 10vh;
-    overflow-y: auto;
   }
