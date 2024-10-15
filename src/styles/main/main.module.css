@@ -97,7 +97,7 @@ html, body {
 
 .menu-item {
   font-family: 'Pretendard-semiBold';
-  padding: 5px 5px; 
+  padding: 5px 1px; 
   font-size: 14px; 
   cursor: pointer;
   color: #ffffff; 
@@ -214,14 +214,14 @@ html, body {
 
 .c2{
   position: relative;
-  left: 15%;
+  left: 17%;
   margin-top: 20%;
 }
 
 .c1{
   position: relative;
-  right: 15%;
-  margin-top: 5%;
+  right: 17%;
+  margin-top: 2%;
 }
 
 .safety-comment2{
@@ -242,8 +242,8 @@ html, body {
 .themestory {
   position: relative;
   width: 60%;
-  left: 5%;
-  bottom:10%;
+  left: 7%;
+  bottom:5%;
 }
 
 .theme {
@@ -259,13 +259,13 @@ html, body {
   align-items: center; 
   gap: 1.5vw; 
   margin-top: 3%;
-  bottom: 10%;
+  bottom: 1%;
 }
 
 .hashtag-row {
   display: flex;
   justify-content: center; 
-  gap: 2vw; 
+  gap: 3vw; 
 }
 
 .hashtag-box {
@@ -274,7 +274,7 @@ html, body {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 46px;
-  font-size: 3vw;
+  font-size: 2.5vw;
   color: #333; 
   white-space: nowrap;
 }
@@ -291,7 +291,11 @@ html, body {
   font-size: 1.7vw;
   margin-bottom: 10px; 
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
+}
+
+.mc-container{
+  margin-top: 7%;
 }
 
 .mc1{
@@ -318,11 +322,12 @@ html, body {
 }
 
 .map-comment2 {
-  margin-top: 2%;
-  font-family: 'Pretendard';
+  margin-top: 8%;
+  font-family: 'Pretendard-bold';
   font-size: 3vw;
   margin-bottom: 10px; 
   text-align: center;
+  color: #696969;
 }
 
 .map-container2{
@@ -480,7 +485,7 @@ flex-direction: column;
 
 .bottom-comment1 {
   font-family: 'Pretendard';
-  margin-top: 8%;
+  margin-top: 3%;
   font-size: 2vw;
   font-weight: bold;
   color: #696969;
@@ -491,6 +496,7 @@ flex-direction: column;
   font-family: 'Pretendard-bold';
   font-size: 2vw;
   color: #696969;
+  margin-top: 0.5%;
 }
 
 .bottom-comment3 {
