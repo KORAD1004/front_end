@@ -86,6 +86,13 @@ html, body {
     margin-top: 5%;
   }
 
+  .i-container{
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
 
   .input-container {
     position: relative;
@@ -95,6 +102,7 @@ html, body {
     align-items: center;
     height: auto;
     justify-content: flex-start;
+    z-index: 2;
 
   }
     
@@ -108,7 +116,7 @@ html, body {
     font-size: 16px;
     color: #000000 !important;
     transform: scale(0.8);
-    z-index: 1;
+    z-index: 2;
   }
     
   .search-button {
@@ -119,7 +127,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
     margin-left: -7%;
   }
   
@@ -136,6 +144,7 @@ html, body {
     background: linear-gradient(to right,  #83AD68,#2C5016);
     margin-top: 2%;
     margin-bottom: 2%;
+    margin-left: 2.5%;
   }
   
   .new-content{
@@ -270,10 +279,15 @@ html, body {
     }
 
   .comment-container{
-    left: 30%;
+    left: 12%;
+    top:20%;
 
   }
-
+.i-container{  
+  position: relative; 
+  transform: translate(0, -100%);
+}
+ 
   .middle-comment1{
     font-size: 1.5vw;
     }
@@ -283,7 +297,7 @@ html, body {
       }
 
   .midback{
-        width: 100%;
+        width: 80%;
         height: 50vw;
         z-index: 1;
         
@@ -360,6 +374,21 @@ html, body {
     border-radius: 5px; 
     z-index: 4;
   }
+  .full-screen-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255); /* 배경색 추가 */
+  }
+  
+  .new-image-full {
+    width: 11vw;
+    height: 11vh;
+    object-fit: cover;
+  }
+  
 
   }
 
