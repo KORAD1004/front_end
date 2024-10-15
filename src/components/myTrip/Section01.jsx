@@ -24,6 +24,7 @@ const Section01 = ({ tripName, setTripName, numPeople, setNumPeople, startDate, 
                             type="text"
                             className={styles.longInputBox}
                             value={tripName}
+                            maxLength={12}
                             onChange={(e) => setTripName(e.target.value)}
                         />
                         <p className={styles.tripText}>인원수</p>
