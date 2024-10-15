@@ -201,12 +201,7 @@ html, body {
   z-index: -1;
 }
 
-.new-image {
-  position: relative;
-  top: 75%; 
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 .travel-container{
   position: relative;
@@ -251,6 +246,10 @@ html, body {
 
 
 .new-image {
+  position: relative;
+  top: 75%; 
+  left: 51%;
+  transform: translateX(-50%);
   width: 85vw; 
   height: 11vh; 
   border-radius: 10px;
@@ -264,6 +263,7 @@ html, body {
 
 .darker {
   position: absolute;
+  left: 1%;
   width: 85vw; 
   height: 11vh; 
   background-color: rgba(0, 0, 0, 0.281); 
@@ -374,21 +374,5 @@ html, body {
     border-radius: 5px; 
     z-index: 4;
   }
-  .full-screen-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255); /* 배경색 추가 */
-  }
-  
-  .new-image-full {
-    width: 11vw;
-    height: 11vh;
-    object-fit: cover;
-  }
-  
-
   }
 
