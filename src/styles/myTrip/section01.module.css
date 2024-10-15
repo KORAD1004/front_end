@@ -43,15 +43,18 @@
     
     .tripTextContainer {
         display: flex;
-        align-items: center;
+        align-items: flex-start !important;
         justify-content: space-between;
         margin-bottom: 2%;
     }
     
     .tripText {
+        margin-top: 10.5px !important;
         font-family: 'Pretendard-bold';
         font-size: 17.73px !important;
         margin-right: 2%;
+        width: 10%;
+        text-align: left;
     }
     
     .daysContainer{
@@ -59,7 +62,7 @@
         flex-direction: column;
         width: 40% !important;
         margin-right: 5%;
-        margin-top: 3% !important;
+        margin-top: 0 !important;
     }
     
     .longInputBox {
@@ -68,6 +71,7 @@
         border-radius: 5px;
         border: 1px solid #c4c4c4;
         margin-right: 5%;
+        box-sizing: border-box;
     }
     
     .longInputBox2 {
@@ -75,6 +79,7 @@
         height: 36px !important;
         border-radius: 5px;
         border: 1px solid #c4c4c4;
+        box-sizing: border-box;
     }
     
     .longInputBox3 {
@@ -82,6 +87,7 @@
         height: 36px !important;
         border-radius: 5px;
         border: 1px solid #c4c4c4;
+        box-sizing: border-box;
     }
     
     .shortInputBox {
@@ -153,6 +159,8 @@
     font-family: 'Pretendard-bold';
     font-size: 12.73px;
     margin-right: 2%;
+    width: 10%;
+    text-align: left;
 }
 
 .daysContainer{
@@ -167,6 +175,7 @@
     border-radius: 5px;
     border: 1px solid #c4c4c4;
     margin-right: 6.5%;
+    box-sizing: border-box;
 }
 
 .longInputBox2 {
@@ -177,6 +186,7 @@
     appearance:none ;
     -webkit-appearance: none;
     -moz-appearance: none;
+    box-sizing: border-box;
 }
 
 .longInputBox3 {
@@ -188,6 +198,7 @@
     appearance:none ;
     -webkit-appearance: none;
     -moz-appearance: none;
+    box-sizing: border-box;
 }
 
 .shortInputBox {

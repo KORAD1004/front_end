@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Section01 from '../../components/myTrip/Section01';
 import Section02 from '../../components/myTrip/Section02';
 import Section03 from '../../components/myTrip/Section03';
+import { useMediaQuery } from 'react-responsive';
 
 const MyTripCreate = () => {
   const [tripName, setTripName] = useState("");
@@ -10,12 +11,20 @@ const MyTripCreate = () => {
   const [endDate, setEndDate] = useState("");
   const [dayCount, setDayCount] = useState("");
   const [location, setLocation] = useState({ latitude: null, longitude: null });
-  const [rows, setRows] = useState([
-    { id: 1, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
-    { id: 2, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
-    { id: 3, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
-    { id: 4, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" }
-  ]);
+  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
+  const [rows, setRows] = useState(() => {
+    const baseRows = [
+      { id: 1, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
+      { id: 2, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
+      { id: 3, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
+    ];
+  
+    if (isDesktop) {
+      baseRows.push({ id: 4, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" });
+    }
+  
+    return baseRows;
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

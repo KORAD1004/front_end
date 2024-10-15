@@ -35,6 +35,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        flex: 0 0 auto;
     }
     
     .memoText {
@@ -43,6 +44,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        text-align: left !important;
     }
     
     .noDataText {
@@ -111,7 +113,7 @@
     .textContainer {
         display: flex;
         align-items: center;
-        margin: 0 8% 0 8% !important;
+        margin: 0 10% !important;
         height: 70px;
     }
     
@@ -229,7 +231,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 3% 11.5%;
+        margin: 3% 10%;
       }
     
       .mapText {
@@ -251,7 +253,7 @@
         top: 60px;
         left: 25%;
         position: absolute;
-        padding: 10px;
+        padding: 10px 2%;
         background-color: #EBEBEB;
         margin-top: 5px;
         width: 40%;
@@ -261,6 +263,11 @@
     .memoText {
         font-size: 14px;
         color: #333;
+    }
+
+    .rowsWrapper {
+        height: auto !important;
+        overflow-y: none;
     }
 }
 
@@ -275,7 +282,7 @@
     display: inline-block;
     align-items: center;
     justify-content: center;
-    width: 85%;
+    width: 90%;
 }
 
 .textContainer {
@@ -380,7 +387,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5%;
+    padding: 5% 0;
   }
 
   .textContainer2 {
@@ -392,4 +399,9 @@
   .mapText {
     font-family: 'Pretendard-extraBold';
     font-size: 12.73px;
+  }
+
+  .rowsWrapper {
+    height: 10vh;
+    overflow-y: auto;
   }
