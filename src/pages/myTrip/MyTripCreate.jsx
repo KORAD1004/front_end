@@ -14,7 +14,7 @@ const MyTripCreate = () => {
     { id: 1, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
     { id: 2, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
     { id: 3, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" },
-    { id: 3, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" }
+    { id: 4, place: "", latitude: "", longitude: "", isMemoVisible: false, address: "", memo: "" }
   ]);
 
   useEffect(() => {
