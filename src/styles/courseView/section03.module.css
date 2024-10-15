@@ -176,6 +176,13 @@
         border-radius: 50px !important;
         background-color: #5E8447;
         margin-bottom: 6%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .saveButton:hover {
+        background-color: #4A6E36;
+        transform: scale(1.05);
+        cursor: pointer;
     }
 }
 
