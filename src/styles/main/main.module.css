@@ -18,8 +18,10 @@ html, body {
   width: 100%;
   height: 400px; 
   background-image: url('../../assets/images/main/bac.webp'); 
-  background-size: cover; 
+  background-size: contain; 
   background-position: center; 
+  background-repeat: no-repeat;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -43,6 +45,8 @@ html, body {
 }
 
 .top-button {
+  font-family: 'PretendardV';
+  font-weight: 600;
   position: absolute;
   bottom: 10%; 
   right: 7%; 
