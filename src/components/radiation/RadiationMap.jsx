@@ -10,6 +10,7 @@ import { focusGyeongju } from "../../hooks/radiation/FocusGyeongju";
 import { drawPolygon } from "../../hooks/radiation/DrawPolygon";
 import { drawMap } from "../../hooks/radiation/DrawMap";
 import { manufactureRadiation } from "../../hooks/radiation/ManufactureRadiation";
+import ImageLazy from "../imgLazy/ImageLazy";
 
 export default function RadiationMap() {
     const [area, setArea] = useState([]);
@@ -79,14 +80,14 @@ export default function RadiationMap() {
                 <div className={styles.notice}>
                     <div onClick={() => { 
                         setIsClick((state) => !state); focusGyeongju(map, customOverlayRef, isClick, polygonObjects, gyeongjuPolygon, area, initialPolygons, styles);}} className={isClick ? styles.clickPictogram : styles.pictogram}>
-                        <img src={gongdan} alt="경주 방폐물처리장" />
+                        <ImageLazy src={gongdan} alt="경주 방폐물처리장" />
                         <span>경주 방폐물처리장</span>
                     </div>
                 </div>
             </div>
             {isClick ? (
                 <div className={styles.gongdan}>
-                    <img src={gongdanImg} alt="경주 방폐물처리장 이미지" />
+                    <ImageLazy src={gongdanImg} alt="경주 방폐물처리장 이미지" />
                 </div>
             ) : null}
         </div>

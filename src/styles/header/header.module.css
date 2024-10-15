@@ -107,6 +107,7 @@
 
 .title img {
   width: 23%;
+  aspect-ratio: 3.6/1;
 }
 
 .title div span{

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    background-image: url('../../assets/images/radiation/radBackground.svg');
+    background-image: url('../../assets/images/radiation/radBackground.webp');
     background-repeat: no-repeat;
     background-size: 100vw;
 }
