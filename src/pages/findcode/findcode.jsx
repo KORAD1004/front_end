@@ -113,8 +113,13 @@ function App() {
         <div className={styles["travel-com"]} onClick={handleImageClick}> 
           <p className={styles["travel-name"]}>{travelDetails.travelName}</p> 
           <p className={styles["travel-comment"]}>
-  | {`${travelDetails.startDate} ~ ${travelDetails.endDate} 中 ${travelDetails.days.includes('일차') ? travelDetails.days : `${travelDetails.days}일차`}`}
+  | {`${travelDetails.startDate} ~ ${travelDetails.endDate} 中 ${
+    travelDetails.days.includes('일차') || travelDetails.days.includes('일 차') 
+      ? travelDetails.days 
+      : `${travelDetails.days}일차`
+  }`}
 </p>
+
 
         </div>
         <div className={styles["image-list"]}>
