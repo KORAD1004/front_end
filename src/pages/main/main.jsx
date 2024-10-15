@@ -20,10 +20,10 @@ import text from '../../assets/images/main/text.svg';
 import example1 from '../../assets/images/main/example1.svg';
 import example2 from '../../assets/images/main/example2.svg';
 import example3 from '../../assets/images/main/example3.svg';
-import safety from '../../assets/images/main/safety.svg';
-import safety2 from '../../assets/images/main/safety2.svg';
+import safety from '../../assets/images/main/safety.webp';
+import safety2 from '../../assets/images/main/safety2.webp';
 import themestory from '../../assets/images/main/Theme Story.svg';
-import theme from '../../assets/images/main/theme.svg';
+import theme from '../../assets/images/main/theme.webp';
 import information from '../../assets/images/main/information.svg';
 import check from '../../assets/images/main/check.svg';
 import c1 from '../../assets/images/main/c1.svg';
@@ -122,7 +122,22 @@ function App() {
       {/* Safety section */}
       <div className={styles['middle-container']}>
         <div className={styles["safety-container"]}>
+ 
           <ImageLazy src={isDesktop ? safety2 : safety} className={styles["safety"]} alt="safety" />
+          <div className={styles["sc-container"]}>
+          <p className={styles["scomment1"]}>
+              최우선의 가치
+          </p>
+          <p className={styles["scomment2"]}>
+SAFETY ┃ 안전성
+</p>
+<p className={styles["scomment3"]}>
+민주적 부지선정과 안전성을<br/>
+최우선으로 한 설계 및 시공으로<br/>
+IAEA 방폐물 안전협약 검토회의 중 우수 사례 선정의 경주
+</p>
+<div className={styles["sbox"]}></div>
+          </div>
           <ImageLazy src={check} className={styles["check"]} alt="check" />
           <ImageLazy src={c2} className={styles["c2"]} alt="c2" />
           <ImageLazy src={c1} className={styles["c1"]} alt="c1" />
