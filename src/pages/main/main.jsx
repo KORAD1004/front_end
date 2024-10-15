@@ -75,8 +75,8 @@ function App() {
   }, []);
 
   return (
-    <div className={styles["app-container"]} style={isDesktop?null:{backgroundImage:"url('../../assets/images/main/bac2.gif')"}}>
-      <div className={styles["top-container"]}>
+    <div className={styles["app-container"]}>
+      <div className={styles["top-container"]} style={isDesktop?null:{backgroundImage:"url('src/assets/images/main/bac2.gif')"}}>
         <div className={styles["image-overlay"]}>
           <ImageLazy src={mainname} className={styles["mainname"]} alt="main name" />
           <ImageLazy src={toptext} className={styles["toptext"]} alt="top text" />
