@@ -480,6 +480,7 @@ flex-direction: column;
   font-size: 2vw;
   font-weight: bold;
   color: #696969;
+  line-height: 2;
 }
 
 .bottom-comment2 {
@@ -622,6 +623,7 @@ margin-right: 20%;
   }
     
   .hashtag-box {
+    font-family: 'Pretendard-semiBold';
     padding: 1.5vw 2vw;
     font-size: 1.8vw;
   }
@@ -661,7 +663,7 @@ margin-right: 20%;
 
 
   .mc-container{
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #D8D8D8 90%);
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 40%, #D8D8D8 90%);
     width: 40vw;
     height: 60vw;
   }
@@ -738,6 +740,7 @@ margin-right: 20%;
 
   .bottom-comment1 {
     font-size: 1.1vw;
+    line-height: 2;
   }
   
   .bottom-comment2 {
