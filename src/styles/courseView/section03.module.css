@@ -24,20 +24,22 @@
     }
 
     .placeContainer {
+        width: 45vw !important;
+        height: 41vw !important;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
     .placeUnderline {
-        width: 90% !important;
+        width: 98% !important; 
         border: 0;
         border-top: 2px solid #000;
         margin: 3% 0% 3% 5%;
     }
 
     .placeList {
-        width: 50vw !important;
+        width: 100% !important;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -45,10 +47,17 @@
         margin-left: 5% !important;
         justify-content: flex-start !important;
         padding: 0% !important;
+        overflow-x: scroll; /* 스크롤 기능을 유지한 상태로 */
+        scrollbar-width: none; /* Firefox용 */
+    }
+
+    .placeList::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Edge용 */
     }
 
     .place {
-        width: 700px !important;
+        width: 95% !important;
+        height: 43%;
         display: flex;
         gap: 15px;
         padding: 10px;
@@ -58,12 +67,12 @@
     }
 
     .infoContainer {
-        width: 60% !important;
+        width: 69% !important;
         height: auto !important;
     }
 
     div.infoContainer>div {
-        width: 100% !important;
+        width: 95% !important;
         height: auto !important;
         border: none !important;
         display: flex !important;
@@ -74,11 +83,11 @@
     }
 
     div.infoContainer span:first-child {
-        font-size: 33.18px !important;
+        font-size: 20.18px !important;
         font-weight: bold !important;
         color: #000 !important;
         margin-bottom: 3% !important;
-        text-align: left !important; /* 텍스트를 왼쪽 정렬 */
+        text-align: left !important;
         display: block !important; 
     }
 
@@ -87,16 +96,18 @@
     }
 
     div.infoContainer span:last-child {
-        font-size: 19.56px !important;
+        font-size: 15.56px !important;
         font-weight: bold !important;
         color: #000 !important;
+        text-align: left !important;
+        display: block !important; 
     }
 
 
     .placeImg {
         position: relative;
-        width: 212px !important;
-        height: 200px !important;
+        width: 35% !important;
+        height: 100% !important;
         border-radius: 8px;
         overflow: hidden;
     }
@@ -130,7 +141,8 @@
         padding: 10px 20px;
         border: none !important;
         text-align: center;
-        width: 95% !important;
+        width: 90% !important;
+        box-sizing: border-box;
     }
 
     div.infoContainer > div.memo > span {
@@ -164,6 +176,29 @@
         border-radius: 50px !important;
         background-color: #5E8447;
         margin-bottom: 6%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    div.infoContainer span:first-child {
+        font-size: 33.18px !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        margin-bottom: 3% !important;
+        text-align: left !important;
+        display: block !important; 
+    }
+
+    div.infoContainer>div>div {
+        display: none;
+    }
+
+    div.infoContainer span:last-child {
+        font-size: 19.56px !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        text-align: left !important;
+        display: block !important; 
     }
 }
 
