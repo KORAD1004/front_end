@@ -38,7 +38,7 @@ html, body {
 
 .toptext {
   position: absolute;
-  width: 65vw;
+  max-width: 50%;
   top: 70%; 
   left: 40%; 
   transform: translate(-50%,-50%);
@@ -451,15 +451,12 @@ flex-direction: column;
   font-size: 1.9vw;
   text-align: left;
   color: #000000;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; 
-  -webkit-box-orient: vertical;
+  white-space: nowrap; 
   overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 1vh;
-  min-width: 10vw;
+  text-overflow: ellipsis; 
   max-width: 30vw;
 }
+
 
 .notice-url {
   color: black; 
@@ -554,12 +551,14 @@ flex-direction: column;
   .text-image{
     width: 35vw;
     height: 10vw;
-margin-right: 20%;
+  margin-right: 20%;
   }
 
   .toptext{
-    top:85%;
-    left:15%
+    min-width: 25%;
+    max-width: 25%;
+    top:81%;
+    left:18%
   }
 
   .dot-indicator-container {
@@ -728,7 +727,7 @@ margin-right: 20%;
   }
 
   .search-input {
-    width: 27vw;
+    width: 520px  ;
     height: 3%;
     padding: 1vw; 
     font-size
@@ -765,6 +764,6 @@ margin-right: 20%;
   .notice-content {
     min-width: 10vw;
     max-width: 30vw;
-    max-height: 3.5vh;
+    max-height: 4vh;
   }
 }
