@@ -39,6 +39,13 @@ export default function FindCode() {
         }
     };
 
+    const handleEnter = (e) => {
+      if(e.key==='Enter') {
+        if(!isValidInput(inputValue)) return;
+        navigate(`/courseView?code=${inputValue}`);
+      }
+    }
+
     const handleInputChange = (e) => {
         setInputValue(e.target.value);  
     };
@@ -125,18 +132,17 @@ export default function FindCode() {
 
             {isSearchClicked && travelDetails && (
               <div className={styles["travel-container"]} ref={scrollRef}>
-                <div className={styles["travel-com"]} onClick={handleImageClick}>
-                  <p className={styles["travel-name"]}>{travelDetails.travelName}</p> 
-                  <p className={styles["travel-comment"]}>
-                    {`${travelDetails.startDate} ~ ${travelDetails.endDate} 中 ${
-                      travelDetails.days.includes('일차') || travelDetails.days.includes('일 차')
-                        ? travelDetails.days
-                        : `${travelDetails.days}일차`
-                    }`}
-                  </p>
-                </div>
                 <div className={styles["image-list"]}>
-                  <div className={styles["darker"]} onClick={handleImageClick}></div>
+                  <div className={styles["travel-com"]} onClick={handleImageClick}>
+                    <p className={styles["travel-name"]}>{travelDetails.travelName}</p> 
+                    <p className={styles["travel-comment"]}>
+                      {`${travelDetails.startDate} ~ ${travelDetails.endDate} 中 ${
+                        travelDetails.days.includes('일차') || travelDetails.days.includes('일 차')
+                          ? travelDetails.days
+                          : `${travelDetails.days}일차`
+                      }`}
+                    </p>
+                  </div>
                   <img loading='lazy' 
                     src={travelDetails.image} 
                     alt="Travel" 
@@ -170,6 +176,7 @@ export default function FindCode() {
                     value={inputValue}  
                     onChange={handleInputChange} 
                     placeholder="8자리 숫자를 입력해 주세요"
+                    onKeyDown={handleEnter}
                     maxLength={8}  
                     className={styles['search-input']}
                   />
