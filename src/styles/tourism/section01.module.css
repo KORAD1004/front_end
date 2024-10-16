@@ -1,0 +1,159 @@
+@media screen and (min-width: 1024px){
+  .allContainer {
+    width: 100vw;
+    overflow: hidden;
+    position: relative; 
+  }
+  
+  .imageContainer {
+    width: 100vw;
+    height: 600px !important; 
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .image {
+    position: relative;
+    top: 0; 
+    left: 0;
+    z-index: 0;
+  }
+  
+  .tilteImageContainer {
+    position: absolute;
+    top: 12%;
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+  
+  .tilteImage {
+    width: 139px;
+    height: 152.05px;
+  }
+  
+  .mainTextContainer {
+    margin-left: 8% !important;
+    margin-top: 5%;
+  }
+  
+  .mainText {
+    font-family: 'Pretendard-extraBold';
+    font-size: 35px !important;
+    text-align: left;
+  }
+  
+  .mainSmallText{
+    font-family: 'Pretendard-bold';
+    font-size: 24px !important;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  
+  .courseButton {
+    width: 161.17px !important;
+    height: 51.23px !important;
+    background-color: #FFFFFF;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 20.44px !important;
+    font-family: 'Pretendard-semiBold';
+  }
+  
+  .courseButtonContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+  
+  .courseImage {
+    margin-top: 5%;
+  }
+}
+
+
+.allContainer {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  position: relative; 
+}
+
+.imageContainer {
+  background: black;
+  width: 100vw;
+  height: 52vh; 
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  width: auto; 
+  height: 100%; 
+  position: relative;
+  top: 0; 
+  left: 0;
+  z-index: 0;
+}
+
+.tilteImageContainer {
+  position: absolute;
+  top: 12%;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.tilteImage {
+  width: 139px;
+  height: 152.05px;
+}
+
+.mainTextContainer {
+  margin-left: 8%;
+  margin-top: 10%;
+}
+
+.mainText {
+  font-family: 'Pretendard-extraBold';
+  font-size: 25.76px;
+  text-align: left;
+}
+
+.mainSmallText{
+  font-family: 'Pretendard-bold';
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 8px;
+  margin-top: 5%;
+}
+
+.courseButton {
+  width: 91.17px;
+  height: 29.23px;
+  background-color: #FFFFFF;
+  color: #000;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  font-size: 10.44px;
+  font-family: 'Pretendard-semiBold';
+}
+
+.courseButtonContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.courseImage {
+  margin-top: 5%;
+}

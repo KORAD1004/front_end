@@ -1,0 +1,106 @@
+.modalWrapper {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: 0 auto;
+    border: 0.5px solid #838383;
+    border-radius: 15px;
+    width: 363px;
+    height: 60%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closeWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 2% 2%;
+    box-sizing: border-box;
+}
+
+.searchWrapper {
+    display: flex;
+    width: 90%;
+    gap: 5%;
+    height: 7%;
+    justify-content: space-evenly;
+}
+
+.searchWrapper input {
+    width: 80%;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    border: none;
+    padding: 5% 3%;
+    font-size: 16px;
+    font-family: 'Pretendard-medium';
+}
+
+.searchWrapper div {
+    width: 42px;
+    background: linear-gradient(-44deg, #59843E, #79BD4E);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.placeWrapper {
+    margin-top: 3%;
+    width: 93%;
+    overflow-y: auto;
+}
+
+.place {
+    border-radius: 10px;
+    padding: 5% 7%;
+    border-bottom: 0.5px solid #BCBCBC;
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 4%;
+}
+
+.title div {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.title div span {
+    font-family: 'Pretendard-bold';
+    font-size: 12.29px;
+    margin-left: 15px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom span {
+    font-family: 'Pretendard';
+    font-size: 12.29px;
+}
+
+.bottom span:first-child {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.click {
+    background-color: #40672A;
+}
+
+.click span {
+    color: white;
+}
+

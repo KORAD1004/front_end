@@ -1,0 +1,147 @@
+.menu {
+  position: absolute;
+  top: 70%;
+  right: 0%;
+  width: 185px;
+  background: linear-gradient(180deg,  #365d29 0%, #4f8b3d 100%);
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  opacity: 0; /* 열리기 전에 숨김 */
+  max-height: 0; /* 열리기 전에 숨김 */
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.menu.open {
+  opacity: 1;
+  max-height: 500px;
+}
+  
+.menu ul {
+  list-style: none;
+  padding: 10%;
+  margin: 0;
+}
+  
+.menu li {
+  padding: 10px 0;
+  cursor: pointer;
+  font-family: 'Pretendard';
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2%;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
+
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.IconsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background-color: transparent;
+  position: relative;
+  margin-bottom: -71px;
+  top: 20px;
+  z-index: 100;
+}
+  
+.leftIcons {
+  display: flex;
+  align-items: center;
+}
+  
+.rightIcons {
+  display: flex;
+  align-items: center;
+  margin-right: 7%;
+  gap: 50%; 
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+  
+.desktopHeader {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 20px 5%;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 100;
+  color: white;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  cursor: pointer;
+  width: 45%;
+}
+
+.title div {
+  position: relative;
+  top: 10%;
+  width: 50%;
+}
+
+.title img {
+  width: 23%;
+  aspect-ratio: 3.6/1;
+}
+
+.title div span{
+  font-size: 13.68px;
+  font-family: 'Pretendard';
+  white-space: nowrap;
+}
+
+.menuList {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-family: 'PretendardV';
+  font-weight: 600;
+}
+
+.menuList div {
+  cursor: pointer;
+  padding: 3% 3%;
+  border-radius: 10px;
+  transition: color 0.25s ease-in, font-family 0.25s ease-in;
+}
+
+.menuList div.dimmed {
+  color: #787878; /* 호버되지 않은 형제들의 색상을 변경 */
+}
+
+.menuList div:hover {
+  font-family: 'Pretendard-bold';
+  color: white;
+}
+
+.gradation {
+  background: linear-gradient(90deg, #1A4400, #000000);
+}

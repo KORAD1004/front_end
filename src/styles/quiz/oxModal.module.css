@@ -1,0 +1,84 @@
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2); /* 배경 어둡게 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modalHeader {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5%;
+  }
+  
+  .titleSecond {
+    font-family: 'Pretendard-extraBold';
+    font-size: 18px;
+    margin: 1%;
+    text-align: center;
+    border-bottom: 1px solid #383838;
+    padding-bottom: 5%;
+  }
+
+  .titleFirst {
+    font-family: 'Pretendard-extraBold';
+    font-size: 18px;
+    margin: 1%;
+    text-align: center;
+  }
+  
+  .modalBody {
+    margin: 0% 2% 5% 2%;
+  }
+  
+  .modalBody h2 {
+    font-family: 'Pretendard-extraBold';
+    font-size: 16px;
+    margin-bottom: 1%;
+  }
+
+  .modalBody p {
+    font-family: 'Pretendard-bold';
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .correctImg {
+    width: 30%;
+    margin-bottom: 5%;
+  }
+
+  .modalActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .courseButton {
+    width: 60%;
+    padding: 4% 3% 4% 3%;
+    border-radius: 20px;
+    background-color: #79BD4E;
+    color: #ffffff;
+    font-family: 'Pretendard-bold';
+    font-size: 14px;
+  }
+  

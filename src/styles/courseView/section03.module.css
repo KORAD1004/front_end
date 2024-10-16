@@ -1,0 +1,409 @@
+@media screen and (min-width: 1024px) {
+    .allContainer {
+        width: 95vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+    }
+
+    .placeTitle {
+        font-family: "Pretendard-bold";
+        font-size: 35px;
+        color: #000;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .placeContainer {
+        width: 45vw !important;
+        height: 41vw !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .placeUnderline {
+        width: 98% !important; 
+        border: 0;
+        border-top: 2px solid #000;
+        margin: 3% 0% 3% 5%;
+    }
+
+    .placeList {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 500px !important;
+        margin-left: 5% !important;
+        justify-content: flex-start !important;
+        padding: 0% !important;
+        overflow-x: scroll; /* 스크롤 기능을 유지한 상태로 */
+        scrollbar-width: none; /* Firefox용 */
+    }
+
+    .placeList::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Edge용 */
+    }
+
+    .place {
+        width: 95% !important;
+        height: 43%;
+        display: flex;
+        gap: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        flex-direction: row !important;
+    }
+
+    .infoContainer {
+        width: 69% !important;
+        height: auto !important;
+    }
+
+    div.infoContainer>div {
+        width: 95% !important;
+        height: auto !important;
+        border: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        align-items: baseline !important;
+        margin-left: 5% !important;
+    }
+
+    div.infoContainer span:first-child {
+        font-size: 20.18px !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        margin-bottom: 3% !important;
+        text-align: left !important;
+        display: block !important; 
+    }
+
+    div.infoContainer>div>div {
+        display: none;
+    }
+
+    div.infoContainer span:last-child {
+        font-size: 15.56px !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        text-align: left !important;
+        display: block !important; 
+    }
+
+
+    .placeImg {
+        position: relative;
+        width: 35% !important;
+        height: 100% !important;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .placeImg img {
+        width: -webkit-fill-available !important;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .number {
+        width: 42px !important;
+        height: 42px !important;
+        position: absolute;
+        top: 15px !important;
+        left: 15px !important;
+        background-color: #5E8447 !important;
+        color: white !important;
+        font-size: 24px !important;
+        border-radius: 50%;
+    }
+
+    .webContainer {
+        display: flex;
+    }
+
+    div.infoContainer>div.memo {
+        margin-top: 5px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        padding: 10px 20px;
+        border: none !important;
+        text-align: center;
+        width: 90% !important;
+        box-sizing: border-box;
+    }
+
+    div.infoContainer > div.memo > span {
+        color: #787878 !important;
+        font-size: 14.66px !important;
+        font-family: 'Pretendard-semiBold';
+        display: inline-block;
+        margin: 0 !important;
+        padding: 2%;
+    }
+
+    .map {
+        height: 70vh !important;
+    }
+
+    .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+        gap: 2%;
+        margin-top: 1%;
+    }
+
+    .saveButton {
+        width: 15% !important;
+        padding: 1.5% 2% !important;
+        font-family: 'Pretendard-bold' !important;
+        font-size: 20.29px !important;
+        color: #ffffff;
+        border-radius: 50px !important;
+        background-color: #5E8447;
+        margin-bottom: 6%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .saveButton:hover {
+        background-color: #4A6E36;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    div.infoContainer span:first-child {
+        font-size: 33.18px !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        margin-bottom: 3% !important;
+        text-align: left !important;
+        display: block !important; 
+    }
+
+    div.infoContainer>div>div {
+        display: none;
+    }
+
+    div.infoContainer span:last-child {
+        font-size: 19.56px !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        text-align: left !important;
+        display: block !important; 
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+}
+
+.allContainer {
+    width: 95vw;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.placeList {
+    width: 100%;
+    display: flex;
+    gap: 3%;
+    margin-top: 3%;
+    overflow-x: auto;
+    padding: 0 1px;
+    height: 63vw;
+}
+
+.placeContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.place {
+    flex: 0 0 auto;
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2% 0;
+}
+
+.infoContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.number {
+    position: absolute;
+    border-radius: 50%;
+    font-family: 'Pretendard-bold';
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 4%;
+    top: 2%;
+}
+
+.memo {
+    border: 0.5px solid #7A7A7A;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35%;
+    margin-top: 6%;
+}
+
+.memo span {
+    font-size: 6px;
+    font-family: 'Pretendard-semiBold';
+}
+
+.place>div:nth-child(2) {
+    height: 28%;
+}
+
+.placeImg {
+    width: 100%;
+    height: 60%;
+}
+
+.placeImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+.courseImage {
+    width: 100%;
+    height: 30%;
+    border-radius: 5%;
+}
+
+.courseImageContainer {
+    margin-top: 3%;
+    width: 32%;
+}
+
+.courseImgeAllContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.courseContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 1%;
+}
+
+.card {
+    border: 0.5px solid #ccc;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+    width: 32%;
+}
+
+.museumName {
+    font-size: 10px;
+    font-family: 'Pretendard-Bold';
+    margin-top: 4%;
+}
+
+.underline {
+    width: 100px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 8% auto;
+}
+
+.museumAddress {
+    font-size: 8px;
+    font-family: 'Pretendard-semiBold';
+    margin-bottom: 2%;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    gap: 2%;
+    margin-top: 1%;
+}
+
+.customButton {
+    width: 32%;
+    font-size: 10px;
+    font-family: 'Pretendard-Bold';
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.customButton:hover {
+    background-color: #f0f0f0;
+}
+
+.customButton:active {
+    background-color: #e0e0e0;
+}
+
+.underline2 {
+    width: 100%;
+    height: 1px;
+    background-color: #C7C7C7;
+    margin-bottom: 4%;
+    transform: scaleY(0.5);
+    margin-top: 2%;
+}
+
+.saveButton {
+    width: 30%;
+    padding: 3%;
+    font-family: 'Pretendard';
+    font-size: 9.43px;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: #5E8447;
+    margin-bottom: 6%;
+}

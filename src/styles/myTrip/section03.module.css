@@ -1,0 +1,397 @@
+@media screen and (min-width: 600px){
+    
+    .textContainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+    
+    .noTextContainer{
+        width: 20%;
+    }
+    
+    .courseTextContainer{
+        width: 50%;
+        display: flex;
+        align-self: start;
+    }
+    
+    .memoTextContainer{
+        width: 30%;
+        display: flex;
+        align-self: start;
+    }
+    
+    .noText {
+        font-family: 'Pretendard-bold';
+        font-size: 15px !important;
+        margin-right: 7%;
+    }
+    
+    .courseText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 15px !important;
+        margin-right: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 0 0 auto;
+    }
+    
+    .memoText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 15px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left !important;
+    }
+    
+    .noDataText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 15px !important;
+    }
+    
+    .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    
+    .saveButton {
+        background-color: #77B353;
+        width: 75px !important;
+        height: 48.14px !important;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        margin-left: 3%;
+        font-family: 'Pretendard-bold';
+        font-size: 15.52px !important;
+    }
+      
+    .saveButton:hover {
+        background-color: #45a049;
+    }
+    
+    .backButton {
+        background-color: #E1E1E1;
+        width: 75px !important;
+        height: 48.14px !important;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-family: 'Pretendard-bold';
+        font-size: 15.52px !important;
+        color: #000;
+    }
+
+    .backButton:hover {
+        background-color: #7d827d !important;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .allContainer {
+        width: 100vw;
+        height: auto;
+        overflow: hidden;
+        position: relative; 
+    }
+    
+    .textAllContainer {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    
+    .textContainer {
+        display: flex;
+        align-items: center;
+        margin: 0 10% !important;
+        height: 70px;
+    }
+    
+    .noTextContainer{
+        width: 20%;
+    }
+    
+    .courseTextContainer{
+        width: 50%;
+        display: flex;
+        align-self: start;
+        height: 100%;
+        align-items: center;
+    }
+    
+    .memoTextContainer{
+        width: 30%;
+        display: flex;
+        align-self: start;
+        height: 100%;
+        align-items: center;
+    }
+    
+    .noText {
+        font-family: 'Pretendard-bold';
+        font-size: 17px !important;
+        margin-right: 7%;
+    }
+    
+    .courseText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 17px !important;
+        margin-right: 0 !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .courseText:first-child {
+        width: 40%;
+    }
+
+    .courseText:nth-child(2) {
+        margin-right: 3% !important;
+    }
+    
+    .memoText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 17px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .noDataText {
+        font-family: 'Pretendard-semiBold';
+        font-size: 17px !important;
+    }
+    
+    .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    
+    .saveButton {
+        background: linear-gradient(64deg, #77B353, #496A34);
+        width: 120px !important;
+        height: 58.14px !important;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        margin-left: 3%;
+        font-family: 'Pretendard-bold';
+        font-size: 20px !important;
+    }
+      
+    .saveButton:hover {
+        background-color: #45a049;
+    }
+    
+    .backButton {
+        background-color: #8C8C8C !important;
+        width: 120px !important;
+        height: 58.14px !important;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-family: 'Pretendard-bold';
+        font-size: 20px !important;
+        color: white !important;
+    }
+      
+    .backButton:hover {
+        background-color: #7d827d !important;
+    }
+
+    .underline {
+        width: 80% !important;
+        height: 2px !important;
+        background-color: #303030 !important;
+      }
+    
+      .underlineContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 5% 5% 5% !important;
+      }
+
+      .textContainer2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 3% 10%;
+      }
+    
+      .mapText {
+        font-family: 'Pretendard-extraBold';
+        font-size: 30px !important;
+      }
+
+      .noTextContainer {
+        width: 15% !important;
+        padding-right: 16px;
+        margin-right: 16px;
+        border-right: 1px solid #ddd;
+        height: 100%; /* 행이 늘어나도 선 길이 유지 */
+        display: flex;
+        align-items: center;
+      }
+
+      .memoContainer {
+        top: 60px;
+        left: 25%;
+        position: absolute;
+        padding: 10px 2%;
+        background-color: #EBEBEB;
+        margin-top: 5px;
+        width: 40%;
+        border-radius: 10.5px;
+    }
+    
+    .memoText {
+        font-size: 14px;
+        color: #333;
+    }
+}
+
+.allContainer {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    position: relative; 
+}
+
+.textAllContainer {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.textContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.noTextContainer{
+    width: 20%;
+}
+
+.courseTextContainer{
+    width: 50%;
+    display: flex;
+    align-self: start;
+}
+
+.memoTextContainer{
+    width: 30%;
+    display: flex;
+    align-self: start;
+}
+
+.noText {
+    font-family: 'Pretendard-bold';
+    font-size: 11px;
+    margin-right: 7%;
+}
+
+.courseText {
+    font-family: 'Pretendard-semiBold';
+    font-size: 10px;
+    margin-right: 5%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.memoText {
+    font-family: 'Pretendard-semiBold';
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.noDataText {
+    font-family: 'Pretendard-semiBold';
+    font-size: 10px;
+    margin-right: 40%;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.saveButton {
+    background-color: #77B353;
+    width: 65px;
+    height: 38.14px;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 3%;
+    font-family: 'Pretendard-bold';
+    font-size: 12.52px;
+}
+  
+.saveButton:focus {
+    background-color: #45a049;
+}
+
+.backButton {
+    background-color: #E1E1E1;
+    width: 65px;
+    height: 38.14px;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Pretendard-bold';
+    font-size: 12.52px;
+    color: #000;
+}
+  
+.backButton:focus {
+    background-color: #7d827d;
+}
+
+.underline {
+    width: 100%;
+    height: 1px;
+    background-color: #C7C7C7;
+  }
+  
+  .underlineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+  }
+
+  .textContainer2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mapText {
+    font-family: 'Pretendard-extraBold';
+    font-size: 12.73px;
+  }

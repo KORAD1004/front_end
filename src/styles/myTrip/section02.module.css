@@ -1,0 +1,392 @@
+@media screen and (min-width: 600px) {
+  .mapText {
+    font-family: 'Pretendard-extraBold';
+    font-size: 12.73px !important;
+  }
+
+  .addScheduleButton {
+    width: 13% !important;
+    padding: 1.5% 1% !important;
+    font-family: 'Pretendard-semiBold';
+    font-size: 11.68px !important;
+    color: #000000;
+    border-radius: 20px !important;
+    border: 1px solid #c4c4c4;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    height: 155px !important;
+    overflow-y: auto;
+    margin-top: 1%;
+  }
+
+  .searchBox {
+    width: 48% !important;
+    padding: 1% !important;
+    border-radius: 20px !important;
+    background: linear-gradient(90deg, #D6D6D6, #F0F0F0);
+  }
+
+  .row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5% !important;
+    width: 100%;
+  }
+
+  .textBox2 {
+    width: 50%;
+    height: 7%;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+
+  .text {
+    font-family: 'Pretendard-bold';
+    font-size: 12px !important;
+    margin-right: 5%;
+  }
+
+  .memoContainer {
+    position: absolute;
+    top: 120% !important;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .memoTextBox {
+    width: 70% !important;
+    height: 35px !important;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #E9E9E9;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .allContainer {
+    width: 100vw;
+    height: 60vh !important;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5% 10% !important;
+    margin-top: -5%;
+    margin-bottom: -5%;
+  }
+
+  .textContainer2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+
+  .mapText {
+    font-family: 'Pretendard-extraBold';
+    font-size: 30px !important;
+  }
+
+  .mapContainer {
+    width: 40%;
+    height: auto !important;
+    padding: 0 0 0 3% !important;
+    margin-left: 7%;
+  }
+
+  .searchContainer {
+    padding: 0% !important;
+    margin-top: 1% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+  }
+
+  .saveContainer {
+    padding: 0% !important;
+    margin-top: 7% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+  }
+
+  .addScheduleButton {
+    width: 25% !important;
+    padding: 1.2% 0% !important;
+    font-family: 'Pretendard-semiBold';
+    font-size: 14.68px !important;
+    color: white !important;
+    border-radius: 30px !important;
+    border: 1px solid #c4c4c4;
+    background-color: #77B353 !important;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 !important;
+    height: 265px !important;
+    overflow-y: auto;
+    margin-top: 1%;
+    gap: 6px 0;
+  }
+
+  .line {
+    border: 1px solid black;
+    width: 70%;
+    margin: 5% auto 65px auto;
+  }
+
+  .searchBox {
+    width: 53% !important;
+    padding: 0 !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 16.54px !important;
+    background: linear-gradient(90deg, #D6D6D6, #F0F0F0);
+  }
+
+  .row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5% !important;
+    width: 100%;
+    height: 50px !important;
+    flex: 0 0 auto;
+  }
+
+  .textBox2 {
+    width: 60% !important;
+    height: 7%;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+
+  .text {
+    font-family: 'Pretendard-bold';
+    width: 16%;
+    font-size: 15px !important;
+    margin-right: 0 !important;
+  }
+
+  .textContainer3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+
+  .arrowButton {
+    width: 39.79px;
+    height: 37.69px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+  }
+
+  .trashCanContainer {
+    margin-left: 2% !important;
+  }
+
+  .trashCan {
+    width: 40px;
+  }
+
+  .memoContainer {
+    position: absolute;
+    top: 133% !important;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .memoTextBox {
+    width: 62% !important;
+    height: 45px !important;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #E9E9E9;
+  }
+
+  .underline {
+    width: 80% !important;
+    height: 2px !important;
+    background-color: #303030 !important;
+  }
+
+  .underlineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 5% 5% 5% !important;
+  }
+
+  .travelContainer {
+    width: 50%;
+  }
+
+}
+
+.allContainer {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 5%;
+  margin-top: -5%;
+  margin-bottom: -5%;
+}
+
+.textContainer2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mapText {
+  font-family: 'Pretendard-extraBold';
+  font-size: 12.73px;
+}
+
+.mapContainer {
+  padding: 5%;
+  height: 193px;
+}
+
+.searchContainer {
+  padding: 5%;
+  margin-top: 5%;
+}
+
+.addScheduleButton {
+  width: 20%;
+  padding: 2%;
+  font-family: 'Pretendard-semiBold';
+  font-size: 7.68px;
+  color: #000000;
+  border-radius: 20px;
+  border: 1px solid #c4c4c4;
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5% 0 5%;
+  height: 168px;
+  overflow-y: auto;
+}
+
+.searchBox {
+  width: 68%;
+  padding: 2%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #D6D6D6, #F0F0F0);
+}
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
+  width: 100%;
+}
+
+.textBox2 {
+  width: 50%;
+  height: 7%;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.text {
+  font-family: 'Pretendard-bold';
+  font-size: 10px;
+  margin-right: 5%;
+}
+
+.textContainer3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowButton {
+  width: 39.79px;
+  height: 37.69px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2%;
+}
+
+.trashCanContainer {
+  margin-left: 4%;
+}
+
+.trashCan {
+  width: 40px;
+}
+
+.memoContainer {
+  position: absolute;
+  top: 122%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.memoTextBox {
+  width: 97%;
+  height: 35px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: #E9E9E9;
+  font-size: 16px;
+}
+
+.underline {
+  width: 100%;
+  height: 1px;
+  background-color: #C7C7C7;
+}
+
+.underlineContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}

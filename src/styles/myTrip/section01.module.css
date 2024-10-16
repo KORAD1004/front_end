@@ -1,0 +1,214 @@
+@media screen and (min-width: 1024px){
+    .allContainer {
+        width: 100vw;
+        height: auto !important;
+        overflow: hidden;
+        position: relative; 
+    }
+    
+    .imgContainer {
+        width: 100%;
+        height: 50% !important;
+        overflow: hidden;
+    }
+    
+    .image {
+        width: 100vw; 
+        height: auto; 
+        z-index: 0;
+    }
+
+    .titleContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title{
+        font-family: 'Pretendard-bold';
+        font-size: 30px !important;
+        color: #ffffff;
+        z-index: 1;
+    }
+    
+    .tripBigContainer {
+        height: auto;
+        padding: 5% 15% !important;
+    }
+    
+    .tripTextContainer {
+        display: flex;
+        align-items: flex-start !important;
+        justify-content: space-between;
+        margin-bottom: 2%;
+    }
+    
+    .tripText {
+        margin-top: 10.5px !important;
+        font-family: 'Pretendard-bold';
+        font-size: 17.73px !important;
+        margin-right: 2%;
+        width: 10%;
+        text-align: left;
+    }
+    
+    .daysContainer{
+        display: flex;
+        flex-direction: column;
+        width: 40% !important;
+        margin-right: 5%;
+        margin-top: 0 !important;
+    }
+    
+    .longInputBox {
+        width: 40% !important;
+        height: 36px !important;
+        border-radius: 5px;
+        border: 1px solid #c4c4c4;
+        margin-right: 5%;
+        box-sizing: border-box;
+    }
+    
+    .longInputBox2 {
+        width: 100%;
+        height: 36px !important;
+        border-radius: 5px;
+        border: 1px solid #c4c4c4;
+        box-sizing: border-box;
+    }
+    
+    .longInputBox3 {
+        width: 100%;
+        height: 36px !important;
+        border-radius: 5px;
+        border: 1px solid #c4c4c4;
+        box-sizing: border-box;
+    }
+    
+    .shortInputBox {
+        width: 20%;
+        height: 36px !important;
+        border-radius: 5px;
+        border: 1px solid #c4c4c4;
+    }
+}
+
+.allContainer {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    position: relative; 
+}
+
+.imgContainer {
+    width: 100%;
+    height: 194px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100vw; 
+    height: auto; 
+    z-index: 0;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title{
+    font-family: 'Pretendard-bold';
+    font-size: 20px;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.tripBigContainer {
+    height: auto;
+    padding: 5%;
+}
+
+.tripTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.tripMiniText2 {
+    font-family: 'Pretendard';
+    font-size: 8px;
+    color: #404040;
+    margin-left: 0%;
+    margin-top: 5%;
+}
+
+.tripText {
+    font-family: 'Pretendard-bold';
+    font-size: 12.73px;
+    margin-right: 2%;
+    width: 10%;
+    text-align: left;
+}
+
+.daysContainer{
+    width: 130px;
+    margin-top: 8%;
+    margin-right: 6.5%;
+}
+
+.longInputBox {
+    width: 130px;
+    height: 26px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    margin-right: 6.5%;
+    box-sizing: border-box;
+}
+
+.longInputBox2 {
+    width: 100%;
+    height: 26px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    appearance:none ;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+}
+
+.longInputBox3 {
+    width: 100%;
+    height: 26px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    margin-top: 3%;
+    appearance:none ;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+}
+
+.shortInputBox {
+    width: 20%;
+    height: 26px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+}

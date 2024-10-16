@@ -1,0 +1,372 @@
+html, body {
+  overflow: visible;
+  height: 100vh;
+}
+
+
+.app-container {
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+
+  .top-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .back{
+    width: 100%;
+    height: 30%;
+    top: 60%;
+    z-index: 1;
+  }
+
+  .top-comment{
+    position: absolute;
+    font-family: 'Pretendard-bold';
+    font-size: 20px;
+    color: #ffffff;
+    z-index: 2;
+    bottom: 24%; 
+  }
+
+  
+
+  .middle-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+
+  }
+
+  .comment-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    left: 10%;
+    top: 10%;
+  }
+
+  .middle-comment1{
+    font-family: 'Pretendard';
+    font-size: 14px;
+    left: 5%;
+  }
+
+  .middle-comment2{
+    font-family: 'Pretendard-bold';
+    font-size: 25px;
+    margin-top: 5%;
+  }
+
+
+    
+  .midback{
+    width: 100%;
+    z-index: 1;
+    margin-top: 5%;
+  }
+
+  .i-container{
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .input-container {
+    position: relative;
+    top: 85%; 
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    height: auto;
+    justify-content: flex-start;
+    z-index: 2;
+
+  }
+    
+  .search-input {
+    flex-shrink: 0; 
+    width: 370px; 
+    padding: 15px 15px;
+    border: 1px solid #D8D8D8;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #000000 !important;
+    transform: scale(0.8);
+    z-index: 2;
+  }
+    
+  .search-button {
+    flex-shrink: 0; /* 버튼이 줄어들지 않도록 설정 */
+    width: 40px;
+    height: 40px;
+    background-color: #5E8447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    margin-left: -7%;
+  }
+  
+  .midbutton{
+    position: relative;
+    width: 370px; 
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #c2c2c2;
+    color:#FFFFFF;
+    font-size: 12px;
+    font-family: 'Pretendard-bold'; 
+    z-index: 2;
+    background: linear-gradient(to right,  #83AD68,#2C5016);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2.5%;
+  }
+  
+  .new-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+  }
+
+
+  .input-container2 {
+    position: absolute; 
+    margin-top:30%;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    height: auto;
+  }
+  
+  
+  
+  .search-input2 {
+    width: 250px;
+    padding: 14px 3px;
+    padding-left: 5%;
+    border: 1px solid #D8D8D8;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 10px;
+    color: #000000 !important;
+    margin-right:5% ;
+    z-index: 1;
+  }
+  
+  .search-button2 {
+    width: 40px;
+    height: 40px;
+    background-color: #5E8447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+
+.linear {
+  position: absolute; 
+  width: 100%;
+  height: 30%; 
+  bottom: 0%;
+  background: linear-gradient(to bottom,  #FFFFFF,#E9F4E2);
+  z-index: -1;
+}
+
+
+
+.travel-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+.travel-com {
+  position: absolute;
+  justify-content: flex-start;
+  align-items: center; 
+  max-width: fit-content;
+  height: auto;
+  text-align: left;
+  z-index: 2;
+  left: 7%;
+  top: 50%;
+  border-radius: 5px; /* 모서리를 둥글게 */
+  z-index: 4;
+}
+
+
+.travel-name {
+  font-family: 'Pretendard-bold';
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 4;
+}
+
+.travel-comment {
+  font-family: 'Pretendard-extraBold';
+  font-size: 10px;
+  color: #ffffff;
+  z-index: 4;
+  margin-top: 1%;
+}
+
+
+.new-image {
+  position: relative;
+  top: 75%; 
+  left: 51%;
+  transform: translateX(-50%);
+  width: 100%; 
+  height: 11vh; 
+  border-radius: 10px;
+  object-fit: cover;
+  z-index: 1; 
+}
+
+.image-list{
+  position: relative;
+  width: 365px;
+}
+
+@media screen and (min-width: 1024px) {
+  .top-comment{
+    font-size: 2vw;
+    bottom: 50%;
+    }
+
+  .comment-container{
+    left: 11%;
+    top:20%;
+
+  }
+
+  .middle-container {
+    bottom: 2vh;
+  }
+
+.i-container{  
+  position: relative; 
+  transform: translate(0, -100%);
+}
+ 
+  .middle-comment1{
+    font-size: 1.5vw;
+    }
+
+  .middle-comment2{
+      font-size: 3vw;
+      }
+
+  .midback{
+        width: 85%;
+        height: 600px;
+        z-index: 1;
+        margin-top: 5%;
+      }
+    
+  .input-container {
+      right: 0.5%;
+      }
+  
+  .search-input {
+    width: 27vw;
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    transform: scale(1);
+  }
+  
+  .search-button {
+    width: 3vw;
+    height: 3vw;
+    margin-left:4%
+  }
+
+  .midbutton{
+    width: 35vw;
+    height: 3vw;
+    font-size: 1vw;
+  }
+
+  .travel-com {
+    max-width: fit-content;
+  }
+  
+  .travel-name {
+    font-size: 1.5vw;
+  }
+  
+  .travel-comment {
+    font-size: 1vw;
+  
+  }
+  
+  .image-list{
+    position: relative;
+    width: 100%;
+  }
+
+  .new-image {
+    width: 35vw; 
+    height: 15vh; 
+    border-radius: 10px;
+    object-fit: cover;
+    z-index: 1; 
+  }
+
+  .darker {
+    width: 35vw!important;
+    height: 15vh !important;
+    z-index: 2; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .travel-com {
+    position: absolute;
+    justify-content: flex-start;
+    align-items: center; 
+    max-width: fit-content;
+    height: auto;
+    text-align: left;
+    z-index: 2;
+    left: 33.5%;
+    top: 60%;
+    border-radius: 5px; 
+    z-index: 4;
+  }
+  }
+

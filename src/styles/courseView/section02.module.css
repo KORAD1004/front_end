@@ -1,0 +1,136 @@
+@media screen and (min-width: 1024px){
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
+    }
+    
+    .allContainer {
+        width: 95vw;
+        height: auto;
+        overflow: hidden;
+        position: relative; 
+        margin: 0 auto;
+    }
+    
+    .scheduleContainer {
+        display: flex;
+        align-items: center;
+        margin-top: 1% !important;
+        margin-left: 2%;
+        margin-bottom: 1%;
+        padding: 1% 0% !important;
+    }
+    
+    .scheduleText {
+        font-family: 'Pretendard-extraBold';
+        font-size: 15px !important;
+        margin-right: 5%;
+    }
+    
+    .underline {
+        width: 100%;
+        height: 1px;
+        background-color: #C7C7C7;
+        margin-bottom: 3%;
+        transform: scaleY(0.5);
+    }
+    
+    .mapImageContainer {
+        display: inline-block;
+        justify-content: center; 
+        align-items: center;
+    }
+    
+    .mapImage {
+        width: 100vw;
+        height: 233px;
+        border-radius: 10%;
+    }
+    
+    .scheduleItem {
+        display: flex;
+        align-items: center;
+        margin-left: 2%;
+    }
+    
+    .icon {
+        margin-right: 7px;
+    }
+    
+    .scheduleText {
+        margin: 0;
+    }
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+}
+
+.allContainer {
+    width: 95vw;
+    height: auto;
+    overflow: hidden;
+    position: relative; 
+    margin: 0 auto;
+}
+
+.scheduleContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    padding: 2% 0%;
+}
+
+.scheduleText {
+    font-family: 'Pretendard-extraBold';
+    font-size: 10px;
+    margin-right: 5%;
+}
+
+.scheduleImage {
+    width: 4%;
+    height: 4%;
+    margin-right: 2%;
+}
+
+.underline {
+    width: 100%;
+    height: 1px;
+    background-color: #C7C7C7;
+    margin-bottom: 3%;
+    transform: scaleY(0.5);
+}
+
+.mapImageContainer {
+    display: inline-block;
+    justify-content: center; 
+    align-items: center;
+}
+
+.mapImage {
+    width: 100vw;
+    height: 233px;
+    border-radius: 10%;
+}
+
+.scheduleItem {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.icon {
+    margin-right: 7px;
+}
+
+.scheduleText {
+    margin: 0;
+}

@@ -1,0 +1,16 @@
+.map {
+    width: 100%;
+    height: 233px;
+}
+
+@media screen and (min-width: 1024px) {
+    .map {
+        height: 41vw;
+        width: 45vw;
+        margin-left: 2%;
+    }
+}
+
+.map div {
+    border-radius: 10px;
+}
