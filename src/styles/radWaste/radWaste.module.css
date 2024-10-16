@@ -398,7 +398,7 @@
 }
 
 .spans span {
-    font-size: 8px;
+    font-size: 10px;
     color: #8A8A8A;
 }
 
@@ -484,7 +484,7 @@
     }
 
     .bodyImg10 div {
-        bottom: 160px;
+        bottom: 145px;
     }
 
     .bodyImg10 div span:last-child {

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQueryClient } from '@tanstack/react-query';
 import { useMediaQuery } from 'react-responsive';
@@ -7,7 +7,7 @@ import { Suspense, lazy } from 'react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/components/swiper.css';
 import useFetchNotices from '../../hooks/main/useFetchNotices'; 
-import { fetchAvgRadiation } from '../../hooks/axios/FetchData';
+import { fetchAvgRadiation, fetchRecentRadiation } from '../../hooks/axios/FetchData';
 import MenuBar from '../../components/main/menubar';
 const Map = lazy(() => import("../../components/main/map.jsx"));
 import SearchBar from '../../components/main/searchbar';
@@ -42,13 +42,14 @@ function App() {
   const queryClient = useQueryClient();
   const { notices, loading, error } = useFetchNotices();
 
-  // Prefetch avgRadiation data
-  useEffect(() => {
-    queryClient.prefetchQuery({
-      queryKey: ['avgRadiation'],
-      queryFn: fetchAvgRadiation,
-    });
-  }, [queryClient]);
+  queryClient.prefetchQuery({
+    queryKey: ['avgRadiation'],
+    queryFn: fetchAvgRadiation,
+  });
+  queryClient.prefetchQuery({
+    queryKey:['recentRadiation'], 
+    queryFn: fetchRecentRadiation
+  });
 
   const handleSlideChange = (swiper) => {
     setCurrentIndex(swiper.realIndex);
