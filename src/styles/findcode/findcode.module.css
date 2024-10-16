@@ -273,6 +273,11 @@ html, body {
     top:20%;
 
   }
+
+  .middle-container {
+    bottom: 2vh;
+  }
+
 .i-container{  
   position: relative; 
   transform: translate(0, -100%);
@@ -288,9 +293,8 @@ html, body {
 
   .midback{
         width: 85%;
-        height: 40vw;
+        height: 600px;
         z-index: 1;
-        
         margin-top: 5%;
       }
     
