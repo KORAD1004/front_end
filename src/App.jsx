@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import './App.css';
 import Header from './components/header/Header.jsx';
-import FindCode from './pages/findcode/Findcode.jsx';
+import FindCode from './pages/findcode/findcode.jsx';
 
 // 각 페이지를 lazy 로드
 const Main = lazy(() => import('./pages/main/main.jsx'));
