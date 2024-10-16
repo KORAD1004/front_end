@@ -91,7 +91,7 @@ const Header = () => {
             onMouseLeave={handleMouseLeave}
             className={
               (hoveredIndex && hoveredIndex !== 4) || 
-              (location.pathname !== '/' && location.pathname !== '/findCode') 
+              (location.pathname !== '/' && location.pathname !== '/findCode' && location.pathname !== '/courseView' && location.pathname !== '/myTrip') 
                 ? styles.dimmed 
                 : ''
             }

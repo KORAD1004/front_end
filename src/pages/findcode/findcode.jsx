@@ -6,7 +6,6 @@ import midback from '../../assets/images/findcode/midback.webp';
 import midback2 from '../../assets/images/findcode/midback2.webp';  
 import search from '../../assets/images/findcode/search.svg';
 import useFetchTravelDetails from '../../hooks/findCode/useFetchTravelDetails';
-import ImageLazy from '../../components/imgLazy/ImageLazy';
 
 export default function FindCode() { 
     const [inputValue, setInputValue] = useState(''); 
@@ -88,7 +87,7 @@ export default function FindCode() {
         {!isLargeScreen && (
           <>
             <div className={styles["top-container"]}>
-              <ImageLazy src={back} className={styles["back"]} alt="back" />
+              <img loading='lazy' src={back} className={styles["back"]} alt="back" />
               <p className={styles["top-comment"]}>나의 여행 일정</p>
             </div>
 
@@ -97,7 +96,7 @@ export default function FindCode() {
                 <p className={styles["middle-comment1"]}>설정 코스 검색 및 입력하기</p>
                 <p className={styles["middle-comment2"]}>내가 만든 코스</p>
               </div>
-              <ImageLazy src={midback} className={styles["midback"]} alt="middle background" />
+              <img loading='lazy' src={midback} className={styles["midback"]} alt="middle background" />
               <div className={styles["i-container"]}>
                 <div className={styles["input-container"]}>
                   <input 
@@ -113,7 +112,7 @@ export default function FindCode() {
                     onClick={handleSearchClick}
                     disabled={!isValidInput(inputValue)}  
                   >
-                    <ImageLazy src={search} alt="search" className={styles['search']} />
+                    <img loading='lazy' src={search} alt="search" className={styles['search']} />
                   </button>
                 </div>
                 <button className={styles['midbutton']} onClick={() => navigate('/myTrip')}>
@@ -138,7 +137,7 @@ export default function FindCode() {
                 </div>
                 <div className={styles["image-list"]}>
                   <div className={styles["darker"]} onClick={handleImageClick}></div>
-                  <ImageLazy 
+                  <img loading='lazy' 
                     src={travelDetails.image} 
                     alt="Travel" 
                     className={styles['new-image']}
@@ -163,7 +162,7 @@ export default function FindCode() {
                 <p className={styles["middle-comment1"]}>설정 코스 검색 및 입력하기</p>
                 <p className={styles["middle-comment2"]}>내가 만든 코스</p>
               </div>
-              <ImageLazy src={midback2} className={styles["midback"]} alt="middle background" />
+              <img loading='lazy' src={midback2} className={styles["midback"]} alt="middle background" />
               <div className={styles["i-container"]}>
                 <div className={styles["input-container"]}>
                   <input 
@@ -179,7 +178,7 @@ export default function FindCode() {
                     onClick={handleSearchClick}
                     disabled={!isValidInput(inputValue)}  
                   >
-                    <ImageLazy src={search} alt="search" className={styles['search']} />
+                    <img loading='lazy' src={search} alt="search" className={styles['search']} />
                   </button>
                 </div>
                 <button className={styles['midbutton']} onClick={() => navigate('/myTrip')}>
