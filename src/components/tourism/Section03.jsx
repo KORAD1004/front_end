@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import styles from '../../styles/tourism/section03.module.css';
-import bottom from '../../assets/images/tourism/bottomImg.png';
+import bottom from '../../assets/images/tourism/bottomImg.webp';
 import ImageLazy from "../imgLazy/ImageLazy";
 
 const Section03 = () => {

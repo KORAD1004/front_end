@@ -1,6 +1,6 @@
 import React from "react";
 import styles from '../../styles/myTrip/section01.module.css';
-import Background from '../../assets/images/myTrip/background.svg';
+import Background from '../../assets/images/myTrip/background.webp';
 import ImageLazy from "../imgLazy/ImageLazy";
 
 const Section01 = ({ tripName, setTripName, numPeople, setNumPeople, startDate, setStartDate, endDate, setEndDate, dayCount, setDayCount }) => {

@@ -1,5 +1,5 @@
 import styles from '../../styles/courseView/section01.module.css';
-import background from '../../assets/images/courseView/background.png';
+import background from '../../assets/images/courseView/background.webp';
 import { useSearchParams } from 'react-router-dom';
 import ImageLazy from '../imgLazy/ImageLazy';
 
