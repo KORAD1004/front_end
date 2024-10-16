@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Main from './pages/main/main.jsx';
 import Radiation from './pages/radiation/Radiation.jsx';
@@ -14,19 +14,44 @@ import FindCode from './pages/findcode/findcode.jsx';
 export default function App() {
   return (
     <BrowserRouter>
-      <Header/>
+
       <Routes>
-        <Route path='/' element={<Main/>}/>
-        <Route path='/radiation' element={<Radiation/>}/>
-        <Route path='/tourism' element={<TourismHome/>}/>
-        <Route path='/introduction' element={<Introduction/>}/>
-        <Route path='/courseSelection' element={<CourseHome/>}/>
-        <Route path='/radWaste' element={<RadWaste/>}/>
-        <Route path='/myTrip' element={<MyTrip/>}/>
-        <Route path='/courseView' element={<CourseView/>}/>
-        <Route path='/findCode' element={<FindCode/>}/>
+  
+        <Route path='/' element={<RootLayout />}>
+          <Route index={true} element={<Main />}/>
+          <Route path='tourism' element={<TourismHome/>}/>
+          <Route path='introduction' element={<Introduction/>}/>
+          <Route path='courseSelection' element={<CourseHome/>}/>
+          <Route path='radWaste' element={<RadWaste/>}/>
+          <Route path='myTrip' element={<MyTrip/>}/>
+          <Route path='courseView' element={<CourseView/>}/>
+          <Route path='findCode' element={<FindCode/>}/>
+        </Route>
+
+        <Route path='/radiation' element={<LazyLayout />}>
+          <Route index={true} element={<Radiation />}/>
+        </Route>
+       
       </Routes>
     </BrowserRouter>
 
+  )
+}
+
+function RootLayout() {
+  return(
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
+
+}
+
+function LazyLayout() {
+  return (
+    <>
+      <Outlet />
+    </>
   )
 }
