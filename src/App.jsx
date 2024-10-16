@@ -10,6 +10,8 @@ import RadWaste from './pages/radWaste/RadWaste.jsx';
 import MyTrip from './pages/myTrip/MyTripCreate.jsx';
 import CourseView from './pages/courseView/CourseView.jsx';
 import FindCode from './pages/findcode/findcode.jsx';
+import { Suspense } from 'react';
+import Loading from './components/loading/Loading.jsx';
 
 export default function App() {
   return (
@@ -51,7 +53,9 @@ function RootLayout() {
 function LazyLayout() {
   return (
     <>
-      <Outlet />
+      <Suspense fallback={<Loading time={0.5}/>}>
+        <Outlet />
+      </Suspense>
     </>
   )
 }

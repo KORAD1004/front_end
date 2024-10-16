@@ -7,7 +7,6 @@ import Loading from "../loading/Loading";
 import { useQuery } from '@tanstack/react-query';
 import { fetchAvgRadiation, fetchRecentRadiation } from "../../hooks/axios/FetchData";
 import { drawMap, manufactureRadiation, drawPolygon, focusGyeongju, getColorByRadiation, getPolygonCenter } from "../../hooks/radiation/radiationFns";
-import ImageLazy from "../imgLazy/ImageLazy";
 
 export default function RadiationMap() {
     const [area, setArea] = useState([]);
@@ -54,14 +53,14 @@ export default function RadiationMap() {
                 <div className={styles.notice}>
                     <div onClick={() => { 
                         setIsClick((state) => !state); focusGyeongju(map, customOverlayRef, isClick, polygonObjects, gyeongjuPolygon, area, initialPolygons, styles);}} className={isClick ? styles.clickPictogram : styles.pictogram}>
-                        <ImageLazy src={gongdan} alt="경주 방폐물처리장" />
+                        <img loading="lazy" src={gongdan} alt="경주 방폐물처리장" />
                         <span>경주 방폐물처리장</span>
                     </div>
                 </div>
             </div>
             {isClick ? (
                 <div className={styles.gongdan}>
-                    <ImageLazy src={gongdanImg} alt="경주 방폐물처리장 이미지" />
+                    <img loading="lazy" src={gongdanImg} alt="경주 방폐물처리장 이미지" />
                 </div>
             ) : null}
         </div>
