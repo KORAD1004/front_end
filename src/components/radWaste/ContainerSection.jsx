@@ -33,7 +33,7 @@ export default function ContainerSection() {
 
                 <WasteContainer per={per[3]} msg="현재 포화 정도" />
                 <div className={styles.unitInfo}>
-                    <img src={drum}/>
+                    <img loading='lazy' src={drum}/>
                     <span>단위 기준 200L 드럼</span>
                     <div className={styles.line}/>
                     <span>방폐물 저장 시기를 바탕으로, 일별인수저장소 및 폐기물 양을 비교 분석을 거쳐 백분율을 기준점으로 이해할 수 있도록 시각화한 자료입니다.</span>

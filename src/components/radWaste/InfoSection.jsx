@@ -8,7 +8,6 @@ import bodyImg9 from '../../assets/images/radWaste/bodyImg9.webp';
 import bodyImg10 from '../../assets/images/radWaste/bodyImg10.webp';
 import { useMediaQuery } from 'react-responsive';
 import { useState, useRef, useEffect } from 'react';
-import ImageLazy from '../imgLazy/ImageLazy';
 
 export default function InfoSection({onClick}) {
     const [isVisible, setIsVisible] = useState(false);
@@ -50,8 +49,8 @@ export default function InfoSection({onClick}) {
             }
             <div ref={targetRef} className={styles.radWasteInfo}>
                 <span>방폐물은 크게 두 가지로 나뉩니다.</span>
-                <ImageLazy className={styles.bodyImg} src={bodyImg}/>
-                <ImageLazy className={styles.bodyImg9} src={bodyImg9}/>
+                <img loading='lazy' className={styles.bodyImg} src={bodyImg}/>
+                <img loading='lazy' className={styles.bodyImg9} src={bodyImg9}/>
                 <span>정확하게는 열 발생량이 2km/m3, 반감기 20년 이상인 알파선을 방출하는 핵종으로</span>
                 <span>방사능 농도가 그램당 4,000Bq(베크렐) 이상인 것입니다.</span>
                 <span>경주 방폐물 처리장에서 주로 다루는 중저준위 방폐물은</span>
@@ -60,17 +59,17 @@ export default function InfoSection({onClick}) {
                     <span>우리나라의 고준위폐기물은</span>
                 </div>
                 <div className={styles.bodyImg2}>
-                    <ImageLazy src={bodyImg2}/>
+                    <img loading='lazy' src={bodyImg2}/>
                 </div>
                 <span>이러한 폐기물은 바다 혹은 우주에 처리하는 등의 방안이 있지만,</span>
                 <span>안전하게 고준위 폐기물을 관리할 수 없다고 판단하여 국제적으로 여러 가지 측면을 고려해</span>
                 <span>연구한 끝에 현재는 고준위 폐기물을 땅 속 깊은 곳에 보관하는 방법을 택하고 있습니다.</span>
                 <span>· 이로서 ·</span>
                 <div className={styles.bodyImg3}>
-                    <ImageLazy src={bodyImg3}/>
+                    <img loading='lazy' src={bodyImg3}/>
                 </div>
                 <div className={styles.bodyImg10}>
-                    <ImageLazy src={bodyImg10}/>
+                    <img loading='lazy' src={bodyImg10}/>
                     <div>
                         <span>수십만 년 동안 방사능을 가지고 있을 수 있기 때문에</span>
                         <span>조금이라도 방사능이 새게 해서는 안 되며,</span>
