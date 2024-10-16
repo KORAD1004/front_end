@@ -8,7 +8,6 @@ import Quiz1 from '../../components/quiz/Quiz1.jsx';
 import Quiz2 from '../../components/quiz/Quiz2.jsx';
 import Quiz3 from '../../components/quiz/Quiz3.jsx';
 import CourseSelect from './CourseSelect.jsx';
-import ImageLazy from '../imgLazy/ImageLazy.jsx';
 import { useMediaQuery } from 'react-responsive';
 
 
@@ -29,9 +28,9 @@ const Section01 = () => {
 
     const handleCourseSelect = () => {
         if (selectedImageId !== null) {
-            navigate(`/courseSelection/?id=${selectedImageId}`);
+            navigate(`/courseSelection?id=${selectedImageId}`);
         } else {
-            navigate('/courseSelection/?id=1');
+            navigate('/courseSelection?id=1');
         }
     };
 
@@ -52,14 +51,14 @@ const Section01 = () => {
         <div className={styles.allContainer}>
             {renderQuiz()}
             <div className={styles.imageContainer}>
-                <ImageLazy 
+                <img loading='lazy' 
                     src={isDesktop?background:background2}
                     alt="Tourism Background" 
                     className={styles.image}
                 />
             </div>
             <div className={styles.tilteImageContainer}>
-                <ImageLazy 
+                <img loading='lazy' 
                     src={title}
                     alt="Tourism Title" 
                     className={styles.tilteImage}
