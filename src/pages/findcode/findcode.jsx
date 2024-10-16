@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import styles from '../../styles/findcode/findcode.module.css';
-import back from '../../assets/images/findcode/background.svg';
-import midback from '../../assets/images/findcode/midback.svg';
-import midback2 from '../../assets/images/findcode/midback2.svg';  
+import back from '../../assets/images/findcode/background.webp';
+import midback from '../../assets/images/findcode/midback.webp';
+import midback2 from '../../assets/images/findcode/midback2.webp';  
 import search from '../../assets/images/findcode/search.svg';
 import useFetchTravelDetails from '../../hooks/findCode/useFetchTravelDetails';
 import ImageLazy from '../../components/imgLazy/ImageLazy';

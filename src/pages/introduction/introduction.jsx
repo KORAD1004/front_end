@@ -1,16 +1,16 @@
 import { useState, useRef } from 'react';
-import topback from '../../assets/images/introduction/top-back.svg';
-import topboxback from '../../assets/images/introduction/topboxback.svg';
-import rad from '../../assets/images/introduction/radiation.svg';
-import ne from '../../assets/images/introduction/negative.svg';
+import topback from '../../assets/images/introduction/top-back.webp';
+import topboxback from '../../assets/images/introduction/topboxback.webp';
+import rad from '../../assets/images/introduction/radiation.webp';
+import ne from '../../assets/images/introduction/negative.webp';
 import politics1 from '../../assets/images/introduction/politics1.svg';
 import politics2 from '../../assets/images/introduction/politics2.svg';
-import care from '../../assets/images/introduction/care.svg';
-import tower from '../../assets/images/introduction/tower.svg';
-import promise from '../../assets/images/introduction/promise.svg';
-import impossible from '../../assets/images/introduction/impossible.svg';
-import graph from '../../assets/images/introduction/graph.svg';
-import gback from '../../assets/images/introduction/gback.svg';
+import care from '../../assets/images/introduction/care.webp';
+import tower from '../../assets/images/introduction/tower.webp';
+import promise from '../../assets/images/introduction/promise.webp';
+import impossible from '../../assets/images/introduction/impossible.webp';
+import graph from '../../assets/images/introduction/graph.webp';
+import gback from '../../assets/images/introduction/gback.webp';
 import styles from '../../styles/introduction/introduction.module.css';
 import ImageLazy from '../../components/imgLazy/ImageLazy';
 
@@ -53,6 +53,10 @@ function App() {
 
       <div className={styles["rad-container"]}>
         <ImageLazy src={rad} className={styles["rad"]} alt="radiation" />
+        {/* <p className={styles["rad-comment0"]}>
+          대한민국 방사성폐기물<br />
+          관리사업을 효율적으로 추진함으로써 
+        </p> */}
         <p className={styles["rad-comment"]}>
           방사성폐기물로 인한 위해를 방지하고 공공의 안전과 환경보전에 이바지하기 위하여<br />
           설립된 <span className={styles["highlight2"]}>대한민국 산업통상자원부 산하 위탁집행형 준정부기관을 의미합니다.</span>
@@ -116,6 +120,10 @@ function App() {
           2005년 11월 2일 주민투표를 통해<br />
           <span className={styles["highlight3"]}>중저준위방사성폐기물 처분시설 부지가 경주로 확정되어</span>
         </p>
+        {/* <p className={styles["gbcomment"]}>
+          방사성폐기물관리산업은<br/>
+          원자력 발전 역사에 큰 획을 긋게 되었습니다.
+        </p> */}
         <ImageLazy src={gback} className={styles["gback"]} alt="gback" />
       </div>
     </div>

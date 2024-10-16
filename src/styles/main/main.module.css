@@ -38,7 +38,7 @@ html, body {
 
 .toptext {
   position: absolute;
-  width: 65vw;
+  width: 300px;
   top: 70%; 
   left: 40%; 
   transform: translate(-50%,-50%);
@@ -203,6 +203,55 @@ html, body {
   margin-bottom: 5%;
   align-items: center; 
 }
+
+
+.sc-container {
+  position: absolute; 
+  top: 25%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 2; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  color: #ffffff; 
+}
+
+
+.scomment1{
+  font-family: 'Pretendard-extraBold';
+  font-size: 5.3vw;
+}
+
+.scomment2 {
+  font-family: 'Pretendard-extraBold';
+  font-size: 5.6vw;
+  margin-top: 8%;
+  text-shadow: -6px 1px 10px rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 1; 
+}
+
+
+.scomment3{
+  font-family: 'Pretendard-Bold';
+  font-size: 2.6vw;
+  margin-top: 8%;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.sbox {
+  margin-top: 5%;
+  width: 55Vw; 
+  height: 25px; 
+  background-color: #ffffff; 
+  border-radius: 0 0 15px 15px; 
+}
+
+
+
 
 .safety {
   width: 100vw;
@@ -451,15 +500,12 @@ flex-direction: column;
   font-size: 1.9vw;
   text-align: left;
   color: #000000;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; 
-  -webkit-box-orient: vertical;
+  white-space: nowrap; 
   overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 1vh;
-  min-width: 10vw;
+  text-overflow: ellipsis; 
   max-width: 30vw;
 }
+
 
 .notice-url {
   color: black; 
@@ -554,12 +600,14 @@ flex-direction: column;
   .text-image{
     width: 35vw;
     height: 10vw;
-margin-right: 20%;
+  margin-right: 20%;
   }
 
   .toptext{
-    top:85%;
-    left:15%
+
+    top:81%;
+    left:18%;
+    width: 400px;
   }
 
   .dot-indicator-container {
@@ -567,9 +615,7 @@ margin-right: 20%;
   margin-top: 25%;
   }
   
-  .toptext {
-    width: 20vw;
-  }
+
 
   .mainname {
     width: 18vw; 
@@ -598,7 +644,7 @@ margin-right: 20%;
   }
 
   .middle-container{
-    max-height: 3300px; 
+    height: 176vw; 
   }
 
 .map-container2{
@@ -728,7 +774,7 @@ margin-right: 20%;
   }
 
   .search-input {
-    width: 27vw;
+    width: 520px  ;
     height: 3%;
     padding: 1vw; 
     font-size
@@ -765,6 +811,42 @@ margin-right: 20%;
   .notice-content {
     min-width: 10vw;
     max-width: 30vw;
-    max-height: 3.5vh;
+    max-height: 4vh;
+  }
+  
+  .sc-container {
+    position: absolute; 
+    top: 15%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    color: #ffffff; 
+  }
+
+  
+  .scomment1{
+    font-size: 3.6vw;
+  }
+  
+  .scomment2 {
+    font-size: 4vw;
+
+  }
+  
+  
+  .scomment3{
+    font-size: 1.5vw;
+
+  }
+
+  .sbox {
+    margin-top: 5%;
+    width: 30Vw; 
+    height: 25px; 
+
   }
 }
