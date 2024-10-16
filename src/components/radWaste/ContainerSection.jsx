@@ -1,5 +1,5 @@
 import styles from '../../styles/radWaste/radWaste.module.css';
-import drum from '../../assets/images/radWaste/drum.svg';
+import drum from '../../assets/images/radWaste/drum.webp';
 import WasteContainer from './WasteContainer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';

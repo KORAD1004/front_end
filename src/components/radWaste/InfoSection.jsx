@@ -1,11 +1,11 @@
 import styles from '../../styles/radWaste/radWaste.module.css';
 import PropTypes from 'prop-types';
-import bodyImg from '../../assets/images/radWaste/bodyImg.svg';
-import bodyImg2 from '../../assets/images/radWaste/bodyImg2.svg';
-import bodyImg3 from '../../assets/images/radWaste/bodyImg3.svg';
+import bodyImg from '../../assets/images/radWaste/bodyImg.webp';
+import bodyImg2 from '../../assets/images/radWaste/bodyImg2.webp';
+import bodyImg3 from '../../assets/images/radWaste/bodyImg3.webp';
 import bodyImg4 from '../../assets/images/radWaste/bodyImg4.svg';
-import bodyImg9 from '../../assets/images/radWaste/bodyImg9.svg';
-import bodyImg10 from '../../assets/images/radWaste/bodyImg10.svg';
+import bodyImg9 from '../../assets/images/radWaste/bodyImg9.webp';
+import bodyImg10 from '../../assets/images/radWaste/bodyImg10.webp';
 import { useMediaQuery } from 'react-responsive';
 import { useState, useRef, useEffect } from 'react';
 import ImageLazy from '../imgLazy/ImageLazy';
