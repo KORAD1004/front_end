@@ -14,17 +14,17 @@ import ImageLazy from '../../components/imgLazy/ImageLazy';
 
 import styles from '../../styles/main/main.module.css'; 
 
-import mainname from '../../assets/images/main/mainname.svg';
-import toptext from '../../assets/images/main/top_text.svg';
+import mainname from '../../assets/images/main/mainname.webp';
+import toptext from '../../assets/images/main/top_text.webp';
 import text from '../../assets/images/main/text.svg';
 import example1 from '../../assets/images/main/example1.svg';
 import example2 from '../../assets/images/main/example2.svg';
 import example3 from '../../assets/images/main/example3.svg';
 import safety from '../../assets/images/main/safety.webp';
 import safety2 from '../../assets/images/main/safety2.webp';
-import themestory from '../../assets/images/main/Theme Story.svg';
+import themestory from '../../assets/images/main/Theme Story.webp';
 import theme from '../../assets/images/main/theme.webp';
-import information from '../../assets/images/main/information.svg';
+import information from '../../assets/images/main/information.webp';
 import check from '../../assets/images/main/check.svg';
 import c1 from '../../assets/images/main/c1.svg';
 import c2 from '../../assets/images/main/c2.svg';
@@ -125,7 +125,7 @@ function App() {
  
           <ImageLazy src={isDesktop ? safety2 : safety} className={styles["safety"]} alt="safety" />
           <div className={styles["sc-container"]}>
-          <p className={styles["scomment1"]}>
+          {/* <p className={styles["scomment1"]}>
               최우선의 가치
           </p>
           <p className={styles["scomment2"]}>
@@ -136,7 +136,7 @@ SAFETY ┃ 안전성
 최우선으로 한 설계 및 시공으로<br/>
 IAEA 방폐물 안전협약 검토회의 중 우수 사례 선정의 경주
 </p>
-<div className={styles["sbox"]}></div>
+<div className={styles["sbox"]}></div> */}
           </div>
           <ImageLazy src={check} className={styles["check"]} alt="check" />
           <ImageLazy src={c2} className={styles["c2"]} alt="c2" />

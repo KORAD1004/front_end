@@ -290,6 +290,13 @@
   line-height: 1.2;
   font-size: 4vw;
 }
+
+.ne{
+  width: 100%;
+}
+.impossible{
+  width: 100%;
+}
   
 /* Media Queries */
 @media screen and (min-width: 1024px) {

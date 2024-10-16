@@ -38,7 +38,7 @@ html, body {
 
 .toptext {
   position: absolute;
-  max-width: 50%;
+  width: 300px;
   top: 70%; 
   left: 40%; 
   transform: translate(-50%,-50%);
@@ -604,10 +604,10 @@ flex-direction: column;
   }
 
   .toptext{
-    min-width: 25%;
-    max-width: 25%;
+
     top:81%;
-    left:18%
+    left:18%;
+    width: 400px;
   }
 
   .dot-indicator-container {
@@ -615,9 +615,7 @@ flex-direction: column;
   margin-top: 25%;
   }
   
-  .toptext {
-    width: 20vw;
-  }
+
 
   .mainname {
     width: 18vw; 
