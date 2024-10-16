@@ -1,19 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQueryClient } from '@tanstack/react-query';
 import { useMediaQuery } from 'react-responsive';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Suspense, lazy } from 'react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/components/swiper.css';
 import useFetchNotices from '../../hooks/main/useFetchNotices'; 
 import { fetchAvgRadiation } from '../../hooks/axios/FetchData';
 import MenuBar from '../../components/main/menubar';
-import Map from '../../components/main/map';
+const Map = lazy(() => import("../../components/main/map.jsx"));
 import SearchBar from '../../components/main/searchbar';
-import ImageLazy from '../../components/imgLazy/ImageLazy';
-
 import styles from '../../styles/main/main.module.css'; 
-
 import mainname from '../../assets/images/main/mainname.webp';
 import toptext from '../../assets/images/main/top_text.webp';
 import text from '../../assets/images/main/text.svg';
@@ -66,8 +64,8 @@ function App() {
       {/* Top section with background image */}
       <div className={styles["top-container"]} style={!isDesktop ? { backgroundImage: `url(${bac2})` } : null}>
         <div className={styles["image-overlay"]}>
-          <ImageLazy src={mainname} className={styles["mainname"]} alt="main name" />
-          <ImageLazy src={toptext} className={styles["toptext"]} alt="top text" />
+          <img loading='lazy' src={mainname} className={styles["mainname"]} alt="main name" />
+          <img loading='lazy' src={toptext} className={styles["toptext"]} alt="top text" />
           <button className={styles['top-button']} onClick={() => navigate('/introduction')}>
             자세히 알아보기
           </button>
@@ -82,7 +80,7 @@ function App() {
       {/* Image gallery and text */}
       <div className={styles["image-container"]}>
         <div className={styles["text-and-dots-container"]}>
-          <ImageLazy src={text} className={styles["text-image"]} alt="text" />
+          <img loading='lazy' src={text} className={styles["text-image"]} alt="text" />
           <div className={styles["dot-indicator-container"]}>
             {images.map((_, index) => (
               <div
@@ -104,7 +102,7 @@ function App() {
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id} onClick={() => handleImageClick(swiperRef.current.swiper, index)}>
-                <ImageLazy
+                <img loading='lazy'
                   src={image.src}
                   alt={image.alt}
                   className={`${styles["gallery-image"]} ${currentIndex === index ? styles["active"] : ''}`}
@@ -123,30 +121,18 @@ function App() {
       <div className={styles['middle-container']}>
         <div className={styles["safety-container"]}>
  
-          <ImageLazy src={isDesktop ? safety2 : safety} className={styles["safety"]} alt="safety" />
+          <img loading='lazy' src={isDesktop ? safety2 : safety} className={styles["safety"]} alt="safety" />
           <div className={styles["sc-container"]}>
-          {/* <p className={styles["scomment1"]}>
-              최우선의 가치
-          </p>
-          <p className={styles["scomment2"]}>
-SAFETY ┃ 안전성
-</p>
-<p className={styles["scomment3"]}>
-민주적 부지선정과 안전성을<br/>
-최우선으로 한 설계 및 시공으로<br/>
-IAEA 방폐물 안전협약 검토회의 중 우수 사례 선정의 경주
-</p>
-<div className={styles["sbox"]}></div> */}
           </div>
-          <ImageLazy src={check} className={styles["check"]} alt="check" />
-          <ImageLazy src={c2} className={styles["c2"]} alt="c2" />
-          <ImageLazy src={c1} className={styles["c1"]} alt="c1" />
+          <img loading='lazy' src={check} className={styles["check"]} alt="check" />
+          <img loading='lazy' src={c2} className={styles["c2"]} alt="c2" />
+          <img loading='lazy' src={c1} className={styles["c1"]} alt="c1" />
         </div>
 
         {/* Theme section */}
         <div className={styles['theme-container']}>
-          <ImageLazy src={theme} className={styles["theme"]} alt="theme" />
-          <ImageLazy src={themestory} className={styles["themestory"]} alt="theme story" />
+          <img loading='lazy' src={theme} className={styles["theme"]} alt="theme" />
+          <img loading='lazy' src={themestory} className={styles["themestory"]} alt="theme story" />
           <div className={styles['hashtag']}>
             <div className={styles['hashtag-row']}>
               <div className={styles['hashtag-box']}>#경주월드</div>
@@ -179,14 +165,16 @@ IAEA 방폐물 안전협약 검토회의 중 우수 사례 선정의 경주
         </div>
 
         <div className={styles["map-container2"]}>
-          <Map />
+          <Suspense>
+            <Map />
+          </Suspense>
           <SearchBar />
         </div>
       </div>
 
       {/* Information section */}
       <div className={styles["information-container"]}>
-        <ImageLazy src={information} className={styles["information"]} alt="Information" />
+        <img loading='lazy' src={information} className={styles["information"]} alt="Information" />
         <div className={styles["notice-container"]}>
           {loading ? (
             <p>Loading notices...</p>

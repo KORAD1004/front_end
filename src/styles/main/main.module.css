@@ -491,6 +491,7 @@ flex-direction: column;
   min-width: 10vw;
   max-width: 30vw;
   line-height: 1.2;
+  cursor: pointer;
 }
 
 .notice-content {
@@ -604,9 +605,8 @@ flex-direction: column;
   }
 
   .toptext{
-
-    top:81%;
-    left:18%;
+    top: 81%;
+    left: 25%;
     width: 400px;
   }
 
@@ -615,8 +615,6 @@ flex-direction: column;
   margin-top: 25%;
   }
   
-
-
   .mainname {
     width: 18vw; 
   }
@@ -812,6 +810,7 @@ flex-direction: column;
     min-width: 10vw;
     max-width: 30vw;
     max-height: 4vh;
+    cursor: pointer;
   }
   
   .sc-container {
