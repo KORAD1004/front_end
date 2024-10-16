@@ -325,7 +325,11 @@
   }
 
   .rad {
-    width: 50%;
+    width: 80%;
+  }
+
+  .rad-comment0 {
+    font-size: 3.4vw;
   }
 
   .rad-comment {
@@ -446,5 +450,8 @@
     font-family: 'Pretendard';
     font-size: 2vw;
     margin-bottom: 10%;
+  }
+  .gbcomment{
+    font-size: 2.5vw;
   }
 }
