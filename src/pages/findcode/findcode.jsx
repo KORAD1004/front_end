@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import styles from '../../styles/findcode/findcode.module.css';
 import back from '../../assets/images/findcode/background.svg';
@@ -8,7 +8,7 @@ import search from '../../assets/images/findcode/search.svg';
 import useFetchTravelDetails from '../../hooks/findCode/useFetchTravelDetails';
 import ImageLazy from '../../components/imgLazy/ImageLazy';
 
-function App() { 
+export default function FindCode() { 
     const [inputValue, setInputValue] = useState(''); 
     const [isSearchClicked, setIsSearchClicked] = useState(false); 
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024); 
@@ -196,5 +196,3 @@ function App() {
       </div>
     );
 }
-
-export default App;
