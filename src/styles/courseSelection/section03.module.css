@@ -54,7 +54,7 @@ body {
     padding: 0 !important;
     border-radius: 10px;
     text-align: center;
-    width: 20vw !important;
+    width: 30vw !important;
     height: 13.3vw;
   }
   
@@ -74,7 +74,7 @@ body {
   }
   
   .courseAddress {
-    font-size: 15.56px !important;
+    font-size: 14px !important;
     font-family: 'Pretendard-semiBold';
     margin-bottom: 2%;
     text-align: left;
@@ -92,9 +92,9 @@ body {
   .customButton {
     display: flex;
     width: 10vw !important;
-    height: 3.5vw !important;
+    height: 35px !important;
     justify-content: center;
-    margin-top: 10% !important;
+    margin-top: 5% !important;
     font-size: 13px !important;
     font-family: 'Pretendard-Bold';
     border: 1px solid #ccc;
@@ -136,13 +136,13 @@ body {
   }
 }
 
-@media screen and (min-width: 1124px){
+@media screen and (min-width: 1330px){
   .customButton {
     display: flex;
     width: 10vw !important;
     height: 40px !important;
     justify-content: center;
-    margin-top: 10% !important;
+    margin-top: 6% !important;
     font-size: 15px !important;
     font-family: 'Pretendard-Bold';
     border: 1px solid #ccc;
@@ -170,7 +170,7 @@ body {
   }
   
   .courseAddress {
-    font-size: 19.56px !important;
+    font-size: 18.56px !important;
     font-family: 'Pretendard-semiBold';
     margin-bottom: 2%;
     text-align: left;
