@@ -575,11 +575,11 @@ flex-direction: column;
 
 .separator-line2 {
   position: absolute;
-  top: 10%;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
-  height: 17vw;
+  height: 20vw;
   background-color: #e0e0e0;
 }
 
@@ -864,4 +864,13 @@ height: 75px;
   .search-bar-container {
     margin-top: 2%;
   }
+
+  .separator-line2 {
+
+    width: 1px;
+    height: 18vw;
+
+  }
+
+  
 }
