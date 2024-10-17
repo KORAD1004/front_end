@@ -21,12 +21,12 @@ const Quiz3 = () => {
   const handleCorrect = () => {
     setIsModalOpen(false);
     setIsCorrectModalOpen(true);
-    cookie.set("test", true);
   };
 
   const handleWrong = () => {
     setIsModalOpen(false);
     setIsWrongModalOpen(true);
+    cookie.set("test", true);
   };
 
   const handleCloseCorrectModal = () => {
