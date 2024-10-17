@@ -585,7 +585,7 @@ flex-direction: column;
 
 
 /* Media Queries */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .top-container {
     height: 600px;
   }
