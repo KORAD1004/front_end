@@ -43,7 +43,13 @@ const Section02 = () => {
             <div className={styles.touristAttractionContainer}>
                 <div className={styles.touristAttractions}>
                     {attractions.map((attraction, index) => (
-                        <div className={styles.touristAttraction} key={index}>
+                        <a
+                            href={attraction.spotURL} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className={styles.touristAttraction} 
+                            key={index}
+                        >
                             <img loading='lazy' src={'https://' + attraction.image} alt={attraction.subTitle} className={styles.touristAttractionImage} />
                             <div className={styles.touristAttractionTextContainer}>
                                 <p className={styles.touristAttractionText}>{attraction.title}</p>
@@ -54,7 +60,7 @@ const Section02 = () => {
                                     <FontAwesomeIcon icon={faPhone} />{attraction.phone_num || "전화번호 없음"}
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
