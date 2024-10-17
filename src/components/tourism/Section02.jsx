@@ -11,7 +11,11 @@ const Section02 = () => {
     async function getData(category, index) {
         try {
             const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/hotspot/${category}`);
-            setAttractions(response.data);
+            const processedData = response.data.map(attraction => ({
+                ...attraction,
+                spotURL: attraction.spotURL || '',
+            }));
+            setAttractions(processedData);
             setActiveButton(index);
         } catch (error) {
             console.error(error);
