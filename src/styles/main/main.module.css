@@ -282,10 +282,10 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  width: 98%;
+  width: 90%;
   height: 80vw;
   border-radius: 20px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 10%;
 }
 
@@ -585,7 +585,7 @@ flex-direction: column;
 
 
 /* Media Queries */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .top-container {
     height: 600px;
   }
@@ -721,6 +721,7 @@ flex-direction: column;
     background: linear-gradient(to bottom, rgb(255, 255, 255) 40%, #D8D8D8 90%);
     width: 40vw;
     height: 60vw;
+    border-radius: 12px;
   }
 
   .mc1{
@@ -729,12 +730,14 @@ flex-direction: column;
     color: #8DB475;
     margin-bottom: 10%;
     line-height: 4;
+    white-space: nowrap;
   }
   
   .mc2{
     font-family: 'Pretendard-extraBold';
     font-size: 3vw;
     line-height: 2;
+    white-space: nowrap;
   }
   
   .mc3{
@@ -742,11 +745,13 @@ flex-direction: column;
     font-size: 4vw;
     color: #648252;
     margin-top: 5%;
+    white-space: nowrap;
   }
   .mc4{
     font-family: 'Pretendard-extraBold';
     font-size: 4vw;
     margin-bottom: 5%;
+    white-space: nowrap;
   }
   
   .map-comment2 {
@@ -760,11 +765,13 @@ flex-direction: column;
 
   .map-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-end;
     width: 100%;
     padding: 0 20px;
     flex-direction: row;
+    gap: 1vw;
+    margin-top: 0%;
   }
 
   .map-comment{
@@ -787,8 +794,8 @@ flex-direction: column;
 
 
   .search-button {
-    width: 6vw;
-    height: 4vw;
+width: 150px;
+height: 75px;
     font-size: 1.2vw;
   }
 
@@ -846,6 +853,15 @@ flex-direction: column;
     margin-top: 5%;
     width: 30Vw; 
     height: 25px; 
+  }
+  
+  .search-input {
 
+    width: 655px; 
+    height: 40px;
+  }
+
+  .search-bar-container {
+    margin-top: 2%;
   }
 }
