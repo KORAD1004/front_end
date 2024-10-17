@@ -42,8 +42,8 @@ const Quiz3 = () => {
       <QuizModal
         isOpen={isModalOpen}
         onRequestClose={handleCloseModal}
-        info="고준위방폐물이란 열과 방사능의 준위가 높은 폐기물을 말합니다."
-        question="우리나라의 경우 고준위방사성폐기물은 사용 후 핵연료가 대부분입니다."
+        info="중저준위방사성폐기물은"
+        question="사용 용도에 따라 '중준위', '저준위', '극저준위 방사성폐기물로 구분됩니다."
         onCorrect={handleCorrect}
         onWrong={handleWrong}
       />
