@@ -3,8 +3,10 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import styles from '../../styles/courseSelection/section03.module.css';
 import ImageLazy from "../imgLazy/ImageLazy";
+import CourseMap from "./CourseMap";
 
 const Section03 = () => {
+    const isDesktop = window.innerWidth >= 1024;
     const [courseData, setCourseData] = useState([]);
     const location = useLocation();
 
@@ -28,6 +30,8 @@ const Section03 = () => {
 
     return (
         <div className={styles.allContainer}>
+            <CourseMap />
+
             <div className={styles.courseImgeAllContainer}>
                 {courseData.length > 0 ? (
                     courseData.map((course, index) => (
@@ -53,13 +57,18 @@ const Section03 = () => {
                             <div className={styles.courseName}>{course.title}</div>
                             <hr className={styles.underline} />
                             <div className={styles.courseAddress}>{course.address}</div>
+                            {isDesktop && (
+                                <button key={index} className={styles.customButton} onClick={() => window.location.href = course.spotURL}>
+                                    더 알아보기
+                                </button>
+                            )}
                         </div>
                     ))
                 ) : (
                     <div>Loading...</div>
                 )}
             </div>
-            <div className={styles.buttonContainer}>
+            {!isDesktop && (<div className={styles.buttonContainer}>
                 {courseData.length > 0 ? (
                     courseData.map((course, index) => (
                         <button key={index} className={styles.customButton} onClick={() => window.location.href = course.spotURL}>
@@ -69,7 +78,7 @@ const Section03 = () => {
                 ) : (
                     <div>Loading...</div>
                 )}
-            </div>
+            </div>)}
         </div>
     );
 };

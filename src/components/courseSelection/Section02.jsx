@@ -5,6 +5,7 @@ import CourseMap from "./CourseMap";
 import { useLocation } from 'react-router-dom';
 
 const Section02 = () => {
+    const isDesktop = window.innerWidth >= 1024;
     const [course, setCourse] = useState([]);
     const location = useLocation();
 
@@ -36,7 +37,7 @@ const Section02 = () => {
                 </div>
             )}
 
-            <CourseMap />
+            { !isDesktop && <CourseMap /> }
         </div>
     );
 };
