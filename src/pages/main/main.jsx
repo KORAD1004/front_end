@@ -34,7 +34,7 @@ const images = [
   { id: 3, src: example3, alt: 'Image 3' },
 ];
 
-function App() {
+function Main() {
   const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
   const [currentIndex, setCurrentIndex] = useState(0);
   const swiperRef = useRef(null);
@@ -214,4 +214,4 @@ function App() {
   );
 }
 
-export default App;
+export default Main;
