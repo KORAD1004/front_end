@@ -11,7 +11,11 @@ const Section02 = () => {
     async function getData(category, index) {
         try {
             const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/hotspot/${category}`);
-            setAttractions(response.data);
+            const processedData = response.data.map(attraction => ({
+                ...attraction,
+                spotURL: attraction.spotURL || '',
+            }));
+            setAttractions(processedData);
             setActiveButton(index);
         } catch (error) {
             console.error(error);
@@ -43,7 +47,13 @@ const Section02 = () => {
             <div className={styles.touristAttractionContainer}>
                 <div className={styles.touristAttractions}>
                     {attractions.map((attraction, index) => (
-                        <div className={styles.touristAttraction} key={index}>
+                        <a
+                            href={attraction.spotURL} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className={styles.touristAttraction} 
+                            key={index}
+                        >
                             <img loading='lazy' src={'https://' + attraction.image} alt={attraction.subTitle} className={styles.touristAttractionImage} />
                             <div className={styles.touristAttractionTextContainer}>
                                 <p className={styles.touristAttractionText}>{attraction.title}</p>
@@ -54,7 +64,7 @@ const Section02 = () => {
                                     <FontAwesomeIcon icon={faPhone} />{attraction.phone_num || "전화번호 없음"}
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>

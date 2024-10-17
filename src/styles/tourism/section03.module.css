@@ -177,6 +177,7 @@
     align-items: center;         
     justify-content: center;
     width: 50%;
+    height: auto;
 }
 
 .clipText {
@@ -185,6 +186,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; /* 넘칠 경우 말줄임표(...) 표시 */
+    padding: 1%;
 }
 
 .clipTextClickContainer {

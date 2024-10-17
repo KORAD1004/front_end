@@ -20,8 +20,8 @@ export default function RadiationMap() {
     const customOverlayRef = useRef(null); // customOverlay를 ref로 선언하여 필요시 사용
 
     //지역별 현재 방사선량, 지역별 3년 평균 방사선량 패칭
-    const { data: radiation, isLoading: loading2 } = useQuery({queryKey:['recentRadiation'], queryFn:fetchRecentRadiation, staleTime: 1000*60*5, refetchInterval: 1000*60*10}); 
-    const { data: avgRad, isLoading: loading} = useQuery({queryKey:['avgRadiation'], queryFn:fetchAvgRadiation, staleTime: 1000*60*5, refetchInterval: 1000*60*10});
+    const { data: radiation, isLoading: loading2 } = useQuery({queryKey:['recentRadiation'], queryFn:fetchRecentRadiation, staleTime: 1000*60*60}); 
+    const { data: avgRad, isLoading: loading} = useQuery({queryKey:['avgRadiation'], queryFn:fetchAvgRadiation, staleTime: 1000*60*60});
 
     //초기 data 구조 가공
     useEffect(() => {
