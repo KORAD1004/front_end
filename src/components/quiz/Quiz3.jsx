@@ -43,7 +43,7 @@ const Quiz3 = () => {
         isOpen={isModalOpen}
         onRequestClose={handleCloseModal}
         info="중저준위방사성폐기물은"
-        question="사용 용도에 따라 '중준위', '저준위', '극저준위 방사성폐기물로 구분됩니다."
+        question="사용 용도에 따라 '중준위', '저준위', '극저준위' 방사성폐기물로 구분됩니다."
         onCorrect={handleCorrect}
         onWrong={handleWrong}
       />
