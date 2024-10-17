@@ -1,12 +1,17 @@
-import RadiationHeader from '../../components/radiation/RadiationHeader.jsx';
-import RadiationMap from '../../components/radiation/RadiationMap.jsx';
+import { lazy } from 'react';
+const RadiationHeader = lazy(() => import('../../components/radiation/RadiationHeader.jsx'));
+const RadiationMap = lazy(() => import('../../components/radiation/RadiationMap.jsx'));
 import styles from '../../styles/radiation/radiation.module.css';
+import Header from '../../components/header/Header.jsx';
 
 export default function Radiation() {
     return (
-        <div className={styles.pageWrapper}>
-            <RadiationHeader/>
-            <RadiationMap/>
-        </div>
-    )
+        <>
+            <Header />
+            <div className={styles.pageWrapper}>
+                <RadiationHeader/>
+                <RadiationMap/>
+            </div>
+        </>
+    ) 
 }

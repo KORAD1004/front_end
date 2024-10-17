@@ -1,14 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import styles from '../../styles/findcode/findcode.module.css';
-import back from '../../assets/images/findcode/background.svg';
-import midback from '../../assets/images/findcode/midback.svg';
-import midback2 from '../../assets/images/findcode/midback2.svg';  
+import back from '../../assets/images/findcode/background.webp';
+import midback from '../../assets/images/findcode/midback.webp';
+import midback2 from '../../assets/images/findcode/midback2.webp';  
 import search from '../../assets/images/findcode/search.svg';
 import useFetchTravelDetails from '../../hooks/findCode/useFetchTravelDetails';
-import ImageLazy from '../../components/imgLazy/ImageLazy';
 
-function App() { 
+export default function FindCode() { 
     const [inputValue, setInputValue] = useState(''); 
     const [isSearchClicked, setIsSearchClicked] = useState(false); 
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024); 
@@ -39,6 +38,13 @@ function App() {
             }
         }
     };
+
+    const handleEnter = (e) => {
+      if(e.key==='Enter') {
+        if(!isValidInput(inputValue)) return;
+        navigate(`/courseView?code=${inputValue}`);
+      }
+    }
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);  
@@ -88,7 +94,7 @@ function App() {
         {!isLargeScreen && (
           <>
             <div className={styles["top-container"]}>
-              <ImageLazy src={back} className={styles["back"]} alt="back" />
+              <img loading='lazy' src={back} className={styles["back"]} alt="back" />
               <p className={styles["top-comment"]}>나의 여행 일정</p>
             </div>
 
@@ -97,7 +103,7 @@ function App() {
                 <p className={styles["middle-comment1"]}>설정 코스 검색 및 입력하기</p>
                 <p className={styles["middle-comment2"]}>내가 만든 코스</p>
               </div>
-              <ImageLazy src={midback} className={styles["midback"]} alt="middle background" />
+              <img loading='lazy' src={midback} className={styles["midback"]} alt="middle background" />
               <div className={styles["i-container"]}>
                 <div className={styles["input-container"]}>
                   <input 
@@ -113,7 +119,7 @@ function App() {
                     onClick={handleSearchClick}
                     disabled={!isValidInput(inputValue)}  
                   >
-                    <ImageLazy src={search} alt="search" className={styles['search']} />
+                    <img loading='lazy' src={search} alt="search" className={styles['search']} />
                   </button>
                 </div>
                 <button className={styles['midbutton']} onClick={() => navigate('/myTrip')}>
@@ -126,19 +132,18 @@ function App() {
 
             {isSearchClicked && travelDetails && (
               <div className={styles["travel-container"]} ref={scrollRef}>
-                <div className={styles["travel-com"]} onClick={handleImageClick}>
-                  <p className={styles["travel-name"]}>{travelDetails.travelName}</p> 
-                  <p className={styles["travel-comment"]}>
-                    {`${travelDetails.startDate} ~ ${travelDetails.endDate} 中 ${
-                      travelDetails.days.includes('일차') || travelDetails.days.includes('일 차')
-                        ? travelDetails.days
-                        : `${travelDetails.days}일차`
-                    }`}
-                  </p>
-                </div>
                 <div className={styles["image-list"]}>
-                  <div className={styles["darker"]} onClick={handleImageClick}></div>
-                  <ImageLazy 
+                  <div className={styles["travel-com"]} onClick={handleImageClick}>
+                    <p className={styles["travel-name"]}>{travelDetails.travelName}</p> 
+                    <p className={styles["travel-comment"]}>
+                      {`${travelDetails.startDate} ~ ${travelDetails.endDate} 中 ${
+                        travelDetails.days.includes('일차') || travelDetails.days.includes('일 차')
+                          ? travelDetails.days
+                          : `${travelDetails.days}일차`
+                      }`}
+                    </p>
+                  </div>
+                  <img loading='lazy' 
                     src={travelDetails.image} 
                     alt="Travel" 
                     className={styles['new-image']}
@@ -163,7 +168,7 @@ function App() {
                 <p className={styles["middle-comment1"]}>설정 코스 검색 및 입력하기</p>
                 <p className={styles["middle-comment2"]}>내가 만든 코스</p>
               </div>
-              <ImageLazy src={midback2} className={styles["midback"]} alt="middle background" />
+              <img loading='lazy' src={midback2} className={styles["midback"]} alt="middle background" />
               <div className={styles["i-container"]}>
                 <div className={styles["input-container"]}>
                   <input 
@@ -171,6 +176,7 @@ function App() {
                     value={inputValue}  
                     onChange={handleInputChange} 
                     placeholder="8자리 숫자를 입력해 주세요"
+                    onKeyDown={handleEnter}
                     maxLength={8}  
                     className={styles['search-input']}
                   />
@@ -179,7 +185,7 @@ function App() {
                     onClick={handleSearchClick}
                     disabled={!isValidInput(inputValue)}  
                   >
-                    <ImageLazy src={search} alt="search" className={styles['search']} />
+                    <img loading='lazy' src={search} alt="search" className={styles['search']} />
                   </button>
                 </div>
                 <button className={styles['midbutton']} onClick={() => navigate('/myTrip')}>
@@ -196,5 +202,3 @@ function App() {
       </div>
     );
 }
-
-export default App;

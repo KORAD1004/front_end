@@ -6,11 +6,7 @@ import gongdanImg from '../../assets/images/radiation/gongdanImg.svg';
 import Loading from "../loading/Loading";
 import { useQuery } from '@tanstack/react-query';
 import { fetchAvgRadiation, fetchRecentRadiation } from "../../hooks/axios/FetchData";
-import { focusGyeongju } from "../../hooks/radiation/FocusGyeongju";
-import { drawPolygon } from "../../hooks/radiation/DrawPolygon";
-import { drawMap } from "../../hooks/radiation/DrawMap";
-import { manufactureRadiation } from "../../hooks/radiation/ManufactureRadiation";
-import ImageLazy from "../imgLazy/ImageLazy";
+import { drawMap, manufactureRadiation, drawPolygon, focusGyeongju, getColorByRadiation, getPolygonCenter } from "../../hooks/radiation/radiationFns";
 
 export default function RadiationMap() {
     const [area, setArea] = useState([]);
@@ -22,29 +18,6 @@ export default function RadiationMap() {
     const gyeongjuPolygon = useRef(null);
     const polygonGroups = useRef({}); // 지역별로 폴리곤 그룹을 저장할 객체
     const customOverlayRef = useRef(null); // customOverlay를 ref로 선언하여 필요시 사용
-    
-    // 폴리곤 중심 좌표 계산 함수
-    const getPolygonCenter = (coordinates) => {
-        let sumLat = 0;
-        let sumLng = 0;
-        coordinates.forEach((coord) => {
-            sumLat += coord.getLat();
-            sumLng += coord.getLng();
-        });
-        return new window.kakao.maps.LatLng(sumLat / coordinates.length, sumLng / coordinates.length);
-    };
-
-    // 방사선 수치에 따른 색상 설정 함수
-    const getColorByRadiation = (level, avgRad) => {
-        if (level - avgRad < -0.023) return "#80FF32";
-        else if (level - avgRad < -0.018) return "#75EA2D";
-        else if (level - avgRad < -0.013) return "#66FF66";
-        else if (level - avgRad < -0.008) return "#009900";
-        else if (level - avgRad < 0.0973) return "#006600"; // 낮은 수치
-        else if (level - avgRad < 0.973) return "#FFFF00"; // 중간 수치
-        else if (level - avgRad < 973) return "#E68E27";
-        else return "#FF0000"; // 높은 수치
-    };
 
     //지역별 현재 방사선량, 지역별 3년 평균 방사선량 패칭
     const { data: radiation, isLoading: loading2 } = useQuery({queryKey:['recentRadiation'], queryFn:fetchRecentRadiation, staleTime: 1000*60*5, refetchInterval: 1000*60*10}); 
@@ -80,14 +53,14 @@ export default function RadiationMap() {
                 <div className={styles.notice}>
                     <div onClick={() => { 
                         setIsClick((state) => !state); focusGyeongju(map, customOverlayRef, isClick, polygonObjects, gyeongjuPolygon, area, initialPolygons, styles);}} className={isClick ? styles.clickPictogram : styles.pictogram}>
-                        <ImageLazy src={gongdan} alt="경주 방폐물처리장" />
+                        <img loading="lazy" src={gongdan} alt="경주 방폐물처리장" />
                         <span>경주 방폐물처리장</span>
                     </div>
                 </div>
             </div>
             {isClick ? (
                 <div className={styles.gongdan}>
-                    <ImageLazy src={gongdanImg} alt="경주 방폐물처리장 이미지" />
+                    <img loading="lazy" src={gongdanImg} alt="경주 방폐물처리장 이미지" />
                 </div>
             ) : null}
         </div>

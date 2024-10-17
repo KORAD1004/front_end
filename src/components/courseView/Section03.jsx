@@ -2,12 +2,22 @@ import styles from '../../styles/courseView/section03.module.css';
 import PropTypes from 'prop-types';
 import InfoBox from '../radWaste/InfoBox';
 import CourseMap from './CourseMap';
-import { useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 const Section03 = ({ data }) => {
     const isDesktop = window.innerWidth >= 1024;
-    const navigate = useNavigate();
+    const [param] = useSearchParams();
+    const code = param.get("code");
 
+    const copyClipBoard = async () => {
+        try {
+          await navigator.clipboard.writeText(code);
+          alert('클립보드에 복사되었습니다!');
+        } catch (err) {
+          console.error('복사 실패:', err);
+          alert('복사에 실패했습니다.');
+        }
+      };
 
     return (
         <>
@@ -43,7 +53,7 @@ const Section03 = ({ data }) => {
                 </div>
             </div>
             <div className={styles.underline2}></div>
-            <button className={styles.saveButton} onClick={() => navigate('/findCode')}>코스 내보내기</button>
+            <button className={styles.saveButton} onClick={copyClipBoard}>코드 복사하기</button>
         </>
     );
 };

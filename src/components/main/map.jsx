@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from '../../styles/components/map.module.css';
 
 const Map = () => {
@@ -8,6 +8,8 @@ const Map = () => {
     const options = {
       center: new kakao.maps.LatLng(35.8388735, 129.196647),
       level: 4, 
+      draggable: false,  // 드래그 비활성화
+      zoomable: false,   // 줌 비활성화
     };
     const map = new kakao.maps.Map(container, options); 
     const markerPosition = new kakao.maps.LatLng(35.8388735, 129.196647); 
@@ -15,9 +17,6 @@ const Map = () => {
       position: markerPosition,
     });
     marker.setMap(map); 
-
-    const zoomControl = new kakao.maps.ZoomControl();
-    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
   }, []);
 

@@ -67,7 +67,7 @@ const Header = () => {
             onMouseLeave={handleMouseLeave}
             className={
               (hoveredIndex && hoveredIndex !== 2) || 
-              (location.pathname !== '/' && location.pathname !== '/radiation') 
+              (location.pathname !== '/' && location.pathname !== '/radiation')
                 ? styles.dimmed 
                 : ''
             }
@@ -79,7 +79,7 @@ const Header = () => {
             onMouseLeave={handleMouseLeave}
             className={
               (hoveredIndex && hoveredIndex !== 3) || 
-              (location.pathname !== '/' && location.pathname !== '/tourism') 
+              (location.pathname !== '/' && location.pathname !== '/tourism' && location.pathname !== '/courseSelection') 
                 ? styles.dimmed 
                 : ''
             }
@@ -91,7 +91,7 @@ const Header = () => {
             onMouseLeave={handleMouseLeave}
             className={
               (hoveredIndex && hoveredIndex !== 4) || 
-              (location.pathname !== '/' && location.pathname !== '/findCode') 
+              (location.pathname !== '/' && location.pathname !== '/findCode' && location.pathname !== '/courseView' && location.pathname !== '/myTrip') 
                 ? styles.dimmed 
                 : ''
             }

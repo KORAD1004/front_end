@@ -398,7 +398,7 @@
 }
 
 .spans span {
-    font-size: 8px;
+    font-size: 10px;
     color: #8A8A8A;
 }
 
@@ -471,7 +471,7 @@
     }
 
     .radWasteInfo span:last-child, .radWasteInfo span:nth-last-child(2) {
-        font-size: 20px;
+        font-size: 35px;
     }
 
     .bodyImg3 {
@@ -484,7 +484,7 @@
     }
 
     .bodyImg10 div {
-        bottom: 160px;
+        bottom: 145px;
     }
 
     .bodyImg10 div span:last-child {
@@ -568,7 +568,7 @@
 
     .todayInfo span {
         width: 100%;
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .todayInfo img {
@@ -584,7 +584,7 @@
         width: 100vw;
         gap: 0;
         display: flex;
-        background-image: url('../../assets/images/radWaste/bodyImg6.svg');
+        background-image: url('../../assets/images/radWaste/bodyImg6.webp');
         background-repeat: no-repeat;
         background-position: left bottom 5%;
         background-size: 40%;

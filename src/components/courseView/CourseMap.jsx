@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import styles from '../../styles/courseView/courseMap.module.css';
 
 const CourseMap = ({ data }) => {

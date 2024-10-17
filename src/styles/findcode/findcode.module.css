@@ -108,7 +108,7 @@ html, body {
     
   .search-input {
     flex-shrink: 0; 
-    width: 85vw; 
+    width: 370px; 
     padding: 15px 15px;
     border: 1px solid #D8D8D8;
     background-color: #ffffff;
@@ -133,7 +133,7 @@ html, body {
   
   .midbutton{
     position: relative;
-    width: 85vw; 
+    width: 370px; 
     height: 40px;
     border-radius: 10px;
     border: 1px solid #c2c2c2;
@@ -222,8 +222,8 @@ html, body {
   height: auto;
   text-align: left;
   z-index: 2;
-  left: 13%;
-  top: 60%;
+  left: 7%;
+  top: 50%;
   border-radius: 5px; /* 모서리를 둥글게 */
   z-index: 4;
 }
@@ -250,7 +250,7 @@ html, body {
   top: 75%; 
   left: 51%;
   transform: translateX(-50%);
-  width: 85vw; 
+  width: 100%; 
   height: 11vh; 
   border-radius: 10px;
   object-fit: cover;
@@ -259,17 +259,7 @@ html, body {
 
 .image-list{
   position: relative;
-}
-
-.darker {
-  position: absolute;
-  left: 1%;
-  width: 85vw; 
-  height: 11vh; 
-  background-color: rgba(0, 0, 0, 0.281); 
-  border-radius: 10px; 
-  z-index: 2; 
-  
+  width: 365px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -279,10 +269,15 @@ html, body {
     }
 
   .comment-container{
-    left: 12%;
+    left: 11%;
     top:20%;
 
   }
+
+  .middle-container {
+    bottom: 2vh;
+  }
+
 .i-container{  
   position: relative; 
   transform: translate(0, -100%);
@@ -297,10 +292,9 @@ html, body {
       }
 
   .midback{
-        width: 80%;
-        height: 50vw;
+        width: 85%;
+        height: 600px;
         z-index: 1;
-        
         margin-top: 5%;
       }
     
