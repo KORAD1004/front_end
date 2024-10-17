@@ -228,7 +228,6 @@ export const getPolygonCenter = (coordinates) => {
 
 // 방사선 수치에 따른 색상 설정 함수
 export const getColorByRadiation = (level, avgRad) => {
-    console.log(level-avgRad);
     if (level - avgRad < -0.003) return "#80FF32";
     else if (level - avgRad < -0.002) return "#75EA2D";
     else if (level - avgRad < -0.001) return "#66FF66";
