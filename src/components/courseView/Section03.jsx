@@ -11,13 +11,17 @@ const Section03 = ({ data }) => {
 
     const copyClipBoard = async () => {
         try {
-          await navigator.clipboard.writeText(code);
-          alert('클립보드에 복사되었습니다!');
+            await navigator.clipboard.writeText(code);
+            alert('클립보드에 복사되었습니다!');
         } catch (err) {
-          console.error('복사 실패:', err);
-          alert('복사에 실패했습니다.');
+            console.error('복사 실패:', err);
+            alert('복사에 실패했습니다.');
         }
-      };
+    };
+
+    const handleClick = (url) => {
+        window.open(url, "_blank", "noopener,noreferrer"); // 새 탭에서 열리도록 처리
+    };
 
     return (
         <>
@@ -35,10 +39,15 @@ const Section03 = ({ data }) => {
                     >
                         {data.length > 1 &&
                             data[1].map(place => (
-                                <div key={place.number} className={styles.place}>
+                                <div 
+                                    key={place.number} 
+                                    className={styles.place}
+                                    onClick={() => handleClick(place.spotURL)}
+                                    style={{ cursor: 'pointer' }}
+                                >
                                     <div className={styles.placeImg}>
                                         <div className={styles.number}>{place.number}</div>
-                                        <img src={"https://" + place.image} />
+                                        <img src={"https://" + place.image} alt={place.title} />
                                     </div>
                                     <div className={styles.infoContainer}>
                                         <InfoBox msg={place.title} msg2={place.address} width="100%" />
@@ -62,4 +71,4 @@ export default Section03;
 
 Section03.propTypes = {
     data: PropTypes.array
-}
+};
