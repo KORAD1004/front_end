@@ -30,8 +30,7 @@ const Section03 = () => {
 
     return (
         <div className={styles.allContainer}>
-            <CourseMap />
-
+           {isDesktop && <CourseMap />}
             <div className={styles.courseImgeAllContainer}>
                 {courseData.length > 0 ? (
                     courseData.map((course, index) => (
