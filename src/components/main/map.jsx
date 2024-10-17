@@ -27,7 +27,6 @@ const Map = () => {
       marker.setMap(map);
     } catch (error) {
       console.error('Kakao Map 초기화 중 오류 발생:', error);
-      alert('지도를 불러오는 데 실패했습니다. 잠시 후 다시 시도해주세요.');
     }
   }, []);
 

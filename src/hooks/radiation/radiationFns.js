@@ -155,7 +155,6 @@ export const drawPolygon = (map, area, avgRad, loading, polygonObjects, getColor
 export const manufactureRadiation = (radiation, data, setArea) => {
     // Kakao Maps API 로드 확인
     if (!window.kakao || !window.kakao.maps) {
-        alert("Kakao maps API is not loaded");
         return;
     }
 
@@ -235,7 +234,7 @@ export const getColorByRadiation = (level, avgRad) => {
     else if (level - avgRad < -0.001) return "#66FF66";
     else if (level - avgRad < 0) return "#009900";
     else if (level - avgRad < 0.0973) return "#006600"; // 낮은 수치
-    else if (level - avgRad < 0.973) return "#FFFF00"; // 중간 수치
-    else if (level - avgRad < 973) return "#E68E27";
+    else if (level < 0.973) return "#FFFF00"; // 중간 수치
+    else if (level < 973) return "#E68E27";
     else return "#FF0000"; // 높은 수치
 };
