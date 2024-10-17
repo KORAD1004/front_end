@@ -84,7 +84,7 @@ const CourseMap = ({ data }) => {
         }, 1000);
       }
     } catch (error) {
-      console.error("지도 생성 중 오류가 발생했습니다:", error);
+      console.error(error);
     }
   }, [data]);
 

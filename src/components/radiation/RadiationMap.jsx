@@ -50,6 +50,7 @@ export default function RadiationMap() {
     return (
         <div className={styles.map}>
             <div id="map" style={isClick?{width: "100%", height: "100%", pointerEvents:"none"}:{ width: "100%", height: "100%" }}>
+                {window.kakao&&
                 <div className={styles.notice}>
                     <div onClick={() => { 
                         setIsClick((state) => !state); focusGyeongju(map, customOverlayRef, isClick, polygonObjects, gyeongjuPolygon, area, initialPolygons, styles);}} className={isClick ? styles.clickPictogram : styles.pictogram}>
@@ -57,6 +58,7 @@ export default function RadiationMap() {
                         <span>경주 방폐물처리장</span>
                     </div>
                 </div>
+                }
             </div>
             {isClick ? (
                 <div className={styles.gongdan}>
