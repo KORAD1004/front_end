@@ -55,7 +55,7 @@ body {
     border-radius: 10px;
     text-align: center;
     width: 30vw !important;
-    height: 13.3vw;
+    height: 13.3vw !important;
   }
   
   .courseName {
