@@ -1,706 +1,715 @@
 @keyframes mount {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .gongdanInfo {
-    padding: 3% 0;
-    border-radius: 9.29px;
-    background-color: white;
-    width: 50%;
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 0.58px solid rgba(0, 0, 0, 0.5);
+  padding: 3% 0;
+  border-radius: 9.29px;
+  background-color: white;
+  width: 50%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.58px solid rgba(0, 0, 0, 0.5);
 }
 
 .pageWrapper {
-    background-image: url('../../assets/images/radWaste/rwBackground2.webp'), url('../../assets/images/radWaste/rwBackground.webp'), url('../../assets/images/radWaste/bodyImg5.webp');
-    background-repeat: no-repeat;
-    width: 100vw;
-    background-position: center 80px, center 0, bottom;
-    overflow: hidden;
-    background-size: 100vw;
+  background-image: url("../../assets/images/radWaste/rwBackground2.webp"),
+    url("../../assets/images/radWaste/rwBackground.webp"),
+    url("../../assets/images/radWaste/bodyImg5.webp");
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-position: center 80px, center 0, bottom;
+  overflow: hidden;
+  background-size: 100vw;
 }
 
 .header {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .header span {
-    font-family: 'Pretendard-bold';
-    font-size: 20px;
-    color: white;
+  font-family: "Pretendard-bold";
+  font-size: 20px;
+  color: white;
 }
 
 .infoHeader {
-    margin-top: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: end;
-    height: 4%;
+  margin-top: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+  height: 4%;
 }
 
 .todayInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 3.29px;
-    padding: 4px 5px;
-    height: 25%;
-    gap: 3%;
-    width: 120px;
-    white-space: nowrap;
-    border: 0.66px solid rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 3.29px;
+  padding: 4px 5px;
+  height: 25%;
+  gap: 3%;
+  width: 120px;
+  white-space: nowrap;
+  border: 0.66px solid rgba(0, 0, 0, 1);
 }
 
 .todayInfo span {
-    font-family: 'Pretendard-medium';
-    font-size: 6.58px;
+  font-family: "Pretendard-medium";
+  font-size: 6.58px;
 }
 
 .todayInfo span:nth-child(2) {
-    font-family: 'Pretendard-bold';
+  font-family: "Pretendard-bold";
 }
 
 .todayInfo div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .gongdanInfo div {
-    line-height: auto;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  line-height: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .gongdanInfo span:first-child {
-    font-family: 'Pretendard-bold';
-    font-size: 10.45px;
+  font-family: "Pretendard-bold";
+  font-size: 10.45px;
 }
 
 .gongdanInfo span:last-child {
-    font-family: 'Pretendard-medium';
-    font-size: 6.96px;
-    padding: 1%;
+  font-family: "Pretendard-medium";
+  font-size: 6.96px;
+  padding: 1%;
 }
 
 .line {
-    border: 0.58px solid hsl(0, 0%, 84%);
-    width: 80%;
-    margin: 2% auto;
+  border: 0.58px solid hsl(0, 0%, 84%);
+  width: 80%;
+  margin: 2% auto;
 }
 
 .intro {
-    margin-top: 2%;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 2% 0;
+  margin-top: 2%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0;
 }
 
 .intro span:first-child {
-    font-size: 10px;
-    font-family: 'Pretendard-bold';
-    margin-bottom: 1%;
+  font-size: 10px;
+  font-family: "Pretendard-bold";
+  margin-bottom: 1%;
 }
 
 .intro span:last-child {
-    font-family: 'Pretendard';
-    font-size: 6px;
+  font-family: "Pretendard";
+  font-size: 6px;
 }
 
 .saturationInfo {
-    margin-top: 3%;
-    display: flex;
-    height: 10%;
-    gap: 5%;
-    width: 95%;
+  margin-top: 3%;
+  display: flex;
+  height: 10%;
+  gap: 5%;
+  width: 95%;
 }
 
 .predictRadWaste {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .currentSaturation {
-    border-radius: 9.29px;
-    border: 0.58px solid rgba(0, 0, 0, 0.5);
-    width: 30%;
-    padding: 2% 0;
-    background-color: white;
+  border-radius: 9.29px;
+  border: 0.58px solid rgba(0, 0, 0, 0.5);
+  width: 30%;
+  padding: 2% 0;
+  background-color: white;
 }
 
 .wasteContainer {
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wasteContainer img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .wasteOutline {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .wasteFill {
-    position: absolute;
-    bottom: 3%;
-    width: 90%;
-    background: linear-gradient(0, #33422A, #648252); /* 초록색 내용물 */
-    z-index: 0;
-    transition: height 0.5s ease; /* 내용물의 변화가 부드럽게 보이도록 */
-    border-radius: 5px;
+  position: absolute;
+  bottom: 3%;
+  width: 90%;
+  background: linear-gradient(0, #33422a, #648252); /* 초록색 내용물 */
+  z-index: 0;
+  transition: height 0.5s ease; /* 내용물의 변화가 부드럽게 보이도록 */
+  border-radius: 5px;
 }
 
 .containerInfo {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .containerInfo span:first-child {
-    font-family: 'Pretendard-bold';
-    font-size: 10.45px;
+  font-family: "Pretendard-bold";
+  font-size: 10.45px;
 }
 
 .containerInfo span:last-child {
-    font-family: 'Pretendard-medium';
-    font-size: 9.29px;
+  font-family: "Pretendard-medium";
+  font-size: 9.29px;
 }
 
 .unitInfo {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    border-radius: 9.29px;
-    border: 0.58px solid rgba(0, 0, 0, 0.5);
-    width: 60%;
-    padding: 3% 2%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 9.29px;
+  border: 0.58px solid rgba(0, 0, 0, 0.5);
+  width: 60%;
+  padding: 3% 2%;
 }
 
 .unitInfo span:nth-child(2) {
-    font-family: 'Pretendard-bold';
-    font-size: 13.58px;
-    margin-bottom: 2%;
+  font-family: "Pretendard-bold";
+  font-size: 13.58px;
+  margin-bottom: 2%;
 }
 
 .unitInfo span:last-child {
-    margin-top: 2%;
-    font-family: 'Pretendard-medium';
-    font-size: 6.96px;
+  margin-top: 2%;
+  font-family: "Pretendard-medium";
+  font-size: 6.96px;
 }
 
 .predictHeader {
-    border-radius: 8px;
-    border: 0.58px solid rgba(0, 0, 0, 0.5);
-    padding: 2% 0;
-    width: 95%;
-    margin: 0 auto;
+  border-radius: 8px;
+  border: 0.58px solid rgba(0, 0, 0, 0.5);
+  padding: 2% 0;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .predictHeader span {
-    font-family: 'Pretendard-medium';
-    font-size: 11px;
+  font-family: "Pretendard-medium";
+  font-size: 11px;
 }
 
 .predictContainers {
-    margin: 5% auto;
-    display: flex;
-    width: 95%;
-    gap: 5%;
+  margin: 5% auto;
+  display: flex;
+  width: 95%;
+  gap: 5%;
 }
 
 .radWasteInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .radWasteInfo span {
-    font-family: 'Pretendard-medium';
-    font-size: 10px;
+  font-family: "Pretendard-medium";
+  font-size: 10px;
 }
 
 .radWasteInfo > span:first-child {
-    font-family: 'Pretendard-extraBold';
-    font-size: 15px;
-    color: #8E670F;
-    margin-top: 10%;
-    margin-bottom: 5%;
+  font-family: "Pretendard-extraBold";
+  font-size: 15px;
+  color: #8e670f;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
 
 .radWasteInfo span:nth-child(6) {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 .radWasteInfo div:nth-child(8) {
-    margin-top: 12%;
-    width: 50%;
-    height: 40px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(81deg, #77B353, #41652B);
-    margin-bottom: 5%;
+  margin-top: 12%;
+  width: 50%;
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(81deg, #77b353, #41652b);
+  margin-bottom: 5%;
 }
 
 .radWasteInfo div:nth-child(8) span {
-    font-family: 'Pretendard-bold';
-    font-size: 15px;
-    color: white;
+  font-family: "Pretendard-bold";
+  font-size: 15px;
+  color: white;
 }
 
 .radWasteInfo span:nth-child(10) {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .radWasteInfo span:nth-child(13) {
-    margin-top: 15%;
-    margin-bottom: 9%;
-    font-size: 20px;
-    color: #77B353;
-    font-family: 'Pretendard-extraBold';
+  margin-top: 15%;
+  margin-bottom: 9%;
+  font-size: 20px;
+  color: #77b353;
+  font-family: "Pretendard-extraBold";
 }
 
 .radWasteInfo span:nth-child(14) {
-    margin-bottom: 12%;
-    font-family: 'Pretendard-bold';
+  margin-bottom: 12%;
+  font-family: "Pretendard-bold";
 }
 
 .radWasteInfo span:nth-child(15) {
-    margin-bottom: 11%;
+  margin-bottom: 11%;
 }
 
 .radWasteInfo img:nth-child(18) {
-    margin-top: 10%;
-    margin-bottom: 15%;
+  margin-top: 10%;
+  margin-bottom: 15%;
 }
 
 .radWasteInfo span:nth-child(19) {
-    font-family: 'Pretendard-bold';
+  font-family: "Pretendard-bold";
 }
 
 .radWasteInfo span:nth-child(20) {
-    margin-bottom: 12%;
-    font-family: 'Pretendard-bold';
+  margin-bottom: 12%;
+  font-family: "Pretendard-bold";
 }
 
 .radWasteInfo span:nth-child(24) {
-    margin-top: 13%;
-    font-family: 'Pretendard-bold';
+  margin-top: 13%;
+  font-family: "Pretendard-bold";
 }
 
 .radWasteInfo span:nth-child(25) {
-    font-family: 'Pretendard-bold';
-    margin-bottom: 15%;
+  font-family: "Pretendard-bold";
+  margin-bottom: 15%;
 }
 
 .radWasteInfo > span:nth-last-child(2) {
-    margin-top: 20%;
-    color: white;
-    font-size: 12px;
-    font-family: 'Pretendard-extraBold';
+  margin-top: 20%;
+  color: white;
+  font-size: 12px;
+  font-family: "Pretendard-extraBold";
 }
 
 .radWasteInfo > span:last-child {
-    margin-bottom: 20%;
-    color: white;
-    font-size: 12px;
-    font-family: 'Pretendard-extraBold';
+  margin-bottom: 20%;
+  color: white;
+  font-size: 12px;
+  font-family: "Pretendard-extraBold";
 }
 
 .radWasteInfo span:nth-child(13) {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .bodyImg {
-    width: 100vw;
-    margin-bottom: 15%;
+  width: 100vw;
+  margin-bottom: 15%;
 }
 
 .bodyImg2 {
-    width: 100%;
-    text-align: end;
+  width: 100%;
+  text-align: end;
 }
 
 .bodyImg2 img {
-    width: 90%;
+  width: 90%;
 }
 
 .bodyImg3 {
-    position: relative;
-    width: 100%;
-    bottom: 70px;
+  position: relative;
+  width: 100%;
+  bottom: 70px;
 }
 
 .bodyImg3 img {
-    width: 100%;
+  width: 100%;
 }
 
 .bodyImg9 {
-    width: 80vw;
+  width: 80vw;
 }
 
 .bodyImg10 {
-    width: 80%;
+  width: 80%;
 }
 
 .bodyImg10 div {
-    position: relative;
-    bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bodyImg10 img {
-    width: 50%;
+  width: 50%;
 }
 
 .bodyImg10 span {
-    font-family: 'Pretendard-bold';
+  font-family: "Pretendard-bold";
 }
 
 .bodyImg10 span:last-child {
-    margin-top: 1%;
-    font-family: 'Pretendard-extraBold';
-    font-size: 13px;
-    color: #57833e;
+  margin-top: 1%;
+  font-family: "Pretendard-extraBold";
+  font-size: 13px;
+  color: #57833e;
 }
 
 .spans {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10%;
 }
 
 .spans span {
-    font-size: 10px;
-    color: #8A8A8A;
+  font-size: 10px;
+  color: #8a8a8a;
 }
 
 .spans span:first-child {
-    margin-bottom: 3%;
+  margin-bottom: 3%;
 }
 
 .spans span:nth-child(3) {
-    margin-bottom: 3%;
+  margin-bottom: 3%;
+}
+
+.spans span:nth-child(4) {
+  white-space: nowrap;
 }
 
 .spans2 {
-    margin-bottom: 7%;
+  margin-bottom: 7%;
 }
 
 .spans2 span {
-    font-family: 'Pretendard-bold';
-    font-size: 8.5px;
+  font-family: "Pretendard-bold";
+  font-size: 8.5px;
 }
 
 .spans2 span:last-child {
-    color: #57833e;
+  color: #57833e;
 }
 
 .backBtn {
-    position: fixed;
-    bottom: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    border: 0.5px solid #909090;
-    width: 165px;
-    height: 32px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    animation: mount 1s ease-in-out;
-    cursor: pointer;
+  position: fixed;
+  bottom: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  border: 0.5px solid #909090;
+  width: 165px;
+  height: 32px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  animation: mount 1s ease-in-out;
+  cursor: pointer;
 }
 .predictWrapper {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .backBtn span {
-    font-family: 'Pretendard-bold';
-    font-size: 10px;
+  font-family: "Pretendard-bold";
+  font-size: 10px;
 }
 
 @media screen and (min-width: 1024px) {
-    .radWasteInfo span {
-        font-size: 20px;
-    }
+  .radWasteInfo span {
+    font-size: 20px;
+  }
 
-    .radWasteInfo > span:first-child {
-        font-size: 50px;
-    }
+  .radWasteInfo > span:first-child {
+    font-size: 50px;
+  }
 
-    .radWasteInfo div:nth-child(8) {
-        width: 35%;
-        height: 10vh;
-    }
+  .radWasteInfo div:nth-child(8) {
+    width: 35%;
+    height: 10vh;
+  }
 
-    .radWasteInfo div:nth-child(8) span {
-        font-size: 30px;
-    }
+  .radWasteInfo div:nth-child(8) span {
+    font-size: 30px;
+  }
 
-    .radWasteInfo span:last-child, .radWasteInfo span:nth-last-child(2) {
-        font-size: 35px;
-    }
+  .radWasteInfo span:last-child,
+  .radWasteInfo span:nth-last-child(2) {
+    font-size: 35px;
+  }
 
-    .bodyImg3 {
-        bottom: 240px;
-    }
+  .bodyImg3 {
+    bottom: 240px;
+  }
 
-    .bodyImg4 {
-        width: 70%;
-        margin-bottom: 7%;
-    }
+  .bodyImg4 {
+    width: 70%;
+    margin-bottom: 7%;
+  }
 
-    .bodyImg10 div {
-        bottom: 145px;
-    }
+  .bodyImg10 div {
+    bottom: 145px;
+  }
 
-    .bodyImg10 div span:last-child {
-        font-size: 25px;
-    }
-    
-    .gongdanInfo {
-        border: 1.17px solid rgba(0, 0, 0, 0.5);
-        width: 65%;
-        height: 30px;
-        border-radius: 20px;
-    }
+  .bodyImg10 div span:last-child {
+    font-size: 25px;
+  }
 
-    .line {
-        width: 90%;
-        margin: 1% auto;
-    }
+  .gongdanInfo {
+    border: 1.17px solid rgba(0, 0, 0, 0.5);
+    width: 65%;
+    height: 30px;
+    border-radius: 20px;
+  }
 
-    .gongdanInfo span:first-child {
-        font-size: 18px;
-    }
+  .line {
+    width: 90%;
+    margin: 1% auto;
+  }
 
-    .gongdanInfo span:last-child {
-        font-size: 12px;
-    }
+  .gongdanInfo span:first-child {
+    font-size: 18px;
+  }
 
-    .intro span:first-child {
-        font-size: 15px;
-    }
+  .gongdanInfo span:last-child {
+    font-size: 12px;
+  }
 
-    .intro span:last-child {
-        font-size: 8px;
-    }
+  .intro span:first-child {
+    font-size: 15px;
+  }
 
-    .predictRadWaste {
-        width: 80%;
-        margin: 0 auto;
-    }
+  .intro span:last-child {
+    font-size: 8px;
+  }
 
-    .containerInfo span:first-child {
-        font-size: 15px;
-    }
+  .predictRadWaste {
+    width: 80%;
+    margin: 0 auto;
+  }
 
-    .containerInfo span:last-child {
-        font-size: 10px;
-    }
+  .containerInfo span:first-child {
+    font-size: 15px;
+  }
 
-    .unitInfo span:nth-child(2) {
-        font-size: 20px;
-    }
+  .containerInfo span:last-child {
+    font-size: 10px;
+  }
 
-    .unitInfo span:last-child {
-        font-size: 10px;
-    }
+  .unitInfo span:nth-child(2) {
+    font-size: 20px;
+  }
 
-    .predictHeader span {
-        font-size: 14px;
-    }
+  .unitInfo span:last-child {
+    font-size: 10px;
+  }
 
-    .header {
-        margin-top: 10%;
-    }
+  .predictHeader span {
+    font-size: 14px;
+  }
 
-    .header span {
-        font-size: 30px;
-    }
+  .header {
+    margin-top: 10%;
+  }
 
-    .todayInfo {
-        width: 31%;
-        height: 100%;
-        border-radius: 6px;
-        border: 1.17px solid rgba(0, 0, 0, 0.5);
-    }
+  .header span {
+    font-size: 30px;
+  }
 
-    .infoHeader {
-        width: 53%;
-        margin: 27% auto 0 auto;
-        padding-left: 3%;
-        justify-content: space-between;
-    }
+  .todayInfo {
+    width: 31%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1.17px solid rgba(0, 0, 0, 0.5);
+  }
 
-    .todayInfo span {
-        width: 100%;
-        font-size: 11px;
-    }
+  .infoHeader {
+    width: 53%;
+    margin: 27% auto 0 auto;
+    padding-left: 3%;
+    justify-content: space-between;
+  }
 
-    .todayInfo img {
-        width: 7%;
-    }
+  .todayInfo span {
+    width: 100%;
+    font-size: 11px;
+  }
 
-    .intro {
-        width: 75%;
-        margin: 1% auto;
-    }
+  .todayInfo img {
+    width: 7%;
+  }
 
-    .saturationInfo {
-        width: 100vw;
-        gap: 0;
-        display: flex;
-        background-image: url('../../assets/images/radWaste/bodyImg6.webp');
-        background-repeat: no-repeat;
-        background-position: left bottom 5%;
-        background-size: 40%;
-        margin: 10% 0;
-    }
+  .intro {
+    width: 75%;
+    margin: 1% auto;
+  }
 
-    .unitInfo {
-        margin: 0 2%;
-        width: 40%;
-        box-sizing: border-box;
-        border: 1.2px solid rgba(0, 0, 0, 0.5);
-    }
+  .saturationInfo {
+    width: 100vw;
+    gap: 0;
+    display: flex;
+    background-image: url("../../assets/images/radWaste/bodyImg6.webp");
+    background-repeat: no-repeat;
+    background-position: left bottom 5%;
+    background-size: 40%;
+    margin: 10% 0;
+  }
 
-    .unitInfo img {
-        height: 80%;
-    }
+  .unitInfo {
+    margin: 0 2%;
+    width: 40%;
+    box-sizing: border-box;
+    border: 1.2px solid rgba(0, 0, 0, 0.5);
+  }
 
-    .unitInfo span:last-child {
-        font-size: 13px;
-    }
+  .unitInfo img {
+    height: 80%;
+  }
 
-    .saturationInfo .currentSaturation {
-        height: 100%;
-        box-sizing: border-box;
-        width: 20%;
-    }
+  .unitInfo span:last-child {
+    font-size: 13px;
+  }
 
-    .currentSaturation {
-        border: 1.2px solid rgba(0, 0, 0, 0.5);
-    }
+  .saturationInfo .currentSaturation {
+    height: 100%;
+    box-sizing: border-box;
+    width: 20%;
+  }
 
-    .currentSaturation span:first-child {
-        font-size: 17px;
-    }
+  .currentSaturation {
+    border: 1.2px solid rgba(0, 0, 0, 0.5);
+  }
 
-    .currentSaturation span:last-child {
-        font-size: 15px;
-    }
+  .currentSaturation span:first-child {
+    font-size: 17px;
+  }
 
-    .predictWrapper {
-        background-image: url('../../assets/images/radWaste/bodyImg8.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius: 23px;
-    }
+  .currentSaturation span:last-child {
+    font-size: 15px;
+  }
 
-    .predictContainers {
-        margin-top: 2%;
-        width: 80%;
-        background-position: center;
-        background-size: 100% 100%;
-    }
+  .predictWrapper {
+    background-image: url("../../assets/images/radWaste/bodyImg8.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 23px;
+  }
 
-    .predictHeader {
-        background-color: #41652B;
-        border-radius: 21px;
-    }
+  .predictContainers {
+    margin-top: 2%;
+    width: 80%;
+    background-position: center;
+    background-size: 100% 100%;
+  }
 
-    .predictHeader span {
-        font-size: 23px;
-        font-family: 'Pretendard-bold';
-        color: white;
-    }
+  .predictHeader {
+    background-color: #41652b;
+    border-radius: 21px;
+  }
 
-    .bg6 {
-        width: 30%;
-        display: flex;
-        justify-content: center;
-    }
+  .predictHeader span {
+    font-size: 23px;
+    font-family: "Pretendard-bold";
+    color: white;
+  }
 
-    .bg6 img {
-        position: relative;
-        top: 25%;
-    }
+  .bg6 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
 
-    .bg6 div {
-        margin-top: 20%;
-        display: flex;
-        flex-direction: column;
-        width: 65%;
-    }
+  .bg6 img {
+    position: relative;
+    top: 25%;
+  }
 
-    .bg6 div span {
-        color: #41652B;
-        text-align: left;
-    }
+  .bg6 div {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+  }
 
-    .bg6 span:first-child {
-        font-family: 'Pretendard-medium';
-        font-size: 25px;
-    }
+  .bg6 div span {
+    color: #41652b;
+    text-align: left;
+  }
 
-    .bg6 span:nth-child(2) {
-        font-size: 40px;
-        font-family: 'Pretendard-bold';
-        margin-bottom: 5%;
-        margin-top: 5%;
-    }
-    
-    .pageWrapper {
-        background-image: url('../../assets/images/radWaste/rwBackground3.webp'), url('../../assets/images/radWaste/rwBackground4.webp'), url('../../assets/images/radWaste/bodyImg5.webp');
-        background-size: 60vw, 100vw, 100vw;
-        background-position: center 100px, center 0, bottom;
-    }
+  .bg6 span:first-child {
+    font-family: "Pretendard-medium";
+    font-size: 25px;
+  }
+
+  .bg6 span:nth-child(2) {
+    font-size: 40px;
+    font-family: "Pretendard-bold";
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .pageWrapper {
+    background-image: url("../../assets/images/radWaste/rwBackground3.webp"),
+      url("../../assets/images/radWaste/rwBackground4.webp"),
+      url("../../assets/images/radWaste/bodyImg5.webp");
+    background-size: 60vw, 100vw, 100vw;
+    background-position: center 100px, center 0, bottom;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1335px) {
-    .bg6 div span:first-child {
-        font-size: 20px;
-    }
+  .bg6 div span:first-child {
+    font-size: 20px;
+  }
 
-    .bg6 div span:nth-child(2) {
-        font-size: 30px;
-    }
+  .bg6 div span:nth-child(2) {
+    font-size: 30px;
+  }
 
-    .bg6 div span:last-child {
-        font-size: 12px;
-    }
+  .bg6 div span:last-child {
+    font-size: 12px;
+  }
 }
