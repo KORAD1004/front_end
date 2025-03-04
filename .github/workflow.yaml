@@ -1,0 +1,68 @@
+name: Front Deployment
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  build:
+    if: github.event.pull_request.merged == true || github.event_name == 'push'
+    name: react build & deploy
+    runs-on: ubuntu-latest
+
+    env:
+      VITE_SERVER_URL: ${{ secrets.VITE_SERVER_URL }}
+      VITE_SERVER_URL2: ${{ secrets.VITE_SERVER_URL2 }}
+      VITE_KAKAO_API_KEY: ${{ secrets.VITE_KAKAO_API_KEY }}
+
+    steps:
+      - name: checkout Github Action
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: react build
+        run: npm run build
+
+      - name: Make directory
+        uses: appleboy/ssh-action@master
+        with:
+          username: ubuntu
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            mkdir -p /home/ubuntu/korad
+
+      - name: Transfer Build Folder
+        uses: appleboy/scp-action@master
+        with:
+          username: ubuntu
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          source: |
+            dist
+          target: "/home/ubuntu/korad"
+
+      - name: Using Docker Compose
+        uses: appleboy/ssh-action@master
+        with:
+          username: ubuntu
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /home/ubuntu/korad
+            sudo docker compose down
+            sudo docker compose up --build -d
