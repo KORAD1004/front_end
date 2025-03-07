@@ -1,13 +1,19 @@
-import React from 'react';
-import Modal from 'react-modal';
-import styles from '../../styles/quiz/quizModal.module.css';
-import Correct from '../../assets/images/quiz/Correct.svg';
-import Wrong  from '../../assets/images/quiz/Wrong.svg';
-import ImageLazy from '../imgLazy/ImageLazy';
+import Modal from "react-modal";
+import styles from "../../styles/quiz/quizModal.module.css";
+import Correct from "../../assets/images/quiz/Correct.svg";
+import Wrong from "../../assets/images/quiz/Wrong.svg";
+import ImageLazy from "../imgLazy/ImageLazy";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
-const QuizModal = ({ isOpen, onRequestClose, info, question, onCorrect, onWrong }) => {
+const QuizModal = ({
+  isOpen,
+  onRequestClose,
+  info,
+  question,
+  onCorrect,
+  onWrong,
+}) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -17,11 +23,9 @@ const QuizModal = ({ isOpen, onRequestClose, info, question, onCorrect, onWrong 
       overlayClassName={styles.overlay}
     >
       <div className={styles.modalHeader}>
-      <div className={styles.titleFirst}>
-            KORAD 퀴즈 풀고
-        </div>
+        <div className={styles.titleFirst}>KORAD 퀴즈 풀고</div>
         <div className={styles.titleSecond}>
-            경주 관광 페이지 적극 활용하자!
+          경주 관광 페이지 적극 활용하자!
         </div>
       </div>
 
@@ -32,17 +36,17 @@ const QuizModal = ({ isOpen, onRequestClose, info, question, onCorrect, onWrong 
       </div>
 
       <div className={styles.modalActions}>
-        <ImageLazy 
-            className={styles.correctButton} 
-            src={Correct}
-            alt="Correct" 
-            onClick={onCorrect} 
+        <ImageLazy
+          className={styles.correctButton}
+          src={Correct}
+          alt="Correct"
+          onClick={onCorrect}
         />
-        <ImageLazy 
-            className={styles.wrongButton} 
-            src={Wrong}
-            alt="Wrong" 
-            onClick={onWrong} 
+        <ImageLazy
+          className={styles.wrongButton}
+          src={Wrong}
+          alt="Wrong"
+          onClick={onWrong}
         />
       </div>
     </Modal>

@@ -8,6 +8,7 @@ import {
 import HeaderSection from "../../components/radWaste/HeaderSection.jsx";
 import ContainerSection from "../../components/radWaste/ContainerSection.jsx";
 import InfoSection from "../../components/radWaste/InfoSection.jsx";
+import AnimationLayout from "../../AnimationLayout.jsx";
 
 export default function RadWaste() {
   const scrollRef = useRef(null);
@@ -29,10 +30,12 @@ export default function RadWaste() {
   }, []);
 
   return (
-    <div className={styles.pageWrapper}>
-      <HeaderSection refer={scrollRef} />
-      <ContainerSection />
-      <InfoSection onClick={onClick} />
-    </div>
+    <AnimationLayout>
+      <div className={styles.pageWrapper}>
+        <HeaderSection refer={scrollRef} />
+        <ContainerSection />
+        <InfoSection onClick={onClick} />
+      </div>
+    </AnimationLayout>
   );
 }
