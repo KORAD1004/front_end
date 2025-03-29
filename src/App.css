@@ -1,8 +1,9 @@
-@import url('./styles/reset.css');
+@import url("./styles/reset.css");
 
 #root {
   margin: 0 auto;
   text-align: center;
+  background-color: white;
 }
 
 .logo {
@@ -42,31 +43,31 @@
 }
 
 @font-face {
-  font-family: 'Pretendard-bold'; /* 사용할 폰트의 이름을 정의 */
-  src: url('./assets/fonts/Pretendard-Bold.woff2'); /* 폰트 파일의 위치 */
+  font-family: "Pretendard-bold"; /* 사용할 폰트의 이름을 정의 */
+  src: url("./assets/fonts/Pretendard-Bold.woff2"); /* 폰트 파일의 위치 */
 }
 
 @font-face {
-  font-family: 'Pretendard-extraBold'; /* 사용할 폰트의 이름을 정의 */
-  src: url('./assets/fonts/Pretendard-ExtraBold.woff2'); /* 폰트 파일의 위치 */
+  font-family: "Pretendard-extraBold"; /* 사용할 폰트의 이름을 정의 */
+  src: url("./assets/fonts/Pretendard-ExtraBold.woff2"); /* 폰트 파일의 위치 */
 }
 
 @font-face {
-  font-family: 'Pretendard'; /* 사용할 폰트의 이름을 정의 */
-  src: url('./assets/fonts/Pretendard-Regular.woff2'); /* 폰트 파일의 위치 */
+  font-family: "Pretendard"; /* 사용할 폰트의 이름을 정의 */
+  src: url("./assets/fonts/Pretendard-Regular.woff2"); /* 폰트 파일의 위치 */
 }
 
 @font-face {
-  font-family: 'Pretendard-semiBold'; /* 사용할 폰트의 이름을 정의 */
-  src: url('./assets/fonts/Pretendard-SemiBold.woff2'); /* 폰트 파일의 위치 */
+  font-family: "Pretendard-semiBold"; /* 사용할 폰트의 이름을 정의 */
+  src: url("./assets/fonts/Pretendard-SemiBold.woff2"); /* 폰트 파일의 위치 */
 }
 
 @font-face {
-  font-family: 'Pretendard-medium';
-  src: url('./assets/fonts/Pretendard-Medium.woff2');
+  font-family: "Pretendard-medium";
+  src: url("./assets/fonts/Pretendard-Medium.woff2");
 }
 
 @font-face {
-  font-family: 'PretendardV';
-  src: url('./assets/fonts/PretendardVariable.woff2');
+  font-family: "PretendardV";
+  src: url("./assets/fonts/PretendardVariable.woff2");
 }

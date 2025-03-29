@@ -17,6 +17,7 @@
   background-image: url("../../assets/images/radiation/radBackground.webp");
   background-repeat: no-repeat;
   background-size: 100vw;
+  color: black;
 }
 
 .headerWrapper {

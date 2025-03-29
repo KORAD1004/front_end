@@ -29,6 +29,7 @@
   background-position: center 80px, center 0, bottom;
   overflow: hidden;
   background-size: 100vw;
+  color: black;
 }
 
 .header {
