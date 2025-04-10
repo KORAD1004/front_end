@@ -92,6 +92,7 @@
   height: auto;
   overflow: hidden;
   position: relative;
+  color: black;
 }
 
 .imageContainer {

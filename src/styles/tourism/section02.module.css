@@ -1,312 +1,312 @@
 @media screen and (min-width: 768px) {
-    .touristAttractions {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 80vw;
-        justify-items: center;
-        padding-top: 1% !important;
-    }
+  .touristAttractions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80vw;
+    justify-items: center;
+    padding-top: 1% !important;
+  }
 
-    .touristAttraction {
-        width: 90% !important;
-        border-radius: 10px;
-        background-color: #f2f2f2;
-        border: 2px solid #c4c4c4;
-        margin-bottom: 7% !important;
-        overflow: hidden;
-        position: relative;
-        text-decoration: none;
-        color: black;
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
-    
-    .touristAttraction:hover {
-        color: black;
-        transform: scale(1.05);
-        cursor: pointer;
-    }
+  .touristAttraction {
+    width: 90% !important;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    border: 2px solid #c4c4c4;
+    margin-bottom: 7% !important;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .touristAttraction:hover {
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .allContainer {
-        width: 100vw;
-        height: 200vh !important;
-        background-color: #f2f2f2;
-        overflow: hidden;
-    }
-
-    .mainTextContainer {
-        margin-left: 8%;
-        margin-top: -10%;
-    }
-
-    .mainText {
-        font-family: 'Pretendard-extraBold';
-        font-size: 35px !important;
-        text-align: left;
-    }
-
-    .mainSmallText {
-        font-family: 'Pretendard-bold';
-        font-size: 24px !important;
-        text-align: left;
-        margin-bottom: 8px;
-        margin-top: 20%;
-    }
-
-    .miniButton {
-        width: 100%;
-        height: 100% !important;
-        background-color: #D9D9D9;
-        color: #000;
-        border-radius: 30px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px !important;
-        font-family: 'Pretendard-semiBold';
-        margin: 1%;
-        white-space: nowrap;
-        transition: background 0.3s ease, color 0.3 ease;
-    }
-
-    .miniButton:hover {
-        background: linear-gradient(90deg, #5e8447, #7eb65c);
-        color: white;
-    }
-
-    .miniButton:focus {
-        background: linear-gradient(90deg, #5e8447, #7eb65c);
-        color: white;
-    }
-
-    .miniButtonAllContainer {
-        margin: 4% 8%;
-        width: 84%;
-        display: flex;
-        justify-content: center;
-        gap: 2%;
-    }
-
-    .miniButtonContainer {
-        width: 200px !important;
-        height: 60px !important;
-    }
-
-    .touristAttractionContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 840px !important;
-        overflow-y: auto;
-        width: 100% !important;
-        padding: 0;
-    }
-
-    .touristAttractions {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 80vw;
-        justify-items: center;
-        padding-top: 1% !important;
-    }
-
-    .touristAttraction {
-        width: 90% !important;
-        border-radius: 10px;
-        background-color: #f2f2f2;
-        border: 2px solid #c4c4c4;
-        margin-bottom: 7% !important;
-        overflow: hidden;
-        position: relative;
-        text-decoration: none;
-        color: black;
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .touristAttraction:hover {
-        color: black;
-        transform: scale(1.05);
-        cursor: pointer;
-    }
-
-    .touristAttractions::after {
-        content: '';
-        grid-column: span 2;
-        height: 0;
-    }
-
-    .touristAttractionImage {
-        width: 33.33%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .touristAttractionTextContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 5%;
-        width: 58%;
-    }
-
-    .touristAttractionText {
-        font-family: 'Pretendard-extraBold';
-        font-size: 17px;
-        text-align: left;
-        margin-top: 8%;
-        margin-bottom: 15%;
-    }
-
-    .touristAttractionSmallText {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        font-family: 'Pretendard-bold';
-        font-size: 10px;
-        text-align: left;
-        margin: 2%;
-        gap: 2%;
-    }
-
-    .subText {
-        font-family: 'Pretendard';
-        font-size: 8px;
-        text-align: center;
-        margin: 2%;
-    }
-}
-
-.allContainer {
+  .allContainer {
     width: 100vw;
-    height: 800px;
+    height: 200vh !important;
     background-color: #f2f2f2;
     overflow: hidden;
-}
+  }
 
-.mainTextContainer {
+  .mainTextContainer {
     margin-left: 8%;
-    margin-top: -5%;
-}
+    margin-top: -10%;
+  }
 
-.mainText {
-    font-family: 'Pretendard-extraBold';
-    font-size: 25.76px;
+  .mainText {
+    font-family: "Pretendard-extraBold";
+    font-size: 35px !important;
     text-align: left;
-}
+  }
 
-.mainSmallText {
-    font-family: 'Pretendard-bold';
-    font-size: 14px;
+  .mainSmallText {
+    font-family: "Pretendard-bold";
+    font-size: 24px !important;
     text-align: left;
     margin-bottom: 8px;
     margin-top: 20%;
-}
+  }
 
-.miniButton {
+  .miniButton {
     width: 100%;
-    height: 27.53px;
-    background-color: #D9D9D9;
+    height: 100% !important;
+    background-color: #d9d9d9;
     color: #000;
-    border-radius: 20px;
+    border-radius: 30px !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
-    font-family: 'Pretendard-semiBold';
+    font-size: 20px !important;
+    font-family: "Pretendard-semiBold";
     margin: 1%;
     white-space: nowrap;
-    transition: background 0.3s ease, color 0.3s ease;
-}
+    transition: background 0.3s ease, color 0.3 ease;
+  }
 
-.miniButton:hover {
+  .miniButton:hover {
     background: linear-gradient(90deg, #5e8447, #7eb65c);
     color: white;
-}
+  }
 
-.miniButton.active {
+  .miniButton:focus {
     background: linear-gradient(90deg, #5e8447, #7eb65c);
     color: white;
-}
+  }
 
-
-.miniButtonAllContainer {
+  .miniButtonAllContainer {
     margin: 4% 8%;
     width: 84%;
     display: flex;
     justify-content: center;
     gap: 2%;
-}
+  }
 
-.miniButtonContainer {
-    width: 85px;
-}
+  .miniButtonContainer {
+    width: 200px !important;
+    height: 60px !important;
+  }
 
-.touristAttractionContainer {
+  .touristAttractionContainer {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    height: 68%;
+    height: 840px !important;
     overflow-y: auto;
-    width: 100%;
-}
+    width: 100% !important;
+    padding: 0;
+  }
 
-.touristAttraction {
-    display: flex;
-    width: 338px;
-    height: 143px;
+  .touristAttractions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80vw;
+    justify-items: center;
+    padding-top: 1% !important;
+  }
+
+  .touristAttraction {
+    width: 90% !important;
     border-radius: 10px;
     background-color: #f2f2f2;
-    border: 1px solid #c4c4c4;
-    margin-bottom: 2%;
+    border: 2px solid #c4c4c4;
+    margin-bottom: 7% !important;
     overflow: hidden;
     position: relative;
     text-decoration: none;
     color: black;
-}
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
 
-.touristAttraction:hover {
-    text-decoration: none;
+  .touristAttraction:hover {
     color: black;
-}
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 
-.touristAttractionImage {
+  .touristAttractions::after {
+    content: "";
+    grid-column: span 2;
+    height: 0;
+  }
+
+  .touristAttractionImage {
     width: 33.33%;
     height: 100%;
     object-fit: cover;
-}
+  }
 
-.touristAttractionTextContainer {
+  .touristAttractionTextContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
     width: 58%;
-}
+  }
 
-.touristAttractionText {
-    font-family: 'Pretendard-extraBold';
+  .touristAttractionText {
+    font-family: "Pretendard-extraBold";
     font-size: 17px;
     text-align: left;
     margin-top: 8%;
     margin-bottom: 15%;
-}
+  }
 
-.touristAttractionSmallText {
+  .touristAttractionSmallText {
     display: flex;
     align-items: center;
     width: 100%;
-    font-family: 'Pretendard-bold';
+    font-family: "Pretendard-bold";
     font-size: 10px;
     text-align: left;
     margin: 2%;
     gap: 2%;
-}
+  }
 
-.subText {
-    font-family: 'Pretendard';
+  .subText {
+    font-family: "Pretendard";
     font-size: 8px;
     text-align: center;
     margin: 2%;
+  }
+}
+
+.allContainer {
+  width: 100vw;
+  height: 800px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  color: black;
+}
+
+.mainTextContainer {
+  margin-left: 8%;
+  margin-top: -5%;
+}
+
+.mainText {
+  font-family: "Pretendard-extraBold";
+  font-size: 25.76px;
+  text-align: left;
+}
+
+.mainSmallText {
+  font-family: "Pretendard-bold";
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 8px;
+  margin-top: 20%;
+}
+
+.miniButton {
+  width: 100%;
+  height: 27.53px;
+  background-color: #d9d9d9;
+  color: #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-family: "Pretendard-semiBold";
+  margin: 1%;
+  white-space: nowrap;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.miniButton:hover {
+  background: linear-gradient(90deg, #5e8447, #7eb65c);
+  color: white;
+}
+
+.miniButton.active {
+  background: linear-gradient(90deg, #5e8447, #7eb65c);
+  color: white;
+}
+
+.miniButtonAllContainer {
+  margin: 4% 8%;
+  width: 84%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.miniButtonContainer {
+  width: 85px;
+}
+
+.touristAttractionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 68%;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.touristAttraction {
+  display: flex;
+  width: 338px;
+  height: 143px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #c4c4c4;
+  margin-bottom: 2%;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.touristAttraction:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.touristAttractionImage {
+  width: 33.33%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.touristAttractionTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  width: 58%;
+}
+
+.touristAttractionText {
+  font-family: "Pretendard-extraBold";
+  font-size: 17px;
+  text-align: left;
+  margin-top: 8%;
+  margin-bottom: 15%;
+}
+
+.touristAttractionSmallText {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-family: "Pretendard-bold";
+  font-size: 10px;
+  text-align: left;
+  margin: 2%;
+  gap: 2%;
+}
+
+.subText {
+  font-family: "Pretendard";
+  font-size: 8px;
+  text-align: center;
+  margin: 2%;
 }
