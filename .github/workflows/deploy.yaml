@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: npm install
-        run: npm install
+      - name: 의존성 설치
+        run: npm ci
 
       - name: React build
         run: npm run build
